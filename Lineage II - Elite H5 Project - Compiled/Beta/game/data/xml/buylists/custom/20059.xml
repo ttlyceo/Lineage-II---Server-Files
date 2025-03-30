@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="9860" count="1" /><!-- Dynasty Phantom -->
+   <item id="9861" count="1" /><!-- Dynasty Phantom -->
+   <item id="9862" count="1" /><!-- Dynasty Phantom -->
+   <item id="9854" count="1" /><!-- Dynasty Sword -->
+   <item id="9855" count="1" /><!-- Dynasty Sword -->
+   <item id="9856" count="1" /><!-- Dynasty Sword -->
+   <item id="9377" count="1" /><!-- Dynasty Rapier -->
+   <item id="9378" count="1" /><!-- Dynasty Rapier -->
+   <item id="9379" count="1" /><!-- Dynasty Rapier -->
+</list>

@@ -1,0 +1,128 @@
+<html>
+	<title>L2 SOW</title>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+	      <center><br> 
+	      		<table width=730 border=0 cellpadding=0>
+				<tr>
+					<td width=720 fixwidth=720><img src="L2UI.SquareGray" width=744 height=2>
+						<table width=760 bgcolor="1F1F1F" height=48>
+							<tr>
+								<td width=32>
+								    <table width=32>
+								    	   <tr>
+									       <td width=32>
+					       	   			       	   <img src="icon.skill0395" width=32 height=32>
+									       </td>
+     				                                           </tr>
+						                    </table>
+				                                </td>
+								<td width=644>
+				    				     <table width=604 border=0>
+									<tr>
+										<td>
+											<table cellpadding=0 cellspacing=0 border=0>
+												<tr>
+													<td>
+														<font name="hs12" color="FF9900">Buffstore - Buff Search System</font>
+													</td>
+													<td>
+														<button action="bypass %BYPASS%" width=32 height=32 back="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" fore="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" />
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<font color="F8F9B7">You can search the more cheap buff</font><br>
+										</td>
+									</tr>
+								     </table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<img src="L2UI.SquareGray" width="756" height=2>
+   			<table width=762 background=L2UI_CT1.Windows_DF_TooltipBG border=0 height=480>
+				<tr>
+					<td fixwidth=200 align=LEFT height=60>
+						<table width=200 border=0>
+							%BUFF_LIST%
+						</table><br>
+						%TABLE_BUFF_LIST%
+						<br>
+					</td>
+					<td fixwidth=562>
+			   			<table width=562 background=L2UI_CT1.Windows_DF_TooltipBG border=0 height=48>
+						        <tr>
+						       	   <td fixwidth=562 align=CENTER>
+							       Searching for Buffstore with <br1> <font name="hs12">%SELECTED_BUFF%</font>
+							   </td>
+							</tr><tr>
+							   <td align=CENTER>
+								<font>select your payment currency</font><br1>
+								<combobox width=190 var="cmbItem" list="%ITEM_LIST%"><br1>
+								<button value="Change" action="%CHANGE_ITEM_PRICE_FOR_SEARCH%" width=100 height=32 back=L2UI_CT1.Button_DF_Calculator fore=L2UI_CT1.Button_DF_Calculator>
+							   </td>
+			   	   			</tr>
+						</table><br>
+						<table width=490 cellspacing=0 cellpadding=0 border=0>
+							<tr>
+								<td>
+									<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+								</td>
+								<td fixwidth=165 align=LEFT>
+									<button value="Name" width=165 height=16 action="%BYPASS_NAME_LINK%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+								</td>
+								<td align=LEFT fixwidth=2>
+									<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+								</td>
+								<td align=LEFT fixwidth=2>
+									<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+								</td>
+								<td fixwidth=110 align=LEFT>
+									<button value="Enchant" width=110 height=16 action="%BYPASS_ENCHANT%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+								</td>
+								<td align=LEFT fixwidth=2>
+									<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+								</td>
+								<td align=LEFT>
+									<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+								</td>
+								<td fixwidth=110 align=LEFT>
+									<button value="Item Price" width=110 height=16 action="%BYPASS_ITEM_PRICE%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+								</td>
+								<td align=LEFT fixwidth=2>
+									<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+								</td>
+								<td align=LEFT fixwidth=2>
+									<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+								</td>
+								<td fixwidth=100 align=LEFT>
+									<button value="Price" width=100 height=16 action="%BYPASS_PRICE%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+								</td>
+								<td align=LEFT fixwidth=2>
+									<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+								</td>
+								<td align=LEFT fixwidth=2>
+									<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+								</td>
+								<td fixwidth=20 align=LEFT>
+									<button value="GO" width=20 height=16 action="BYPASS_GO" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+								</td>
+								<td align=LEFT fixwidth=2>
+									<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+								</td>
+							</tr>
+						</table>
+						%SELLER_PLAYERS%
+						<br><br>
+						<center>%PLAYERS_CONTROLS%</center>
+					</td>
+				</tr>
+			</table>
+	      <br></center>
+	</td></tr></table></body>
+</html>

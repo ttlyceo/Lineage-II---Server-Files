@@ -1,0 +1,1306 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- S-84 weapon -->
+<!-- © 2011 by NeverMore -->
+
+<list maintainEnchantment="true"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15913" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15983" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15984" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15985" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15914" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15986" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15987" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15988" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15915" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15989" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15990" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15991" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15916" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15992" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15993" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15994" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15917" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15995" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15996" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15997" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15918" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15998" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15999" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16000" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15919" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16001" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16002" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16003" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15920" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16004" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16005" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16006" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15921" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16007" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16008" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16009" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15922" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16010" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16011" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16012" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15923" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16013" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16014" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16015" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15924" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16016" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16017" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16018" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15925" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16019" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16020" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16021" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15926" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16022" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16023" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16024" count="1" />
+	</item>
+
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16157" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16159" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15927" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15941" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15942" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15943" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15928" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15944" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15945" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15946" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15929" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15947" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15948" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15949" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15930" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15950" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15951" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15952" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15931" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15953" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15954" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15955" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15932" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15956" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15957" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15958" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15933" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15959" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15960" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15961" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15934" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15962" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15963" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15964" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15935" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15965" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15966" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15967" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15936" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15968" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15969" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15970" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15937" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15971" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15972" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15973" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15938" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15974" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15975" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15976" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15939" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15977" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15978" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15979" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15940" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15980" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15981" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="15982" count="1" />
+	</item>
+	<!-- s84 PvP weapons -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16155" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="16153" count="1" />
+	</item>
+
+
+	<!-- Vesper Avenger - PvP Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14497" count="1" />
+	</item>
+
+	<!-- Vesper Avenger - HP Drain -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14496" count="1" />
+	</item>
+
+	<!-- Vesper Avenger - HP Regeneration -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14498" count="1" />
+	</item>
+
+	<!-- Vesper Buster - Acumen -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14485" count="1" />
+	</item>
+
+	<!-- Vesper Buster - Magic Hold -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14486" count="1" />
+	</item>
+
+	<!-- Vesper Buster - Mana Up -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14484" count="1" />
+	</item>
+
+	<!-- Vesper Caster -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14502" count="1" />
+	</item>
+
+	<!-- Vesper Caster - Mana Up -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14504" count="1" />
+	</item>
+
+	<!-- Vesper Caster - MP Regeneration -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14503" count="1" />
+	</item>
+
+	<!-- Vesper Cutter -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14480" count="1" />
+	</item>
+
+	<!-- Vesper Cutter - Haste -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14478" count="1" />
+	</item>
+
+	<!-- Vesper Cutter - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14479" count="1" />
+	</item>
+
+	<!-- Vesper Fighter - Critical Stun -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14492" count="1" />
+	</item>
+
+	<!-- Vesper Fighter - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14490" count="1" />
+	</item>
+
+	<!-- Vesper Fighter - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14491" count="1" />
+	</item>
+
+	<!-- Vesper Nagan - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14519" count="1" />
+	</item>
+
+	<!-- Vesper Nagan - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14518" count="1" />
+	</item>
+
+	<!-- Vesper Nagan - Haste -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14517" count="1" />
+	</item>
+
+	<!-- Vesper Pincer - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14513" count="1" />
+	</item>
+
+	<!-- Vesper Pincer - Haste -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14511" count="1" />
+	</item>
+
+	<!-- Vesper Pincer - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14512" count="1" />
+	</item>
+
+	<!-- Vesper Retributer - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14500" count="1" />
+	</item>
+
+	<!-- Vesper Retributer - HP Drain -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14501" count="1" />
+	</item>
+
+	<!-- Vesper Retributer - HP Regeneration -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14499" count="1" />
+	</item>
+
+	<!-- Vesper Shaper - Critical Damage -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14487" count="1" />
+	</item>
+
+	<!-- Vesper Shaper - HP Drain -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14488" count="1" />
+	</item>
+
+	<!-- Vesper Shaper - Haste -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14489" count="1" />
+	</item>
+
+	<!-- Vesper Sheutjeh - Cheap Shot -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14514" count="1" />
+	</item>
+
+	<!-- Vesper Sheutjeh - Critical Slow -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14516" count="1" />
+	</item>
+
+	<!-- Vesper Sheutjeh - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14515" count="1" />
+	</item>
+
+	<!-- Vesper Singer - Empower -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14505" count="1" />
+	</item>
+
+	<!-- Vesper Singer - Magic Hold -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14506" count="1" />
+	</item>
+
+	<!-- Vesper Singer - MP Regeneration -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14507" count="1" />
+	</item>
+
+	<!-- Vesper Slasher - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14483" count="1" />
+	</item>
+
+	<!-- Vesper Slasher - Haste -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14481" count="1" />
+	</item>
+
+	<!-- Vesper Slasher - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14482" count="1" />
+	</item>
+
+	<!-- Vesper Stormer - Guidance -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14493" count="1" />
+	</item>
+
+	<!-- Vesper Stormer - Haste -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14494" count="1" />
+	</item>
+
+	<!-- Vesper Stormer - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14495" count="1" />
+	</item>
+
+	<!-- Vesper Thrower - Cheap Shot -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14508" count="1" />
+	</item>
+
+	<!-- Vesper Thrower - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14509" count="1" />
+	</item>
+
+	<!-- Vesper Thrower - Critical Slow -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14510" count="1" />
+	</item>
+
+	<!-- vesper dual sword -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14462" count="1" />
+	</item>
+	<!-- vesper dual dagger -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="14477" count="1" />
+	</item>
+
+	<!-- Icarus Hammer - Anger -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10452" count="1" />
+	</item>
+
+	<!-- Icarus Hammer - Rsk. Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10454" count="1" />
+	</item>
+
+	<!-- Icarus Hammer - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10453" count="1" />
+	</item>
+
+	<!-- Icarus Hand - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10459" count="1" />
+	</item>
+
+	<!-- Icarus Hand - Haste -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10460" count="1" />
+	</item>
+
+	<!-- Icarus Hand - Rsk. Evasion -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10458" count="1" />
+	</item>
+
+	<!-- Icarus Heavy Arms - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10437" count="1" />
+	</item>
+
+	<!-- Icarus Heavy Arms - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10438" count="1" />
+	</item>
+
+	<!-- Icarus Heavy Arms - Light -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10439" count="1" />
+	</item>
+
+	<!-- Icarus Sawsword Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10434" count="1" />
+	</item>
+
+	<!-- Icarus Sawsword Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10435" count="1" />
+	</item>
+
+	<!-- Icarus Sawsword Light -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10436" count="1" />
+	</item>
+
+	<!-- Icarus Shooter - Cheap Shot -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10467" count="1" />
+	</item>
+
+	<!-- Icarus Shooter - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10469" count="1" />
+	</item>
+
+	<!-- Icarus Shooter - Guidance -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10468" count="1" />
+	</item>
+
+	<!-- Icarus Spirit - Acumen -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10440" count="1" />
+	</item>
+
+	<!-- Icarus Spirit - Conversion -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10442" count="1" />
+	</item>
+
+	<!-- Icarus Spirit - Mana Up -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10441" count="1" />
+	</item>
+
+	<!-- Icarus Spitter - Cheap Shot -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10443" count="1" />
+	</item>
+
+	<!-- Icarus Spitter - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10445" count="1" />
+	</item>
+
+	<!-- Icarus Spitter - Guidance -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10444" count="1" />
+	</item>
+
+	<!-- Icarus Stinger - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10461" count="1" />
+	</item>
+
+	<!-- Icarus Stinger - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10462" count="1" />
+	</item>
+
+	<!-- Icarus Stinger - Light -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10463" count="1" />
+	</item>
+
+	<!-- Icarus Trident - Anger -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10449" count="1" />
+	</item>
+
+	<!-- Icarus Trident - Critical Stun -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10450" count="1" />
+	</item>
+
+	<!-- Icarus Trident - Light -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10451" count="1" />
+	</item>
+
+	<!-- Icarus Wingblade - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10464" count="1" />
+	</item>
+
+	<!-- Icarus Wingblade - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10465" count="1" />
+	</item>
+
+	<!-- Icarus Wingblade - Light -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10466" count="1" />
+	</item>
+
+	<!-- Icarus Hall - Conversion -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10456" count="1" />
+	</item>
+
+	<!-- Icarus Disperser - Critical Damage -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10448" count="1" />
+	</item>
+
+	<!-- Icarus Disperser - Evasion -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10447" count="1" />
+	</item>
+
+	<!-- Icarus Disperser - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10446" count="1" />
+	</item>
+
+	<!-- Icarus Hall - Acumen -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10457" count="1" />
+	</item>
+
+	<!-- Icarus Hall - Mana Up -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10455" count="1" />
+	</item>
+
+	<!-- Icarus Dual Sword -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10415" count="1" />
+	</item>
+
+	<!-- Icarus Dual Daggers -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="13883" count="1" />
+	</item>
+
+
+	<!-- Dynasty Phantom - Acumen -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9860" count="1" />
+	</item>
+
+	<!-- Dynasty Phantom - Conversion -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9862" count="1" />
+	</item>
+
+	<!-- Dynasty Phantom - Mana Up -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9861" count="1" />
+	</item>
+
+	<!-- Dynasty Sword - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9854" count="1" />
+	</item>
+
+	<!-- Dynasty Sword - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9855" count="1" />
+	</item>
+
+	<!-- Dynasty Sword - Light -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9856" count="1" />
+	</item>
+
+	<!-- Dynasty Rapier - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9377" count="1" />
+	</item>
+
+	<!-- Dynasty Rapier - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9378" count="1" />
+	</item>
+
+	<!-- Dynasty Rapier - Light -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9379" count="1" />
+	</item>
+
+	<!-- Dynasty Halberd - Anger -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9869" count="1" />
+	</item>
+
+	<!-- Dynasty Halberd - Critical Stun -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9870" count="1" />
+	</item>
+
+	<!-- Dynasty Halberd - Light -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9871" count="1" />
+	</item>
+
+	<!-- Dynasty Bagh-Nakh - Haste -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9880" count="1" />
+	</item>
+
+	<!-- Dynasty Bagh-Nakh - Rsk. Evasion -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9878" count="1" />
+	</item>
+
+	<!-- Dynasty Bagh-Nakh - Rsk. Haste -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9879" count="1" />
+	</item>
+
+	<!-- Dynasty Knife - Critical Damage -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9868" count="1" />
+	</item>
+
+	<!-- Dynasty Knife - Evasion -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9867" count="1" />
+	</item>
+
+	<!-- Dynasty Knife - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9866" count="1" />
+	</item>
+
+	<!-- Dynasty Crossbow - Cheap Shot -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9385" count="1" />
+	</item>
+
+	<!-- Dynasty Crossbow - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9387" count="1" />
+	</item>
+
+	<!-- Dynasty Crossbow - Guidance -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9386" count="1" />
+	</item>
+
+	<!-- Dynasty Bow - Cheap Shot -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9863" count="1" />
+	</item>
+
+	<!-- Dynasty Bow - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9865" count="1" />
+	</item>
+
+	<!-- Dynasty Cudgel - Anger -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9872" count="1" />
+	</item>
+
+	<!-- Dynasty Cudgel - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9873" count="1" />
+	</item>
+
+	<!-- Dynasty Cudgel - Rsk. Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9874" count="1" />
+	</item>
+
+	<!-- Dynasty Blade - Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9857" count="1" />
+	</item>
+
+	<!-- Dynasty Blade - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9858" count="1" />
+	</item>
+
+	<!-- Dynasty Blade - Light -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="9859" count="1" />
+	</item>
+
+	<!-- Dynasty Staff - Acumen -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10529" count="1" />
+	</item>
+
+	<!-- Dynasty Staff - Conversion -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10528" count="1" />
+	</item>
+
+	<!-- Dynasty Staff - Mana Up -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10527" count="1" />
+	</item>
+
+	<!-- Dynasty Crusher - Anger -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10530" count="1" />
+	</item>
+
+	<!-- Dynasty Crusher - Health -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10531" count="1" />
+	</item>
+
+	<!-- Dynasty Crusher - Rsk. Focus -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10532" count="1" />
+	</item>
+	<!-- dynasty dual sword -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="10004" count="1" />
+	</item>
+
+	<!-- Dynasty dual dagger -->
+	<item>
+		<ingredient id="23030" count="1000" />
+		<production id="13882" count="1" />
+	</item>
+
+
+</list>

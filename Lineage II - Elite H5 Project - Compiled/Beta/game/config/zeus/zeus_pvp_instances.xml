@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<instance enabled="false" />
+
+	<zone id="1" enable="true" type="INDIVIDUAL" name="Talking" canSeeDressme="true" transform="false" blockchat="false" partys="false" clan="false" minutes="3" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="-107449,242401,-3514" />
+		<set name="spot_2" value="-104237,246119,-3483" />
+		<set name="spot_3" value="-106041,237308,-3651" />
+		<set name="spot_4" value="-101621,239121,-3435" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,80000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,80" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<prohibited_item_id value = "" />
+		<allowed_classes_id value = "" /> <!-- Just if the Zone type is CLASSES -->
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="true">
+			<set name="id_raid" value="70013,70014" />
+			<set name="second_delay_to_show_after_instance_start" value="70" />
+			<set name="spawn" value="-106041,237308,-3651" />
+		</npc_raid>
+	</zone>
+	<zone id="2" enable="true" type="INDIVIDUAL" name="Antharas" canSeeDressme="true" transform="false" blockchat="false" partys="false" clan="false" minutes="3" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="179836,117687,-7703" />
+		<set name="spot_2" value="179476,111667,-7703" />
+		<set name="spot_3" value="179712,117594,-7708" />
+		<set name="spot_4" value="175677,117719,-7708" />
+		<set name="spot_5" value="175566,111910,-7708" />
+		<set name="spot_6" value="174076,114773,-7708" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,800000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,80" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="4,5,6" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="40,50,60" />
+		</npc_raid>
+	</zone>
+	<zone id="3" enable="true" type="INDIVIDUAL" name="Dinos" canSeeDressme="true" transform="false" blockchat="false" partys="false" clan="false" minutes="3" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="5731,-21689,-3356" />
+		<set name="spot_2" value="2705,-14426,-3396" />
+		<set name="spot_3" value="6113,-11111,-3633" />
+		<set name="spot_4" value="7735,-16383,-3655" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,800000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,80" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="0" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="0,0,0" />
+		</npc_raid>
+	</zone>
+
+	<zone id="1" enable="true" type="CLASSES" name="Talking" canSeeDressme="true" transform="true" blockchat="true" partys="false" clan="false" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="-107449,242401,-3514" />
+		<set name="spot_2" value="-104237,246119,-3483" />
+		<set name="spot_3" value="-106041,237308,-3651" />
+		<set name="spot_4" value="-101621,239121,-3435" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<prohibited_item_id value = "" />
+		<allowed_classes_id value = "88,89,90,91,92,93,94,95,96,99,100,101,102,103,104,106,107,108,109,110,111,113,114,115,117,118,131,132,133,134" /> <!-- Just if the Zone type is CLASSES -->
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="true">
+			<set name="id_raid" value="70013,70014" />
+			<set name="second_delay_to_show_after_instance_start" value="70" />
+			<set name="spawn" value="-106041,237308,-3651" />
+		</npc_raid>
+	</zone>
+	<zone id="2" enable="true" type="CLASSES" name="Antharas" canSeeDressme="true" transform="true" blockchat="true" partys="false" clan="false" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="179836,117687,-7703" />
+		<set name="spot_2" value="179476,111667,-7703" />
+		<set name="spot_3" value="179712,117594,-7708" />
+		<set name="spot_4" value="175677,117719,-7708" />
+		<set name="spot_5" value="175566,111910,-7708" />
+		<set name="spot_6" value="174076,114773,-7708" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "88,89,90,91,92,93,94,95,96,99,100,101,102,103,104,106,107,108,109,110,111,113,114,115,117,118,131,132,133,134" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="4,5,6" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="40,50,60" />
+		</npc_raid>
+	</zone>
+	<zone id="3" enable="true" type="CLASSES" name="Dinos" canSeeDressme="true" transform="true" blockchat="true" partys="false" clan="false" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="5731,-21689,-3356" />
+		<set name="spot_2" value="2705,-14426,-3396" />
+		<set name="spot_3" value="6113,-11111,-3633" />
+		<set name="spot_4" value="7735,-16383,-3655" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "88,89,90,91,92,93,94,95,96,99,100,101,102,103,104,106,107,108,109,110,111,113,114,115,117,118,131,132,133,134" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="0" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="0,0,0" />
+		</npc_raid>
+	</zone>
+
+	<zone id="1" enable="true" type="PARTY" name="Talking" canSeeDressme="true" transform="false" blockchat="false" partys="true" clan="false" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="-107449,242401,-3514" />
+		<set name="spot_2" value="-104237,246119,-3483" />
+		<set name="spot_3" value="-106041,237308,-3651" />
+		<set name="spot_4" value="-101621,239121,-3435" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<prohibited_item_id value = "" />
+		<allowed_classes_id value = "2,5,110,111,88,89,90,91,92,93,94,95" /> <!-- Just if the Zone type is CLASSES -->
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="true">
+			<set name="id_raid" value="70013,70014" />
+			<set name="second_delay_to_show_after_instance_start" value="70" />
+			<set name="spawn" value="-106041,237308,-3651" />
+		</npc_raid>
+	</zone>
+	<zone id="2" enable="true" type="PARTY" name="Antharas" canSeeDressme="true" transform="false" blockchat="false" partys="true" clan="false" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="179836,117687,-7703" />
+		<set name="spot_2" value="179476,111667,-7703" />
+		<set name="spot_3" value="179712,117594,-7708" />
+		<set name="spot_4" value="175677,117719,-7708" />
+		<set name="spot_5" value="175566,111910,-7708" />
+		<set name="spot_6" value="174076,114773,-7708" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "2,5,110,111,88,89,90,91,92,93,94,95" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="4,5,6" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="40,50,60" />
+		</npc_raid>
+	</zone>
+	<zone id="3" enable="true" type="PARTY" name="Dinos" canSeeDressme="true" transform="false" blockchat="false" partys="true" clan="false" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="5731,-21689,-3356" />
+		<set name="spot_2" value="2705,-14426,-3396" />
+		<set name="spot_3" value="6113,-11111,-3633" />
+		<set name="spot_4" value="7735,-16383,-3655" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "2,5,110,111,88,89,90,91,92,93,94,95" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="0" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="0,0,0" />
+		</npc_raid>
+	</zone>
+
+
+	<zone id="1" enable="true" type="FREE_FOR_ALL" name="Talking" canSeeDressme="false" transform="true" blockchat="true" partys="false" clan="false" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="-107449,242401,-3514" />
+		<set name="spot_2" value="-104237,246119,-3483" />
+		<set name="spot_3" value="-106041,237308,-3651" />
+		<set name="spot_4" value="-101621,239121,-3435" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<prohibited_item_id value = "" />
+		<allowed_classes_id value = "2,5,110,111,88,89,90,91,92,93,94,95" /> <!-- Just if the Zone type is CLASSES -->
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="true">
+			<set name="id_raid" value="70013,70014" />
+			<set name="second_delay_to_show_after_instance_start" value="70" />
+			<set name="spawn" value="-106041,237308,-3651" />
+		</npc_raid>
+	</zone>
+	<zone id="2" enable="true" type="FREE_FOR_ALL" name="Antharas" canSeeDressme="true" transform="true" blockchat="true" partys="false" clan="false" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="179836,117687,-7703" />
+		<set name="spot_2" value="179476,111667,-7703" />
+		<set name="spot_3" value="179712,117594,-7708" />
+		<set name="spot_4" value="175677,117719,-7708" />
+		<set name="spot_5" value="175566,111910,-7708" />
+		<set name="spot_6" value="174076,114773,-7708" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "2,5,110,111,88,89,90,91,92,93,94,95" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="4,5,6" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="40,50,60" />
+		</npc_raid>
+	</zone>
+	<zone id="3" enable="true" type="FREE_FOR_ALL" name="Dinos" canSeeDressme="false" transform="true" blockchat="true" partys="false" clan="false" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="5731,-21689,-3356" />
+		<set name="spot_2" value="2705,-14426,-3396" />
+		<set name="spot_3" value="6113,-11111,-3633" />
+		<set name="spot_4" value="7735,-16383,-3655" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "2,5,110,111,88,89,90,91,92,93,94,95" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="0" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="0,0,0" />
+		</npc_raid>
+	</zone>
+
+
+	<zone id="1" enable="true" type="CLAN" name="Talking" canSeeDressme="true" transform="true" blockchat="true" partys="true" clan="true" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="-107449,242401,-3514" />
+		<set name="spot_2" value="-104237,246119,-3483" />
+		<set name="spot_3" value="-106041,237308,-3651" />
+		<set name="spot_4" value="-101621,239121,-3435" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<prohibited_item_id value = "" />
+		<allowed_classes_id value = "2,5,110,111,88,89,90,91,92,93,94,95" /> <!-- Just if the Zone type is CLASSES -->
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="true">
+			<set name="id_raid" value="70013,70014" />
+			<set name="second_delay_to_show_after_instance_start" value="70" />
+			<set name="spawn" value="-106041,237308,-3651" />
+		</npc_raid>
+	</zone>
+	<zone id="2" enable="true" type="CLAN" name="Antharas" canSeeDressme="true" transform="true" blockchat="true" partys="true" clan="true" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="179836,117687,-7703" />
+		<set name="spot_2" value="179476,111667,-7703" />
+		<set name="spot_3" value="179712,117594,-7708" />
+		<set name="spot_4" value="175677,117719,-7708" />
+		<set name="spot_5" value="175566,111910,-7708" />
+		<set name="spot_6" value="174076,114773,-7708" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "2,5,110,111,88,89,90,91,92,93,94,95" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="4,5,6" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="40,50,60" />
+		</npc_raid>
+	</zone>
+	<zone id="3" enable="true" type="CLAN" name="Dinos" canSeeDressme="true" transform="true" blockchat="true" partys="true" clan="true" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="5731,-21689,-3356" />
+		<set name="spot_2" value="2705,-14426,-3396" />
+		<set name="spot_3" value="6113,-11111,-3633" />
+		<set name="spot_4" value="7735,-16383,-3655" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "2,5,110,111,88,89,90,91,92,93,94,95" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="0" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="0,0,0" />
+		</npc_raid>
+	</zone>
+
+	<zone id="1" enable="true" type="DROP_ZONE" name="Dinos" canSeeDressme="true" transform="true" blockchat="true" partys="true" clan="false" minutes="4" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="false">
+		<set name="spot_1" value="5731,-21689,-3356" />
+		<set name="spot_2" value="2705,-14426,-3396" />
+		<set name="spot_3" value="6113,-11111,-3633" />
+		<set name="spot_4" value="7735,-16383,-3655" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<allowed_classes_id value = "" /> <!-- Just if the Zone type is CLASSES -->
+		<prohibited_item_id value = "" />
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="0" />
+			<set name="second_delay_to_show_after_instance_start" value="0" />
+			<set name="spawn" value="0,0,0" />
+		</npc_raid>
+		<player_drop> <!-- Work only with DROP_ZONE type -->
+			<drop item_id="57" porcent="2" minimum_amount_allowed_to_be_inside="50" required="true" />
+			<drop item_id="5575" porcent="2" minimum_amount_allowed_to_be_inside="50" required="false" />
+		</player_drop>
+	</zone>
+
+
+</list>

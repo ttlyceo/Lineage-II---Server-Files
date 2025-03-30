@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="13432" count="1" /><!-- Vesper Breastplate -->
+   <item id="13438" count="1" /><!-- Vesper Gaiters -->
+   <item id="13137" count="1" /><!-- Vesper Helmet -->
+   <item id="13439" count="1" /><!-- Vesper Gauntlet -->
+   <item id="13440" count="1" /><!-- Vesper Boots -->
+   <item id="13471" count="1" /><!-- Vesper Shield -->
+   <item id="13435" count="1" /><!-- Vesper Noble Breastplate -->
+   <item id="13448" count="1" /><!-- Vesper Noble Gaiters -->
+   <item id="13140" count="1" /><!-- Vesper Noble Helmet -->
+   <item id="13449" count="1" /><!-- Vesper Noble Gauntlet -->
+   <item id="13450" count="1" /><!-- Vesper Noble Boots -->
+</list>

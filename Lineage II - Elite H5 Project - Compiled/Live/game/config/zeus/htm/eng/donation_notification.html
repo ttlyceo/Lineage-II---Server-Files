@@ -1,0 +1,19 @@
+<html>
+	<title>Community Board</title>
+	<body>
+		<center>
+        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+			Thanks for your Donation.<br>
+			You will Receive an Email <br>
+			%EMAIL%<br>
+			Select Donation Type<br>
+			<combobox width=200 var=TIPODONACION list=%DONATION_TYPE_LIST%><br>
+			Input the Donation Quantity<br>
+			<edit type="number" var="MONTODONADO" width=150><br>
+			Input more data from your Donation
+			<multiedit var="MEMOSTR" width=250 height=80><br>
+			<button value="Send" action="bypass -h ZeuSNPC ENVIAR_NOTIFICACION $MONTODONADO $TIPODONACION $MEMOSTR" width=128 height=26 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+        </td></tr></table>
+		</center>
+	</body>
+</html>

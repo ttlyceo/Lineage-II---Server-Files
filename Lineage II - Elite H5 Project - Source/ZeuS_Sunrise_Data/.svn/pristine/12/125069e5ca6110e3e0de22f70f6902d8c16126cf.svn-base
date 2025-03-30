@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skills.xsd">
+	<skill id="35201" levels="3" name="Balance Phoenix Knight">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+	    	</for>
+	</skill>
+
+	<skill id="35202" levels="3" name="Balance Hell Knight">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35203" levels="3" name="Balance Eva's Templar">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35204" levels="3" name="Balance Shilien Templar">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35205" levels="3" name="Balance Archmage">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35206" levels="3" name="Balance Soultaker">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35207" levels="3" name="Balance Mystic Muse">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35208" levels="3" name="Balance Storm Screamer">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35209" levels="3" name="Balance Duelist">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35210" levels="3" name="Balance Titan">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35211" levels="3" name="Balance Grand Khavatari">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35212" levels="3" name="Balance Sagitarius">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35213" levels="3" name="Balance MoonLight Sentinel">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35214" levels="3" name="Balance Ghost Sentinel">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35215" levels="3" name="Balance Adventurer">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35216" levels="3" name="Balance Wind Rider">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35217" levels="3" name="Balance Ghost Hunter">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+	</skill>
+
+	<skill id="35218" levels="3" name="Balance Arcana Lord">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+
+		</for>
+	</skill>
+
+	<skill id="35219" levels="3" name="Balance Elemental Master">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35220" levels="3" name="Balance Spectral Master">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35221" levels="3" name="Balance Sword Muse">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+
+		</for>
+	</skill>
+
+	<skill id="35222" levels="3" name="Balance Spectral Dancer">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+
+		</for>
+	</skill>
+
+	<skill id="35223" levels="3" name="Balance Hierophant">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+	</skill>
+
+	<skill id="35224" levels="3" name="Balance Cardinal">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+
+		</for>
+	</skill>
+
+	<skill id="35225" levels="3" name="Balance Eva Saint">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+	</skill>
+
+	<skill id="35226" levels="3" name="Balance Shilen Saint">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+	</skill>
+
+	<skill id="35227" levels="3" name="Balance Dominator">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>
+	</skill>
+
+	<skill id="35228" levels="3" name="Balance Doomcryer">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+	</skill>
+
+	<skill id="35229" levels="3" name="Balance Fortune Seeker">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>	
+	</skill>
+
+	<skill id="35230" levels="3" name="Balance Maestro">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+		</for>	
+	</skill>
+	
+
+	<skill id="35231" levels="3" name="Balance Doombringer">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+
+		</for>
+	</skill>
+
+	<skill id="35232" levels="3" name="Balance Soulhound Male">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+
+		</for>
+	</skill>
+
+	<skill id="35233" levels="3" name="Balance Soulhound Female">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+
+		</for>
+	</skill>
+
+	<skill id="35234" levels="3" name="Balance Trickster">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+
+		</for>
+	</skill>
+
+	<skill id="35235" levels="3" name="Balance Judicator">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+
+		</for>
+	</skill>
+
+	<skill id="35236" levels="3" name="Balance Dreadnought">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+
+		</for>
+	</skill>
+
+	<skill id="35237" levels="3" name="Balance All Char">
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			
+		</for>
+	</skill>
+
+
+	<skill id="35238" levels="3" name="Balance TestSkill">
+		<set name="magicLvl" val="20" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<set stat="maxHp" val="1000" />
+			<set stat="maxMp" val="1000" />
+			<set stat="maxCp" val="100" />
+			<set stat="regHp" val="1.5" />
+			<set stat="regCp" val="1.5" />
+			<set stat="regMp" val="0" />
+			<set stat="pAtk" val="1100" />
+			<set stat="mAtk" val="1800" />
+			<set stat="pDef" val="300" />
+			<set stat="mDef" val="300" />
+			<set stat="pAtkSpd" val="600" />
+			<set stat="mAtkSpd" val="500" />
+			<set stat="rEvas" val="140" />
+			<set stat="critRate" val="150" />
+			<set stat="lethalRate" val="1" />
+			<set stat="runSpd" val="170" />
+			<set stat="STR" val="40" />
+			<set stat="CON" val="43" />
+			<set stat="DEX" val="30" />
+			<set stat="INT" val="21" />
+			<set stat="WIT" val="11" />
+			<set stat="MEN" val="25" />
+			<set stat="bowMpConsumeRate" val="0" />
+			<set stat="reflectDam" val="0" />
+			<set stat="reflectSkillMagic" val="0" />
+			<set stat="reflectSkillPhysic" val="0" />
+			<set stat="vengeanceMdam" val="0" />
+			<set stat="vengeancePdam" val="0" />
+			<set stat="absorbDam" val="0" />
+			<set stat="transDam" val="0" />
+			<mul stat="maxHp" val="1" />
+			<add stat="pAtk" val="1" />
+		</for>
+	</skill>
+</list>

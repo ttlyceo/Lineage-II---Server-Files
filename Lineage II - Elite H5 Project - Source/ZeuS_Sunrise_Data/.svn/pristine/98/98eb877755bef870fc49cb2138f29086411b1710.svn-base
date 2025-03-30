@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="15558" count="1" /><!-- Periel Sword -->
+   <item id="15567" count="1" /><!-- Veniplant Sword -->
+   <item id="15569" count="1" /><!-- Gemtail Rapier -->
+</list>

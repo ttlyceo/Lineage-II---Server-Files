@@ -1,0 +1,83 @@
+Index: src/ZeuS/Config/general.java
+===================================================================
+--- src/ZeuS/Config/general.java	(revision 20)
++++ src/ZeuS/Config/general.java	(working copy)
+@@ -2488,7 +2488,7 @@
+ 				case "SERVER_NAME":
+ 					Server_Name = rss.getString(2);
+ 					if(Server_Name.indexOf(" ")>0){
+-						NOMBRE_NPC = Server_Name.split(" ")[0];
++						NOMBRE_NPC = Server_Name; //Server_Name.split(" ")[0];
+ 					}else{
+ 						NOMBRE_NPC = Server_Name;
+ 					}
+Index: src/ZeuS/Comunidad/Engine.java
+===================================================================
+--- src/ZeuS/Comunidad/Engine.java	(revision 19)
++++ src/ZeuS/Comunidad/Engine.java	(working copy)
+@@ -177,7 +177,7 @@
+ 
+ 		/***/
+ 			/*** Solo Falses */
+-		_btnImaLink.add("False:icon.skill6280:Clases Stadistic:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";" + Engine.enumBypass.ClasesStadistic.name() + ";0;Human;0;0;0;0:null");
++		_btnImaLink.add("False:icon.skill6280:Class Stadistic:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";" + Engine.enumBypass.ClasesStadistic.name() + ";0;Human;0;0;0;0:null");
+ 		_btnImaLink.add("False:icon.skill0390:Donation:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";" + Engine.enumBypass.donation.name() + ";0;0;0;0;0;0:null");
+ 		_btnImaLink.add("False:icon.skill5662:GM List:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";" + Engine.enumBypass.gmlist.name() + ";0;0;0;0;0;0:null");
+ 		_btnImaLink.add("False:icon.skill5081:Oly Buff:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";" + Engine.enumBypass.OlyBuffer.name() + ";0;0;0;0;0;0:null");
+Index: src/ZeuS/Comunidad/Comunidad.java
+===================================================================
+--- src/ZeuS/Comunidad/Comunidad.java	(revision 19)
++++ src/ZeuS/Comunidad/Comunidad.java	(working copy)
+@@ -264,7 +264,7 @@
+ 	}
+ 
+ 	private static void getBugReportWindows(L2PcInstance player, int idBugReport){
+-		String retorno = "<html><title>ZeuS Engine Bug Report</title><body>";
++		String retorno = "<html><title>"+ general.NOMBRE_NPC +" Bug Report</title><body>";
+ 		retorno += central.LineaDivisora(1)+central.headFormat("Bug Report",cbManager.getFontColor(cbManager.enumColor.Naranjo_Claro.name())) + central.LineaDivisora(1) + central.LineaDivisora(3);
+ 		String formatoCabezera = "<table width=270 align=center bgColor=%COLOR%><tr><td width=135 align=CENTER>%TITULO%</td><td width=135 align=CENTER>%DATO%</td></table>" + central.LineaDivisora(1);
+ 		String formatoMensaje = "<table width=270 align=center bgColor=%COLOR%><tr><td width=270 align=CENTER fixwidth=270>%DATO%</td></table>" + central.LineaDivisora(1);
+Index: src/ZeuS/Comunidad/EngineForm/v_RaidBossInfo.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_RaidBossInfo.java	(revision 20)
++++ src/ZeuS/Comunidad/EngineForm/v_RaidBossInfo.java	(working copy)
+@@ -303,7 +303,7 @@
+ 				String MIN = opera.getFormatNumbers( Dat.getMin() );
+ 				String MAX = opera.getFormatNumbers( Dat.getMax() );
+ 				String CHANCE = Dat.getChanceSTR();
+-				String CATE = Dat.isDrop() ? "DROP" : "SWEET";
++				String CATE = Dat.isDrop() ? "DROP" : "SWEED";
+ 				if(contador==0){
+ 					DropData +="<tr>";
+ 				}
+@@ -655,7 +655,7 @@
+ 				String MIN = opera.getFormatNumbers(Dat.getMin());
+ 				String MAX = opera.getFormatNumbers(Dat.getMax());
+ 				String CHANCE = Dat.getChanceSTR();
+-				String CATE = Dat.isDrop() ? "DROP" : "SWEET";
++				String CATE = Dat.isDrop() ? "DROP" : "SWEED";
+ 				if(contador==0){
+ 					Retorno +="<tr>";
+ 				}
+@@ -770,7 +770,7 @@
+ 				String MIN = opera.getFormatNumbers(Dat.getMin() );
+ 				String MAX = opera.getFormatNumbers(Dat.getMax() );
+ 				String CHANCE = Dat.getChanceSTR();
+-				String CATE = Dat.isDrop() ? "DROP" : "SWEET";
++				String CATE = Dat.isDrop() ? "DROP" : "SWEED";
+ 				if(contador==0){
+ 					DropData +="<tr>";
+ 				}
+Index: src/ZeuS/Comunidad/EngineForm/v_dropsearch.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_dropsearch.java	(revision 20)
++++ src/ZeuS/Comunidad/EngineForm/v_dropsearch.java	(working copy)
+@@ -111,7 +111,7 @@
+ 				String MIN = opera.getFormatNumbers(Dat.getMin() );
+ 				String MAX = opera.getFormatNumbers(Dat.getMax() );
+ 				String CHANCE = Dat.getChanceSTR();
+-				String CATE = Dat.isDrop() ? "DROP" : "SWEET";
++				String CATE = Dat.isDrop() ? "DROP" : "SWEED";
+ 				if(contador==0){
+ 					DropData +="<tr>";
+ 				}

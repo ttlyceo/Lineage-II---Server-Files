@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+ 
+   <item id="7695" count="1" /> <!-- Forget-me-not Hairpin -->
+   <item id="7696" count="1" /> <!-- Daisy Hairpin -->
+   <item id="7682" count="1" /> <!-- Maiden's Hairpin -->
+   <item id="8916" count="1" /> <!-- Eye Patch -->
+   <item id="8915" count="1" /> <!-- Luxurious Silver Circlet -->
+   <item id="8914" count="1" /> <!-- Luxurious Gold Circlet -->
+   <item id="8913" count="1" /> <!-- Butterfly Hairpin -->
+   <item id="8917" count="1" /> <!-- Goddess Circlet -->
+   <item id="8918" count="1" /> <!-- Leather Cap -->
+   <item id="8569" count="1" /> <!-- Half Face Mask -->
+   <item id="8912" count="1" /> <!-- Single Stem Flower -->
+   <item id="8923" count="1" /> <!-- Scar -->
+   <item id="8922" count="1" /> <!-- Pirate Hat -->
+   <item id="8921" count="1" /> <!-- Demon Circlet -->
+   <item id="8920" count="1" /> <!-- Angel Halo -->
+   <item id="10244" count="1" /> <!-- White Sheep Hat -->
+   <item id="10245" count="1" /> <!-- Black Sheep Hat -->
+   <item id="10246" count="1" /> <!-- Frog Hat -->
+   <item id="10247" count="1" /> <!-- Fish Hat -->
+   <item id="10248" count="1" /> <!-- Straw Hat -->
+   <item id="10249" count="1" /> <!-- Chicken Hat -->
+   <item id="6846" count="1" /> <!-- Monocle -->
+   <item id="8185" count="1" /> <!-- Feathered Hat -->
+   <item id="5808" count="1" /> <!-- Party Mask -->
+   <item id="6394" count="1" /> <!-- Red Party Mask -->
+   <item id="7681" count="1" /> <!-- Outlaw's Eyepatch -->
+   <item id="6844" count="1" /> <!-- Lady's Hair Pin -->
+   <item id="7683" count="1" /> <!-- Rabbit Ears -->
+   <item id="7680" count="1" /> <!-- Raccoon Ears -->
+   <item id="8189" count="1" /> <!-- Fairy Antennae -->
+   <item id="8188" count="1" /> <!-- Little Angel Wings -->
+   <item id="8186" count="1" /> <!-- Artisan's Goggles -->
+   <item id="8564" count="1" /> <!-- Dapper Cap -->
+   <item id="10251" count="1" /> <!-- Medieval Party Mask -->
+   <item id="13514" count="1" /> <!-- Improved Mining Hat -->
+   <item id="13503" count="1" /> <!-- Refined Medieval Style Party Mask -->
+   <item id="13501" count="1" /> <!-- Refined Romantic Chapeau -->
+
+</list>

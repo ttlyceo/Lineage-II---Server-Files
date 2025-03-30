@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="New Arena 2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
+	<doorlist>
+		<door doorId="17100022" />
+		<door doorId="17100010" />
+	</doorlist>
+	<spawnlist>
+		<group name="general">
+			<spawn npcId="36402" x="-88779" y="-249177" z="-8180" heading="0" respawn="60" />
+			<spawn npcId="36402" x="-86039" y="-249175" z="-8180" heading="0" respawn="60" />
+		</group>
+	</spawnlist>
+</instance>

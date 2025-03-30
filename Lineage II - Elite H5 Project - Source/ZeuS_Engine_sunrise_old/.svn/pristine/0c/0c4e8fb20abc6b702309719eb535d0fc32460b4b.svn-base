@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="">
+	<config>
+		<set name="heal_price" descript="Price to use heal" value="60000" />
+		<set name="cancel_price" descript="Price to use buff cancel" value="80000" />
+		<set name="use_on_peace_zone_only" descript="If you want to use just on peace zone, set on true" value="false" />
+		<set name="use_on_instances" descript="Is you want to use on instances, set on true" value="true" />
+		<set name="heal_and_cancel_peace_zone_only" descript="If you want use just in peace zone, set on true" value="true" />
+		<set name="heal_and_cancel_in_combat_mode" descript="If can heal or cancel a player in combat mode" value="false" />
+		<set name="heal_and_cancel_in_flag_mode" descript="If can heal or cancel a player in flag mode" value="false" />
+		<set name="use_scheme_combat_mode" descript="If can use scheme a player in combat mode" value="false" />
+		<set name="use_scheme_flag_mode" descript="If can use scheme in flag mode" value="false" />
+		<set name="id_item_requested" descript="Please enter the Item to request" value="57" />
+		<set name="max_scheme_pour_player" value="4" descript="Max scheme pour each player" />
+	</config>
+	<buffer id="1" name="Buffs" pricesingle="15000" minlvl="0" active="true" use_in_flag_mode="false" use_with_karma="false" use_in_combat_mode="false" icon="icon.skill1062">
+		<set id="1043" name="Holy Weapon" descript="Increases divine P. Atk. by 20" level="1" active="true" forpremium="false" />
+		<set id="1044" name="Regeneration" descript="Increases HP Regeneration by 20%" level="3" active="true" forpremium="false" />
+		<set id="1045" name="Bless the Body" descript="Increases Max HP by 35%" level="6" active="true" forpremium="false" />
+		<set id="1048" name="Bless the Soul" descript="Increases Max MP by 35%" level="6" active="true" forpremium="false" />
+		<set id="1059" name="Empower" descript="Increases M. Atk. by 75%" level="3" active="true" forpremium="false" />
+		<set id="1062" name="Berserker Spirit" descript="A powerful spirit acts" level="2" active="true" forpremium="false" />
+		<set id="1068" name="Might" descript="Increases P. Atk. by 15%" level="3" active="true" forpremium="false" />
+		<set id="1077" name="Focus" descript="Increases critical rate by 30%" level="3" active="true" forpremium="false" />
+		<set id="1085" name="Acumen" descript="Increases Casting Spd. by 30%" level="3" active="true" forpremium="false" />
+		<set id="1086" name="Haste" descript="Increases Atk. Spd. by 33%" level="2" active="true" forpremium="false" />
+		<set id="1087" name="Agility" descript="Increases evasion by 4" level="3" active="true" forpremium="false" />
+		<set id="1204" name="Wind Walk" descript="Increases movement speed by 20" level="2" active="true" forpremium="false" />
+		<set id="1240" name="Guidance" descript="Increases accuracy by 4" level="3" active="true" forpremium="false" />
+		<set id="1242" name="Death Whisper" descript="Increases critical power by 35%" level="3" active="true" forpremium="false" />
+		<set id="1243" name="Bless Shield" descript="Increases shield def. rate by 15%" level="6" active="true" forpremium="false" />
+		<set id="1268" name="Vampiric Rage" descript="Drain 9% enemy HP by hit" level="4" active="true" forpremium="false" />
+		<set id="1303" name="Wild Magic" descript="Increases magic dmg rate by 2" level="2" active="true" forpremium="false" />
+		<set id="1388" name="Greater Might" descript="Increases P. Atk. by 10%" level="3" active="true" forpremium="false" />
+		<set id="1397" name="Clarity" descript="Decreases MP consumption" level="3" active="true" forpremium="false" />
+	</buffer>
+	
+	<buffer id="2" name="Resist" pricesingle="15000" minlvl="0" active="true" use_in_flag_mode="false" use_with_karma="false" use_in_combat_mode="false" icon="icon.skill1191">
+		<set id="1035" name="Mental Shield" descript="Increases resist to hold/sleep" level="4" active="true" forpremium="false" />
+		<set id="1036" name="Magic Barrier" descript="Increases M. Def. by 30%" level="2" active="true" forpremium="false" />
+		<set id="1040" name="Shield" descript="Increases P. Def. by 15%" level="3" active="true" forpremium="false" />
+		<set id="1078" name="Concentration" descript="Decrases magic cancel dmg. by 53" level="6" active="true" forpremium="false" />
+		<set id="1304" name="Advanced Block" descript="Increases shield defence by 50%" level="3" active="true" forpremium="false" />
+		<set id="1352" name="Elemental Protection" descript="Resist to fire/water/wind/earth" level="1" active="true" forpremium="false" />
+		<set id="1353" name="Divine Protection" descript="Increases resistance to divine by 30" level="1" active="true" forpremium="false" />
+		<set id="1354" name="Arcane Protection" descript="Increases resist to cancel by 30" level="1" active="true" forpremium="false" />
+		<set id="1389" name="Greater Shield" descript="Increases P. Def. by 15%" level="3" active="true" forpremium="false" />
+		<set id="1032" name="Invigor" descript="Increases resistance to bleed by 50%" level="1" active="true" forpremium="false" />
+		<set id="1032" name="Invigor" descript="Increases resistance to bleed by 50%" level="330" active="true" forpremium="true" />	
+		<set id="1033" name="Resist Poison" descript="Increases resist to poison by 50" level="1" active="true" forpremium="false" />
+		<set id="1182" name="Resist Aqua" descript="Increases resistance to water by 20" level="1" active="true" forpremium="false" />
+		<set id="1189" name="Resist Wind" descript="Increases resistance to wind by 20" level="1" active="true" forpremium="false" />
+		<set id="1191" name="Resist Fire" descript="Increases resistance to fire by 20" level="1" active="true" forpremium="false" />
+		<set id="1259" name="Resist Shock" descript="Increases resistance to stun by 20" level="1" active="true" forpremium="false" />
+		<set id="1392" name="Resist Holy" descript="Increases resistance to divine by 30" level="1" active="true" forpremium="false" />
+		<set id="1393" name="Resist Dark" descript="Increases resistance to dark by 30" level="1" active="true" forpremium="false" />
+		<set id="1033" name="Resist Poison" descript="Increases resist to poison by 50" level="315" active="true" forpremium="true" />
+		<set id="1182" name="Resist Aqua" descript="Increases resistance to water by 20" level="330" active="true" forpremium="true" />
+		<set id="1189" name="Resist Wind" descript="Increases resistance to wind by 20" level="330" active="true" forpremium="true" />
+		<set id="1191" name="Resist Fire" descript="Increases resistance to fire by 20" level="330" active="true" forpremium="true" />
+		<set id="1259" name="Resist Shock" descript="Increases resistance to stun by 20" level="330" active="true" forpremium="true" />
+		<set id="1392" name="Resist Holy" descript="Increases resistance to divine by 30" level="130" active="true" forpremium="true" />
+		<set id="1393" name="Resist Dark" descript="Increases resistance to dark by 30" level="130" active="true" forpremium="true" />
+	</buffer>
+	
+	<buffer id="3" name="Special" pricesingle="15000" minlvl="0" active="true" use_in_flag_mode="false" use_with_karma="false" use_in_combat_mode="false" icon="icon.skill1357">
+		<set id="982" name="Combat Aura" descript="Increases P. Atk. and Atk. Spd by 5%" level="1" active="true" forpremium="false" />
+		<set id="1232" name="Blazing Skin" descript="Transfer 20% of receive damage" level="3" active="true" forpremium="false" />
+		<set id="1238" name="Freezing Skin" descript="Transfer 20% of receive damage" level="3" active="true" forpremium="false" />
+		<set id="825" name="Sharp Edge" descript="Increases P. Atk. and critical rate" level="1" active="true" forpremium="false" />
+		<set id="826" name="Spike" descript="Increases P. Atk. and shock weight" level="1" active="true" forpremium="false" />
+		<set id="827" name="Restring" descript="Increases P. Atk. and shoot range" level="1" active="true" forpremium="false" />
+		<set id="828" name="Case Harden" descript="Increases P. Def. by 10%" level="1" active="true" forpremium="false" />
+		<set id="829" name="Hard Tanning" descript="Increases P. Def. and evasion" level="1" active="true" forpremium="false" />
+		<set id="830" name="Embroider" descript="Increases P. Def. and MP recov.rate" level="1" active="true" forpremium="false" />
+		<set id="1323" name="Noblesse Blessing" descript="The blessing of noblesse" level="1" active="true" forpremium="false" />
+		<set id="1542" name="Counter Critical" descript="Increases P. Def. against criticals" level="1" active="true" forpremium="false" />
+		<set id="4699" name="Blessing of the Queen" descript="Increases crit. rate and power" level="1" active="true" forpremium="false" />
+		<set id="4700" name="Gift of the Queeen" descript="Increases P. Atk. and accuracy" level="1" active="true" forpremium="false" />
+		<set id="4702" name="Blessing of Seraphim" descript="Increases MP regeneration" level="1" active="true" forpremium="false" />
+		<set id="4703" name="Gift of Seraphim" descript="Reduces magic skill recovery time" level="1" active="true" forpremium="false" />
+		<set id="1355" name="Prophecy of Water" descript="A powerful spirit acts" level="1" active="true" forpremium="false" />
+		<set id="1356" name="Prophecy of Fire" descript="A powerful spirit acts" level="1" active="true" forpremium="false" />
+		<set id="1357" name="Prophecy of Wind" descript="A powerful spirit acts" level="1" active="true" forpremium="false" />
+		<set id="1363" name="Chant of Victory" descript="A powerful spirit acts" level="1" active="true" forpremium="false" />
+	</buffer>
+	
+	<buffer id="4" name="Chant" pricesingle="15000" minlvl="0" active="true" use_in_flag_mode="false" use_with_karma="false" use_in_combat_mode="false" icon="icon.skill1362">
+		<set id="1002" name="Flame Chant" descript="Increases Casting Spd. by 30%" level="1" active="true" forpremium="false" />
+		<set id="1003" name="Pa'agrian Gift" descript="Increases P. Atk. by 15%" level="1" active="true" forpremium="false" /> 
+		<set id="1004" name="The Wisdom of Pa'agrio" descript="Increases Cast. Spd. by 30%" level="1" active="true" forpremium="false" /> 
+		<set id="1005" name="Blessings of Pa'agrio" descript="Increases P. Def. by 15%" level="1" active="true" forpremium="false" /> 
+		<set id="1006" name="Chant of Fire" descript="Increases M. Def. by 30%" level="1" active="true" forpremium="false" />
+		<set id="1007" name="Chant of Battle" descript="Increases P. Atk. by 15%" level="1" active="true" forpremium="false" />
+		<set id="1008" name="The Glory of Pa'agrio" descript="Increases M. Def. by 30%" level="1" active="true" forpremium="false" /> 
+		<set id="1009" name="Chant of Shielding" descript="Increases P. Def. by 15%" level="1" active="true" forpremium="false" />
+		<set id="1249" name="The Vision of Pa'agrio" descript="Increases accuracy by 4" level="1" active="true" forpremium="false" /> 
+		<set id="1250" name="Shield of Pa'agrio" descript="Increases shield def. rate by 50%" level="1" active="true" forpremium="false" /> 
+		<set id="1251" name="Chant of Fury" descript="Increases Atk. Spd. by 33%" level="1" active="true" forpremium="false" />
+		<set id="1252" name="Chant of Evasion" descript="Increases evasion by 4" level="1" active="true" forpremium="false" />
+		<set id="1253" name="Chant of Rage" descript="Increases critical power by 35%" level="1" active="true" forpremium="false" />
+		<set id="1260" name="The Tact of Pa'agrio" descript="Increases evasion by 4" level="1" active="true" forpremium="false" /> 
+		<set id="1261" name="Rage of Pa'agrio" descript="A powerful spirit acts" level="1" active="true" forpremium="false" /> 
+		<set id="1282" name="Pa'agrian Haste" descript="Increases movement speed by 20" level="1" active="true" forpremium="false" /> 
+		<set id="1284" name="Chant of Revenge" descript="Transfer 20% received damage" level="1" active="true" forpremium="false" />
+		<set id="1308" name="Chant of Predator" descript="Increases critical rate by 30%" level="1" active="true" forpremium="false" />
+		<set id="1309" name="Chant of Eagle" descript="Increases accuracy by 4" level="1" active="true" forpremium="false" />
+		<set id="1310" name="Chant of Vampire" descript="Drain 9% enemy HP by hit" level="1" active="true" forpremium="false" />
+		<set id="1362" name="Chant of Spirit" descript="Resist to cancel/de-buffs by 20/30" level="1" active="true" forpremium="false" />
+		<set id="1364" name="Eye of Pa'agrio" descript="Increases accuracy by 4" level="1" active="true" forpremium="false" />
+		<set id="1365" name="Soul of Pa'agrio" descript="Increases M. Atk. by 75%" level="1" active="true" forpremium="false" /> 
+		<set id="1390" name="War Chant" descript="Increases P. Atk. by 10%" level="1" active="true" forpremium="false" />
+		<set id="1391" name="Earth Chant" descript="Increases P. Def. by 15%" level="1" active="true" forpremium="false" />
+		<set id="1413" name="Magnus' Chant" descript="A powerful spirit acts" level="1" active="true" forpremium="false" />
+		<set id="1414" name="Victory of Pa'agrio" descript="A powerful spirit acts" level="1" active="true" forpremium="false" />
+		<set id="1415" name="Pa'agrio's Emblem" descript="Increases resist to cancel by 30%" level="1" active="true" forpremium="false" />
+		<set id="1416" name="Pa'agrio's Fist" descript="Increases Max CP by 800" level="1" active="true" forpremium="false" />
+		<set id="1461" name="Chant of Protection" descript="Decreases critical dmg received" level="1" active="true" forpremium="false" />
+		<set id="1519" name="Chant of Blood Awakening" descript="Increases Atk.Spd 33% and drain 9%" level="1" active="true" forpremium="false" />
+		<set id="1535" name="Chant of Movement" descript="Increases Speed and Evasion" level="1" active="true" forpremium="false" />
+
+	</buffer>
+	
+	<buffer id="5" name="Dance" pricesingle="15000" minlvl="0" active="true" use_in_flag_mode="false" use_with_karma="false" use_in_combat_mode="false" icon="icon.skill0366">
+		<set id="271" name="Dance of the Warrior" descript="Increases the P. Atk. by 12%" level="1" active="true" forpremium="false" />
+		<set id="272" name="Dance of Inspiration" descript="Increases the accuracy by 4" level="1" active="true" forpremium="false" />
+		<set id="273" name="Dance of the Mystic" descript="Increases the M. Atk. by 20%" level="1" active="true" forpremium="false" />
+		<set id="274" name="Dance of Fire" descript="Increases the critical by 35%" level="1" active="true" forpremium="false" />
+		<set id="275" name="Dance of Fury" descript="Increases the Atk. Spd. by 15%" level="1" active="true" forpremium="false" />
+		<set id="276" name="Dance of Concentration" descript="Increases the Cast. Spd. by 30%" level="1" active="true" forpremium="false" />
+		<set id="277" name="Dance of Light" descript="Increases divine P. Atk. by 20" level="1" active="true" forpremium="false" />
+		<set id="307" name="Dance of Aqua Guard" descript="Icreases resist to water by 30" level="1" active="true" forpremium="false" />
+		<set id="309" name="Dance of Earth Guard" descript="Increases resist to earth by 30" level="1" active="true" forpremium="false" />
+		<set id="310" name="Dance of the Vampire" descript="Drain 8% enemy HP by hit" level="1" active="true" forpremium="false" />
+		<set id="311" name="Dance of Protection" descript="Increases resist to cancel by 30" level="1" active="true" forpremium="false" />
+		<set id="365" name="Dance of Siren" descript="Increases magic critical rate" level="1" active="true" forpremium="false" />
+		<set id="366" name="Dance of Shadows" descript="Prevents from being attacked" level="1" active="true" forpremium="false" />
+		<set id="530" name="Dance of Alignment" descript="Increases resist to dark/divine by 30" level="1" active="true" forpremium="false" />
+		<set id="915" name="Dance of Berserker" descript="A powerfull spirit acts" level="1" active="true" forpremium="false" />
+	</buffer>
+	
+	<buffer id="6" name="Song" pricesingle="15000" minlvl="0" active="true" use_in_flag_mode="false" use_with_karma="false" use_in_combat_mode="false" icon="icon.skill0308">
+		<set id="264" name="Song of Earth" descript="Increases the P. Def. by 25%" level="1" active="true" forpremium="false" />
+		<set id="265" name="Song of Life" descript="Increases HP Regeneration by 20%" level="1" active="true" forpremium="false" />
+		<set id="266" name="Song of Water" descript="Increases evasion by 3" level="1" active="true" forpremium="false" />
+		<set id="267" name="Song of Warding" descript="Increases M. Def. by 30%" level="1" active="true" forpremium="false" />
+		<set id="268" name="Song of Wind" descript="Increases movement speed by 20" level="1" active="true" forpremium="false" />
+		<set id="269" name="Song of Hunter" descript="Increases critical rate by 100%" level="1" active="true" forpremium="false" />
+		<set id="270" name="Song of Invocation" descript="Increases resistance to dark by 20" level="1" active="true" forpremium="false" />
+		<set id="304" name="Song of Vitality" descript="Increases Max HP by 30%" level="1" active="true" forpremium="false" />
+		<set id="305" name="Song of Vengeance" descript="Abillity to transfer 20% dmg back" level="1" active="true" forpremium="false" />
+		<set id="306" name="Song of Flame Guard" descript="Increases resistance to fire by 30" level="1" active="true" forpremium="false" />
+		<set id="308" name="Song of Storm Guard" descript="Increases resistance to wind by 30" level="1" active="true" forpremium="false" />
+		<set id="349" name="Song of Renewal" descript="Decreases re-use time by 20%" level="1" active="true" forpremium="false" />
+		<set id="363" name="Song of Meditation" descript="Increases MP Regeneration by 20%" level="1" active="true" forpremium="false" />
+		<set id="364" name="Song of Champion" descript="Increases physical re-use by 10%" level="1" active="true" forpremium="false" />
+		<set id="529" name="Song of Elemental" descript="Resistance to fire/water/wind/earth" level="1" active="true" forpremium="false" />
+		<set id="914" name="Song of Purification" descript="Resistance to de-buff attacks by 80%" level="1" active="true" forpremium="false" />
+
+	</buffer>
+	
+	<buffer id="7" name="Other" pricesingle="15000" minlvl="0" active="true" use_in_flag_mode="false" use_with_karma="false" use_in_combat_mode="false" icon="icon.skill1307">
+		<set id="1307" name="Prayer" descript="Increases HP Recovery magic by 12%" level="3" active="true" forpremium="false" />
+		<set id="1460" name="Mana Gain" descript="Increases recharge power by 85" level="1" active="true" forpremium="false" />
+		<set id="1499" name="Improved Combat" descript="Increases P. Att. and P.Def. by 15%" level="1" active="true" forpremium="false" />
+		<set id="1500" name="Improved Magic" descript="Increases M. Att. and M. Def." level="1" active="true" forpremium="false" />
+		<set id="1501" name="Improved Condition" descript="Increases Max HP and MP by 35%" level="1" active="true" forpremium="false" />
+		<set id="1502" name="Improved Critical Attack" descript="Increases critical rate and dmg" level="1" active="true" forpremium="false" />
+		<set id="1503" name="Improved Shield Defense" descript="Increases shield defence" level="1" active="true" forpremium="false" />
+		<set id="1504" name="Improved Movement" descript="Increases speed and evasion" level="1" active="true" forpremium="false" />
+		<set id="1536" name="Combat of Pa'agrio" descript="Increases P. Att. and P. Def. by 15%" level="1" active="true" forpremium="false" />
+		<set id="1537" name="Critical of Pa'agrio" descript="Increases Critical Rate and Damage" level="1" active="true" forpremium="false" />
+		<set id="1538" name="Condition of Pa'agrio" descript="Increases Max HP and MP by 35%" level="1" active="true" forpremium="false" />
+		<set id="1311" name="Body of Avatar" descript="Increases Max Hp by 35%" level="6" active="true" forpremium="false" />
+	</buffer>
+	
+	<icons>
+		<set icon="skill0284" />
+		<set icon="skill0285" />
+		<set icon="skill0286" />
+		<set icon="skill0287" />
+		<set icon="skill0288" />
+		<set icon="skill0294" />
+		<set icon="skill0295" />
+		<set icon="skill0296" />
+		<set icon="skill0297" />
+		<set icon="skill0302" />
+		<set icon="skill0303" />
+		<set icon="skill0314" />
+		<set icon="skill0315" />
+		<set icon="skill0318" />
+		<set icon="skill0319" />
+		<set icon="skill0325" />
+		<set icon="skill0335" />
+		<set icon="skill0338" />
+		<set icon="skill0340" />
+		<set icon="skill0350" />
+		<set icon="skill0406" />
+		<set icon="skill0413" />
+		<set icon="skill0416" />
+		<set icon="skill0419" />
+		<set icon="skill0420" />
+		<set icon="skill0422" />
+		<set icon="skill0423" />
+		<set icon="skill0424" />
+		<set icon="skill0429" />
+		<set icon="skill0430" />
+		<set icon="skill0431" />
+		<set icon="skill0432" />
+		<set icon="skill0434" />
+		<set icon="skill0436" />
+		<set icon="skill0439" />
+		<set icon="skill0440" />
+		<set icon="skill0456" />
+		<set icon="skill0457" />
+		<set icon="skill0458" />
+		<set icon="skill0459" />
+		<set icon="skill0460" />
+		<set icon="skill0461" />
+		<set icon="skill0462" />
+		<set icon="skill0494" />
+		<set icon="skill0500" />
+	</icons>
+</list>

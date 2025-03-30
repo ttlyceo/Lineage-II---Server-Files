@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<setting use_value_like_new_rate="true" />
+	<!-- This Setting work with
+		EXP Rate
+		SP Rate
+		Adena Rate
+		Drop Rate Rate
+		Item Drop Rate Rate
+		Spoil Rate -->
+
+
+	<premium id="1" name="Premium Account ">
+		<set name="active" val = "true" />
+		<set name="exp" val="17" /> 
+		<set name="sp" val="17" /> 
+		<set name="mp_bonus" val="500" oly_restriction="false" />
+		<set name="hp_bonus" val="500" oly_restriction="false" />
+		<set name="cp_bonus" val="500" oly_restriction="false" />
+		<set name="adena_chance" val="7" /> 
+		<set name="adena_rate" val="7" />
+		<set name="spoil_chance" val="5" /> 
+		<set name="spoil_rate" val="7" />
+		<set name="drop_chance" val="5" /> 
+		<set name="drop_rate" val="7" />
+		<set name="Epaulette" val="2" /> 
+		<set name="Craft" val="2" />
+		<set name="MW_Craft" val="2" />
+		<set name="soul_crystal" val="2" />
+		<set name="weight_limit" val="5" />
+		<set name="days" val="3" />
+		<set name="cost" val="25" />
+		<set name="apply_to" val="account" />
+		<set name="hero_status" val="false" />
+		<set name="ima" val="BranchSys2.icon.br_soulavatar_stat_i00" />
+		<set name="chat" val ="false" idChat="20" reuse="60" />
+	</premium>
+	<premium id="2" name="Premium Account ">
+		<set name="active" val = "true" />
+		<set name="exp" val="17" /> 
+		<set name="sp" val="17" /> 
+		<set name="mp_bonus" val="500" oly_restriction="false" />
+		<set name="hp_bonus" val="500" oly_restriction="false" />
+		<set name="cp_bonus" val="500" oly_restriction="false" />
+		<set name="adena_chance" val="7" /> 
+		<set name="adena_rate" val="7" />
+		<set name="spoil_chance" val="5" /> 
+		<set name="spoil_rate" val="7" />
+		<set name="drop_chance" val="5" /> 
+		<set name="drop_rate" val="7" />
+		<set name="Epaulette" val="2" /> 
+		<set name="Craft" val="2" />
+		<set name="MW_Craft" val="2" />
+		<set name="soul_crystal" val="2" />
+		<set name="weight_limit" val="5" />
+		<set name="days" val="7" />
+		<set name="cost" val="50" />
+		<set name="apply_to" val="account" />
+		<set name="hero_status" val="false" />
+		<set name="ima" val="BranchSys2.icon.br_soulavatar_attr_i00" />
+		<set name="chat" val ="false" idChat="20" reuse="60" />
+	</premium>
+	<premium id="3" name="Premium Account ">
+		<set name="active" val = "true" />
+		<set name="exp" val="17" /> 
+		<set name="sp" val="17" /> 
+		<set name="mp_bonus" val="500" oly_restriction="false" />
+		<set name="hp_bonus" val="500" oly_restriction="false" />
+		<set name="cp_bonus" val="500" oly_restriction="false" />
+		<set name="adena_chance" val="7" /> 
+		<set name="adena_rate" val="7" />
+		<set name="spoil_chance" val="5" /> 
+		<set name="spoil_rate" val="7" />
+		<set name="drop_chance" val="5" /> 
+		<set name="drop_rate" val="7" />
+		<set name="Epaulette" val="2" /> 
+		<set name="Craft" val="2" />
+		<set name="MW_Craft" val="2" />
+		<set name="soul_crystal" val="2" />
+		<set name="weight_limit" val="5" />
+		<set name="days" val="15" />
+		<set name="cost" val="75" />
+		<set name="apply_to" val="account" />
+		<set name="hero_status" val="false" />
+		<set name="ima" val="BranchSys2.icon.br_soulavatar_resist_i00" />
+		<set name="chat" val ="false" idChat="20" reuse="60" />
+	</premium>
+	<premium id="4" name="Premium Account ">
+		<set name="active" val = "true" />
+		<set name="exp" val="17" /> 
+		<set name="sp" val="17" /> 
+		<set name="mp_bonus" val="500" oly_restriction="false" />
+		<set name="hp_bonus" val="500" oly_restriction="false" />
+		<set name="cp_bonus" val="500" oly_restriction="false" />
+		<set name="adena_chance" val="7" /> 
+		<set name="adena_rate" val="7" />
+		<set name="spoil_chance" val="5" /> 
+		<set name="spoil_rate" val="7" />
+		<set name="drop_chance" val="5" /> 
+		<set name="drop_rate" val="7" />
+		<set name="Epaulette" val="2" /> 
+		<set name="Craft" val="2" />
+		<set name="MW_Craft" val="2" />
+		<set name="soul_crystal" val="2" />
+		<set name="weight_limit" val="5" />
+		<set name="days" val="30" />
+		<set name="cost" val="100" />
+		<set name="apply_to" val="account" />
+		<set name="hero_status" val="false" />
+		<set name="ima" val="BranchSys2.icon.br_soulavatar_active_i00" />
+		<set name="chat" val ="false" idChat="20" reuse="60" />
+	</premium>
+
+	<premium id="5" name="Master Premium">
+		<set name="active" val = "true" />
+		<set name="exp" val="20" /> 
+		<set name="sp" val="20" /> 
+		<set name="mp_bonus" val="1000" oly_restriction="false" />
+		<set name="hp_bonus" val="1000" oly_restriction="false" />
+		<set name="cp_bonus" val="1000" oly_restriction="false" />
+		<set name="adena_chance" val="10" /> 
+		<set name="adena_rate" val="10" />
+		<set name="spoil_chance" val="5" /> 
+		<set name="spoil_rate" val="10" />
+		<set name="drop_chance" val="5" /> 
+		<set name="drop_rate" val="10" />
+		<set name="Epaulette" val="5" /> 
+		<set name="Craft" val="5" />
+		<set name="MW_Craft" val="5" />
+		<set name="soul_crystal" val="5" />
+		<set name="weight_limit" val="10" />
+		<set name="days" val="30" />
+		<set name="cost" val="150" />
+		<set name="apply_to" val="account" />
+		<set name="ima" val="icon.skill5762" />
+		<set name="hero_status" val="false" />
+		<set name="chat" val ="true" idChat="20" reuse="60" />
+	</premium>
+
+</list>

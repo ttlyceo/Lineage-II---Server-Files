@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+   <item id="263" count="1" /> <!-- Chakram -->
+   <item id="4789" count="1" /> <!-- Chakram -->
+   <item id="4790" count="1" /> <!-- Chakram -->
+   <item id="4791" count="1" /> <!-- Chakram -->
+   <item id="4233" count="1" /> <!-- Knuckle Duster -->
+   <item id="4798" count="1" /> <!-- Knuckle Duster -->
+   <item id="4799" count="1" /> <!-- Knuckle Duster -->
+   <item id="4800" count="1" /> <!-- Knuckle Duster -->
+   <item id="265" count="1" /> <!-- Fisted Blade -->
+   <item id="4792" count="1" /> <!-- Fisted Blade -->
+   <item id="4793" count="1" /> <!-- Fisted Blade -->
+   <item id="4794" count="1" /> <!-- Fisted Blade -->
+   <item id="266" count="1" /> <!-- Great Pata -->
+   <item id="4795" count="1" /> <!-- Great Pata -->
+   <item id="4796" count="1" /> <!-- Great Pata -->
+   <item id="4797" count="1" /> <!-- Great Pata -->
+
+</list>

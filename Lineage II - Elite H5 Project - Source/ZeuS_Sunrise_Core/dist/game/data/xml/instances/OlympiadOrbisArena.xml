@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="Orbis Arena" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
+	<doorlist>
+		<door doorId="17100016" />
+		<door doorId="17100014" />
+	</doorlist>
+	<spawnlist>
+		<group name="general">
+			<spawn npcId="36402" x="-76631" y="-239181" z="-8175" heading="0" respawn="60" />
+			<spawn npcId="36402" x="-74289" y="-239184" z="-8175" heading="0" respawn="60" />
+		</group>
+	</spawnlist>
+</instance>

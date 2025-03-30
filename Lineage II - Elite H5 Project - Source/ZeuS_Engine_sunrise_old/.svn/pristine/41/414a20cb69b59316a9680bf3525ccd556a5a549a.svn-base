@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+
+	<npc id="60079" displayId="32344" level="70" type="L2Npc" name="Hero Top 1" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60080" displayId="32344" level="70" type="L2Npc" name="Hero Top 2" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60081" displayId="32344" level="70" type="L2Npc" name="Hero Top 3" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60082" displayId="32344" level="70" type="L2Npc" name="Hero Top 4" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60083" displayId="32344" level="70" type="L2Npc" name="Hero Duelist" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60084" displayId="32344" level="70" type="L2Npc" name="Hero Phoenix Knight" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60085" displayId="32344" level="70" type="L2Npc" name="Hero Sagittarius" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60086" displayId="32344" level="70" type="L2Npc" name="Hero Archmage" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60087" displayId="32344" level="70" type="L2Npc" name="Hero Arcana Lord" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60088" displayId="32344" level="70" type="L2Npc" name="Hero Hieroplant" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60089" displayId="32344" level="70" type="L2Npc" name="Hero Sword Muse" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60090" displayId="32344" level="70" type="L2Npc" name="Hero Moonlight Sentinel" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60091" displayId="32344" level="70" type="L2Npc" name="Hero Elemental Master" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60092" displayId="32344" level="70" type="L2Npc" name="Hero Shillien Templar" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60093" displayId="32344" level="70" type="L2Npc" name="Hero Ghost Hunter" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60094" displayId="32344" level="70" type="L2Npc" name="Hero Storm Screamer" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60095" displayId="32344" level="70" type="L2Npc" name="Hero Shillien Saint" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60096" displayId="32344" level="70" type="L2Npc" name="Hero Grand Khavatari" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60097" displayId="32344" level="70" type="L2Npc" name="Hero Doomcryer" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60098" displayId="32344" level="70" type="L2Npc" name="Hero Maestro" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60099" displayId="32344" level="70" type="L2Npc" name="Hero Soul hound" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60100" displayId="32344" level="70" type="L2Npc" name="Hero Dreadnought" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60101" displayId="32344" level="70" type="L2Npc" name="Hero Hell Knight" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60102" displayId="32344" level="70" type="L2Npc" name="Hero Adventurer" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60103" displayId="32344" level="70" type="L2Npc" name="Hero Soultaker" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60104" displayId="32344" level="70" type="L2Npc" name="Hero Cardinal" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60105" displayId="32344" level="70" type="L2Npc" name="Hero Eva's Templar" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60106" displayId="32344" level="70" type="L2Npc" name="Hero Wind Rider" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60107" displayId="32344" level="70" type="L2Npc" name="Hero Mystic Muse" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60108" displayId="32344" level="70" type="L2Npc" name="Hero Eva's Saint" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60109" displayId="32344" level="70" type="L2Npc" name="Hero Spectral Dancer" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60110" displayId="32344" level="70" type="L2Npc" name="Hero Ghost Sentinel" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60111" displayId="32344" level="70" type="L2Npc" name="Hero Spectral Master" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60112" displayId="32344" level="70" type="L2Npc" name="Hero Titan" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60113" displayId="32344" level="70" type="L2Npc" name="Hero Dominator" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60114" displayId="32344" level="70" type="L2Npc" name="Hero Fortune Seeker" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60115" displayId="32344" level="70" type="L2Npc" name="Hero Doombringer" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+
+	<npc id="60116" displayId="32344" level="70" type="L2Npc" name="Hero Trickster" usingServerSideName="true" title="ZeuS Engine" usingServerSideTitle="true">
+		<!-- Confirmed CT2.5 -->
+		<!-- <race>DIVINE</race> -->
+		<sex>FEMALE</sex>
+		<stats str="0" int="0" dex="0" wit="0" con="0" men="0">
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>560</hitTime>
+		</stats>
+		<status undying="false" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="11.00" />
+			<height normal="45.00" />
+		</collision>
+	</npc>
+</list>

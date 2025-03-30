@@ -1,0 +1,355 @@
+<html>
+	<title>Community Board</title>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+		<center>
+				<table width=730 border=0 cellpadding=0>
+					<tr>
+						<td width=720 fixwidth=720>
+							<img src="L2UI.SquareGray" width=744 height=2>
+								<table width=760 bgcolor="1F1F1F" height=48>
+									<tr>
+										<td width=32>
+											<table width=32>
+												<tr>
+													<td width=32>
+														<img src="icon.skill1369" width=32 height=32>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td width=644>
+											<table width=604 border=0>
+												<tr>
+													<td>
+														<table cellpadding=0 cellspacing=0 border=0>
+															<tr>
+																<td>
+																	<font name="hs12" color="FF9900">Drop Search</font>
+																</td>
+																<td>
+																	<button action="bypass %BYPASS%" width=32 height=32 back="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" fore="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" value=" " >
+																</td>
+															</tr>>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<font color="F8F9B7">DROP SEARCH</font>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td width=64 align="RIGHT">
+										</td>
+									</tr>
+								</table>
+							<img src="L2UI.SquareGray" width="756" height=2>
+						</td>
+					</tr>
+				</table><br>
+				<center>
+					<table width=720 fixwith=720 background=L2UI_CT1.Windows_DF_Drawer_Bg cellspacing=0 cellpadding=1>
+						<tr>
+							<td width=360>
+								<table width=360 background=L2UI_CT1.Windows_DF_TooltipBG cellspacing=1 cellpadding=0 height=100>
+									<tr>
+										<td width=360 align=CENTER>
+											<font name="hs12" color="CCFFCC">Look For Items</font>
+										</td>
+									</tr>
+									<tr>
+										<td align=CENTER>
+											<edit var="txtItem" width=150>
+										</td>
+									</tr>
+									<tr>
+										<td align=CENTER>
+											<button value="Search Item" action="%BYPASS_ITEM%" width=100 height=24 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width=360>
+								<table width=360 background=L2UI_CT1.Windows_DF_TooltipBG cellspacing=1 cellpadding=0 height=100>
+									<tr>
+										<td width=360 align=CENTER>
+											<font name="hs12" color="CCFFCC">Look For Monsters</font>
+										</td>
+									</tr>
+									<tr>
+										<td align=CENTER>
+											<edit var="txtMonster" width=150>
+										</td>
+									</tr>
+									<tr>
+										<td align=CENTER>
+											<button value="Search Monster" action="%BYPASS_NPC%" width=100 height=24 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</center>
+				<img src="L2UI.SquareGray" width=768 height=2>
+				<center>
+					<table width=700 background=L2UI_CT1.Windows_DF_TooltipBG cellspacing=1 cellpadding=5 height=50>
+						<tr>
+							<td width=32 align=CENTER>
+								<img src="icon.skill0635" width=32 height=32>
+							</td>
+							<td align=CENTER>
+								<table width=670>
+									<tr>
+										<td>
+											<font name="hs12" color="FFCC00">How is Work</font>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Easy, enter the item or monster name into the box and press Search button
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table><br>
+				</center>
+				<img src="L2UI.SquareGray" width=768 height=2>
+				<center>
+					/*GRID_FORMAT_1=
+						EmptyIcon:icon.skill4416_etc,EmptyTitle:Empty
+					*/
+					<table width=720 fixwith=720 background=L2UI_CT1.Windows_DF_Drawer_Bg cellspacing=2 cellpadding=2 height=200>
+						<tr>
+							<td width=360 align=CENTER>
+								<table width=300 height=32 background=L2UI_CT1.Windows_DF_TooltipBG cellpadding=0 cellspacing=0>
+									<tr>
+										<td align=CENTER width=32>
+											<table width=32 height=32 background=L2UI_CT1.Windows_DF_TooltipBG>
+												<tr>
+													<td>
+														<table width=34 height=33 background=%ITEM_ICO_IMG_1% border=0 cellspacing=0 cellpadding=-2>
+															<tr>
+																<td>
+																	<button action="%ITEM_BYPASS_1%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table><br>
+										</td>
+										<td align=LEFT width=268>
+											%ITEM_NAME_1% 
+										</td>
+									</tr>
+								</table>
+								<table width=300 height=32 background=L2UI_CT1.Windows_DF_TooltipBG cellpadding=0 cellspacing=0>
+									<tr>
+										<td align=CENTER width=32>
+											<table width=32 height=32 background=L2UI_CT1.Windows_DF_TooltipBG>
+												<tr>
+													<td>
+														<table width=34 height=33 background=%ITEM_ICO_IMG_2% border=0 cellspacing=0 cellpadding=-2>
+															<tr>
+																<td>
+																	<button action="%ITEM_BYPASS_2%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table><br>
+										</td>
+										<td align=LEFT width=268>
+											%ITEM_NAME_2% 
+										</td>
+									</tr>
+								</table>
+								<table width=300 height=32 background=L2UI_CT1.Windows_DF_TooltipBG cellpadding=0 cellspacing=0>
+									<tr>
+										<td align=CENTER width=32>
+											<table width=32 height=32 background=L2UI_CT1.Windows_DF_TooltipBG>
+												<tr>
+													<td>
+														<table width=34 height=33 background=%ITEM_ICO_IMG_3% border=0 cellspacing=0 cellpadding=-2>
+															<tr>
+																<td>
+																	<button action="%ITEM_BYPASS_3%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table><br>
+										</td>
+										<td align=LEFT width=268>
+											%ITEM_NAME_3% 
+										</td>
+									</tr>
+								</table>
+								<table width=300 height=32 background=L2UI_CT1.Windows_DF_TooltipBG cellpadding=0 cellspacing=0>
+									<tr>
+										<td align=CENTER width=32>
+											<table width=32 height=32 background=L2UI_CT1.Windows_DF_TooltipBG>
+												<tr>
+													<td>
+														<table width=34 height=33 background=%ITEM_ICO_IMG_4% border=0 cellspacing=0 cellpadding=-2>
+															<tr>
+																<td>
+																	<button action="%ITEM_BYPASS_4%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table><br>
+										</td>
+										<td align=LEFT width=268>
+											%ITEM_NAME_4% 
+										</td>
+									</tr>
+								</table>
+								<table width=300 height=32 background=L2UI_CT1.Windows_DF_TooltipBG cellpadding=0 cellspacing=0>
+									<tr>
+										<td align=CENTER width=32>
+											<table width=32 height=32 background=L2UI_CT1.Windows_DF_TooltipBG>
+												<tr>
+													<td>
+														<table width=34 height=33 background=%ITEM_ICO_IMG_5% border=0 cellspacing=0 cellpadding=-2>
+															<tr>
+																<td>
+																	<button action="%ITEM_BYPASS_5%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table><br>
+										</td>
+										<td align=LEFT width=268>
+											%ITEM_NAME_5% 
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width=360 align=CENTER>
+								<table width=300 height=32 background=L2UI_CT1.Windows_DF_TooltipBG cellpadding=0 cellspacing=0>
+									<tr>
+										<td align=CENTER width=32>
+											<table width=32 height=32 background=L2UI_CT1.Windows_DF_TooltipBG>
+												<tr>
+													<td>
+														<table width=34 height=33 background=%MOB_ICO_IMG_1% border=0 cellspacing=0 cellpadding=-2>
+															<tr>
+																<td>
+																	<button action="%MOB_BYPASS_1%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table><br>
+										</td>
+										<td align=LEFT width=268>
+											%MOB_NAME_1% 
+										</td>
+									</tr>
+								</table>
+								<table width=300 height=32 background=L2UI_CT1.Windows_DF_TooltipBG cellpadding=0 cellspacing=0>
+									<tr>
+										<td align=CENTER width=32>
+											<table width=32 height=32 background=L2UI_CT1.Windows_DF_TooltipBG>
+												<tr>
+													<td>
+														<table width=34 height=33 background=%MOB_ICO_IMG_2% border=0 cellspacing=0 cellpadding=-2>
+															<tr>
+																<td>
+																	<button action="%MOB_BYPASS_2%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table><br>
+										</td>
+										<td align=LEFT width=268>
+											%MOB_NAME_2% 
+										</td>
+									</tr>
+								</table>
+								<table width=300 height=32 background=L2UI_CT1.Windows_DF_TooltipBG cellpadding=0 cellspacing=0>
+									<tr>
+										<td align=CENTER width=32>
+											<table width=32 height=32 background=L2UI_CT1.Windows_DF_TooltipBG>
+												<tr>
+													<td>
+														<table width=34 height=33 background=%MOB_ICO_IMG_3% border=0 cellspacing=0 cellpadding=-2>
+															<tr>
+																<td>
+																	<button action="%MOB_BYPASS_3%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table><br>
+										</td>
+										<td align=LEFT width=268>
+											%MOB_NAME_3% 
+										</td>
+									</tr>
+								</table>
+								<table width=300 height=32 background=L2UI_CT1.Windows_DF_TooltipBG cellpadding=0 cellspacing=0>
+									<tr>
+										<td align=CENTER width=32>
+											<table width=32 height=32 background=L2UI_CT1.Windows_DF_TooltipBG>
+												<tr>
+													<td>
+														<table width=34 height=33 background=%MOB_ICO_IMG_4% border=0 cellspacing=0 cellpadding=-2>
+															<tr>
+																<td>
+																	<button action="%MOB_BYPASS_4%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table><br>
+										</td>
+										<td align=LEFT width=268>
+											%MOB_NAME_4% 
+										</td>
+									</tr>
+								</table>
+								<table width=300 height=32 background=L2UI_CT1.Windows_DF_TooltipBG cellpadding=0 cellspacing=0>
+									<tr>
+										<td align=CENTER width=32>
+											<table width=32 height=32 background=L2UI_CT1.Windows_DF_TooltipBG>
+												<tr>
+													<td>
+														<table width=34 height=33 background=%MOB_ICO_IMG_5% border=0 cellspacing=0 cellpadding=-2>
+															<tr>
+																<td>
+																	<button action="%MOB_BYPASS_5%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table><br>
+										</td>
+										<td align=LEFT width=268>
+											%MOB_NAME_5% 
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</center>
+		</center>					
+	</td></tr></table></body>
+</html>

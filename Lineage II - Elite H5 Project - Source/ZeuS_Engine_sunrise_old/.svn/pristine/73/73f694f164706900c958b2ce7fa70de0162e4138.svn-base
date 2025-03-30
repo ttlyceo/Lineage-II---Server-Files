@@ -1,0 +1,34 @@
+Index: java/l2r/gameserver/model/actor/appearance/PcAppearance.java
+===================================================================
+--- java/l2r/gameserver/model/actor/appearance/PcAppearance.java	(revision 4)
++++ java/l2r/gameserver/model/actor/appearance/PcAppearance.java	(working copy)
+@@ -18,6 +18,7 @@
+  */
+ package l2r.gameserver.model.actor.appearance;
+ 
++import ZeuS.ZeuS.ZeuS;
+ import l2r.gameserver.model.actor.instance.L2PcInstance;
+ 
+ public class PcAppearance
+@@ -174,6 +175,10 @@
+ 	
+ 	public int getNameColor()
+ 	{
++		int tmpColor = ZeuS.getInstance().getColorName((L2PcInstance)_owner);
++		if(tmpColor > 0) {
++			return tmpColor;
++		}
+ 		return _nameColor;
+ 	}
+ 	
+@@ -194,6 +199,10 @@
+ 	
+ 	public int getTitleColor()
+ 	{
++		int colorTemp = ZeuS.getInstance().getColorTitle((L2PcInstance) _owner);
++		if(colorTemp > 0) {
++			return colorTemp;
++		}
+ 		return _titleColor;
+ 	}
+ 	

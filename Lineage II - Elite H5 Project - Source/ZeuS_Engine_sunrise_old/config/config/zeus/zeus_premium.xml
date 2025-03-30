@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<setting use_value_like_new_rate="true" />
+	<!--
+		If you Choose use_value_like_new_rate = True this mean that this Value will be a New Rate
+		If you Choose use_value_like_new_rate = False this mean that this Value will be a Porcent of the Rate and the Value
+		This Setting work with
+		EXP Rate
+		SP Rate
+		Adena Rate
+		Drop Rate Rate
+		Item Drop Rate Rate
+		Spoil Rate -->
+	<premium id="1" name="normal">
+		<set name="active" val = "true" />
+		<set name="exp" val="40" /> 
+		<set name="sp" val="40" /> 
+		<set name="mp_bonus" val="0" oly_restriction="true" />
+		<set name="hp_bonus" val="0" oly_restriction="true" />
+		<set name="cp_bonus" val="0" oly_restriction="true" />
+		<set name="adena_chance" val="40" /> 
+		<set name="adena_rate" val="42" />
+		<set name="spoil_chance" val="40" /> 
+		<set name="spoil_rate" val="42" />
+		<set name="drop_chance" val="40" /> 
+		<set name="drop_rate" val="42" />
+		<set name="Epaulette" val="40" /> 
+		<set name="Craft" val="40" />
+		<set name="MW_Craft" val="40" />
+		<set name="Buff_Premium" val="True" />
+		<set name="Buff_Duration" val="450000" />
+		<set name="soul_crystal" val="40" />
+		<set name="weight_limit" val="50" />
+		<set name="item_drop_chance" val="true" />
+		<set name="premium_item_chance" val="6578,3;6577,5" /> <!-- Item,% chance;Item,% chance;Item,% chance -->
+		<set name="item_drop_rate" val="true" />
+		<set name="premium_item_rate" val="6578,6;6577,10" /> <!-- Item,% chance;Item,% chance;Item,% chance -->
+		<set name="days" val="3" />
+		<set name="hero_status" val="true" />
+		<set name="cost" val="30" />
+		<set name="apply_to" val="account" />
+		<set name="ima" val="br_cashtex.skill.br_cash_rune_of_exp_buff_1" />
+	</premium>
+	<premium id="2" name="Normal Clan">
+		<set name="active" val = "true" />
+		<set name="exp" val="90" />
+		<set name="sp" val="40" />
+		<set name="mp_bonus" val="0" oly_restriction="true" />
+		<set name="hp_bonus" val="0" oly_restriction="true" />
+		<set name="cp_bonus" val="0" oly_restriction="true" />		
+		<set name="adena_chance" val="90" /> 
+		<set name="adena_rate" val="92" />
+		<set name="spoil_chance" val="90" /> 
+		<set name="spoil_rate" val="92" />
+		<set name="drop_chance" val="90" /> 
+		<set name="drop_rate" val="92" />
+		<set name="Epaulette" val="40" />
+		<set name="Craft" val="40" />
+		<set name="MW_Craft" val="40" />
+		<set name="Buff_Premium" val="true" />
+		<set name="Buff_Duration" val="450000" />
+		<set name="soul_crystal" val="40" />
+		<set name="weight_limit" val="50" />
+		<set name="item_drop_chance" val="true" />
+		<set name="premium_item_chance" val="6578,3;6577,5" /> <!-- Item,% chance;Item,% chance;Item,% chance -->
+		<set name="item_drop_rate" val="true" />
+		<set name="premium_item_rate" val="6578,6;6577,10" /> <!-- Item,% chance;Item,% chance;Item,% chance -->
+		<set name="days" val="3" />
+		<set name="cost" val="30" />
+		<set name="hero_status" val="true" />
+		<set name="apply_to" val="clan" />
+		<set name="ima" val="br_cashtex.skill.br_cash_rune_of_exp_buff_4" />
+	</premium>
+</list>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- This is the "auto farm" feature (still in tests) 
+In theory, if you spawn a character inside the Area Center location, he will "try" to farm inside that area from the Min till Max Level
+if he reaches max level, he will try to go to another farm zone if it exists here
+
+as example below.
+
+when spawning a fake, it will automaticaly come and try to farm / levelup in these areas
+
+so spawn a random lv 1 or citizen and it will stay there, random will attack mobs, citizen will just stay
+if click on button for fake spawn, they will run to these locations here and level up
+check these locations if u want
+-->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/phantomFarmPlaces.xsd">
+
+</list>

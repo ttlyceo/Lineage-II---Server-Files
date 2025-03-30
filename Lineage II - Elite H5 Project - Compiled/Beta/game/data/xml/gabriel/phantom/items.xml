@@ -1,0 +1,2679 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+possible classIds:
+See final of file!
+Items per class and grade
+if more than one house, it will randomly take one
+ex:
+<armors ids="356,2468,2438,2414"/>
+<armors ids="60,64,517,2468"/>
+-->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/items.xsd">
+
+    <item classId="fighter">
+		
+        <playerGrade grade="no-grade">
+            <armors ids="43,2386,23,20,39"/>
+            <weapons ids="102,66"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="warrior">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2422,2447"/>
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="2499"/>
+            <weapons ids="159"/>
+	    <weapons ids="225"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>	
+    </item>
+
+    <item classId="gladiator">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="8848"/>
+            <weapons ids="8837"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730,2379"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="2624"/>
+	    <weapons ids="2620"/>
+	    <weapons ids="2626"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="5706"/>
+            <weapons ids="5705"/>
+            <weapons ids="5704"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="warlord">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="299"/>
+	    <weapons ids="303"/>
+   	    <weapons ids="95"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="4859"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="5633"/>
+	    <weapons ids="8803"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="knight">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2422,2447"/>
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="2499"/>
+            <weapons ids="159"/>
+	    <weapons ids="225"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>	
+    </item>
+
+    <item classId="paladin">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="135"/>
+	    <weapons ids="2503"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="79"/>
+	    <weapons ids="4753"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="4720"/>
+	    <weapons ids="5602"/>
+	    <weapons ids="5648"/>
+	    <weapons ids="8135"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="darkAvenger">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="135"/>
+	    <weapons ids="2503"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="79"/>
+	    <weapons ids="4753"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="4720"/>
+	    <weapons ids="5602"/>
+	    <weapons ids="5648"/>
+	    <weapons ids="8135"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="rogue">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="225"/>
+	    <weapons ids="1660"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>
+    </item>
+
+    <item classId="treasureHunter">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="397,2387,608,62,2414"/> 
+	    <armors ids="401,2461,2437,2414"/> 
+            <weapons ids="228"/> 
+	    <weapons ids="233"/>
+            <jewels ids="886,886,854,854,119"/> 
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2417,2392,5723,5739"/>
+	    <armors ids="2391,2416,5719,5735"/>
+            <weapons ids="229"/>
+	    <weapons ids="234"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2395,5775,2419,5787"/>
+	    <armors ids="10798,5784,5772,3418"/>
+	    <armors ids="2385,2389,512,5766,5778"/> 
+            <weapons ids="8801"/> 
+	    <weapons ids="5618"/> 
+	    <weapons ids="4783"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="hawkeye">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="397,2387,608,62,2414"/> 
+	    <armors ids="401,2461,2437,2414"/> 
+            <weapons ids="286"/>
+            <jewels ids="886,886,854,854,119"/> 
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2417,2392,5723,5739"/>
+	    <armors ids="2391,2416,5719,5735"/>
+            <weapons ids="4829"/>
+	    <weapons ids="286"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465,1464"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2395,5775,2419,5787"/>
+	    <armors ids="10798,5784,5772,3418"/>
+	    <armors ids="2385,2389,512,5766,5778"/> 
+            <weapons ids="5612"/> 
+            <weapons ids="8807"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="mage">
+        <playerGrade grade="no-grade">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="310"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="wizard">
+        <playerGrade grade="D">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="189"/> 
+	    <weapons ids="190"/> 
+	    <weapons ids="188"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="3948"/>
+        </playerGrade>
+    </item>
+
+    <item classId="sorceror">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="necromancer">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="warlock">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="cleric">
+        <playerGrade grade="D">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="189"/> 
+	    <weapons ids="190"/> 
+	    <weapons ids="188"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="3948"/>
+        </playerGrade>
+    </item>
+
+    <item classId="bishop">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="prophet">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="elvenFighter">
+        <playerGrade grade="no-grade">
+            <armors ids="43,2386,23,20,39"/>
+            <weapons ids="102,66"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="elvenKnight">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2422,2447"/>
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="2499"/>
+            <weapons ids="159"/>
+	    <weapons ids="225"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>	
+    </item>
+
+    <item classId="templeKnight">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="135"/>
+	    <weapons ids="2503"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="79"/>
+	    <weapons ids="4753"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="4720"/>
+	    <weapons ids="5602"/>
+	    <weapons ids="5648"/>
+	    <weapons ids="8135"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="swordSinger">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="135"/>
+	    <weapons ids="2503"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="79"/>
+	    <weapons ids="4753"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="5706"/>
+            <weapons ids="5705"/>
+            <weapons ids="5704"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="elvenScout">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="225"/>
+	    <weapons ids="1660"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>
+    </item>
+
+    <item classId="plainsWalker">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="397,2387,608,62,2414"/> 
+	    <armors ids="401,2461,2437,2414"/> 
+            <weapons ids="228"/> 
+	    <weapons ids="233"/>
+            <jewels ids="886,886,854,854,119"/> 
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2417,2392,5723,5739"/>
+	    <armors ids="2391,2416,5719,5735"/>
+            <weapons ids="229"/>
+	    <weapons ids="234"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2395,5775,2419,5787"/>
+	    <armors ids="10798,5784,5772,3418"/>
+	    <armors ids="2385,2389,512,5766,5778"/> 
+            <weapons ids="8801"/> 
+	    <weapons ids="5618"/> 
+	    <weapons ids="4783"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="silverRanger">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="397,2387,608,62,2414"/> 
+	    <armors ids="401,2461,2437,2414"/> 
+            <weapons ids="286"/>
+            <jewels ids="886,886,854,854,119"/> 
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2417,2392,5723,5739"/>
+	    <armors ids="2391,2416,5719,5735"/>
+            <weapons ids="4829"/>
+	    <weapons ids="286"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465,1464"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2395,5775,2419,5787"/>
+	    <armors ids="10798,5784,5772,3418"/>
+	    <armors ids="2385,2389,512,5766,5778"/> 
+            <weapons ids="5612"/> 
+            <weapons ids="8807"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="elvenMage">
+        <playerGrade grade="no-grade">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="310"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+
+        </playerGrade>
+    </item>
+
+    <item classId="elvenWizard">
+        <playerGrade grade="D">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="189"/> 
+	    <weapons ids="190"/> 
+	    <weapons ids="188"/>
+            <jewels ids="881,881,850,850,913"/>
+
+        </playerGrade>
+    </item>
+
+    <item classId="spellsinger">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="elementalSummoner">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="oracle">
+        <playerGrade grade="D">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="189"/> 
+	    <weapons ids="190"/> 
+	    <weapons ids="188"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="3948"/>
+        </playerGrade>
+    </item>
+
+    <item classId="elder">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="darkFighter">
+        <playerGrade grade="no-grade">
+            <armors ids="43,2386,23,20,39"/>
+            <weapons ids="102,66"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="palusKnight">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2422,2447"/>
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="2499"/>
+            <weapons ids="159"/>
+	    <weapons ids="225"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>	
+    </item>
+
+    <item classId="shillienKnight">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="135"/>
+	    <weapons ids="2503"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="79"/>
+	    <weapons ids="4753"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="4720"/>
+	    <weapons ids="5602"/>
+	    <weapons ids="5648"/>
+	    <weapons ids="8135"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="bladedancer">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="135"/>
+	    <weapons ids="2503"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="79"/>
+	    <weapons ids="4753"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="5706"/>
+            <weapons ids="5705"/>
+            <weapons ids="5704"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="assassin">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="225"/>
+	    <weapons ids="1660"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>
+    </item>
+
+    <item classId="abyssWalker">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="397,2387,608,62,2414"/> 
+	    <armors ids="401,2461,2437,2414"/> 
+            <weapons ids="228"/> 
+	    <weapons ids="233"/>
+            <jewels ids="886,886,854,854,119"/> 
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2417,2392,5723,5739"/>
+	    <armors ids="2391,2416,5719,5735"/>
+            <weapons ids="229"/>
+	    <weapons ids="234"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2395,5775,2419,5787"/>
+	    <armors ids="10798,5784,5772,3418"/>
+	    <armors ids="2385,2389,512,5766,5778"/> 
+            <weapons ids="8801"/> 
+	    <weapons ids="5618"/> 
+	    <weapons ids="4783"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="phantomRanger">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="397,2387,608,62,2414"/> 
+	    <armors ids="401,2461,2437,2414"/> 
+            <weapons ids="286"/>
+            <jewels ids="886,886,854,854,119"/> 
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2417,2392,5723,5739"/>
+	    <armors ids="2391,2416,5719,5735"/>
+            <weapons ids="4829"/>
+	    <weapons ids="286"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465,1464"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2395,5775,2419,5787"/>
+	    <armors ids="10798,5784,5772,3418"/>
+	    <armors ids="2385,2389,512,5766,5778"/> 
+            <weapons ids="5612"/> 
+            <weapons ids="8807"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="darkMage">
+        <playerGrade grade="no-grade">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="310"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="darkWizard">
+        <playerGrade grade="D">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="189"/> 
+	    <weapons ids="190"/> 
+	    <weapons ids="188"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="3948"/>
+        </playerGrade>
+    </item>
+
+    <item classId="spellhowler">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="phantomSummoner">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="shillienOracle">
+        <playerGrade grade="D">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="189"/> 
+	    <weapons ids="190"/> 
+	    <weapons ids="188"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="3948"/>
+        </playerGrade>
+    </item>
+
+    <item classId="shillenElder">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="orcFighter">
+        <playerGrade grade="no-grade">
+            <armors ids="43,2386,23,20,39"/>
+            <weapons ids="102,66"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="orcRaider">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2422,2447"/>
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="7881"/>
+	    <weapons ids="7896"/>
+	    <weapons ids="5285"/> 
+	    <weapons ids="5284"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>	
+    </item>
+
+    <item classId="destroyer">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="7897"/> 
+	    <weapons ids="5286"/> 
+	    <weapons ids="7882"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="78"/>
+	    <weapons ids="8106"/>
+	    <weapons ids="8129"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="5644"/> 
+	    <weapons ids="8791"/>
+	    <weapons ids="8135"/> 
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="orcMonk">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2422,2447"/>
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="261"/> 
+	    <weapons ids="260"/> 
+	    <weapons ids="258"/> 
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>	
+    </item>
+
+    <item classId="tyrant">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="266"/>
+	    <weapons ids="265"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="4806"/>
+	    <weapons ids="4803"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="8810"/>
+	    <weapons ids="5625"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="orcMage">
+        <playerGrade grade="no-grade">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="310"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="orcShaman">
+        <playerGrade grade="D">
+            <armors ids="44,1104,1101,39,51,102"/>
+            <weapons ids="189"/> 
+	    <weapons ids="190"/> 
+	    <weapons ids="188"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="3948"/>
+        </playerGrade>
+    </item>
+
+    <item classId="overlord">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="warcryer">
+        <playerGrade grade="C">
+            <armors ids="439,471,2459,2430,2414"/>
+	    <armors ids="442,473,2463,603,2414"/>
+	    <armors ids="441,472,2459,2435,2414"/>
+            <weapons ids="84"/>
+	    <weapons ids="203"/>
+   	    <weapons ids="206"/> 
+	    <weapons ids="205"/> 
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="3949"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2406,5716,5732,2415"/>
+	    <armors ids="2398,2403,5720,5736,2416"/>
+            <weapons ids="7722,673"/>
+	    <weapons ids="8141,673"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="3950"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2409,5776,5788,2419"/>
+	    <armors ids="2408,5773,5785,2418"/>
+	    <armors ids="512,2407,5767,5779"/>
+            <weapons ids="5643,641"/>
+	    <weapons ids="5643,641"/> 
+	    <weapons ids="8150,2498"/> 
+	    <weapons ids="8149,2498"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="dwarvenFighter">
+        <playerGrade grade="no-grade">
+            <armors ids="43,2386,23,20,39"/>
+            <weapons ids="102,66"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="scavenger">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2422,2447"/>
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="2499"/>
+	    <weapons ids="159"/>
+  	    <weapons ids="225"/>
+	    <weapons ids="1660"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>	
+    </item>
+
+    <item classId="bountyHunter">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="7897"/> 
+ 	    <weapons ids="5286"/> 
+	    <weapons ids="7882"/>
+	    <weapons ids="135,2497"/> 
+	    <weapons ids="2503,107"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="79,110"/>
+	    <weapons ids="4753,633"/>
+	    <weapons ids="78"/>
+	    <weapons ids="8106"/>
+	    <weapons ids="8129"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="5644"/> 
+	    <weapons ids="8791"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="artisan">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2422,2447"/>
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="2499"/>
+            <weapons ids="159"/>
+	    <weapons ids="225"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>	
+    </item>
+
+    <item classId="warsmith">
+        <playerGrade grade="C">
+            <armors ids="398,418,2455,2431,2414"/> 
+	    <armors ids="356,2414,2462,2438"/>
+            <weapons ids="7897"/> 
+ 	    <weapons ids="5286"/> 
+	    <weapons ids="7882"/>
+	    <weapons ids="135,2497"/> 
+	    <weapons ids="2503,107"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2376,2415,5714,5730"/>
+            <armors ids="2416,358,2380,5718,5734"/>
+            <armors ids="2381,2417,5722,5738"/>
+            <armors ids="5710,5726,503,357,383"/>
+            <weapons ids="79,110"/>
+	    <weapons ids="4753,633"/>
+	    <weapons ids="78"/>
+	    <weapons ids="8106"/>
+	    <weapons ids="8129"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2383,2419,5774,5786"/>
+	    <armors ids="374,2418,5771,5783"/>
+	    <armors ids="2382,574,5768,5780"/>
+            <weapons ids="5644"/> 
+	    <weapons ids="8791"/>
+            <jewels ids="933,871,871,902,902"/>
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="duelist">
+        <playerGrade grade="S">
+            <armors ids="6373,6374,6378,6375,6376"/>
+            <armors ids="9425,9421,9422,9423,9424"/>
+            <weapons ids="6580"/>
+            <weapons ids="10004"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15609,15612,15606,15615,15618"/>
+            <weapons ids="10415"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13432,13438,13137,13439,13440"/>
+            <armors ids="13435,13448,13140,13449,13450"/>
+            <armors ids="15592,15595,15589,15598,15601"/>
+            <armors ids="15575,15578,15572,15581,15584"/>
+            <weapons ids="52"/>
+            <weapons ids="16154"/>
+            <weapons ids="16158"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="dreadnought">
+        <playerGrade grade="S">
+            <armors ids="6373,6374,6378,6375,6376"/>
+            <armors ids="9425,9421,9422,9423,9424"/>
+            <weapons ids="6601"/>
+            <weapons ids="9870"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15609,15612,15606,15615,15618"/>
+            <weapons ids="10450"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13432,13438,13137,13439,13440"/>
+            <armors ids="13435,13448,13140,13449,13450"/>
+            <armors ids="15592,15595,15589,15598,15601"/>
+            <armors ids="15575,15578,15572,15581,15584"/>
+            <weapons ids="14135"/>
+            <weapons ids="15848"/>
+            <weapons ids="15889"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="phoenixKnight">
+        <playerGrade grade="S">
+            <armors ids="6373,6374,6378,6375,6376"/>
+            <armors ids="9425,9421,9422,9423,9424"/>
+            <weapons ids="6583,6377"/>
+            <weapons ids="9854,9441"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15609,15612,15606,15615,15618"/>
+            <weapons ids="10434,9441"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13432,13438,13137,13439,13440"/>
+            <armors ids="13435,13448,13140,13449,13450"/>
+            <armors ids="15592,15595,15589,15598,15601"/>
+            <armors ids="15575,15578,15572,15581,15584"/>
+            <weapons ids="14120,13471"/>
+            <weapons ids="15830,15604"/>
+            <weapons ids="15871,15587"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="hellKnight">
+        <playerGrade grade="S">
+            <armors ids="6373,6374,6378,6375,6376"/>
+            <armors ids="9425,9421,9422,9423,9424"/>
+            <weapons ids="6583,6377"/>
+            <weapons ids="9854,9441"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15609,15612,15606,15615,15618"/>
+            <weapons ids="10434,9441"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13432,13438,13137,13439,13440"/>
+            <armors ids="13435,13448,13140,13449,13450"/>
+            <armors ids="15592,15595,15589,15598,15601"/>
+            <armors ids="15575,15578,15572,15581,15584"/>
+            <weapons ids="14120,13471"/>
+            <weapons ids="15830,15604"/>
+            <weapons ids="15871,15587"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="sagittarius">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <armors ids="9425,9428,9429,9430,9431"/>
+            <weapons ids="6594"/>
+            <weapons ids="7577"/>
+            <weapons ids="9865"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10445"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14149"/>
+            <weapons ids="15859"/>
+            <weapons ids="15903"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="adventurer">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <armors ids="9425,9428,9429,9430,9431"/>
+            <weapons ids="6590,9868,13882"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10448,13883"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14127,15834,15875,13884,16152,16156"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="archmage">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="soultaker">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="arcanaLord">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="cardinal">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="hierophant">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="evaTemplar">
+        <playerGrade grade="S">
+            <armors ids="6373,6374,6378,6375,6376"/>
+            <armors ids="9425,9421,9422,9423,9424"/>
+            <weapons ids="6583,6377"/>
+            <weapons ids="9854,9441"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15609,15612,15606,15615,15618"/>
+            <weapons ids="10434,9441"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13432,13438,13137,13439,13440"/>
+            <armors ids="13435,13448,13140,13449,13450"/>
+            <armors ids="15592,15595,15589,15598,15601"/>
+            <armors ids="15575,15578,15572,15581,15584"/>
+            <weapons ids="14120,13471"/>
+            <weapons ids="15830,15604"/>
+            <weapons ids="15871,15587"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="swordMuse">
+        <playerGrade grade="S">
+            <armors ids="6373,6374,6378,6375,6376"/>
+            <armors ids="9425,9421,9422,9423,9424"/>
+            <weapons ids="6583,6377"/>
+            <weapons ids="9854,9441"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15609,15612,15606,15615,15618"/>
+            <weapons ids="10434,9441"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13432,13438,13137,13439,13440"/>
+            <armors ids="13435,13448,13140,13449,13450"/>
+            <armors ids="15592,15595,15589,15598,15601"/>
+            <armors ids="15575,15578,15572,15581,15584"/>
+            <weapons ids="14120,13471"/>
+            <weapons ids="15830,15604"/>
+            <weapons ids="15871,15587"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="windRider">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <armors ids="9425,9428,9429,9430,9431"/>
+            <weapons ids="6590,9868,13882"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10448,13883"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14127,15834,15875,13884,16152,16156"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="moonlightSentinel">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <armors ids="9425,9428,9429,9430,9431"/>
+            <weapons ids="6594"/>
+            <weapons ids="7577"/>
+            <weapons ids="9865"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10445"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14149"/>
+            <weapons ids="15859"/>
+            <weapons ids="15903"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="mysticMuse">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="elementalMaster">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="evaSaint">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="shillienTemplar">
+        <playerGrade grade="S">
+            <armors ids="6373,6374,6378,6375,6376"/>
+            <armors ids="9425,9421,9422,9423,9424"/>
+            <weapons ids="6583,6377"/>
+            <weapons ids="9854,9441"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15609,15612,15606,15615,15618"/>
+            <weapons ids="10434,9441"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13432,13438,13137,13439,13440"/>
+            <armors ids="13435,13448,13140,13449,13450"/>
+            <armors ids="15592,15595,15589,15598,15601"/>
+            <armors ids="15575,15578,15572,15581,15584"/>
+            <weapons ids="14120,13471"/>
+            <weapons ids="15830,15604"/>
+            <weapons ids="15871,15587"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="spectralDancer">
+        <playerGrade grade="S">
+            <armors ids="6373,6374,6378,6375,6376"/>
+            <armors ids="9425,9421,9422,9423,9424"/>
+            <weapons ids="6580"/>
+            <weapons ids="10004"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15609,15612,15606,15615,15618"/>
+            <weapons ids="10415"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13432,13438,13137,13439,13440"/>
+            <armors ids="13435,13448,13140,13449,13450"/>
+            <armors ids="15592,15595,15589,15598,15601"/>
+            <armors ids="15575,15578,15572,15581,15584"/>
+            <weapons ids="52"/>
+            <weapons ids="16154"/>
+            <weapons ids="16158"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="ghostHunter">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <armors ids="9425,9428,9429,9430,9431"/>
+            <weapons ids="6590,9868,13882"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10448,13883"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14127,15834,15875,13884,16152,16156"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="ghostSentinel">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <armors ids="9425,9428,9429,9430,9431"/>
+            <weapons ids="6594"/>
+            <weapons ids="7577"/>
+            <weapons ids="9865"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10445"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14149"/>
+            <weapons ids="15859"/>
+            <weapons ids="15903"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="stormScreamer">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="spectralMaster">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="shillienSaint">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="titan">
+        <playerGrade grade="S">
+            <armors ids="6373,6374,6378,6375,6376"/>
+            <armors ids="9425,9421,9422,9423,9424"/>
+            <weapons ids="6607"/>
+            <weapons ids="9857"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15609,15612,15606,15615,15618"/>
+            <weapons ids="10437"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13432,13438,13137,13439,13440"/>
+            <armors ids="13435,13448,13140,13449,13450"/>
+            <armors ids="15592,15595,15589,15598,15601"/>
+            <armors ids="15575,15578,15572,15581,15584"/>
+            <weapons ids="14123"/>
+            <weapons ids="15842"/>
+            <weapons ids="15883"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="grandKhavatari">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <armors ids="9425,9428,9429,9430,9431"/>
+            <weapons ids="6604"/>
+            <weapons ids="9879"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10459"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14132"/>
+            <weapons ids="15845"/>
+            <weapons ids="15886"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="dominator">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="doomcryer">
+        <playerGrade grade="S">
+            <armors ids="9432,9437,9438,9439,9440"/>
+            <armors ids="6383,6384,6385,6386"/>
+            <weapons ids="6608,12811"/>
+            <weapons ids="9860,12812"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15611,15614,15608,15617,15620"/>
+            <weapons ids="10440,15622"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13434,13444,13139,13445,13446"/>
+            <armors ids="13437,13454,13142,13455,13456"/>
+            <armors ids="15594,15597,15591,15600,15603"/>
+            <armors ids="15577,15580,15574,15583,15586"/>
+            <weapons ids="14125,12813"/>
+            <weapons ids="15856,15605"/>
+            <weapons ids="15900,15588"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="fortuneSeeker">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <armors ids="9425,9428,9429,9430,9431"/>
+            <weapons ids="6590,9868,13882"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10448,13883"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14127,15834,15875,13884,16152,16156"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="maestro">
+        <playerGrade grade="S">
+            <armors ids="6373,6374,6378,6375,6376"/>
+            <armors ids="9425,9421,9422,9423,9424"/>
+            <weapons ids="6585,6377"/>
+            <weapons ids="9873,9441"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15609,15612,15606,15615,15618"/>
+            <weapons ids="10454,9441"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13432,13438,13137,13439,13440"/>
+            <armors ids="13435,13448,13140,13449,13450"/>
+            <armors ids="15592,15595,15589,15598,15601"/>
+            <armors ids="15575,15578,15572,15581,15584"/>
+            <weapons ids="14137,13471"/>
+            <weapons ids="15835,15604"/>
+            <weapons ids="15879,15587"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="maleSoldier">
+        <playerGrade grade="no-grade">
+            <armors ids="43,2386,23,20,39"/>
+            <weapons ids="66"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="femaleSoldier">
+        <playerGrade grade="no-grade">
+            <armors ids="43,2386,23,20,39"/>
+            <weapons ids="66"/>
+            <jewels ids="115,115,877,877,908"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="trooper">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="2499"/>
+	    <weapons ids="70"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="1463"/>
+        </playerGrade>
+    </item>
+
+    <item classId="warder">
+        <playerGrade grade="D">
+            <armors ids="352,2378,2411,2424,2450"/>
+            <weapons ids="190"/>
+	    <weapons ids="189"/>
+            <jewels ids="881,881,850,850,913"/>
+            <others ids="3948"/>
+        </playerGrade>
+    </item>
+    <item classId="berserker">
+        <playerGrade grade="C">
+            <armors ids="400,420,2460,2436,2414"/>
+            <armors ids="398,418,2431,2455,2414"/>
+            <armors ids="401,2437,2461,2414"/>
+            <weapons ids="9297"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2390,2415,5715,5731"/>
+            <armors ids="2384,2388,5711,5727,503"/>
+            <armors ids="2392,5723,5739,2417"/>
+            <armors ids="2416,2391,5719,5735"/>
+            <weapons ids="9311"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2385,2389,512,5766,5778"/>
+            <armors ids="2393,547,5769,5781"/>
+            <armors ids="2419,2395,5775,5787"/>
+            <armors ids="2418,5784,5772,2394"/>
+            <weapons ids="9345"/>
+            <jewels ids="933,871,871,902,902"/> 
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="maleSoulbreaker">
+        <playerGrade grade="C">
+            <armors ids="400,420,2460,2436,2414"/>
+            <armors ids="398,418,2431,2455,2414"/>
+            <armors ids="401,2437,2461,2414"/>
+            <weapons ids="9293"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2390,2415,5715,5731"/>
+            <armors ids="2384,2388,5711,5727,503"/>
+            <armors ids="2392,5723,5739,2417"/>
+            <armors ids="2416,2391,5719,5735"/>
+            <weapons ids="9306"/>
+            <jewels ids="895,895,864,864,926"/>
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2385,2389,512,5766,5778"/>
+            <armors ids="2393,547,5769,5781"/>
+            <armors ids="2419,2395,5775,5787"/>
+            <armors ids="2418,5784,5772,2394"/>
+            <weapons ids="9342"/>
+            <jewels ids="933,871,871,902,902"/> 
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="femaleSoulbreaker">
+        <playerGrade grade="C">
+            <armors ids="400,420,2460,2436,2414"/>
+            <armors ids="398,418,2431,2455,2414"/>
+            <armors ids="401,2437,2461,2414"/>
+            <weapons ids="9293"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464,3947"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2390,2415,5715,5731"/>
+            <armors ids="2384,2388,5711,5727,503"/>
+            <armors ids="2392,5723,5739,2417"/>
+            <armors ids="2416,2391,5719,5735"/>
+            <weapons ids="9306"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="1465,3948"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2385,2389,512,5766,5778"/>
+            <armors ids="2393,547,5769,5781"/>
+            <armors ids="2419,2395,5775,5787"/>
+            <armors ids="2418,5784,5772,2394"/>
+            <weapons ids="9342"/>
+            <jewels ids="933,871,871,902,902"/> 
+            <others ids="1466,3951"/>
+        </playerGrade>
+    </item>
+
+    <item classId="arbalester">
+        <playerGrade grade="C">
+            <armors ids="400,420,2460,2436,2414"/>
+            <armors ids="398,418,2431,2455,2414"/>
+            <armors ids="401,2437,2461,2414"/>
+            <weapons ids="9301"/>
+            <jewels ids="886,886,854,854,119"/>
+            <others ids="1464"/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2390,2415,5715,5731"/>
+            <armors ids="2384,2388,5711,5727,503"/>
+            <armors ids="2392,5723,5739,2417"/>
+            <armors ids="2416,2391,5719,5735"/>
+            <weapons ids="9314"/>
+            <jewels ids="895,895,864,864,926"/> 
+            <others ids="1465"/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2385,2389,512,5766,5778"/>
+            <armors ids="2393,547,5769,5781"/>
+            <armors ids="2419,2395,5775,5787"/>
+            <armors ids="2418,5784,5772,2394"/>
+            <weapons ids="9350"/>
+            <jewels ids="933,871,871,902,902"/> 
+            <others ids="1466"/>
+        </playerGrade>
+    </item>
+
+    <item classId="doombringer">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <armors ids="9425,9428,9429,9430,9431"/>
+            <weapons ids="9371"/>
+            <weapons ids="9381"/>
+            <jewels ids="858,858,889,889,920"/>
+            <jewels ids="9457,9457,9455,9455,9456"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10464"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14159"/>
+            <weapons ids="15866"/>
+            <weapons ids="15907"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="maleSoulhound">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <weapons ids="9367"/>
+            <jewels ids="858,858,889,889,920"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10461"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14153"/>
+            <weapons ids="15863"/>
+            <weapons ids="15904"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="femaleSoulhound">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <weapons ids="9367"/>
+            <jewels ids="858,858,889,889,920"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10461"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14153"/>
+            <weapons ids="15863"/>
+            <weapons ids="15904"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="trickster">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <weapons ids="9374"/>
+            <weapons ids="9387"/>
+            <jewels ids="858,858,889,889,920"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10469"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14155"/>
+            <weapons ids="15868"/>
+            <weapons ids="15912"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="inspector">
+        <playerGrade grade="C">
+            <armors ids="400,420,2460,2436,2414"/>
+            <armors ids="398,418,2431,2455,2414"/>
+            <armors ids="401,2437,2461,2414"/>
+            <weapons ids="9293"/>
+            <jewels ids="888,888,857,857,919"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="B">
+            <armors ids="2390,2415,5715,5731"/>
+            <armors ids="2384,2388,5711,5727,503"/>
+            <armors ids="2392,5723,5739,2417"/>
+            <armors ids="2416,2391,5719,5735"/>
+            <weapons ids="9306"/>
+            <jewels ids="14345,14345,14346,14346,14347"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="A">
+            <armors ids="2385,2389,512,5766,5778"/>
+            <armors ids="2393,547,5769,5781"/>
+            <armors ids="2419,2395,5775,5787"/>
+            <armors ids="2418,5784,5772,2394"/>
+            <weapons ids="9342"/>
+            <jewels ids="862,862,893,893,924"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+    <item classId="judicator">
+        <playerGrade grade="S">
+            <armors ids="6379,6380,6381,6382"/>
+            <weapons ids="9367"/>
+            <jewels ids="858,858,889,889,920"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S80">
+            <armors ids="15610,15613,15607,15616,15619"/>
+            <weapons ids="10461"/>
+            <jewels ids="15723,15723,15724,15724,15725"/>
+            <others ids=""/>
+        </playerGrade>
+        <playerGrade grade="S84">
+            <armors ids="13433,13441,13138,13442,13443"/>
+            <armors ids="13436,13451,13141,13452,13453"/>
+            <armors ids="15593,15596,15590,15602,15599"/>
+            <armors ids="15576,15579,15573,15582,15585"/>
+            <weapons ids="14153"/>
+            <weapons ids="15863"/>
+            <weapons ids="15904"/>
+            <jewels ids="14165,14165,14163,14163,14164"/>
+            <jewels ids="15720,15720,15721,15721,15722"/>
+            <jewels ids="15717,15717,15718,15718,15719"/>
+            <others ids=""/>
+        </playerGrade>
+    </item>
+
+
+</list>
+
+        <!--
+        
+        fighter
+        warrior
+        gladiator
+        warlord
+        knight
+        paladin
+        darkAvenger
+        rogue
+        treasureHunter
+        hawkeye
+        mage
+        wizard
+        sorceror
+        necromancer
+        warlock
+        cleric
+        bishop
+        prophet
+        elvenFighter
+        elvenKnight
+        templeKnight
+        swordSinger
+        elvenScout
+        plainsWalker
+        silverRanger
+        elvenMage
+        elvenWizard
+        spellsinger
+        elementalSummonr
+        oracle
+        elder
+        darkFighter
+        palusKnight
+        shillienKnight
+        bladedancer
+        assassin
+        abyssWalker
+        phantomRanger
+        darkMage
+        darkWizard
+        spellhowler
+        phantomSummoner
+        shillienOracle
+        shillenElder
+        orcFighter
+        orcRaider
+        destroyer
+        orcMonk
+        tyrant
+        orcMage
+        orcShaman
+        overlord
+        warcryer
+        dwarvenFighter
+        scavenger
+        bountyHunter
+        artisan
+        warsmith
+        duelist
+        dreadnought
+        phoenixKnight
+        hellKnight
+        sagittarius
+        adventurer
+        archmage
+        soultaker
+        arcanaLord
+        cardinal
+        hierophant
+        evaTemplar
+        swordMuse
+        windRider
+        moonlightSentinel
+        mysticMuse
+        elementalMaster
+        evaSaint
+        shillienTemplar
+        spectralDancer
+        ghostHunter
+        ghostSentinel
+        stormScreamer
+        spectralMaster
+        shillienSaint
+        titan
+        grandKhavatari
+        dominator
+        doomcryer
+        fortuneSeeker
+        maestro
+        maleSoldier
+        femaleSoldier
+        trooper
+        warder
+        berserker
+        maleSoulbreaker
+        femaleSoulbreaker
+        arbalester
+        doombringer
+        maleSoulhound
+        femaleSoulhound
+        trickster
+        inspector
+        judicator
+        
+        -->

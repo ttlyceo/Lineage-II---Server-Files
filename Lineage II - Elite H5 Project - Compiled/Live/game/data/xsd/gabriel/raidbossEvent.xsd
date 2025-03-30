@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="raidboss" maxOccurs="unbounded">
+
+					<xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dropLists" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="item" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="id" type="xs:int" />
+                                                <xs:attribute name="min" type="xs:int" />
+                                                <xs:attribute name="max" type="xs:int" />
+                                                <xs:attribute name="chance" type="xs:int" />
+                                                <xs:attribute name="minOccurs" type="xs:int"
+                                                              default="0" />
+                                                <xs:attribute name="maxOccurs" type="xs:int"
+                                                              default="0" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:boolean" name="ENABLED"/>
+                        <xs:attribute name="npcId" type="xs:int"/>
+                        <xs:attribute name="name" type="xs:string"/>
+                        <xs:attribute name="spawnX" type="xs:int"/>
+                        <xs:attribute name="spawnY" type="xs:int"/>
+                        <xs:attribute name="spawnZ" type="xs:int"/>
+                        <xs:attribute type="xs:string" name="MODE"/>
+                        <xs:attribute type="xs:byte" name="DURATION"/>
+                        <xs:attribute type="xs:byte" name="NOTIFY_DELAY"/>
+                        <xs:attribute type="xs:byte" name="DAY"/>
+                        <xs:attribute type="xs:byte" name="HOUR"/>
+                        <xs:attribute type="xs:byte" name="MINUTE"/>
+                        <xs:attribute type="xs:integer" name="RANDOM_MINUTE"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

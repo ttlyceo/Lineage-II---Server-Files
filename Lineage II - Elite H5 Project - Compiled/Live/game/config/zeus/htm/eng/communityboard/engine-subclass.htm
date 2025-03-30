@@ -1,0 +1,82 @@
+<html>
+	<title>Community Board</title>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+		<img src="L2UI.SquareGray" width="756" height="2">
+		<table width=730 border=0 cellpadding=0>
+			<tr>
+				<td width=720 fixwidth=720>
+					<img src="L2UI.SquareGray" width=744 height=2>
+					<table width=760 bgcolor="1F1F1F" height=48>
+						<tr>
+							<td width=32>
+								<table width=32>
+									<tr>
+										<td width=32>
+											<img src="icon.skill6289" width=32 height=32>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width=644>
+								<table width=604 border=0>
+									<tr>
+										<td>
+											<table cellpadding=0 cellspacing=0 border=0>
+												<tr>
+													<td>
+														<font name="hs12" color="FF9900">Subclass Manager</font>
+													</td>
+													<td>
+														<button action="bypass %BYPASS%" width=32 height=32 back="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" fore="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" value=" " >
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<font color="F8F9B7">Add, Change & Remove Subclasses</font>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width=64 align="RIGHT">
+							</td>
+						</tr>
+					</table>
+					<img src="L2UI.SquareGray" width="756" height=2>
+				</td>
+			</tr>
+		</table><br>
+		<table width=720 height=200>
+			<tr>
+				<td width=220>
+					<table width=220 background=L2UI_CT1.Windows_DF_Drawer_Bg>
+						<tr>
+							<td align="CENTER">
+								<br><button value="Add Subclass" action="bypass %BYPASS%;SubClass;add;0;0;0;0;0" width=195 height=40 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+								<button value="Change Subclass" action="bypass %BYPASS%;SubClass;change;0;0;0;0;0" width=195 height=40 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+								<button value="Remove Subclass" action="bypass %BYPASS%;SubClass;remove;0;0;0;0;0" width=195 height=40 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+								<br>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td width=500>
+					<table width=500 fixwidth=220 height=200 background=L2UI_CT1.Windows_DF_Drawer_Bg cellspacing=0 cellpadding=5>
+						%DATA%
+					</table><br><br>
+				</td>
+			</tr>
+		</table>
+			<center>
+				<table width=200 border=0 cellpadding=1>
+					<tr>
+						<td fixwidth=50 align=RIGHT><button action="%SUBCLASS_PREV_PAGE_BYPASS%" width=32 height=16 back="L2UI_CT1.Button_DF_Left" fore="L2UI_CT1.Button_DF_Left" value=" "></td>
+						<td fixwidth=100 align=CENTER><font color=04B4AE name=hs12>%SUBCLASS_PAGE_NUM%</font></td>
+						<td fixwidth=50 align=LEFT><button action="%SUBCLASS_NEXT_PAGE_BYPASS%" width=32 height=16 back="L2UI_CT1.Button_DF_Right" fore="L2UI_CT1.Button_DF_Right" value=" "></td>
+					</tr>
+				</table>
+			</center>
+	</td></tr></table></body>
+</html>

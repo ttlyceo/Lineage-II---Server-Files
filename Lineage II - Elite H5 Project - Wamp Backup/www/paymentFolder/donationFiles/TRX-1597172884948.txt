@@ -1,0 +1,35 @@
+IP: 173.0.81.1
+mc_gross=10.00
+protection_eligibility=Eligible
+payer_id=JEDPUM9TB5FSW
+payment_date=12:07:59 Aug 11, 2020 PDT
+payment_status=Completed
+charset=windows-1252
+first_name=Juan
+mc_fee=0.69
+notify_version=3.9
+custom=
+payer_status=unverified
+business=l2neptune.donations@gmail.com
+quantity=1
+verify_sign=Alb6u1AFHgpbZIlteqBDPiAPZh8CA1Ug.3xs1v.xqdRGHH1kzTzFCdg0
+payer_email=juanhp18@gmail.com
+txn_id=8DU105754N294600V
+payment_type=instant
+last_name=Hidalgo Pérez
+receiver_email=l2neptune.donations@gmail.com
+payment_fee=
+shipping_discount=0.00
+receiver_id=9M9AU66KKC2DU
+insurance_amount=0.00
+txn_type=web_accept
+item_name=f43ef66966a1cc4fb095092aa5c1101d
+discount=0.00
+mc_currency=EUR
+item_number=
+residence_country=ES
+shipping_method=Default
+transaction_subject=
+payment_gross=
+ipn_track_id=fc6dfcf9cb492
+

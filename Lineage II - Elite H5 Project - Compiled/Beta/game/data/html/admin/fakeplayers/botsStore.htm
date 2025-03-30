@@ -1,0 +1,119 @@
+<html>
+<title>Community Board Services</title>
+<body><br>
+<table>
+    <tr>
+        <td>
+            <button value="Back" action="bypass -h admin_phantoms" width=755 height=21
+                    back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+        </td>
+    </tr>
+</table>
+
+<table width=755>
+    <tr>
+        <td align="center" width="370">
+            <table width="300">
+                <tr>
+                    <td align="left" width="300" height="100">
+                        Add here an item that u want to be sold in the store of the phantom bot. <br>
+                        The phantom will have random appearance
+                    </td>
+                </tr>
+            </table>
+
+            <table width="300">
+                <tr>
+                    <td align="center" width="100" height="100">
+                        <button value="Change Mode" action="bypass -h admin_phstoreMaker ¬/ changeMode " width=100 height=21
+                                back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+                    </td>
+                    <td align="center" width="100" height="100">
+                        <button value="Add New Item" action="bypass -h admin_phstoreMaker ¬/ add " width=100 height=21
+                                back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+                    </td>
+                </tr>
+            </table>
+            <table width="300">
+                <tr>
+                    <td align="left" width="50" height="100">
+                        To Edit Value:
+                    </td>
+                    <td align="left" width="50" height="100">
+                        <edit width=150 height=12 var=toEditValue />
+                    </td>
+                </tr>
+            </table>
+            <table width="300">
+                <tr>
+                    <td align="center" width="100" height="30">
+                        <button value="Set Item Id" action="bypass -h admin_phstoreMaker ¬/ itemId ¬/ %index% ¬/ $toEditValue " width=100 height=21
+                                back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+                    </td>
+                    <td align="center" width="100" height="30">
+                        <button value="Set Price / Piece" action="bypass -h admin_phstoreMaker ¬/ price ¬/ %index% ¬/ $toEditValue " width=100 height=21
+                                back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" width="100" height="30">
+                        <button value="Set Title" action="bypass -h admin_phstoreMaker ¬/ title ¬/ $toEditValue " width=100 height=21
+                                back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+                    </td>
+                    <td align="center" width="100" height="30">
+                        <button value="Set Quantity" action="bypass -h admin_phstoreMaker ¬/ qnt ¬/ %index% ¬/ $toEditValue " width=100 height=21
+                                back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+                    </td>
+                </tr>
+            </table>
+            <table width="300">
+                <tr>
+
+                    <td align="center" width="100" height="100">
+                        <button value="Spawn" action="bypass -h admin_phstoreMaker ¬/ spawn " width=100 height=21
+                                back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"/>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td align="center" width="370">
+            <table width="400">
+                <tr>
+                    <td align="right" width="150" height="50">
+                        Current Mode:
+                    </td>
+                    <td align="left" width="150" height="50">
+                        %mode%
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" width="150" height="50">
+                        Current Title:
+                    </td>
+                    <td align="left" width="150" height="50">
+                        %title%
+                    </td>
+                </tr>
+            </table>
+            <table width="400">
+                <tr>
+                    <td width="30">V</td>
+                    <td width="50">ItemId</td>
+                    <td width="120">Item Name</td>
+                    <td width="30"></td>
+                    <td width="120">Value</td>
+                    <td width="50">Qnty</td>
+                    <td width="30">Del</td>
+                </tr>
+            </table>
+            <table width="400">
+                <tr>
+                    <td width="400">===========================================</td>
+                </tr>
+            </table>
+            %list%
+        </td>
+    </tr>
+</table>
+</body>
+</html>

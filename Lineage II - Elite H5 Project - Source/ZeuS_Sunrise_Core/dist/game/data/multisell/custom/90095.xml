@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<list maintainEnchantment="true"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+	
+
+	
+	<!-- Transformation Sealbook: Onyx Beast -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="9648" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Death Blader -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="9649" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Grail Apostle -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="9650" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Unicorn -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="9651" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Lilim Knight -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="9652" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Golem Guardian -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="9653" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Inferno Drake -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="9654" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Dragon Bomber -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="9655" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Onyx Beast  -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="9791" count="1" />
+	</item>
+
+	<!-- Transformation Sealbook: Zaken -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10295" count="1" />
+	</item>
+
+	<!-- Transformation Sealbook: Venom -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10297" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Gordon -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10298" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Ranku -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10299" count="1" />
+	</item>
+	<!-- Transformation Sealbook  - Kechi -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10300" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Demon Prince -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10301" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Heretic -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10302" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Veil Master -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10303" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Saber Tooth Tiger -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10304" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Oel Mahum -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10305" count="1" />
+	</item>
+	<!-- Transformation Sealbook: Doll Blader -->
+	<item>
+		<ingredient id="-100" count="12000" />
+		<production id="10306" count="1" />
+	</item>
+
+
+
+
+</list>

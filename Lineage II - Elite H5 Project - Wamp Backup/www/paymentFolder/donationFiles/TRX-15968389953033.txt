@@ -1,0 +1,35 @@
+IP: 173.0.81.1
+mc_gross=25.00
+protection_eligibility=Eligible
+payer_id=S6WEGGQPRZQWG
+payment_date=15:23:09 Aug 07, 2020 PDT
+payment_status=Completed
+charset=windows-1252
+first_name=mark
+mc_fee=1.20
+notify_version=3.9
+custom=
+payer_status=verified
+business=l2neptune.donations@gmail.com
+quantity=1
+verify_sign=A7oTpueo9Qk6cEg53QxjGR1qoBQRAgQl2Q5qVmcSXA4QtEk8aZE6f5dO
+payer_email=mark.ferguson14@gmail.com
+txn_id=6H3388880F520551A
+payment_type=instant
+last_name=ferguson
+receiver_email=l2neptune.donations@gmail.com
+payment_fee=
+shipping_discount=0.00
+receiver_id=9M9AU66KKC2DU
+insurance_amount=0.00
+txn_type=web_accept
+item_name=f45568fd826896b96ed86b86d2b89254
+discount=0.00
+mc_currency=EUR
+item_number=
+residence_country=GB
+shipping_method=Default
+transaction_subject=
+payment_gross=
+ipn_track_id=7f157d5166ebd
+

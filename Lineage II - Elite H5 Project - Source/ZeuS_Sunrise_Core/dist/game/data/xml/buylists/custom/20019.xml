@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+   <item id="302" count="1" /> <!-- Body Slasher -->
+   <item id="4840" count="1" /> <!-- Body Slasher -->
+   <item id="4841" count="1" /> <!-- Body Slasher -->
+   <item id="4842" count="1" /> <!-- Body Slasher -->
+   <item id="298" count="1" /> <!-- Orcish Glaive -->
+   <item id="4837" count="1" /> <!-- Orcish Glaive -->
+   <item id="4838" count="1" /> <!-- Orcish Glaive -->
+   <item id="4839" count="1" /> <!-- Orcish Glaive -->
+   <item id="96" count="1" /> <!-- Scythe -->
+   <item id="4834" count="1" /> <!-- Scythe -->
+   <item id="4835" count="1" /> <!-- Scythe -->
+   <item id="4836" count="1" /> <!-- Scythe -->
+   <item id="94" count="1" /> <!-- Bec de Corbin -->
+   <item id="4843" count="1" /> <!-- Bec de Corbin -->
+   <item id="4844" count="1" /> <!-- Bec de Corbin -->
+   <item id="4845" count="1" /> <!-- Bec de Corbin -->
+   <item id="95" count="1" /> <!-- Poleaxe -->
+   <item id="7719" count="1" /> <!-- Poleaxe -->
+   <item id="7720" count="1" /> <!-- Poleaxe -->
+   <item id="7721" count="1" /> <!-- Poleaxe -->
+   <item id="301" count="1" /> <!-- Scorpion -->
+   <item id="4846" count="1" /> <!-- Scorpion -->
+   <item id="4847" count="1" /> <!-- Scorpion -->
+   <item id="4848" count="1" /> <!-- Scorpion -->
+   <item id="303" count="1" /> <!-- Widow Maker -->
+   <item id="4849" count="1" /> <!-- Widow Maker -->
+   <item id="4850" count="1" /> <!-- Widow Maker -->
+   <item id="4851" count="1" /> <!-- Widow Maker -->
+   <item id="299" count="1" /> <!-- Orcish Poleaxe -->
+   <item id="4852" count="1" /> <!-- Orcish Poleaxe -->
+   <item id="4853" count="1" /> <!-- Orcish Poleaxe -->
+   <item id="4854" count="1" /> <!-- Orcish Poleaxe -->
+
+</list>

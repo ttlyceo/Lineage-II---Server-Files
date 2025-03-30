@@ -1,0 +1,35 @@
+IP: 173.0.81.1
+mc_gross=23.40
+protection_eligibility=Eligible
+payer_id=GBB949VKNCLWU
+payment_date=16:17:41 Aug 07, 2020 PDT
+payment_status=Completed
+charset=windows-1252
+first_name=CAÊ
+mc_fee=1.61
+notify_version=3.9
+custom=
+payer_status=unverified
+business=l2neptune.donations@gmail.com
+quantity=1
+verify_sign=A1n5aMGeilw97c9PTkMwxjNJN2URARb38sYlKPGVYcJPwHmGjVNCPy.0
+payer_email=caemestrepokemon@gmail.com
+txn_id=50F63540GP7857012
+payment_type=instant
+last_name=AIRES M LACERDA
+receiver_email=l2neptune.donations@gmail.com
+payment_fee=
+shipping_discount=0.00
+receiver_id=9M9AU66KKC2DU
+insurance_amount=0.00
+txn_type=web_accept
+item_name=7ebcd0ee393eb1aaf79f506f434a5eda
+discount=0.00
+mc_currency=EUR
+item_number=
+residence_country=BR
+shipping_method=
+transaction_subject=
+payment_gross=
+ipn_track_id=7f2d431e5d8cc
+

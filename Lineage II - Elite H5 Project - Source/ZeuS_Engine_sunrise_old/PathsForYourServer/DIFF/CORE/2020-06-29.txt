@@ -1,0 +1,57 @@
+Index: java/l2r/gameserver/network/clientpackets/RequestBuyItem.java
+===================================================================
+--- java/l2r/gameserver/network/clientpackets/RequestBuyItem.java	(revision 4)
++++ java/l2r/gameserver/network/clientpackets/RequestBuyItem.java	(working copy)
+@@ -139,15 +139,16 @@
+ 			if (merchant instanceof L2MerchantInstance)
+ 			{
+ 				intNpcId = ((L2MerchantInstance) merchant).getId();
++				if (ZeuS.isNPCZeuS(intNpcId))
++				{
++					intNpcId = ZeuS.getIDNpcZeuS_General();
++				}				
+ 				if (!buyList.isNpcAllowed(intNpcId) && !ZeuS.isNPCZeuS(intNpcId))
+ 				{
+ 					sendPacket(ActionFailed.STATIC_PACKET);
+ 					return;
+ 				}
+-				if (ZeuS.isNPCZeuS(intNpcId))
+-				{
+-					intNpcId = ZeuS.getIDNpcZeuS_General();
+-				}
++
+ 				
+ 				castleTaxRate = ((L2MerchantInstance) merchant).getMpc().getCastleTaxRate();
+ 				baseTaxRate = ((L2MerchantInstance) merchant).getMpc().getBaseTaxRate();
+Index: java/l2r/gameserver/model/actor/instance/L2PcInstance.java
+===================================================================
+--- java/l2r/gameserver/model/actor/instance/L2PcInstance.java	(revision 4)
++++ java/l2r/gameserver/model/actor/instance/L2PcInstance.java	(working copy)
+@@ -14546,7 +14546,7 @@
+ 			case SPOIL:
+ 				if (ZeuS.isPremium(this))
+ 				{
+-					float Retornar = ZeuS.getPremiumDropSpoil_Rate(this, true);
++					float Retornar = (float) ZeuS.getPremiumDropSpoil_Rate(this, true);
+ 					return Retornar;
+ 				}
+ 				return Config.RATE_DROP_ITEMS_ID.containsKey(itemId) ? Config.RATE_DROP_ITEMS_ID.get(itemId) : Config.RATE_DROP_SPOIL;
+@@ -14561,7 +14561,8 @@
+ 					}
+ 					if (ZeuS.isPremiumItem_Rate(this, itemId))
+ 					{
+-						_returnValue = ZeuS.getItemPremiumDrop_Rate(this, itemId, false, Config.RATE_DROP_ITEMS); //ZeuS.getRateDropItemPremium_Rate(this, itemId);
++						_returnValue = (float) ZeuS.getItemPremiumDrop_Rate(this, itemId, false, Config.RATE_DROP_ITEMS); //ZeuS.getRateDropItemPremium_Rate(this, itemId);
++				
+ 						return _returnValue;
+ 					}
+ 					else if (isRaid)
+@@ -14575,7 +14576,7 @@
+ 					}
+ 					else
+ 					{
+-						_returnValue = ZeuS.getPremiumDropItem_Rate(this, true);
++						_returnValue = (float) ZeuS.getPremiumDropItem_Rate(this, true);
+ 						return _returnValue;
+ 					}
+ 					

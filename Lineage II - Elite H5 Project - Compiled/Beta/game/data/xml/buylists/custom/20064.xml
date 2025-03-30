@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="9878" count="1" /><!-- Dynasty Bagh-Nakh -->
+   <item id="9879" count="1" /><!-- Dynasty Bagh-Nakh -->
+   <item id="9880" count="1" /><!-- Dynasty Bagh-Nakh -->
+</list>

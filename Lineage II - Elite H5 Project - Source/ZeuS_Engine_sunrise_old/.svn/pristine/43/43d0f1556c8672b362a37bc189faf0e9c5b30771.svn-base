@@ -1,0 +1,263 @@
+<html>
+/*GRID_FORMAT_1=<img src="L2UI_CT1.Gauge_DF_SSQ_Dawn" width=70 height=20>
+*/
+
+/*GRID_FORMAT_2=<img src="L2UI_CT1.Gauge_DF_SSQ_Dusk" width=70 height=20>
+*/
+
+<title>Community Board - L2L2 SOW  </title>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br><br><br>
+        <center>
+        <img src="L2UI.SquareGray" width=790 height=2><img src="L2UI.SquareBlank" width=720 height=3>
+        <table width=770 bgcolor=171717>
+        	<tr>
+            		<td align=LEFT width=770>
+                		<table width=750>
+                    			<tr>
+                        		<td width=270>
+                            			<table width=260>
+                               	    			<tr>
+                                    				<td>
+                                            				<table width=260 bgcolor=161619>
+										<tr>
+											<td align=CENTER fixwidth=260>
+												<font color="D8D8D8" align=CENTER>Character Control Panel</font>
+											</td>
+										</tr>
+									</table>
+									<table bgcolor=161619 width=260>
+										<tr>
+											<td width=120 align=RIGHT>
+												<font name="CreditTextSmall" color="FFFFFF">Block Exp/Sp:</font>
+											</td>
+											<td width=60>
+												<button value="Change" width=55 height=20 action="bypass %BYPASS%;CHANG;expsp;0;0;0" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+											<td width=80 align=LEFT>%expsp_STATUS%</td>
+										</tr>
+										<tr>
+											<td width=120 align=RIGHT>
+												<font name="CreditTextSmall" color="FFFFFF">Trade Refusal:</font>
+											</td>
+											<td width=60>
+												<button value="Change" width=55 height=20 action="bypass %BYPASS%;CHANG;tradec;0;0;0" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+											<td width=80 align=LEFT>%tradec_STATUS%</td>
+										</tr>
+										<tr>
+											<td width=120 align=RIGHT>
+												<font name="CreditTextSmall" color="FFFFFF">Badbuff Protection:</font>
+											</td>
+											<td width=60>
+												<button value="Change" width=55 height=20 action="bypass %BYPASS%;CHANG;noBuff;0;0;0" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+											<td width=80 align=LEFT>%noBuff_STATUS%</td>
+										</tr>
+										<tr>
+											<td width=120 align=RIGHT>
+												<font name="CreditTextSmall" color="FFFFFF">Hide Stores:</font>
+											</td>
+											<td width=60>
+												<button value="Change" width=55 height=20 action="bypass %BYPASS%;CHANG;hideStore;0;0;0" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+											<td width=80 align=LEFT>%hideStore_STATUS%</td>
+										</tr>
+										<tr>
+											<td width=120 align=RIGHT>
+												<font name="CreditTextSmall" color="FFFFFF">Public Self Stats:</font>
+											</td>
+											<td width=60>
+												<button value="Change" width=55 height=20 action="bypass %BYPASS%;CHANG;showmystat;0;0;0" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+											<td width=80 align=LEFT>%showmystat_STATUS%</td>
+										</tr>
+										<tr>
+											<td width=120 align=RIGHT>
+												<font name="CreditTextSmall" color="FFFFFF">Refusal Mode:</font>
+											</td>
+											<td width=60>
+												<button value="Change" width=55 height=20 action="bypass %BYPASS%;CHANG;Refusal;0;0;0" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+											<td width=80 align=LEFT>%Refusal_STATUS%</td>
+										</tr>
+										<tr>
+											<td width=120 align=RIGHT>
+												<font name="CreditTextSmall" color="FFFFFF">P.Matching Refusal:</font>
+											</td>
+											<td width=60>
+												<button value="Change" width=55 height=20 action="bypass %BYPASS%;CHANG;partymatching;0;0;0" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+											<td width=80 align=LEFT>%partymatching_STATUS%</td>
+										</tr>
+										/*GRID_FORMAT_3=<tr>
+											<td width=120 align=RIGHT>
+												<font name="CreditTextSmall" color="FFFFFF">Oly Scheme Buffer:</font>
+											</td>
+											<td width=60>
+												<button value="Change" width=55 height=20 action="bypass %BYPASS%;CHANG;olyBuffScheme;0;0;0" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+											<td width=80 align=LEFT>%olyBuffScheme_STATUS%</td>
+										</tr>
+										*/
+										<tr>
+											<td width=120 align=RIGHT>
+												<font name="CreditTextSmall" color="FFFFFF">Read Oly Winner:</font>
+											</td>
+											<td width=60>
+												<button value="Change" width=55 height=20 action="bypass %BYPASS%;CHANG;readolywinner;0;0;0" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+											<td width=80 align=LEFT>%readolywinner_STATUS%</td>
+										</tr>
+										<tr>
+											<td width=120 align=RIGHT>
+												<font name="CreditTextSmall" color="FFFFFF">See Other Dressme:</font>
+											</td>
+											<td width=60>
+												<button value="Change" width=55 height=20 action="bypass %DRESSME_SEE_OTHERS%" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+											<td width=80 align=LEFT>%seeOtherDressme_STATUS%</td>
+										</tr>
+									</table>
+									<table width=260 bgcolor=161619>
+										<tr>
+											<td align=CENTER fixwidth=260>
+												<center>
+													<font name=hs12 color=FE9A2E>Registration Email</font><br1>
+													/*GRID_FORMAT_4=<a action="bypass -h voice .acc_register">Register My Account</a><br>
+													*/
+													/*GRID_FORMAT_5=<font color=F6E3CE>%ACCOUNT_EMAIL%</font>
+													*/
+													<br1>
+													<button value="My Info" width=200 height=32 action="bypass %BYPASS_2%;MyInfo;0;0;0;0;0;0"; back="L2UI_CT1.OlympiadWnd_DF_Watch" fore="L2UI_CT1.OlympiadWnd_DF_Watch">
+													/*GRID_FORMAT_7=<button value="Dealy Login Quest (Cycle %CYCLE%)" width=200 height=32 action="bypass ZeuS dealy_login_quest" back="L2UI_CT1.OlympiadWnd_DF_Watch" fore="L2UI_CT1.OlympiadWnd_DF_Watch">
+													*/
+												</center>
+											</td>
+										</tr>
+									</table>
+		                                     	</td>
+						</tr>
+					</table>
+				</td>
+                            	<td width=460>
+					<table width=490>
+						<tr>
+							<td width=122 align=CENTER><button value="ANNOUCEMENT" width=113 height=28 action="bypass %BYPASS%;ANNO;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+							<td width=122 align=CENTER><button value="CHANGE LOG" width=113 height=28 action="bypass %BYPASS%;CHANGELOG;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+							<td width=122 align=CENTER><button value="RULES" width=113 height=28 action="bypass %BYPASS%;RULES;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+							<td width=122 align=CENTER><button value="STAFF" width=113 height=28 action="bypass %BYPASS%;STAFF;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+						</tr>
+					</table><br1>
+					<table width=490>
+						<tr>
+							<td width=122 align=CENTER><button value="SV. CONFIG" width=113 height=28 action="bypass %BYPASS%;RATE;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+							<td width=122 align=CENTER><button value="FEATURES" width=113 height=28 action="bypass %BYPASS%;FEATURES;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+							<td width=122 align=CENTER><button value="EVENTS" width=113 height=28 action="bypass %BYPASS%;EVENTS;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+							<td width=122 align=CENTER><button value="PLAYGAME" width=113 height=28 action="bypass %BYPASS%;PLAYGAME;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+						</tr>
+					</table><br1>
+					<table width=490>
+						<tr>
+							<td width=122 align=CENTER><button value="TOP PLAYERS" width=113 height=28 action="bypass %BYPASS%;TOPPLAYER;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+							<td width=122 align=CENTER><button value="HEROES" width=113 height=28 action="bypass %BYPASS_2%;HeroList;0;Human;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+							<td width=122 align=CENTER><button value="CLAN" width=113 height=28 action="bypass %BYPASS%;CLAN;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+							<td width=122 align=CENTER><button value="CASTLE" width=113 height=28 action="bypass %BYPASS%;CASTLE;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>"+
+						</tr>
+					</table><br>
+	                                <center>
+						<table width=480 border=0 background=L2UI_CT1.Windows_DF_TooltipBG>
+							<tr>
+								<td fixwidth=480 align=CENTER>
+									<font name=hs12 color=FFC441>Last Annoucement</font>
+								</td>
+							</tr>
+						</table>
+						<table width=480 border=0 background=L2UI_CT1.Windows_DF_TooltipBG height=150>
+							<tr>
+                        	     				<td fixwidth=480 align=CENTER>
+                                	 				<table width=460 border=0 background=L2UI_CT1.Windows_DF_TooltipBG>
+                                        					<tr>
+                                             						<td fixwidth=460 align=RIGHT>
+                                                 						%LAST_MESSAGE%
+                                             						</td>
+                                        					</tr>
+	                                 				</table>
+        	                         				<table width=460 border=0 background=L2UI_CT1.Windows_DF_TooltipBG>
+                	                        				<tr>
+                        	                     					<td fixwidth=460 align=RIGHT>
+                                	                 					<font color=3E738B>Posted on %LAST_MESSAGE_DATE% by</font> <font color=41C4FF>%LAST_MESSAGE_WRITER_NAME%</font>
+                                        	     					</td>
+                                        					</tr>
+                                 					</table><br>
+	                             				</td>
+        	                 			</tr>
+                	  			</table>
+					</center>
+				</td>
+			</tr>
+			</table>
+                    	<img src="L2UI.SquareGray" width=790 height=2>
+                    	<img src="L2UI.SquareBlank" width=720 height=3><br1>
+
+			<table width=770 bgcolor=040416>
+				<tr>
+					<td width=130 align=CENTER><font color="58C08C">Online Player: </font><font color="EBC277">%ONLINE_PLAYERS_COUNT%</font></td>
+					<td width=130 align=CENTER><font color="58C08C">Offtraders: </font><font color="EBC277">%OFFLINE_TRADERS%</font></td>
+						<td width=290 align=CENTER><font color="58C08C">Last Restarted: </font><font color="EBC277">%LAST_RESTART%</font></td>
+						<td with=220 align=LEFT><font color="58C08C">Time: </font><font color="EBC277">%SERVER_TIME%</font></td>
+				</tr>
+			</table>
+			<img src="L2UI.SquareGray" width=790 height=2>
+                      	<img src="L2UI.SquareBlank" width=720 height=3><br1>
+                      	<img src="L2UI.SquareGray" width=790 height=2>
+                      	<img src="L2UI.SquareBlank" width=720 height=3>
+
+			<table width="770" border=0 cellpadding=-1 bgcolor="161414">
+				<tr>
+					<td width=110 align=CENTER><table width=34 height=33 background="icon.skill6280" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB class_statistic" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Class Statistic</td>
+					<td width=110 align=CENTER><table width=34 height=33 background="icon.skillboss" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB raidboss_info" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Raid Boss Info</td>
+					<td width=110 align=CENTER><table width=34 height=33 background="icon.skill0390" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB donation_manager" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Donation</td>
+					<td width=110 align=CENTER><table width=34 height=33 background="icon.skill1297" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB buffer" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Buffer</td>
+					<td width=110 align=CENTER><table width=34 height=33 background="icon.skill1411" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB go_party_leader" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Go Party Leader</td>
+					<td width=110 align=CENTER><table width=34 height=33 background="icon.skill5661" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB flag_finder" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Flag Finder</td>
+					<td width=110 align=CENTER><table width=34 height=33 background="icon.skillelf" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB teleport" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Teleport</td>
+				</tr>
+			</table>
+
+			<img src="L2UI.SquareGray" width=790 height=2>
+			<img src="L2UI.SquareBlank" width=720 height=3>
+			<img src="L2UI.SquareGray" width=790 height=2>
+			<img src="L2UI.SquareBlank" width=720 height=3><br1>
+			<img src="L2UI.SquareGray" width=790 height=2>
+			<img src="L2UI.SquareBlank" width=720 height=3>
+
+			<table width=770>
+				<tr>
+					<td width=770 align=CENTER>
+						<font color="58C08C" name="CreditTextSmall">Total Server Memory Ram:</font><font color="EBC277" name="CreditTextSmall">%TOTAL_SERVER_RAM%</font> - 
+						<font color="58C08C" name="CreditTextSmall">Used Memory Ram:</font><font color="EBC277" name="CreditTextSmall">%USED_SERVER_MEMORY_RAM%</font> - 
+						<font color="58C08C" name="CreditTextSmall">Free Memory Ram:</font><font color="EBC277" name="CreditTextSmall">%FREE_SERVER_MEMORY_RAM%</font>
+					</td>
+				</tr>
+			</table>
+			/*GRID_FORMAT_6=<table width=770>
+					<tr>
+						<td width=770 align=CENTER>
+							<button value="BUG REPORT (%NO_READING_COUNT%)" width=180 height=28 action="%BYPASS_BUG_REPORT%" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+						</td>
+					</tr>
+				</table>
+			*/
+
+        		<img src="L2UI.SquareBlank" width=720 height=3>
+       			<img src="L2UI.SquareGray" width=790 height=2>
+		</center>
+    		<table width=720 align=CENTER>
+    			<tr>
+        			<td width=720 align=CENTER>
+            				<font color=333333>Zeus Community Engine for L2L2 SOW<br1>By JabberWock & xKamui 2016 - 2017</font>
+            			</td>
+			</tr>
+    		</table><br>
+	</td></tr></table></body>
+</html>

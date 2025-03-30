@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<list maintainEnchantment="true"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="8" id="23001" />
+		<!-- Fire Crystal -->
+		<production count="1" id="9552" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="8" id="23001" />
+		<!-- Water Crystal -->
+		<production count="1" id="9553" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="8" id="23001" />
+		<!-- Earth Crystal -->
+		<production count="1" id="9554" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="8" id="23001" />
+		<!-- Wind Crystal -->
+		<production count="1" id="9555" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="8" id="23001" />
+		<!-- Dark Crystal -->
+		<production count="1" id="9556" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="8" id="23001" />
+		<!-- Holy Crystal -->
+		<production count="1" id="9557" />
+	</item>
+
+
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="60" id="23001" />
+		<!-- PC Bang -->
+		<ingredient count="25000" id="-100" />
+		<!-- Red Dragon Bugle of Wind -->
+		<production count="1" id="10308" />
+	</item>
+
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="60" id="23001" />
+		<!-- PC Bang -->
+		<ingredient count="25000" id="-100" />
+		<!-- Red Dragon Bugle of Star -->
+		<production count="1" id="10309" />
+	</item>
+
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="60" id="23001" />
+		<!-- PC Bang -->
+		<ingredient count="25000" id="-100" />
+		<!-- Red Dragon Bugle of Twilight -->
+		<production count="1" id="10310" />
+	</item>
+
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="60" id="23001" />
+		<!-- PC Bang -->
+		<ingredient count="35000" id="-100" />
+		<!-- Fenrir Necklace -->
+		<production count="1" id="10426" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="60" id="23001" />
+		<!-- PC Bang -->
+		<ingredient count="35000" id="-100" />
+		<!-- Snow Fenrir Necklace -->
+		<production count="1" id="10611" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="3" id="23001" />
+		<!-- Greater CP Potion -->
+		<production count="20" id="5592" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="6" id="23001" />
+		<!-- Gaint's Codex -->
+		<production count="3" id="6622" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="6" id="23001" />
+		<!-- High-Grade Life Stone - lv80 -->
+		<production count="1" id="9575" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="8" id="23001" />
+		<!-- High-Grade Life Stone - lv84 -->
+		<production count="1" id="14168" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="8" id="23001" />
+		<!-- Top-Grade Life Stone - lv80 -->
+		<production count="1" id="9576" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="10" id="23001" />
+		<!-- Top-Grade Life Stone - lv84 -->
+		<production count="1" id="14169" />
+	</item>
+
+
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="6" id="23001" />
+		<!-- Blessed Scroll of Resurrection -->
+		<production count="2" id="3936" />
+	</item>
+	<item>
+		 <!-- Event Coin -->
+		<ingredient count="6" id="23001" />
+		<!-- Blessed Scroll of Escape -->
+		<production count="2" id="1538" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="300" id="23001" />
+		<!-- Golden Jack O'Lantern Mask -->
+		<production count="1" id="20723" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="300" id="23001" />
+		<!-- Shiny Planet x235 Alien's Mask -->
+		<production count="1" id="15449" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="300" id="23001" />
+		<!-- Shiny Super Strong GIant's Mask -->
+		<production count="1" id="15450" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="300" id="23001" />
+		<!-- Shiny Silent Scream's Mask -->
+		<production count="1" id="15451" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="300" id="23001" />
+		<!-- Shiny Wrathfull Spirit's Mask -->
+		<production count="1" id="15452" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="300" id="23001" />
+		<!-- Shiny Unrotten Corpse's Mask -->
+		<production count="1" id="15453" />
+	</item>
+
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="450" id="23001" />
+		<!-- Wizard's Cloak -->
+		<production count="1" id="23022" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="450" id="23001" />
+		<!-- Summoner's Cloak -->
+		<production count="1" id="23021" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="450" id="23001" />
+		<!-- Warrior's Cloak -->
+		<production count="1" id="23020" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="450" id="23001" />
+		<!-- Rouge's Cloak -->
+		<production count="1" id="23019" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="450" id="23001" />
+		<!-- Healer's Cloak -->
+		<production count="1" id="23018" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="450" id="23001" />
+		<!-- Enchanter's Cloak -->
+		<production count="1" id="23017" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="450" id="23001" />
+		<!-- Archer's Cloak -->
+		<production count="1" id="23016" />
+	</item>
+	<item>
+		<!-- Event Coin -->
+		<ingredient count="450" id="23001" />
+		<!-- Knight's Cloak -->
+		<production count="1" id="23015" />
+	</item>
+</list>

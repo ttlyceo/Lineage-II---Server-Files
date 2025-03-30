@@ -1,0 +1,1888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/items.xsd">
+	<item id="55027" type="Armor" name="Twitch Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="44014" type="Armor" name="Royal's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90011" type="Armor" name="Mage's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90008" type="Armor" name="Summoner's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90007" type="Armor" name="Rogue's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90005" type="Armor" name="Night's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90004" type="Armor" name="Healer's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90003" type="Armor" name="Archer's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90002" type="Armor" name="Magician's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90001" type="Armor" name="Duke's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90565" type="Armor" name="Valakas Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90566" type="Armor" name="Antharas Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="90010" type="Armor" name="Warrio's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="131555" type="Armor" name="Dark's Cloak">
+		<set name="icon" val="Heaven_icon.Heaven_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="CLOTH" />
+		<set name="item_skill" val="8507-1" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="70955" type="Armor" name="Halloween Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="70956" type="Armor" name="Ninja Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="80100" type="Armor" name="Baret v.1 Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="80101" type="Armor" name="Baret v.2 Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="80102" type="Armor" name="Baret v.3 Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="80103" type="Armor" name="Baret v.4 Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="80104" type="Armor" name="Baret v.5 Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="80105" type="Armor" name="Baret v.6 Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="70627" type="Armor" name="Blacj Jack-O Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="35730" type="Armor" name="Tribal Healer Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="44255" type="Armor" name="Modern Ninja Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="131556" type="Armor" name="Dark Helmet Accessory">
+		<set name="icon" val="Heaven_icon.Heaven_accessary" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="price" val="6000000" />
+	</item>
+	<item id="33309" type="Armor" name="Gold Helmet">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="1005" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="530" />
+		<set name="price" val="20940000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33314" type="Armor" name="Gold Leather Helmet">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="1005" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="530" />
+		<set name="price" val="20940000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33319" type="Armor" name="Gold Circlet">
+		<set name="icon" val="icon.armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="1005" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="530" />
+		<set name="price" val="20940000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33310" type="Armor" name="Gold Breastplate">
+		<set name="icon" val="icon.armor_t94_u_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="2680" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="7520" />
+		<set name="price" val="55840000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33315" type="Armor" name="Gold Leather Breastplate">
+		<set name="icon" val="icon.armor_t95_u_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="2010" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4140" />
+		<set name="price" val="41880000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33320" type="Armor" name="Gold Tunic">
+		<set name="icon" val="icon.armor_t96_u_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="2010" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1750" />
+		<set name="price" val="41880000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33311" type="Armor" name="Gold Gaiter">
+		<set name="icon" val="icon.armor_t94_l_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="1675" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="3170" />
+		<set name="price" val="34900000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33316" type="Armor" name="Gold Leather Legging">
+		<set name="icon" val="icon.armor_t95_l_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="1256" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1320" />
+		<set name="price" val="26175000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33321" type="Armor" name="Gold Stockings">
+		<set name="icon" val="icon.armor_t96_l_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="1256" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="850" />
+		<set name="price" val="26175000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33312" type="Armor" name="Gold Gauntlet">
+		<set name="icon" val="icon.armor_t94_g_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="670" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="13960000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33317" type="Armor" name="Gold Leather Gloves">
+		<set name="icon" val="icon.armor_t95_g_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="670" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="13960000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33322" type="Armor" name="Gold Gloves">
+		<set name="icon" val="icon.armor_t96_g_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="670" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="13960000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33313" type="Armor" name="Gold Boots">
+		<set name="icon" val="icon.armor_t94_b_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="670" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="13960000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33318" type="Armor" name="Gold Leather Boots">
+		<set name="icon" val="icon.armor_t95_b_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="670" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="13960000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="33323" type="Armor" name="Gold Shoes">
+		<set name="icon" val="icon.armor_t96_b_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="670" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="13960000" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="70928" type="Armor" name="Dark RoboCop Suit">
+		<set name="icon" val="LineageCustom3.hwn_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="61019" type="Armor" name="Kelbin Suit">
+		<set name="icon" val="LineageCustom3.hwn_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="61018" type="Armor" name="Tauti Suit">
+		<set name="icon" val="LineageCustom3.hwn_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="44254" type="Armor" name="Modern Ninja Suit">
+		<set name="icon" val="LineageCustom3.hwn_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="58007" type="Armor" name="Red Pirate Suit">
+		<set name="icon" val="LineageCustom3.hwn_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="33045" type="Armor" name="Blue Pirate Suit">
+		<set name="icon" val="LineageCustom3.hwn_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="70914" type="Armor" name="Black Navy Suit">
+		<set name="icon" val="LineageCustom3.hwn_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="131557" type="Armor" name="Dark Suit">
+		<set name="icon" val="LineageCustom3.hwn_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="40840" type="Weapon" name="Baium Shaper">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40841" type="Weapon" name="Baium Cutter">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13468" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40842" type="Weapon" name="Baium Slasher">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_twohand_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13470" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40843" type="Weapon" name="Baium Avenger">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_blunt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40844" type="Weapon" name="Baium Fighter">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_fist_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40845" type="Weapon" name="Baium Stormer">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="80" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="2010" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="3599-1" />
+	</item>
+	<item id="40846" type="Weapon" name="Baium Thrower">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13469" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="6" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="1500" />
+	</item>
+	<item id="40847" type="Weapon" name="Baium Buster">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_magic_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+	</item>
+	<item id="40851" type="Weapon" name="Baium Dualsword">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_dual_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="3411-1" />
+		<set name="item_skill" val="3552-1" />
+	</item>
+	<item id="40855" type="Weapon" name="Baium Rapier">
+		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="40" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1280" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13457" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="3426-1" />
+	</item>
+	<item id="40854" type="Weapon" name="Baium Ancient">
+		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="15" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1800" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13458" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40853" type="Weapon" name="Baium Shooterr">
+		<set name="icon" val="Odyssey_Weapons_AS.crossbow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="400" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="-1.5" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="price" val="205668000" />
+		<set name="change_weaponId" val="32010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="400" />
+		<set name="equip_condition" val="{{ec_race;{5}}}" />
+	</item>
+	<item id="40852" type="Weapon" name="Baium Dual Dagger">
+		<set name="icon" val="Odyssey_Weapons_AS.2dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="hit_modify" val="-3.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="11421" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="price" val="237930000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="8298-1" />
+		<set name="item_skill" val="3552-1" />
+		<set name="equip_condition" val="{{ec_requiredlevel;85};{ec_category;{@DAGGER_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player class_id_restriction="93, 101, 108" />
+				<player subclass="false" />
+			</and>
+		</cond>
+	</item>
+	<item id="40850" type="Weapon" name="Baium Blunt">
+		<set name="icon" val="Odyssey_Weapons_AS.hummer_2h_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="4.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="205668000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40849" type="Weapon" name="Baium Staff">
+		<set name="icon" val="icon.weapon_imperial_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2052" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="910" />
+		<set name="price" val="99999999" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<for>
+			<set stat="pAtk" val="274" />
+			<set stat="mAtk" val="193" />
+			<set stat="critRate" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
+	</item>
+	<item id="40848" type="Weapon" name="Baium Mace">
+		<set name="icon" val="Odyssey_Weapons_AS.stuff1h_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="4.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="205668000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="71839" type="Weapon" name="Blue Vesper Shaper">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="71838" type="Weapon" name="Blue Vesper Cutter">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13468" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="71842" type="Weapon" name="Blue Vesper Slasher">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_twohand_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13470" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="71840" type="Weapon" name="Blue Vesper Avenger">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_blunt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="71843" type="Weapon" name="Blue Vesper Fighter">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_fist_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="71844" type="Weapon" name="Blue Vesper Stormer">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="80" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="2010" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="3599-1" />
+	</item>
+	<item id="71848" type="Weapon" name="Blue Vesper Thrower">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13469" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="6" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="1500" />
+	</item>
+	<item id="71847" type="Weapon" name="Blue Vesper Buster">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_magic_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+	</item>
+	<item id="71853" type="Weapon" name="Blue Vesper Dualsword">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_dual_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="3411-1" />
+		<set name="item_skill" val="3552-1" />
+	</item>
+	<item id="71849" type="Weapon" name="Blue Vesper Rapier">
+		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="40" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1280" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13457" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="3426-1" />
+	</item>
+	<item id="71850" type="Weapon" name="Blue Vesper Ancient">
+		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="15" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1800" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13458" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="71851" type="Weapon" name="Blue Vesper Shooterr">
+		<set name="icon" val="Odyssey_Weapons_AS.crossbow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="400" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="-1.5" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="price" val="205668000" />
+		<set name="change_weaponId" val="32010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="400" />
+		<set name="equip_condition" val="{{ec_race;{5}}}" />
+	</item>
+	<item id="71852" type="Weapon" name="Blue Vesper Dual Dagger">
+		<set name="icon" val="Odyssey_Weapons_AS.2dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="hit_modify" val="-3.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="11421" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="price" val="237930000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="8298-1" />
+		<set name="item_skill" val="3552-1" />
+		<set name="equip_condition" val="{{ec_requiredlevel;85};{ec_category;{@DAGGER_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player class_id_restriction="93, 101, 108" />
+				<player subclass="false" />
+			</and>
+		</cond>
+	</item>
+	<item id="71841" type="Weapon" name="Blue Vesper Blunt">
+		<set name="icon" val="Odyssey_Weapons_AS.hummer_2h_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="4.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="205668000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="71846" type="Weapon" name="Blue Vesper Staff">
+		<set name="icon" val="icon.weapon_imperial_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2052" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="910" />
+		<set name="price" val="99999999" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<for>
+			<set stat="pAtk" val="274" />
+			<set stat="mAtk" val="193" />
+			<set stat="critRate" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
+	</item>
+	<item id="71845" type="Weapon" name="Blue Vesper Mace">
+		<set name="icon" val="Odyssey_Weapons_AS.stuff1h_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="4.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="205668000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40471" type="Weapon" name="Samurai Shaper">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40469" type="Weapon" name="Samurai Cutter">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13468" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40472" type="Weapon" name="Samurai Slasher">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_twohand_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13470" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40480" type="Weapon" name="Samurai Avenger">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_blunt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40483" type="Weapon" name="Samurai Fighter">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_fist_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40474" type="Weapon" name="Samurai Stormer">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="80" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="2010" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="3599-1" />
+	</item>
+	<item id="40482" type="Weapon" name="Samurai Thrower">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13469" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="6" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="1500" />
+	</item>
+	<item id="40465" type="Weapon" name="Samurai Dualsword">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_dual_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="3411-1" />
+		<set name="item_skill" val="3552-1" />
+	</item>
+	<item id="40476" type="Weapon" name="Samurai Ancient">
+		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="15" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1800" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13458" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40468" type="Weapon" name="Samurai Shooterr">
+		<set name="icon" val="Odyssey_Weapons_AS.crossbow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="400" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="-1.5" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="price" val="205668000" />
+		<set name="change_weaponId" val="32010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="400" />
+		<set name="equip_condition" val="{{ec_race;{5}}}" />
+	</item>
+	<item id="40464" type="Weapon" name="Samurai Dual Dagger">
+		<set name="icon" val="Odyssey_Weapons_AS.2dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="hit_modify" val="-3.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="11421" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="price" val="237930000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="8298-1" />
+		<set name="item_skill" val="3552-1" />
+		<set name="equip_condition" val="{{ec_requiredlevel;85};{ec_category;{@DAGGER_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player class_id_restriction="93, 101, 108" />
+				<player subclass="false" />
+			</and>
+		</cond>
+	</item>
+	<item id="40467" type="Weapon" name="Samurai Blunt">
+		<set name="icon" val="Odyssey_Weapons_AS.hummer_2h_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="4.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="205668000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="40466" type="Weapon" name="Samurai Staff">
+		<set name="icon" val="icon.weapon_imperial_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2052" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="910" />
+		<set name="price" val="99999999" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<for>
+			<set stat="pAtk" val="274" />
+			<set stat="mAtk" val="193" />
+			<set stat="critRate" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
+	</item>
+	<item id="40478" type="Weapon" name="Samurai Dual Dagger v.2">
+		<set name="icon" val="Odyssey_Weapons_AS.2dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="hit_modify" val="-3.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="11421" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="price" val="237930000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="8298-1" />
+		<set name="item_skill" val="3552-1" />
+		<set name="equip_condition" val="{{ec_requiredlevel;85};{ec_category;{@DAGGER_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player class_id_restriction="93, 101, 108" />
+				<player subclass="false" />
+			</and>
+		</cond>
+	</item>
+	<item id="404791" type="Weapon" name="Samurai Shaper v.2">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="55545" type="Weapon" name="Emerald Shaper">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_dagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="55544" type="Weapon" name="Emerald Cutter">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13468" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="55548" type="Weapon" name="Emerald Slasher">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_twohand_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13470" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="55546" type="Weapon" name="Emerald Avenger">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_blunt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="55549" type="Weapon" name="Emerald Fighter">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_fist_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="55550" type="Weapon" name="Emerald Stormer">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_spear_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="80" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="2010" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="3599-1" />
+	</item>
+	<item id="55554" type="Weapon" name="Emerald Thrower">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13469" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="6" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="1500" />
+	</item>
+	<item id="55553" type="Weapon" name="Emerald Buster">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_onehand_magic_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+	</item>
+	<item id="55559" type="Weapon" name="Emerald Dualsword">
+		<set name="icon" val="AuraKyriadLindviorWeapons.icon.weapon_antaras_dual_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="143356000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="3411-1" />
+		<set name="item_skill" val="3552-1" />
+	</item>
+	<item id="55555" type="Weapon" name="Emerald Rapier">
+		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="40" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1280" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13457" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="3426-1" />
+	</item>
+	<item id="55548" type="Weapon" name="Emerald Ancient">
+		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="15" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="7050" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1800" />
+		<set name="price" val="143356000" />
+		<set name="change_weaponId" val="13458" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="55557" type="Weapon" name="Emerald Shooterr">
+		<set name="icon" val="Odyssey_Weapons_AS.crossbow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="400" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="-1.5" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="price" val="205668000" />
+		<set name="change_weaponId" val="32010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="400" />
+		<set name="equip_condition" val="{{ec_race;{5}}}" />
+	</item>
+	<item id="55558" type="Weapon" name="Emerald Dual Dagger">
+		<set name="icon" val="Odyssey_Weapons_AS.2dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="hit_modify" val="-3.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="11421" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="price" val="237930000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="enchant4_skill" val="8298-1" />
+		<set name="item_skill" val="3552-1" />
+		<set name="equip_condition" val="{{ec_requiredlevel;85};{ec_category;{@DAGGER_master}}}" />
+		<cond msgId="1518">
+			<and>
+				<player class_id_restriction="93, 101, 108" />
+				<player subclass="false" />
+			</and>
+		</cond>
+	</item>
+	<item id="55547" type="Weapon" name="Emerald Blunt">
+		<set name="icon" val="Odyssey_Weapons_AS.hummer_2h_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="4.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="205668000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+	<item id="55552" type="Weapon" name="Emerald Staff">
+		<set name="icon" val="icon.weapon_imperial_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="2052" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="910" />
+		<set name="price" val="99999999" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<for>
+			<set stat="pAtk" val="274" />
+			<set stat="mAtk" val="193" />
+			<set stat="critRate" val="4" />
+			<add stat="accCombat" val="4.75" />
+			<set stat="pAtkSpd" val="325" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
+	</item>
+	<item id="55551" type="Weapon" name="Emerald Mace">
+		<set name="icon" val="Odyssey_Weapons_AS.stuff1h_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="hit_modify" val="4.75" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="9872" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="205668000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="1" />
+		<set name="enchant_enabled" val="1" />
+	</item>
+		<item id="77777" type="Weapon" name="Twitch Hat">
+        <set name="icon" val="newbettu.icon_akamana1" />
+        <set name="default_action" val="EQUIP" />
+        <set name="bodypart" val="hairall" />
+        <set name="material" val="WOOD" />
+        <set name="weight" val="10" />
+		<for>
+			<add stat="maxCp" val="250" />
+			<add stat="maxHp" val="250" />
+			<add stat="maxMp" val="250" />
+		</for>
+	</item>
+</list>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+	 <npc>956</npc>
+     </npcs>
+   <item id="52" count="1" /><!-- Vesper Dual Sword -->
+   <item id="13457" count="1" /><!-- Vesper Cutter -->
+   <item id="13458" count="1" /><!-- Vesper Slasher -->
+   <item id="13459" count="1" /><!-- Vesper Buster -->
+   <item id="13460" count="1" /><!-- Vesper Shaper -->
+   <item id="13461" count="1" /><!-- Vesper Fighter -->
+   <item id="13462" count="1" /><!-- Vesper Stormer -->
+   <item id="13463" count="1" /><!-- Vesper Avenger -->
+   <item id="13464" count="1" /><!-- Vesper Retributer -->
+   <item id="13465" count="1" /><!-- Vesper Caster -->
+   <item id="13466" count="1" /><!-- Vesper Singer -->
+   <item id="13467" count="1" /><!-- Vesper Thrower -->
+   <item id="13468" count="1" /><!-- Vesper Pincer -->
+   <item id="13469" count="1" /><!-- Vesper Shooter -->
+   <item id="13470" count="1" /><!-- Vesper Nagan -->
+   <item id="13884" count="1" /><!-- Vesper Dual Daggers -->
+   <item id="14118" count="1" /><!-- Vesper Cutter - Haste -->
+   <item id="14119" count="1" /><!-- Vesper Cutter - Health -->
+   <item id="14120" count="1" /><!-- Vesper Cutter - Focus -->
+   <item id="14121" count="1" /><!-- Vesper Slasher - Haste -->
+   <item id="14122" count="1" /><!-- Vesper Slasher - Health -->
+   <item id="14123" count="1" /><!-- Vesper Slasher - Focus -->
+   <item id="14124" count="1" /><!-- Vesper Buster - Mana Up -->
+   <item id="14125" count="1" /><!-- Vesper Buster - Acumen -->
+   <item id="14126" count="1" /><!-- Vesper Buster - Magic Hold -->
+   <item id="14127" count="1" /><!-- Vesper Shaper - Critical Damage -->
+   <item id="14128" count="1" /><!-- Vesper Shaper - HP Drain -->
+   <item id="14129" count="1" /><!-- Vesper Shaper - Haste -->
+   <item id="14130" count="1" /><!-- Vesper Fighter - Focus -->
+   <item id="14131" count="1" /><!-- Vesper Fighter - Health -->
+   <item id="14132" count="1" /><!-- Vesper Fighter - Critical Stun -->
+   <item id="14133" count="1" /><!-- Vesper Stormer - Health -->
+   <item id="14134" count="1" /><!-- Vesper Stormer - Guidance -->
+   <item id="14135" count="1" /><!-- Vesper Stormer - Haste -->
+   <item id="14136" count="1" /><!-- Vesper Avenger - HP Drain -->
+   <item id="14137" count="1" /><!-- Vesper Avenger - Health -->
+   <item id="14138" count="1" /><!-- Vesper Avenger - HP Regeneration -->
+   <item id="14139" count="1" /><!-- Vesper Retributer - HP Regeneration -->
+   <item id="14140" count="1" /><!-- Vesper Retributer - Health -->
+   <item id="14141" count="1" /><!-- Vesper Retributer - HP Drain -->
+   <item id="14142" count="1" /><!-- Vesper Caster - Acumen -->
+   <item id="14143" count="1" /><!-- Vesper Caster - MP Regeneration -->
+   <item id="14144" count="1" /><!-- Vesper Caster - Mana Up -->
+   <item id="14145" count="1" /><!-- Vesper Singer - Empower -->
+   <item id="14146" count="1" /><!-- Vesper Singer - MP Regeneration -->
+   <item id="14147" count="1" /><!-- Vesper Singer - Magic Hold -->
+   <item id="14148" count="1" /><!-- Vesper Thrower - Cheap Shot -->
+   <item id="14149" count="1" /><!-- Vesper Thrower - Focus -->
+   <item id="14150" count="1" /><!-- Vesper Thrower - Critical Slow -->
+   <item id="14151" count="1" /><!-- Vesper Pincer - Haste -->
+   <item id="14152" count="1" /><!-- Vesper Pincer - Health -->
+   <item id="14153" count="1" /><!-- Vesper Pincer - Focus -->
+   <item id="14154" count="1" /><!-- Vesper Shooter - Cheap Shot -->
+   <item id="14155" count="1" /><!-- Vesper Shooter - Focus -->
+   <item id="14156" count="1" /><!-- Vesper Shooter - Critical Slow -->
+   <item id="14157" count="1" /><!-- Vesper Nagan - Haste -->
+   <item id="14158" count="1" /><!-- Vesper Nagan - Health -->
+   <item id="14159" count="1" /><!-- Vesper Nagan - Focus -->
+
+</list>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<config>
+		<set name="enabled_pvp_name_color" value="False" />
+		<set name="enabled_pk_title_color" value="False" />
+	</config>
+
+	<pvpcolor count_start="100" count_end="200" color="" /> <!-- COLOR NAME -->
+	<pvpcolor count_start="201" count_end="300" color="" />	<!-- COLOR NAME -->
+	<pvpcolor count_start="301" count_end="400" color="" />	<!-- COLOR NAME -->
+
+
+	<pkcolor count_start="100" count_end="200" color="" /> <!-- COLOR TITLE -->
+	<pkcolor count_start="201" count_end="300" color="" />	<!-- COLOR TITLE -->
+	<pkcolor count_start="301" count_end="400" color="" />	<!-- COLOR TITLE -->
+
+</list>

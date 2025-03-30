@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" path="dist/game/data/scripts"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ZeuS_Sunrise_Core"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/ZeuS_Sunrise_Core/dist/libs/mmocore.jar"/>
+	<classpathentry kind="lib" path="/ZeuS_Sunrise_Core/dist/libs/engine.jar"/>
+	<classpathentry kind="lib" path="/ZeuS_Sunrise_Core/dist/libs/protection.jar"/>
+	<classpathentry kind="lib" path="/ZeuS_Sunrise_Core/dist/libs/commons.jar"/>
+	<classpathentry kind="lib" path="/ZeuS_Sunrise_Core/dist/libs/geoengine.jar"/>
+	<classpathentry kind="lib" path="/ZeuS_Sunrise_Core/dist/libs/event-engine.jar"/>
+	<classpathentry kind="lib" path="/ZeuS_Sunrise_Core/dist/libs/ZeuSNPC.jar"/>
+	<classpathentry kind="lib" path="/ZeuS_Sunrise_Core/dist/libs/protocols.jar"/>
+	<classpathentry kind="lib" path="/ZeuS_Sunrise_Core/dist/libs/sutil.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

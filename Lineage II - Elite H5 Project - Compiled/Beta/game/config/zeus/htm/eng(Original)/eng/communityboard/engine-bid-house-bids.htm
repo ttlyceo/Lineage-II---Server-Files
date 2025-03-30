@@ -1,0 +1,249 @@
+<html>
+	<title>Community Board</title>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+		<center>
+			<img src="L2UI.SquareGray" width="756" height="2">
+			<table width=730 border=0 cellpadding=0>
+				<tr>
+					<td width=720 fixwidth=720>
+						<img src="L2UI.SquareGray" width=744 height=2>
+						<table width=760 bgcolor="1F1F1F" height=48>
+							<tr>
+								<td width=32>
+									<table width=32>
+										<tr>
+											<td width=32>
+												<img src="icon.skill0818" width=32 height=32>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td width=644>
+									<table width=604 border=0>
+										<tr>
+											<td>
+												<table cellpadding=0 cellspacing=0 border=0>
+													<tr>
+														<td>
+															<font name="hs12" color="FF9900">BID House</font>
+														</td>
+														<td>
+															<button action="bypass %BYPASS%" width=32 height=32 back="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" fore="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" value=" " >
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<font color="F8F9B7">BID House</font>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td width=64 align="RIGHT">
+								</td>
+							</tr>
+						</table>
+						<img src="L2UI.SquareGray" width="756" height=2>
+					</td>
+				</tr>
+			</table><br>
+
+			<table widht=770>
+				<tr>
+					<td fixwidth=256><button value="All BID Bidding" action="%ALL_BID_LIST_BYPASS%" width=250 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+					<td fixwidth=256><button value="Create New Bid" action="%MY_BID_CREATE_LIST%" width=250 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+					<td fixwidth=256><button value="Your Biddings & Bids" action="%MY_BIDS_LIST%" width=250 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+				</tr>
+			</table><br>
+
+			<font name="hs12">Your Active Biddings</font>
+			<img src="L2UI.SquareGray" width="756" height=2>
+			
+				<table cellspacing=0 cellpadding=0 border=0>
+					<tr>
+						<td>
+							<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+						</td>
+						<td fixwidth=220 align=center>
+							<button value="Item" width=236 height=16 action="%YOUR_BIDS_ORDER_BY_NAME%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+						</td>
+						<td>
+							<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+						</td>
+						<td>
+							<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+						</td>
+						<td fixwidth=80 align=center>
+							<button value="Quantity" width=80 height=16 action="%YOUR_BIDS_ORDER_BY_QUANTITY%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+						</td>
+						<td>
+							<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+						</td>
+						<td>
+							<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+						</td>
+						<td fixwidth=80 align=center>
+							<button value="I. Request" width=80 height=16 action="%YOUR_BIDS_ORDER_BY_ITEM_REQUESTED%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+						</td>
+						<td>
+							<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+						</td>
+						<td>
+							<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+						</td>
+						<td fixwidth=140 align=center>
+							<button value="Begin > Current Bid" width=140 height=16 action="%YOUR_BIDS_ORDER_BY_CURRENT_BID_DATA%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+						</td>
+						<td>
+							<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+						</td>
+						<td fixwidth=110 align=center>
+							<button value="Remaining Time" width=110 height=16 action="%YOUR_BIDS_ORDER_BY_REMAINING_TIME%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+						</td>
+						<td>
+							<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+						</td>
+						<td fixwidth=20 align=center>
+							<button value="" width=20 height=16 action="" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+						</td>
+						<td>
+							<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+						</td>
+					</tr>
+				</table>
+			/*GRID_FORMAT_1=
+				<table cellspacing=0 cellpadding=0 border=0 width=688 bgcolor=%BGCOLOR%>
+					<tr>
+						<td fixwidth=32 align=Left>
+							%IMG%<br>
+						</td>
+						<td fixwidth=218 align=Left>
+							%ITEM_NAME%<br>
+						</td>
+						<td fixwidth=90 align=Central>
+							%QUANTITY%<br>
+						</td>
+						<td fixwidth=90 align=Left>
+							%ITEM_REQUESTED%<br>
+						</td>
+						<td fixwidth=150 align=Center>
+							<font color=%COLOR%>%INI_BID% > %CURRENT_BID%</font><br>
+						</td>
+						<td fixwidth=110 align=Left>
+							%REMAINING_TIME%<br>
+						</td>
+						<td fixwidth=20 align=Left>
+							%BTN_GO%<br>
+						</td>
+					</tr>
+				</table>
+			*/
+			<br>
+
+			<center>
+				<table width=200 border=0 cellpadding=1>
+					<tr>
+						<td fixwidth=50 align=RIGHT><button action="%MY_BIDS_PREV_PAGE_BYPASS%" width=32 height=16 back="L2UI_CT1.Button_DF_Left" fore="L2UI_CT1.Button_DF_Left" value=" "></td>
+						<td fixwidth=100 align=CENTER><font color=04B4AE name=hs12>%MY_BIDS_PAGE_NUM%</font></td>
+						<td fixwidth=50 align=LEFT><button action="%MY_BIDS_NEXT_PAGE_BYPASS%" width=32 height=16 back="L2UI_CT1.Button_DF_Right" fore="L2UI_CT1.Button_DF_Right" value=" "></td>
+					</tr>
+				</table>
+			</center>
+
+			<br><br><br>
+
+			<font name="hs12">Your Placed Bids</font>
+			<img src="L2UI.SquareGray" width="756" height=2>
+			<table cellspacing=0 cellpadding=0 border=0>
+				<tr>
+					<td>
+						<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+					</td>
+					<td fixwidth=220 align=center>
+						<button value="Item" width=236 height=16 action="%PLACED_BIDS_ORDER_BY_ITEM_NAME%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+					</td>
+					<td>
+						<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+					</td>
+					<td>
+						<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+					</td>
+					<td fixwidth=80 align=center>
+						<button value="Quantity" width=80 height=16 action="%PLACED_BIDS_ORDER_BY_QUANTITY%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+					</td>
+					<td>
+						<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+					</td>
+					<td>
+						<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+					</td>
+					<td fixwidth=80 align=center>
+						<button value="I. Request" width=80 height=16 action="%PLACED_BIDS_ORDER_BY_ITEM_REQUESTED%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+					</td>
+					<td>
+						<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+					</td>
+					<td>
+						<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+					</td>
+					<td fixwidth=140 align=center>
+						<button value="Begin > Current Bid" width=140 height=16 action="%PLACED_BIDS_ORDER_BY_BID_DATA%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+					</td>
+					<td>
+						<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+					</td>
+					<td fixwidth=110 align=center>
+						<button value="Remaining Time" width=110 height=16 action="%PLACED_BIDS_ORDER_BY_REMAINING_TIME%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+					</td>
+					<td>
+						<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+					</td>
+					<td fixwidth=20 align=center>
+						<button value="" width=20 height=16 action="" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+					</td>
+					<td>
+						<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+					</td>
+				</tr>
+			</table>
+			/*GRID_FORMAT_2=
+				<table cellspacing=0 cellpadding=0 border=0 width=688 bgcolor=%BGCOLOR%>
+					<tr>
+						<td fixwidth=32 align=Left>
+							%IMG%<br>
+						</td>
+						<td fixwidth=218 align=Left>
+							%ITEM_NAME%<br>
+						</td>
+						<td fixwidth=90 align=Central>
+							%QUANTITY%<br>
+						</td>
+						<td fixwidth=90 align=Left>
+							%ITEM_REQUESTED%<br>
+						</td>
+						<td fixwidth=150 align=Center>
+							<font color=%COLOR%>%INI_BID% > %CURRENT_BID%</font><br>
+						</td>
+						<td fixwidth=110 align=Left>
+							%REMAINING_TIME%<br>
+						</td>
+						<td fixwidth=20 align=Left>
+							%BTN_GO%<br>
+						</td>
+					</tr>
+				</table>
+			*/
+			<center>
+				<table width=200 border=0 cellpadding=1>
+					<tr>
+						<td fixwidth=50 align=RIGHT><button action="%PLACED_BIDS_PREV_PAGE_BYPASS%" width=32 height=16 back="L2UI_CT1.Button_DF_Left" fore="L2UI_CT1.Button_DF_Left" value=" "></td>
+						<td fixwidth=100 align=CENTER><font color=04B4AE name=hs12>%PLACED_BIDS_PAGE_NUM%</font></td>
+						<td fixwidth=50 align=LEFT><button action="%PLACED_BIDS_NEXT_PAGE_BYPASS%" width=32 height=16 back="L2UI_CT1.Button_DF_Right" fore="L2UI_CT1.Button_DF_Right" value=" "></td>
+					</tr>
+				</table>
+			</center>
+		</center>
+	</td></tr></table></body>
+</html>

@@ -1,0 +1,82 @@
+<html>
+	<title>L2 Neptune - Buffstore System</title>
+	<body>
+		%SERVER_LOGO%<br>
+        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+		<table width=280 background=L2UI_CT1.Windows_DF_Drawer_Bg_Darker border=0>
+			<tr>
+				<td align=CENTER>
+					Here you can set a private Buff Store.<br>Other players will be able to purchase or get for free your buffs directly from you when clicking on you.<br>
+				</td>
+			</tr>
+			<tr>
+				<td align=CENTER>Title:<br1></td>
+			</tr>
+	            	<tr>
+				<td align=CENTER>
+					<multiedit var="txtTitulo" width=180 height=20 ><br>
+				</td>
+			</tr>
+			<tr>
+				<td align=CENTER>Price:<br1></td>
+			</tr>
+	            	<tr>
+				<td align=CENTER>
+					<edit var="txtPrice" type=number width=180><br>
+				</td>
+			</tr>
+			<tr>
+				<td align=CENTER>Item Request:<br1></td>
+			</tr>
+			<tr>
+				<td align=CENTER>
+					<combobox width=190 var="cmbItem" list="%ITEM_LIST%"><br>
+				</td>
+			</tr>
+			<tr>
+				<td align=CENTER>Free buff for my Clan<br1></td>
+			</tr>
+	            	<tr>
+				<td align=CENTER>
+					<combobox width=90 var="cmbBuffClan" list="No;Yes"><br>
+				</td>
+			</tr>
+			<tr>
+				<td align=CENTER>
+					Free buff for my Friends<br1>
+				</td>
+			</tr>
+			<tr>
+				<td align=CENTER>
+					<combobox width=90 var="cmbBuffFriend" list="No;Yes"><br>
+				</td>
+			</tr>
+			<tr>
+				<td align=CENTER>
+					Free buff for my Email<br1>
+				</td>
+			</tr>
+			<tr>
+				<td align=CENTER>
+					<combobox width=90 var="cmbBuffEmail" list="No;Yes"><br>
+				</td>
+			</tr>			
+	        <tr>
+				<td align=CENTER>
+	            			Free buff for my IP Connection<br1> %MY_IP%<br1>
+				</td>
+			</tr>
+			<tr>
+				<td align=CENTER>
+					<combobox width=90 var="cmbFreeConecc" list="Yes;No"><br>
+				</td>
+			</tr>
+			<tr>
+				<td align=CENTER>
+					<button value="Start Now!" action="%BYPASS_START%" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_HeroConfirm" fore="L2UI_CT1.OlympiadWnd_DF_HeroConfirm">
+	            		</td>
+			</tr>
+		</table><br><br>
+        </td></tr></table>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+   <item id="2551" count="1" /> <!-- Crimson Sword*Crimson Sword -->
+   <item id="2555" count="1" /> <!-- Elven Sword*Elven Sword -->
+   <item id="2558" count="1" /> <!-- Sword of Revolution*Sword of Revolution -->
+   <item id="2560" count="1" /> <!-- Elven Long Sword*Elven Long Sword -->
+   <item id="2561" count="1" /> <!-- Stormbringer*Stormbringer -->
+   <item id="2582" count="1" /> <!-- Katana*Katana -->
+   <item id="2559" count="1" /> <!-- Sword of Revolution*Elven Long Sword -->
+   <item id="2572" count="1" /> <!-- Shamshir*Shamshir -->
+   <item id="2591" count="1" /> <!-- Spirit Sword*Spirit Sword -->
+
+</list>

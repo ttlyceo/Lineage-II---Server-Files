@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+
+
+<list maintainEnchantment="false"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+
+
+	<item>
+		<!-- Blessed Earring of Zaken -->
+		<ingredient count="1" id="6659" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="6659" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="150" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="21712" />
+	</item>
+
+	<item>
+		<!-- Blessed Necklance of Frintezza-->
+		<ingredient count="1" id="8191" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="8191" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="150" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="46008" />
+	</item>
+
+	<item>
+		<!-- Blessed Necklance of Freya-->
+		<ingredient count="1" id="16025" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="16025" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="150" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="16026" />
+	</item>
+
+	<item>
+		<!-- Improved Ring of Core -->
+		<ingredient count="1" id="6662" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="6662" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="250" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="46000" />
+	</item>
+
+	<item>
+		<!-- Improved Ring of Queen Ant -->
+		<ingredient count="1" id="6660" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="6660" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="250" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="22174" />
+	</item>
+
+	<item>
+		<!-- Improved Ring of Bauim -->
+		<ingredient count="1" id="6658" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="6658" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="250" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="22173" />
+	</item>
+
+	<item>
+		<!-- Improved Orfen Earring -->
+		<ingredient count="1" id="6661" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="6661" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="250" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="46004" />
+	</item>
+
+	<item>
+		<!-- Improved Blessed Earring of Zaken -->
+		<ingredient count="1" id="21712" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="21712" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="250" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="22175" />
+	</item>
+
+	<item>
+		<!-- Improved Earring of Antharas -->
+		<ingredient count="1" id="6656" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="6656" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="250" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="46012" />
+	</item>
+</list>

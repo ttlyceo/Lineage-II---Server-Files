@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="9422" count="1" /><!-- Dynasty Helmet -->
+   <item id="9420" count="1" /><!-- Dynasty Breast Plate -->
+   <item id="9419" count="1" /><!-- Dynasty Breast Plate -->
+   <item id="9417" count="1" /><!-- Dynasty Breast Plate -->
+   <item id="9418" count="1" /><!-- Dynasty Breast Plate -->
+   <item id="9421" count="1" /><!-- Dynasty Gaiters -->
+   <item id="9423" count="1" /><!-- Dynasty Gauntlet -->
+   <item id="9424" count="1" /><!-- Dynasty Boots -->
+   <item id="9441" count="1" /><!-- Dynasty Shield -->
+</list>

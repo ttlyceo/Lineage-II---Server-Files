@@ -1,0 +1,306 @@
+<html>
+	<title>L2 SOW</title>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+		<center><br>
+			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+			<table width=616 bgcolor=171717>
+				<tr>
+					<td width=16>
+						
+					</td>
+					<td align=CENTER width=560>
+						<center>
+							<font color=86AB98>L2 Neptune - Community Board</font>
+						</center><br1>
+					</td>
+					<td width=16>
+
+					</td>
+				</tr>
+			</table>
+			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+		</center>
+		<center>
+			<img src="L2UI.SquareGray" width="756" height="2">
+			<table width=730 border=0 cellpadding=0>
+				<tr>
+					<td width=720 fixwidth=720>
+						<img src="L2UI.SquareGray" width=744 height=2>
+						<table width=760 bgcolor="1F1F1F" height=48>
+							<tr>
+								<td width=32>
+									<table width=32>
+										<tr>
+											<td width=32>
+												<img src="icon.skill0818" width=32 height=32>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td width=644>
+									<table width=604 border=0>
+										<tr>
+											<td>
+												<table cellpadding=0 cellspacing=0 border=0>
+													<tr>
+														<td>
+															<font name="hs12" color="FF9900">BID House</font>
+														</td>
+														<td>
+															<button action="bypass %BYPASS%" width=32 height=32 back="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" fore="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" value=" " >
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<font color="F8F9B7">BID House</font>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td width=64 align="RIGHT">
+								</td>
+							</tr>
+						</table>
+						<img src="L2UI.SquareGray" width="756" height=2>
+					</td>
+				</tr>
+			</table><br>
+
+			<table widht=770>
+				<tr>
+					<td fixwidth=256><button value="All BID Bidding" action="%ALL_BID_LIST_BYPASS%" width=250 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+					<td fixwidth=256><button value="Create New Bid" action="%MY_BID_CREATE_LIST%" width=250 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+					<td fixwidth=256><button value="Your Biddings & Bids" action="%MY_BIDS_LIST%" width=250 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+				</tr>
+			</table>
+
+			<table border=0 background=L2UI_CT1.Windows_DF_TooltipBG cellspacing=2 cellpadding=2 height=30>
+				<tr>
+					<td fixwidth=70>Grade List</td>
+					<td fixwidth=70><combobox width=70 var="cmbItemRequest" list="%ALL_BID_GRADE_LIST%"></td>
+					<td fixwidth=50><button value="Apply" action="%ALL_BID_APPLY_GRADE_BYPASS%" width=50 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+					<td fixwidth=158 align=RIGHT>Search Word</td><td fixwidth=200><edit var="txtWord" width=200></td>
+					<td fixwidth=80><button value="Search" action="%ALL_BID_SEARCH_WORD_BYPASS%" width=80 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+					<td fixwidth=80><button value="Refresh" action="%ALL_BID_REFRESH_BYPASS%" width=80 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+				</tr>
+			</table>
+
+			<table width=740 border=0 background=L2UI_CT1.Windows_DF_TooltipBG>
+				<tr>
+					<td fixwidth=170>
+
+						<table width=170 background=L2UI_CT1.Windows_DF_TooltipBG>
+							<tr>
+								<td fixwidth=16></td>
+								<td fixwidth=154><font name=hs12 color=8FFFBC>Type to Search</font><br></td>
+							</tr>
+							<tr>
+								<td fixwidth=16>
+									<button action="%ALL_BID_OPEN_JEWEL%" width=16 height=16 back="L2UI_CT1.Inventory_DF_Btn_Align" fore="L2UI_CT1.Inventory_DF_Btn_Align" value=" ">
+								</td>
+								<td fixwidth=154>
+									Jewels Type<br1>
+									/*GRID_FORMAT_1=
+									<table width=150 cellspacing=0 cellpadding=0>
+										<tr>
+											<td>
+												<button value="Ring" action="%ALL_BID_JEWEL_RING%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Earring" action="%ALL_BID_JEWEL_EARRING%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Necklace" action="%ALL_BID_JEWEL_NECKLACE%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+									</table><br>*/
+								</td>
+							</tr>
+							<tr>
+								<td fixwidth=16>
+									<button action="%ALL_BID_OPEN_ARMOR%" width=16 height=16 back="L2UI_CT1.Inventory_DF_Btn_Align" fore="L2UI_CT1.Inventory_DF_Btn_Align" value=" ">
+								</td>
+								<td fixwidth=154>
+									Armor Type<br1>
+									/*GRID_FORMAT_2=
+									<table width=150 cellspacing=0 cellpadding=0>
+										<tr>
+											<td>
+												<button value="Helmet" action="%ALL_BID_ARMOR_HELMET%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Chest" action="%ALL_BID_ARMOR_CHEST%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Legs" action="%ALL_BID_ARMOR_LEGS%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Gloves" action="%ALL_BID_ARMOR_GLOVES%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Shoes" action="%ALL_BID_ARMOR_SHOES%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Cloak" action="%ALL_BID_ARMOR_CLOAK%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Shirt" action="%ALL_BID_ARMOR_SHIRT%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Belt" action="%ALL_BID_ARMOR_BELT%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Sigil" action="%ALL_BID_ARMOR_SIGIL%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button value="Shield" action="%ALL_BID_ARMOR_SHIELD%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+											</td>
+										</tr>
+									</table><br>*/
+								</td>
+							</tr>
+							<tr>
+								<td fixwidth=16>
+									<button action="%ALL_BID_OPEN_WEAPON%" width=16 height=16 back="L2UI_CT1.Inventory_DF_Btn_Align" fore="L2UI_CT1.Inventory_DF_Btn_Align" value=" ">
+								</td>
+								<td fixwidth=154>
+									Weapon Type<br1>
+									/*GRID_FORMAT_3=
+										<table width=150 cellspacing=0 cellpadding=0>
+											<tr><td><button value="Sword" action="%ALL_BID_WEAPON_SWORD%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Dual Sword" action="%ALL_BID_WEAPON_DUAL_SWORD%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Big Sword" action="%ALL_BID_WEAPON_BIG_SWORD%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Ancient Sword" action="%ALL_BID_WEAPON_ANCIENT_SWORD%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Blunt" action="%ALL_BID_WEAPON_BLUNT%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Big Blunt" action="%ALL_BID_BIG_BLUNT%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Dagger" action="%ALL_BID_DAGGER%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Dual Dagger" action="%ALL_BID_DUAL_DAGGER%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Bow" action="%ALL_BID_BOW%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Crossbow" action="%ALL_BID_CROSSBOW%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Pole" action="%ALL_BID_POLE%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Fists" action="%ALL_BID_FISTS%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Rapier" action="%ALL_BID_RAPIER%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+											<tr><td><button value="Other" action="%ALL_BID_OTHER%" width=144 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr>
+										</table>
+									*/
+									<br>
+								</td>
+							</tr>
+						</table><br>
+					</td>
+					<td fixwidth=560>
+						<table width=560 border=0 background=L2UI_CT1.Windows_DF_TooltipBG  height=310>
+							<tr>
+								<td fixwidth=560>
+									<table cellspacing=0 cellpadding=0 border=0>
+										<tr>
+											<td>
+												<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+											</td>
+											<td fixwidth=240 align=center>
+												<button value="Item" width=260 height=16 action="%ALL_BID_SORT_BY_ITEM_NAME%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+											</td>
+											<td>
+												<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+											</td>
+											<td>
+												<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+											</td>
+											<td fixwidth=20 align=center>
+												<button value="Quantity" width=80 height=16 action="%ALL_BID_SORT_BY_QUANTITY%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+											</td>
+											<td>
+												<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+											</td>
+											<td>
+												<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+											</td>
+											<td fixwidth=85 align=center>
+												<button value="I. Request" width=85 height=16 action="%ALL_BID_SORT_ITEM_REQUESTED%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+											</td>
+											<td>
+												<img src="L2UI_CH3.HorizontalSliderBarRight" width=2 height=16><br>
+											</td>
+											<td>
+												<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+											</td>
+											<td fixwidth=110 align=center>
+												<button value="Current bid" width=110 height=16 action="%ALL_BID_SORT_CURRENT_BID%" back=L2UI_CH3.HorizontalSliderBarCenter fore=L2UI_CH3.HorizontalSliderBarCenter>
+											</td>
+											<td>
+												<img src="L2UI_CH3.HorizontalSliderBarLeft" width=2 height=16><br>
+											</td>
+										</tr>
+									</table>
+									/*GRID_FORMAT_4=
+										<table cellspacing=0 cellpadding=0 border=0 bgcolor=%BGCOLOR%>
+											<tr>
+												<td height=65></td>
+												<td fixwidth=32 height=42>
+													%ICONO_LINK%
+												</td>
+												<td fixwidth=237 align=center>
+													%NOMBRE%<br1><font color="EEEDED" name="CreditTextSmall">Time left: %REMAINING_TIME%</font>
+												</td>
+												<td fixwidth=87 align=center>
+													%CANTIDA_VENDER%
+												</td>
+												<td fixwidth=85 align=center>
+													%ITEM_REQUEST_NAME%
+												</td>
+												<td fixwidth=112 align=center>
+													%SALE_PRICE%
+												</td>
+											</tr>
+										</table>
+									*/
+								</td>
+							</tr>
+						</table>
+						<center>
+							<table width=562 border=0 background=L2UI_CT1.Windows_DF_TooltipBG>
+								<tr>
+									<td fixwidth=220 align=RIGHT>
+										<button action="%ALL_BID_CONTROL_PAGE_PREVIEW_BYPASS%" width=32 height=16 back="L2UI_CT1.Button_DF_Left" fore="L2UI_CT1.Button_DF_Left" value=" ">
+									</td>
+									<td fixwidth=120 align=CENTER>
+										<font name=hs12 color=91DEFA>%ALL_BID_CONTROL_PAGE%</font>
+									</td>
+									<td fixwidth=220 align=LEFT>
+										<button action="%ALL_BID_CONTROL_PAGE_NEXT_BYPASS%" width=32 height=16 back="L2UI_CT1.Button_DF_Right" fore="L2UI_CT1.Button_DF_Right" value=" ">
+									</td>
+								</tr>
+							</table>
+						</center>
+					</td>
+				</tr>
+			</table>
+
+		</center>
+	</td></tr></table></body>
+</html>

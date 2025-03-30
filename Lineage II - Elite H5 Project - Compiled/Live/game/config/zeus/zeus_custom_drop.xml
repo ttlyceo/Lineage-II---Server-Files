@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<config value="disabled" />
+	<item id="57">
+		<option chanceAdd="6" dropRateAdd="20" UseInType="LEVEL">
+			<level min="20" max="50" />
+		</option>
+		<option chanceAdd="60" dropRateAdd="10" UseInType="NPC_ID">
+			<npc id="2000" />
+		</option>
+	</item>
+</list>

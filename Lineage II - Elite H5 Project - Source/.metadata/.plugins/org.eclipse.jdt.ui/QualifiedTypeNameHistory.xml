@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="Interface.KeyChecker"/>
+<fullyQualifiedTypeName name="Interface.impl.KeyPacket"/>
+<fullyQualifiedTypeName name="Interface.impl.ConfigPacket"/>
+<fullyQualifiedTypeName name="gr.sr.main.ClassNamesHolder"/>
+<fullyQualifiedTypeName name="gr.sr.utils.Tools"/>
+<fullyQualifiedTypeName name="l2r.gameserver.model.actor.instance.L2CubicInstance"/>
+<fullyQualifiedTypeName name="L2Neptune.pvpZone"/>
+<fullyQualifiedTypeName name="l2r.gabriel.GabrielUtils"/>
+<fullyQualifiedTypeName name="l2r.gameserver.handler.IVoicedCommandHandler"/>
+<fullyQualifiedTypeName name="l2r.gameserver.model.actor.instance.L2PcInstance"/>
+<fullyQualifiedTypeName name="l2r.gameserver.model.quest.QuestState"/>
+<fullyQualifiedTypeName name="quests.Q00254_LegendaryTales.Q00254_LegendaryTales"/>
+<fullyQualifiedTypeName name="l2r.gameserver.network.serverpackets.CreatureSay"/>
+<fullyQualifiedTypeName name="l2r.gameserver.network.clientpackets.Say2"/>
+<fullyQualifiedTypeName name="l2r.gameserver.network.serverpackets.NpcHtmlMessage"/>
+<fullyQualifiedTypeName name="quests.Q00254_LegendaryTales.Q00254_LegendaryTales.Bosses"/>
+<fullyQualifiedTypeName name="ZeuS.language.language"/>
+<fullyQualifiedTypeName name="l2r.gameserver.network.serverpackets.ExBuyList"/>
+<fullyQualifiedTypeName name="l2r.gameserver.network.serverpackets.ExBuySellList"/>
+<fullyQualifiedTypeName name="l2r.gameserver.model.entity.Instance"/>
+<fullyQualifiedTypeName name="ZeuS.Instances.pvpInstance"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="l2r.gameserver.model.Location"/>
+<fullyQualifiedTypeName name="l2r.Config"/>
+<fullyQualifiedTypeName name="ZeuS.procedimientos.opera"/>
+<fullyQualifiedTypeName name="l2r.gameserver.enums.CtrlIntention"/>
+<fullyQualifiedTypeName name="l2r.gameserver.network.serverpackets.ActionFailed"/>
+<fullyQualifiedTypeName name="l2r.gameserver.util.Broadcast"/>
+<fullyQualifiedTypeName name="l2r.gameserver.model.entity.olympiad.OlympiadManager"/>
+<fullyQualifiedTypeName name="l2r.gameserver.instancemanager.SiegeManager"/>
+<fullyQualifiedTypeName name="l2r.gameserver.instancemanager.TownManager"/>
+<fullyQualifiedTypeName name="l2r.gameserver.enums.ZoneIdType"/>
+<fullyQualifiedTypeName name="l2r.gameserver.network.serverpackets.MagicSkillUse"/>
+<fullyQualifiedTypeName name="l2r.gameserver.network.serverpackets.SetupGauge"/>
+<fullyQualifiedTypeName name="l2r.gameserver.GameTimeController"/>
+<fullyQualifiedTypeName name="l2r.gameserver.ThreadPoolManager"/>
+<fullyQualifiedTypeName name="l2r.gameserver.model.actor.instance.L2NpcInstance"/>
+<fullyQualifiedTypeName name="l2r.gameserver.model.effects.AbnormalEffect"/>
+<fullyQualifiedTypeName name="ZeuS.procedimientos.handler.VoicedHandler"/>
+<fullyQualifiedTypeName name="ZeuS.Comunidad.EngineForm.C_oly_buff"/>
+<fullyQualifiedTypeName name="l2r.gameserver.cache.HtmCache"/>
+<fullyQualifiedTypeName name="l2r.gameserver.network.serverpackets.ShowBoard"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,17 @@
+You need to put the zeus folder into the de game/config folder of your server.
+
+1.- Main Setting - You need to set this Values on zeus.properties.
+	<a> USER -> The User of the Game Server Database.
+	<b> HOST -> The Host of the GameServer, allways are 127.0.0.2
+	<c> L2JLOGINSERVER_NAME -> The Login Server Database name.
+2.- Annoucement Command's - Write this Command on annoucement's
+	[VOTE]
+	[RECALL] -> Work only if the gathering event is ON
+	[RBEVENT]
+	[EVENT]
+	[SERVER_INFO]
+	[HOME_CB]
+	[COMMAND_INFO]
+	[DONATION]
+	[ACC_REGISTER]
+	[CHANGE_PASSWORD]	

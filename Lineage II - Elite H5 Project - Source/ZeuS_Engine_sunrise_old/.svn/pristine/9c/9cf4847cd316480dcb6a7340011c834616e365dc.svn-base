@@ -1,0 +1,143 @@
+<html>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+		<center>
+			<font color=86AB98>L2 SOW - Community Board</font>
+			<br1><img src="L2UI.SquareGray" width=620 height=1><img src="L2UI.SquareBlank" width=620 height=2>
+			<table width=616 bgcolor=171717>
+				<tr>
+					<td width=16>
+					</td>
+					<td align=CENTER width=560>
+						<font color=58C08C>Global Server Statistics - World View</font><br1>
+						<table width=300 align=CENTER>
+							<tr>
+								<td width=150>
+									<button value="Show All World" width=150 height=24 action="bypass _bbsloc;ALL;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+								</td>
+								<td width=150>
+									<button value="Show This Zone" width=150 height=24 action="bypass _bbsloc;REGION;0;0;0;0" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+								</td>
+							</tr>
+						</table><br1>
+					</td>
+					<td width=16>
+					</td>
+				</tr>
+			</table>
+		</center>			
+		<center>
+			<img src="L2UI.SquareBlank" width=620 height=3><img src="L2UI.SquareGray" width=620 height=2>
+			<img src="L2UI.SquareGray" width=790 height=2><img src="L2UI.SquareBlank" width=720 height=3>
+			<table width=770 bgcolor=171717>
+				<tr>
+					<td align=LEFT width=770>
+						<center>
+							<img src="L2UI.SquareGray" width=790 height=2><img src="L2UI.SquareBlank" width=720 height=3>
+							<table width=770 bgcolor=171717>
+								<tr>
+									<td align=LEFT width=770>
+										<table width=750 align=CENTER>
+											<tr>
+												<td width=80 align=CENTER>
+													<font color=%COLOR_NORMAL%>Player Online</font>
+												</td>
+												<td width=28 align=CENTER>
+													<font color=%COLOR_NORMAL>%PLAYER_ONLINE%</font>
+												</td>
+												<td width=80 align=CENTER>
+													<font color=%COLOR_GM%>GM's Online</font>
+												</td>
+												<td width=28 align=CENTER>
+													<font color=%COLOR_GM%>%GM_ONLINE%</font>
+												</td>
+												<td width=80 align=CENTER>
+													<font color=%COLOR_PRIVATE_STORE%>Offliners</font>
+												</td>
+												<td width=28 align=CENTER>
+													<font color=%COLOR_PRIVATE_STORE%>%OFFLINERS%<font>
+												</td>
+												<td width=100 align=CENTER>
+													<font color=58C08C>Player in this Area</font>
+												</td>
+												<td width=100 align=CENTER>
+													<font color=58C08C>%AREA%</font>
+												</td>
+											</tr>
+										</table>
+										<table width=750 align=CENTER>
+											<tr>
+												<td width=255></td>
+												<td width=120 align=CENTER>
+													<font color=2E9AFE>Server Online Time</font>
+												</td>
+												<td width=120 align=CENTER>
+													<font color=2E9AFE>Day: %ONLINE%</font>
+												</td>
+												<td width=255></td>
+											</tr>
+										</table><br>
+									</td>
+								</tr>
+							</table>
+							<img src="L2UI.SquareBlank" width=720 height=3><img src="L2UI.SquareGray" width=790 height=2>
+						</center>
+						<table width=736 bgcolor=1C1C1C>
+							<tr>
+								<td width=73 align=CENTER>
+									<font color=%COLOR_GM%>GM</font>
+								</td>
+								<td width=73 align=CENTER>
+									<font color=%COLOR_DEATH%>DEATH</font>
+								</td>
+								<td width=73 align=CENTER>
+									<font color=%COLOR_HERO%>HERO</font>
+								</td>
+								<td width=73 align=CENTER>
+									<font color=%COLOR_CLAN_LEADER%>C.LEADER</font>
+								</td>
+								<td width=73 align=CENTER>
+									<font color=%COLOR_NORMAL%>NORMAL</font>
+								</td>
+								<td width=73 align=CENTER>
+									<font color=%COLOR_FLAG%>FLAG</font>
+								</td>
+								<td width=73 align=CENTER>
+									<font color=%COLOR_PRIVATE_STORE%>P.STORE</font>
+								</td>
+								<td width=73 align=CENTER>
+									<font color=%COLOR_BUFF_STORE%>B.STORE</font>
+								</td>
+								<td width=73 align=CENTER>
+									<font color=%COLOR_KARMA%>KARMA (PK)</font>
+								</td>
+								<td width=73 align=CENTER>
+									<font color=%COLOR_JAILED%>JAILED</font>
+								</td>
+							</tr>
+						</table>
+						<img src="L2UI.SquareGray" width=790 height=2><img src="L2UI.SquareBlank" width=720 height=3>
+						%INFO_PLAYER%<br>
+						<table width=750 align=CENTER gbcolor=1B1B1B>
+							<tr>
+								<td width=80 align=CENTER>
+								</td>
+								<td width=590 align=CENTER>
+									<font color=EBC277>Region Page %PAGE%</font>
+								</td>
+								<td width=80 align=CENTER></td>
+							</tr>
+						</table><br>
+					</td>
+				</tr>
+			</table>
+			<img src="L2UI.SquareBlank" width=720 height=3><img src="L2UI.SquareGray" width=790 height=2>
+		</center>
+		<table width=720 align=CENTER>
+			<tr>
+				<td width=720 align=CENTER>
+					<font color=333333>Zeus Community Engine<br1>By JabberWock 2013 - 2017</font>
+				</td>
+			</tr>
+		</table><br>
+	</td></tr></table></body>
+</html>

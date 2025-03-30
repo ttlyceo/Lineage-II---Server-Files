@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	
+	<item>
+		<!-- Medal of Glory -->
+		<ingredient count="1" id="21874" />
+		<!-- Fame Points -->
+		<production count="100" id="-300" />
+	</item>
+	<item>
+		<ingredient count="5000" id="13722" />
+		<production count="1" id="48001" />
+	</item>
+	<item>
+		<ingredient count="1" id="48001" />
+		<ingredient count="10000" id="13722" />
+		<production count="1" id="48002" />
+	</item>
+	<item>
+		<ingredient count="1" id="48002" />
+		<ingredient count="25000" id="13722" />
+		<production count="1" id="48003" />
+	</item>
+	<item>
+		<ingredient count="1" id="48003" />
+		<ingredient count="50000" id="13722" />
+		<production count="1" id="48004" />
+	</item>
+	<item>
+		<ingredient count="1" id="48004" />
+		<ingredient count="100000" id="13722" />
+		<production count="1" id="48005" />
+	</item>
+	<item>
+		<ingredient count="1" id="48005" />
+		<ingredient count="150000" id="13722" />
+		<production count="1" id="48006" />
+	</item>
+	<item>
+		<ingredient count="50000" id="13722" />
+		<production count="1" id="47008" />
+	</item>
+	<item>
+		<ingredient count="5000" id="13722" />
+		<production count="1" id="47020" />
+	</item>
+	<item>
+		<ingredient count="1" id="47020" />
+		<ingredient count="10000" id="13722" />
+		<production count="1" id="47021" />
+	</item>
+	<item>
+		<ingredient count="1" id="47021" />
+		<ingredient count="25000" id="13722" />
+		<production count="1" id="47022" />
+	</item>
+	<item>
+		<ingredient count="1" id="47022" />
+		<ingredient count="50000" id="13722" />
+		<production count="1" id="47023" />
+	</item>
+	<item>
+		<ingredient count="1" id="47023" />
+		<ingredient count="100000" id="13722" />
+		<production count="1" id="47024" />
+	</item>
+	<item>
+		<ingredient count="1" id="47024" />
+		<ingredient count="150000" id="13722" />
+		<production count="1" id="47025" />
+	</item>
+	<item>
+		<ingredient count="550" id="13722" />
+		<production count="1" id="6622" />
+	</item>
+
+	<item>
+		<ingredient count="125000" id="13722" />
+		<production count="1" id="6577" />
+	</item>
+	<item>
+		<ingredient count="60000" id="13722" />
+		<production count="1" id="6569" />
+	</item>
+	<item>
+		<ingredient count="25000" id="13722" />
+		<production count="1" id="6571" />
+	</item>
+	<item>
+		<ingredient count="63000" id="13722" />
+		<production count="1" id="6578" />
+	</item>
+	<item>
+		<ingredient count="25000" id="13722" />
+		<production count="1" id="6570" />
+	</item>
+	<item>
+		<ingredient count="9000" id="13722" />
+		<production count="1" id="6572" />
+	</item>
+	<item>
+		<ingredient count="30000" id="13722" />
+		<production count="1" id="959" />
+	</item>
+	<item>
+		<ingredient count="15000" id="13722" />
+		<production count="1" id="729" />
+	</item>
+	<item>
+		<ingredient count="5000" id="13722" />
+		<production count="1" id="947" />
+	</item>
+	<item>
+		<ingredient count="7000" id="13722" />
+		<production count="1" id="960" />
+	</item>
+	<item>
+		<ingredient count="3500" id="13722" />
+		<production count="1" id="730" />
+	</item>
+	<item>
+		<ingredient count="1000" id="13722" />
+		<production count="1" id="948" />
+	</item>
+	<item>
+		<ingredient count="15000" id="13722" />
+		<production count="1" id="8618" />
+	</item>
+	<item>
+		<ingredient count="30000" id="13722" />
+		<production count="1" id="8619" />
+	</item>
+	<item>
+		<ingredient count="60000" id="13722" />
+		<production count="1" id="8620" />
+	</item>
+	<item>
+		<ingredient count="90000" id="13722" />
+		<production count="1" id="8621" />
+	</item>
+	<item>
+		<ingredient count="250" id="13722" />
+		<production count="1" id="13750" />
+	</item>
+
+</list>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+   <item id="160" count="1" /> <!-- Battle Axe -->
+   <item id="4729" count="1" /> <!-- Battle Axe -->
+   <item id="4730" count="1" /> <!-- Battle Axe -->
+   <item id="4731" count="1" /> <!-- Battle Axe -->
+   <item id="89" count="1" /> <!-- Big Hammer -->
+   <item id="4726" count="1" /> <!-- Big Hammer -->
+   <item id="4727" count="1" /> <!-- Big Hammer -->
+   <item id="4728" count="1" /> <!-- Big Hammer -->
+   <item id="161" count="1" /> <!-- Silver Axe -->
+   <item id="4732" count="1" /> <!-- Silver Axe -->
+   <item id="4733" count="1" /> <!-- Silver Axe -->
+   <item id="4734" count="1" /> <!-- Silver Axe -->
+   <item id="173" count="1" /> <!-- Skull Graver -->
+   <item id="4735" count="1" /> <!-- Skull Graver -->
+   <item id="4736" count="1" /> <!-- Skull Graver -->
+   <item id="4737" count="1" /> <!-- Skull Graver -->
+   <item id="2502" count="1" /> <!-- Dwarven War Hammer -->
+   <item id="4738" count="1" /> <!-- Dwarven War Hammer -->
+   <item id="4739" count="1" /> <!-- Dwarven War Hammer -->
+   <item id="4740" count="1" /> <!-- Dwarven War Hammer -->
+   <item id="162" count="1" /> <!-- War Axe -->
+   <item id="4741" count="1" /> <!-- War Axe -->
+   <item id="4742" count="1" /> <!-- War Axe -->
+   <item id="4743" count="1" /> <!-- War Axe -->
+   <item id="2503" count="1" /> <!-- Yaksa Mace -->
+   <item id="4744" count="1" /> <!-- Yaksa Mace -->
+   <item id="4745" count="1" /> <!-- Yaksa Mace -->
+   <item id="4746" count="1" /> <!-- Yaksa Mace -->
+   <item id="193" count="1" /> <!-- Stick of Faith -->
+   <item id="7701" count="1" /> <!-- Stick of Faith -->
+   <item id="7702" count="1" /> <!-- Stick of Faith -->
+   <item id="7703" count="1" /> <!-- Stick of Faith -->
+   <item id="191" count="1" /> <!-- Heavy Doom Hammer -->
+   <item id="4864" count="1" /> <!-- Heavy Doom Hammer -->
+   <item id="4865" count="1" /> <!-- Heavy Doom Hammer -->
+   <item id="4866" count="1" /> <!-- Heavy Doom Hammer -->
+   <item id="201" count="1" /> <!-- Club of Nature -->
+   <item id="7710" count="1" /> <!-- Club of Nature -->
+   <item id="7711" count="1" /> <!-- Club of Nature -->
+   <item id="7712" count="1" /> <!-- Club of Nature -->
+   <item id="202" count="1" /> <!-- Mace of Underworld -->
+   <item id="7713" count="1" /> <!-- Mace of Underworld -->
+   <item id="7714" count="1" /> <!-- Mace of Underworld -->
+   <item id="7715" count="1" /> <!-- Mace of Underworld -->
+   <item id="174" count="1" /> <!-- Nirvana Axe -->
+   <item id="7707" count="1" /> <!-- Nirvana Axe -->
+   <item id="7708" count="1" /> <!-- Nirvana Axe -->
+   <item id="7709" count="1" /> <!-- Nirvana Axe -->
+   <item id="196" count="1" /> <!-- Stick of Eternity -->
+   <item id="7704" count="1" /> <!-- Stick of Eternity -->
+   <item id="7705" count="1" /> <!-- Stick of Eternity -->
+   <item id="7706" count="1" /> <!-- Stick of Eternity -->
+   <item id="192" count="1" /> <!-- Crystal Staff -->
+   <item id="4867" count="1" /> <!-- Crystal Staff -->
+   <item id="4868" count="1" /> <!-- Crystal Staff -->
+   <item id="4869" count="1" /> <!-- Crystal Staff -->
+   <item id="194" count="1" /> <!-- Heavy Doom Axe -->
+   <item id="4870" count="1" /> <!-- Heavy Doom Axe -->
+   <item id="4871" count="1" /> <!-- Heavy Doom Axe -->
+   <item id="4872" count="1" /> <!-- Heavy Doom Axe -->
+   <item id="195" count="1" /> <!-- Cursed Staff -->
+   <item id="4873" count="1" /> <!-- Cursed Staff -->
+   <item id="4874" count="1" /> <!-- Cursed Staff -->
+   <item id="4875" count="1" /> <!-- Cursed Staff -->
+   <item id="198" count="1" /> <!-- Inferno Staff -->
+   <item id="7716" count="1" /> <!-- Inferno Staff -->
+   <item id="7717" count="1" /> <!-- Inferno Staff -->
+   <item id="7718" count="1" /> <!-- Inferno Staff -->
+   <item id="199" count="1" /> <!-- Pa'agrian Hammer -->
+   <item id="4879" count="1" /> <!-- Pa'agrian Hammer -->
+   <item id="4880" count="1" /> <!-- Pa'agrian Hammer -->
+   <item id="4881" count="1" /> <!-- Pa'agrian Hammer -->
+   <item id="197" count="1" /> <!-- Paradia Staff -->
+   <item id="4876" count="1" /> <!-- Paradia Staff -->
+   <item id="4877" count="1" /> <!-- Paradia Staff -->
+   <item id="4878" count="1" /> <!-- Paradia Staff -->
+   <item id="200" count="1" /> <!-- Sage's Staff -->
+   <item id="4882" count="1" /> <!-- Sage's Staff -->
+   <item id="4883" count="1" /> <!-- Sage's Staff -->
+   <item id="4884" count="1" /> <!-- Sage's Staff -->
+   <item id="203" count="1" /> <!-- Pa'agrian Axe -->
+   <item id="4885" count="1" /> <!-- Pa'agrian Axe -->
+   <item id="4886" count="1" /> <!-- Pa'agrian Axe -->
+   <item id="4887" count="1" /> <!-- Pa'agrian Axe -->
+   <item id="204" count="1" /> <!-- Deadman's Staff -->
+   <item id="4888" count="1" /> <!-- Deadman's Staff -->
+   <item id="4889" count="1" /> <!-- Deadman's Staff -->
+   <item id="4890" count="1" /> <!-- Deadman's Staff -->
+   <item id="206" count="1" /> <!-- Demon's Staff -->
+   <item id="4894" count="1" /> <!-- Demon's Staff -->
+   <item id="4895" count="1" /> <!-- Demon's Staff -->
+   <item id="4896" count="1" /> <!-- Demon's Staff -->
+   <item id="205" count="1" /> <!-- Ghoul's Staff -->
+   <item id="4891" count="1" /> <!-- Ghoul's Staff -->
+   <item id="4892" count="1" /> <!-- Ghoul's Staff -->
+   <item id="4893" count="1" /> <!-- Ghoul's Staff -->
+
+</list>

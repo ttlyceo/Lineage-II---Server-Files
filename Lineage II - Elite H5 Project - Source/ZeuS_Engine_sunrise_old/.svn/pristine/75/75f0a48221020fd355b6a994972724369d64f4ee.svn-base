@@ -1,0 +1,39 @@
+<html>
+	<title>ZeruS Engine</title>
+	<body>
+		<center>
+        	%SERVER_LOGO%<br>
+            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+			<table width=280 border=0>
+				<tr>
+					<td align=center>
+						<font name=hs12 color=A9E2F3>Delete Scheme</font><br>
+					</td>
+				</tr>
+				<tr>
+	        			<td align=center>
+						<font name=hs12 color=7FF2ED>%SCHEME_NAME%</font><br><br>
+					</td>
+				</tr>
+				<tr>
+        				<td align=center>
+						<img src="%ICON%" width=32 height=32><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td align=center>
+        					<font name=hs12>
+							Are you sure to remove this<br1>Scheme?
+						</font><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td align=center>
+						<button value="Yes, Delete This!" action="%BYPASS%" width=180 height=32 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+					</td>
+				</tr>
+			</table>
+            </td></tr></table>
+		</center>
+	</body>
+</html>

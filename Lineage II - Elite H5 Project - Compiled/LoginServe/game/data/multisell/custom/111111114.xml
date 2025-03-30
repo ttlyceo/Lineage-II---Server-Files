@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+
+
+<list maintainEnchantment="false"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="14163" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="14164" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="14165" count="1" />
+	</item>
+
+	<!-- Vorpal Necklace -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="15722" count="1" />
+	</item>
+
+	<!-- Vorpal Earring -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="15721" count="1" />
+	</item>
+
+	<!-- Vorpal Ring -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="15720" count="1" />
+	</item>
+	<!-- Elegia Necklace -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="15719" count="1" />
+	</item>
+
+	<!-- Elegia Earring -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="15718" count="1" />
+	</item>
+
+	<!-- Elegia Ring -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="15717" count="1" />
+	</item>
+
+
+	<!-- Bless Freya -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="16026" count="1" />
+	</item>
+
+
+	<!-- Freya -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="16025" count="1" />
+	</item>
+
+
+	<!-- Valakas-->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="6657" count="1" />
+	</item>
+
+	<!-- frintezza  -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="8191" count="1" />
+	</item>
+
+
+	<!-- Antharas-->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="6656" count="1" />
+	</item>
+
+
+	<!-- bless zaken -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="21712" count="1" />
+	</item>
+
+	<!-- zaken -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="6659" count="1" />
+	</item>
+
+	<!-- orfen -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="6661" count="1" />
+	</item>
+
+	<!-- baylor -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="10170" count="1" />
+	</item>
+
+
+	<!-- beleth -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="10314" count="1" />
+	</item>
+
+	<!-- bauim -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="6658" count="1" />
+	</item>
+
+	<!-- aq  -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="6660" count="1" />
+	</item>
+
+	<!-- zaken -->
+	<item>
+		<ingredient id="23030" count="100" />
+		<production id="6662" count="1" />
+	</item>
+
+
+</list>

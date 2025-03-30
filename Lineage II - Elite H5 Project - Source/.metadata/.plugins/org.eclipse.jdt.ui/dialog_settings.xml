@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="filters_last_used" value="filter_imports;"/>
+	<section name="JavaElementSearchActions">
+		<list key="lastUsedWorkingSetNames0">
+			<item value="Core"/>
+		</list>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="JavaSearchPage">
+		<item key="CASE_SENSITIVE" value="false"/>
+		<item key="INCLUDE_MASK" value="11"/>
+		<item key="HISTORY_SIZE" value="4"/>
+		<section name="HISTORY0">
+			<item key="searchFor" value="0"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="separateAndSend"/>
+			<item key="limitTo" value="2"/>
+			<item key="matchLocations" value="0"/>
+			<item key="javaElement" value=""/>
+			<item key="isCaseSensitive" value="false"/>
+			<item key="includeMask" value="11"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY1">
+			<item key="searchFor" value="0"/>
+			<item key="scope" value="2"/>
+			<item key="pattern" value="There are not enought neccesary items to use the skill"/>
+			<item key="limitTo" value="2"/>
+			<item key="matchLocations" value="0"/>
+			<item key="javaElement" value=""/>
+			<item key="isCaseSensitive" value="false"/>
+			<item key="includeMask" value="11"/>
+			<list key="workingSets">
+				<item value="Core"/>
+			</list>
+		</section>
+		<section name="HISTORY2">
+			<item key="searchFor" value="2"/>
+			<item key="scope" value="2"/>
+			<item key="pattern" value="l2r.gameserver.model.entity.olympiad"/>
+			<item key="limitTo" value="2"/>
+			<item key="matchLocations" value="0"/>
+			<item key="javaElement" value="=ZeuS_Sunrise_Core/java&lt;l2r.gameserver.model.entity.olympiad"/>
+			<item key="isCaseSensitive" value="true"/>
+			<item key="includeMask" value="11"/>
+			<list key="workingSets">
+				<item value="Core"/>
+			</list>
+		</section>
+		<section name="HISTORY3">
+			<item key="searchFor" value="2"/>
+			<item key="scope" value="2"/>
+			<item key="pattern" value="instance"/>
+			<item key="limitTo" value="2"/>
+			<item key="matchLocations" value="0"/>
+			<item key="javaElement" value=""/>
+			<item key="isCaseSensitive" value="false"/>
+			<item key="includeMask" value="11"/>
+			<list key="workingSets">
+				<item value="Core"/>
+			</list>
+		</section>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item key="pageIndex" value="2"/>
+	</section>
+	<section name="NewPackageWizardPage">
+		<item key="create_package_info_java" value="false"/>
+	</section>
+</section>

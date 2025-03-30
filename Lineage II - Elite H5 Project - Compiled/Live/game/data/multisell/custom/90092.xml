@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- Raid Boss Items -->
+
+<list maintainEnchantment="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"	xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman of Power -->
+		<production count="1" id="9914" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman of Wild Magic -->
+		<production count="1" id="9915" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman of Invisibility -->
+		<production count="1" id="9920" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman - Shield Protection -->
+		<production count="1" id="9921" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Black Talisman - Mending -->
+		<production count="1" id="9922" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Power -->
+		<production count="1" id="9933" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Violent Haste -->
+		<production count="1" id="9934" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Arcane Defense -->
+		<production count="1" id="9935" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Arcane Power -->
+		<production count="1" id="9936" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Arcane Haste -->
+		<production count="1" id="9937" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Accuracy -->
+		<production count="1" id="9938" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Defense -->
+		<production count="1" id="9939" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Alacrity -->
+		<production count="1" id="9940" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Speed -->
+		<production count="1" id="9941" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Critical Reduction -->
+		<production count="1" id="9942" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Critical Damage -->
+		<production count="1" id="9943" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Critical Dodging -->
+		<production count="1" id="9944" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Evasion -->
+		<production count="1" id="9945" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Healing -->
+		<production count="1" id="9946" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of CP Regeneration -->
+		<production count="1" id="9947" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Physical Regeneration -->
+		<production count="1" id="9948" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Yellow Talisman of Mental Regeneration -->
+		<production count="1" id="9949" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Grey Talisman of Weight Training -->
+		<production count="1" id="9950" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Orange Talisman - Hot Springs CP Potion -->
+		<production count="1" id="9952" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Orange Talisman - Elixir of Life -->
+		<production count="1" id="9953" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Orange Talisman - Elixir of Mental Strength -->
+		<production count="1" id="9954" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Black Talisman - Vocalization -->
+		<production count="1" id="9955" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Black Talisman - Arcane Freedom -->
+		<production count="1" id="9956" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Black Talisman - Physical Freedom -->
+		<production count="1" id="9957" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Black Talisman - Rescue -->
+		<production count="1" id="9958" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- White Talisman - Storm -->
+		<production count="1" id="10418" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- White Talisman - Water -->
+		<production count="1" id="10420" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- White Talisman - Light -->
+		<production count="1" id="10422" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman - Self-Destruction -->
+		<production count="1" id="10423" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- White Talisman -  Earth -->
+		<production count="1" id="10519" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman of Defense -->
+		<production count="1" id="9916" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Red Talisman of Minimum Clarity -->
+		<production count="1" id="9917" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Red Talisman of Maximum Clarity -->
+		<production count="1" id="9918" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman of Invisibility -->
+		<production count="1" id="9920" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Black Talisman - Escape -->
+		<production count="1" id="9923" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman of Healing -->
+		<production count="1" id="9924" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Red Talisman of Recovery -->
+		<production count="1" id="9925" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman of Defense -->
+		<production count="1" id="9926" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman of Magic Defense -->
+		<production count="1" id="9927" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Red Talisman of Mental Regeneration -->
+		<production count="1" id="9928" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman of Protection -->
+		<production count="1" id="9929" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Red Talisman of Meditation -->
+		<production count="1" id="9931" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman - Divine Protection -->
+		<production count="1" id="9932" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman - Explosion -->
+		<production count="1" id="10416" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman - Magic Explosion -->
+		<production count="1" id="10417" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- White Talisman - Fire -->
+		<production count="1" id="10421" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Blue Talisman - Greater Healing -->
+		<production count="1" id="10424" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="6673" />
+		<!-- Red Talisman - Life Force -->
+		<production count="1" id="10518" />
+	</item>
+
+
+</list>

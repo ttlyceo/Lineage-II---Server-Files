@@ -1,0 +1,671 @@
+Index: config/config/zeus/htm/eng/MyCharInformation.html
+===================================================================
+--- config/config/zeus/htm/eng/MyCharInformation.html	(revision 19)
++++ config/config/zeus/htm/eng/MyCharInformation.html	(working copy)
+@@ -5,7 +5,7 @@
+         <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+ 		<table width=270 align=CENTER>
+ 			<tr>
+-				<td width=270 align=CENTER>Premium Account Info (%PREMIUM_ACCOUNT_NAME%)</td>
++				<td width=270 align=CENTER><font color=LEVEL>Premium Account Info (%PREMIUM_ACCOUNT_NAME%)</font></td>
+ 			</tr>
+ 			<tr>
+ 				<td>
+@@ -92,7 +92,9 @@
+ 				</td>
+ 			</tr>
+ 			<tr>
+-				<td>
++				<td width=270 align=CENTER><font color=LEVEL>Premium Clan Info (%PREMIUM_CLAN_NAME%)</font></td>
++			</tr>
++			<tr>
+ 					<table width=270 align=CENTER>
+ 						<tr>
+ 							<td width=200 align=LEFT>Player Acc. Premiun</td>
+Index: src/ZeuS/Config/premiumsystem.java
+===================================================================
+--- src/ZeuS/Config/premiumsystem.java	(revision 19)
++++ src/ZeuS/Config/premiumsystem.java	(working copy)
+@@ -312,59 +312,60 @@
+ 		return 0;
+ 	}
+ 	
+-	public int getDrop_chance(boolean porcen){
+-		if(porcen){
+-			return getPorcen( Config.RATE_DROP_ITEMS , this.drop_chance);
++	public int getDrop_chance(float chanceFromServer){
++		if(!this.USE_VALUE_LIKE_NEW_RATE){
++			return getPorcen( chanceFromServer > 0 ? chanceFromServer : Config.RATE_DROP_ITEMS , this.drop_chance);
+ 		}
+-		return this.drop_chance;
++		return (int) (chanceFromServer > this.drop_chance ? chanceFromServer : this.drop_chance);
+ 	}
+ 
+-	public int getSpoil_chance(boolean porcen){
+-		if(porcen){
+-			return getPorcen( Config.RATE_DROP_SPOIL , this.spoil_chance);
++	public int getSpoil_chance(float chanceFromServer){
++		if(!this.USE_VALUE_LIKE_NEW_RATE){
++			return getPorcen( chanceFromServer > 0 ? chanceFromServer : Config.RATE_DROP_SPOIL , this.spoil_chance);
+ 		}
+-		return this.spoil_chance;		
++		return  (int) (chanceFromServer > this.spoil_chance ?  chanceFromServer : this.spoil_chance);		
+ 	}
+ 	
+-	public int getDrop_rate(boolean porcen){
+-		if(porcen){
++	public int getDrop_rate(){
++		if(!this.USE_VALUE_LIKE_NEW_RATE){
+ 			return getPorcen( Config.RATE_DROP_ITEMS , this.drop_rate);
+ 		}
+ 		return this.drop_rate;
+ 	}
+ 
+-	public int getSpoil_rate(boolean porcen){
+-		if(porcen){
++	public int getSpoil_rate(){
++		if(!this.USE_VALUE_LIKE_NEW_RATE){
+ 			return getPorcen( Config.RATE_DROP_SPOIL , this.spoil_rate);
+ 		}
+ 		return this.spoil_rate;
+ 	}	
+ 	
+ 	
+-	public int getadena_chance(boolean porcen){
+-		float Adena = 0;
++	public int getadena_chance(float chanceFromServer){
++		float Adena = chanceFromServer;
+ 		if(Config.RATE_DROP_ITEMS_ID!=null){
+ 			if(Config.RATE_DROP_ITEMS_ID.containsKey(57)){
+ 				Adena = Config.RATE_DROP_ITEMS_ID.get(57);
+ 			}
+ 		}
+-		if(porcen){
+-			return getPorcen( Adena , this.adena_chance);
++		if(!this.USE_VALUE_LIKE_NEW_RATE){
++			return getPorcen( chanceFromServer > Adena ? chanceFromServer : Adena , this.adena_chance);
+ 		}
+ 		return this.adena_chance;		
+ 	}
+ 	
+-	public int getadena_rate(boolean porcen){
+-		float Adena = 0;
++	public int getadena_rate(){
++		float AdenaLocal = 0;
+ 		if(Config.RATE_DROP_ITEMS_ID!=null){
+ 			if(Config.RATE_DROP_ITEMS_ID.containsKey(57)){
+-				Adena = Config.RATE_DROP_ITEMS_ID.get(57);
++				AdenaLocal = Config.RATE_DROP_ITEMS_ID.get(57);
+ 			}
+ 		}
+-		if(porcen){
+-			return getPorcen( Adena , this.adena_rate);
++		if(!this.USE_VALUE_LIKE_NEW_RATE){
++			return getPorcen( AdenaLocal , this.adena_rate);
+ 		}
+-		return this.adena_rate;
++		float Adena = AdenaLocal > this.adena_rate ? AdenaLocal : this.adena_rate;
++		return (int) Adena;
+ 	}	
+ 	
+ 	public double getWeight(boolean porcen, double _weight){
+Index: src/ZeuS/interfase/charPanel.java
+===================================================================
+--- src/ZeuS/interfase/charPanel.java	(revision 19)
++++ src/ZeuS/interfase/charPanel.java	(working copy)
+@@ -63,12 +63,12 @@
+ 		_HTML.replace("%IS_ACCOUNT_PREMIUM%", (isPremiumChar ? "YES" :  "NO"));
+ 		_HTML.replace("%ACCOUNT_EXP_RATE%", (isPremiumChar ? String.valueOf(PS.getexp(false)) : "0"));
+ 		_HTML.replace("%ACCOUNT_SP_RATE%", (isPremiumChar ? String.valueOf(PS.getsp(false)) : "0"));
+-		_HTML.replace("%ACCOUNT_ADENA_DROP_CHANCE%", (isPremiumChar ? String.valueOf(PS.getadena_chance(false)) : "0"));
+-		_HTML.replace("%ACCOUNT_ADENA_DROP_RATE%", (isPremiumChar ? String.valueOf(PS.getadena_rate(false)) : "0"));
+-		_HTML.replace("%ACCOUNT_SPOIL_CHANCE%", (isPremiumChar ? String.valueOf(PS.getSpoil_chance(false)) : "0"));
+-		_HTML.replace("%ACCOUNT_SPOIL_RATE%", (isPremiumChar ? String.valueOf(PS.getSpoil_rate(false)) : "0"));
+-		_HTML.replace("%ACCOUNT_ITEM_DROP_CHANCE%", (isPremiumChar ? String.valueOf(PS.getDrop_chance(false)) : "0"));
+-		_HTML.replace("%ACCOUNT_ITEM_DROP_RATE%", (isPremiumChar ? String.valueOf(PS.getDrop_rate(false)) : "0"));
++		_HTML.replace("%ACCOUNT_ADENA_DROP_CHANCE%", (isPremiumChar ? String.valueOf(PS.getadena_chance(0)) : "0"));
++		_HTML.replace("%ACCOUNT_ADENA_DROP_RATE%", (isPremiumChar ? String.valueOf(PS.getadena_rate()) : "0"));
++		_HTML.replace("%ACCOUNT_SPOIL_CHANCE%", (isPremiumChar ? String.valueOf(PS.getSpoil_chance(0)) : "0"));
++		_HTML.replace("%ACCOUNT_SPOIL_RATE%", (isPremiumChar ? String.valueOf(PS.getSpoil_rate()) : "0"));
++		_HTML.replace("%ACCOUNT_ITEM_DROP_CHANCE%", (isPremiumChar ? String.valueOf(PS.getDrop_chance(0)) : "0"));
++		_HTML.replace("%ACCOUNT_ITEM_DROP_RATE%", (isPremiumChar ? String.valueOf(PS.getDrop_rate()) : "0"));
+ 		_HTML.replace("%ACCOUNT_EPAULETTE_RATE%", (isPremiumChar ? String.valueOf(PS.getEpaulette()) : "0"));
+ 		_HTML.replace("%ACCOUNT_NORMAL_CRAFT_BONUS%", (isPremiumChar ? String.valueOf(PS.getCraft()) : "0"));
+ 		_HTML.replace("%ACCOUNT_MW_CRAFT_BONUS%", (isPremiumChar ? String.valueOf(PS.get_mwCraft()) : "0"));
+@@ -78,12 +78,12 @@
+ 		_HTML.replace("%ACCOUNT_HERO_STATUS%", isPremiumChar ? ( PS.isHero() ? "YES" : "NO" ) : "NO" );
+ 		_HTML.replace("%ACCOUNT_BEGIN_DATE%", isPremiumChar ? PremiumCharInicio : "");
+ 		_HTML.replace("%ACCOUNT_END_DATE%", isPremiumChar ? PremiumCharTermino: "");
+-		_HTML.replace("%ACCOUNT_CP_BONUS%", String.valueOf(PS.CP_bonus()));
+-		_HTML.replace("%ACCOUNT_HP_BONUS%", String.valueOf(PS.HP_bonus()));
+-		_HTML.replace("%ACCOUNT_MP_BONUS%", String.valueOf(PS.MP_bonus()));		
+-		_HTML.replace("%ACCOUNT_CP_REST%", ( PS.CP_bonus_restric_olys() ? "YES" : "NO" ));
+-		_HTML.replace("%ACCOUNT_HP_REST%", ( PS.HP_bonus_restric_olys() ? "YES" : "NO" ));
+-		_HTML.replace("%ACCOUNT_MP_REST%", ( PS.MP_bonus_restric_olys() ? "YES" : "NO" ));
++		_HTML.replace("%ACCOUNT_CP_BONUS%", isPremiumChar ? String.valueOf(PS.CP_bonus()) : "0" );
++		_HTML.replace("%ACCOUNT_HP_BONUS%", isPremiumChar ? String.valueOf(PS.HP_bonus()) : "0" );
++		_HTML.replace("%ACCOUNT_MP_BONUS%", isPremiumChar ? String.valueOf(PS.MP_bonus()) : "0" );		
++		_HTML.replace("%ACCOUNT_CP_REST%", isPremiumChar ? ( PS.CP_bonus_restric_olys() ? "YES" : "NO" ) : "UNK");
++		_HTML.replace("%ACCOUNT_HP_REST%", isPremiumChar ? ( PS.HP_bonus_restric_olys() ? "YES" : "NO" ) : "UNK");
++		_HTML.replace("%ACCOUNT_MP_REST%", isPremiumChar ? ( PS.MP_bonus_restric_olys() ? "YES" : "NO" ) : "UNK");
+ 		
+ 		PS = null;
+ 		String NombreClanPremium = "";
+@@ -103,12 +103,12 @@
+ 		_HTML.replace("%IS_CLAN_PREMIUM%", (isPremiumClan ? "YES" :  "NO"));
+ 		_HTML.replace("%CLAN_EXP_RATE%", (isPremiumClan ? String.valueOf(PS.getexp(false)) : "0"));
+ 		_HTML.replace("%CLAN_SP_RATE%", (isPremiumClan ? String.valueOf(PS.getsp(false)) : "0"));
+-		_HTML.replace("%CLAN_ADENA_DROP_CHANCE%", (isPremiumClan ? String.valueOf(PS.getadena_chance(false)) : "0"));
+-		_HTML.replace("%CLAN_ADENA_DROP_RATE%", (isPremiumClan ? String.valueOf(PS.getadena_rate(false)) : "0"));
+-		_HTML.replace("%CLAN_SPOIL_CHANCE%", (isPremiumClan ? String.valueOf(PS.getSpoil_chance(false)) : "0"));
+-		_HTML.replace("%CLAN_SPOIL_RATE%", (isPremiumClan ? String.valueOf(PS.getSpoil_rate(false)) : "0"));
+-		_HTML.replace("%CLAN_ITEM_DROP_CHANCE%", (isPremiumClan ? String.valueOf(PS.getDrop_chance(false)) : "0"));
+-		_HTML.replace("%CLAN_ITEM_DROP_RATE%", (isPremiumClan ? String.valueOf(PS.getDrop_rate(false)) : "0"));
++		_HTML.replace("%CLAN_ADENA_DROP_CHANCE%", (isPremiumClan ? String.valueOf(PS.getadena_chance(0)) : "0"));
++		_HTML.replace("%CLAN_ADENA_DROP_RATE%", (isPremiumClan ? String.valueOf(PS.getadena_rate()) : "0"));
++		_HTML.replace("%CLAN_SPOIL_CHANCE%", (isPremiumClan ? String.valueOf(PS.getSpoil_chance(0)) : "0"));
++		_HTML.replace("%CLAN_SPOIL_RATE%", (isPremiumClan ? String.valueOf(PS.getSpoil_rate()) : "0"));
++		_HTML.replace("%CLAN_ITEM_DROP_CHANCE%", (isPremiumClan ? String.valueOf(PS.getDrop_chance(0)) : "0"));
++		_HTML.replace("%CLAN_ITEM_DROP_RATE%", (isPremiumClan ? String.valueOf(PS.getDrop_rate()) : "0"));
+ 		_HTML.replace("%CLAN_EPAULETTE_RATE%", (isPremiumClan ? String.valueOf(PS.getEpaulette()) : "0"));
+ 		_HTML.replace("%CLAN_NORMAL_CRAFT_BONUS%", (isPremiumClan ? String.valueOf(PS.getCraft()) : "0"));
+ 		_HTML.replace("%CLAN_MW_CRAFT_BONUS%", (isPremiumClan ? String.valueOf(PS.get_mwCraft()) : "0"));
+@@ -121,9 +121,9 @@
+ 		_HTML.replace("%CLAN_CP_BONUS%", isPremiumClan ? String.valueOf(PS.CP_bonus()) : "0");
+ 		_HTML.replace("%CLAN_HP_BONUS%", isPremiumClan ? String.valueOf(PS.HP_bonus()) : "0");
+ 		_HTML.replace("%CLAN_MP_BONUS%", isPremiumClan ? String.valueOf(PS.MP_bonus()) : "0");
+-		_HTML.replace("%CLAN_CP_REST%", isPremiumClan ? ( PS.CP_bonus_restric_olys() ? "YES" : "NO" ) : "");
+-		_HTML.replace("%CLAN_HP_REST%", isPremiumClan ? ( PS.HP_bonus_restric_olys() ? "YES" : "NO" ) : "");
+-		_HTML.replace("%CLAN_MP_REST%", isPremiumClan ? ( PS.MP_bonus_restric_olys() ? "YES" : "NO" ) : "");
++		_HTML.replace("%CLAN_CP_REST%", isPremiumClan ? ( PS.CP_bonus_restric_olys() ? "YES" : "NO" ) : "UNK");
++		_HTML.replace("%CLAN_HP_REST%", isPremiumClan ? ( PS.HP_bonus_restric_olys() ? "YES" : "NO" ) : "UNK");
++		_HTML.replace("%CLAN_MP_REST%", isPremiumClan ? ( PS.MP_bonus_restric_olys() ? "YES" : "NO" ) : "UNK");
+ 
+ 		String GridFormato = opera.getGridFormatFromHtml(_HTML, 1, "%ALL_CONECTION_DATA%");
+ 		String AllData = "";
+Index: src/ZeuS/Comunidad/EngineForm/v_donation.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_donation.java	(revision 20)
++++ src/ZeuS/Comunidad/EngineForm/v_donation.java	(working copy)
+@@ -826,7 +826,7 @@
+ 					break;						
+ 				case "adena_chance":
+ 					tG = getInfoFromXML(Grilla, Nombre, ValOfi, false);
+-					FinalValue = "x" + String.valueOf(p.getadena_chance(true));
++					FinalValue = "x" + String.valueOf(p.getadena_chance(0));
+ 					break;
+ 				case "adena_rate":
+ 					if(isJustRate) {
+@@ -838,11 +838,11 @@
+ 					}else {
+ 						tG = getInfoFromXML(Grilla, Nombre, ValOfi, isJustRate);
+ 					}
+-					FinalValue = "x" + String.valueOf(p.getadena_rate(!isJustRate));
++					FinalValue = "x" + String.valueOf(p.getadena_rate());
+ 					break;					
+ 				case "drop_chance":
+ 					tG = getInfoFromXML(Grilla, Nombre, ValOfi, false);
+-					FinalValue = "x" + String.valueOf(p.getDrop_chance(true));
++					FinalValue = "x" + String.valueOf(p.getDrop_chance(0));
+ 					break;
+ 				case "drop_rate":
+ 					if(isJustRate) {
+@@ -850,11 +850,11 @@
+ 					}else {
+ 						tG = getInfoFromXML(Grilla, Nombre, ValOfi, isJustRate);
+ 					}
+-					FinalValue = "x" + String.valueOf(p.getDrop_rate(!isJustRate));
++					FinalValue = "x" + String.valueOf(p.getDrop_rate());
+ 					break;					
+ 				case "spoil_chance":
+ 					tG = getInfoFromXML(Grilla, Nombre, ValOfi, false);
+-					FinalValue = "x" + String.valueOf(p.getSpoil_chance(true));
++					FinalValue = "x" + String.valueOf(p.getSpoil_chance(0));
+ 					break;
+ 				case "spoil_rate":
+ 					if(isJustRate) {
+@@ -862,7 +862,7 @@
+ 					}else {
+ 						tG = getInfoFromXML(Grilla, Nombre, ValOfi, isJustRate);
+ 					}
+-					FinalValue = "x" + String.valueOf(p.getSpoil_rate(!isJustRate));
++					FinalValue = "x" + String.valueOf(p.getSpoil_rate());
+ 					break;					
+ 				case "epaulette":
+ 					tG = getInfoFromXML(Grilla, Nombre, ValOfi, false);
+Index: src/ZeuS/Comunidad/EngineForm/v_RaidBossInfo.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_RaidBossInfo.java	(revision 25)
++++ src/ZeuS/Comunidad/EngineForm/v_RaidBossInfo.java	(working copy)
+@@ -303,7 +303,7 @@
+ 				String MIN = opera.getFormatNumbers( Dat.getMin() );
+ 				String MAX = opera.getFormatNumbers( Dat.getMax() );
+ 				String CHANCE = Dat.getChanceSTR();
+-				String CATE = Dat.isDrop() ? "DROP" : "SWEED";
++				String CATE = Dat.isDrop() ? "DROP" : "SWEEP";
+ 				if(contador==0){
+ 					DropData +="<tr>";
+ 				}
+@@ -655,7 +655,7 @@
+ 				String MIN = opera.getFormatNumbers(Dat.getMin());
+ 				String MAX = opera.getFormatNumbers(Dat.getMax());
+ 				String CHANCE = Dat.getChanceSTR();
+-				String CATE = Dat.isDrop() ? "DROP" : "SWEED";
++				String CATE = Dat.isDrop() ? "DROP" : "SWEEP";
+ 				if(contador==0){
+ 					Retorno +="<tr>";
+ 				}
+@@ -770,7 +770,7 @@
+ 				String MIN = opera.getFormatNumbers(Dat.getMin() );
+ 				String MAX = opera.getFormatNumbers(Dat.getMax() );
+ 				String CHANCE = Dat.getChanceSTR();
+-				String CATE = Dat.isDrop() ? "DROP" : "SWEED";
++				String CATE = Dat.isDrop() ? "DROP" : "SWEEP";
+ 				if(contador==0){
+ 					DropData +="<tr>";
+ 				}
+Index: src/ZeuS/Comunidad/EngineForm/v_dropsearch.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_dropsearch.java	(revision 25)
++++ src/ZeuS/Comunidad/EngineForm/v_dropsearch.java	(working copy)
+@@ -111,7 +111,7 @@
+ 				String MIN = opera.getFormatNumbers(Dat.getMin() );
+ 				String MAX = opera.getFormatNumbers(Dat.getMax() );
+ 				String CHANCE = Dat.getChanceSTR();
+-				String CATE = Dat.isDrop() ? "DROP" : "SWEED";
++				String CATE = Dat.isDrop() ? "DROP" : "SWEEP";
+ 				if(contador==0){
+ 					DropData +="<tr>";
+ 				}
+Index: src/ZeuS/ZeuS/ZeuS.java
+===================================================================
+--- src/ZeuS/ZeuS/ZeuS.java	(revision 21)
++++ src/ZeuS/ZeuS/ZeuS.java	(working copy)
+@@ -1468,30 +1468,22 @@
+ 		return retorno;
+ 	}
+ 	
+-	public static int getPremiumEpauletteDropRate(L2PcInstance player){
++	/*public static int getPremiumEpauletteDropRate(L2PcInstance player){
+ 		return getPremiumEpauletteDropRate(player, -20520);		
+-	}	
++	}*/	
+ 	
+-	public static int getPremiumEpauletteDropRate(L2PcInstance player, int valor){
++	public static int getPremiumEpauletteDropRate(L2PcInstance player){
+ 		int _PremiumValue = 0;
+ 		if(isPremium(player)){
+ 			int _valPlayer = 0;
+ 			int _valClan = 0;
+ 			if(opera.isPremium_Player(player)){
+-				if(!general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData().isTest()){
+-					_valPlayer = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData().getEpaulette();
+-				}
++				_valPlayer = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData().getEpaulette();
+ 			}
+ 			if(opera.isPremium_Clan(player)){
+-				if(!general.getPremiumDataFromPlayerOrClan(String.valueOf( player.getClanId() ) ).getPremiumData().isTest()){
+-					_valClan = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId())).getPremiumData().getEpaulette();
+-				}
+-			}
+-			if(_valPlayer > 0 || _valClan > 0){
+-				int _ValMulti = ( _valPlayer > _valClan ? _valPlayer : _valClan );
+-				int NewQuantity = (valor * _ValMulti) / 100;
+-				_PremiumValue = NewQuantity;
++				_valClan = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId())).getPremiumData().getEpaulette();
+ 			}
++			_PremiumValue = _valPlayer > _valClan ? _valPlayer : _valClan;
+ 		}
+ 		
+ 		return _PremiumValue;
+@@ -1763,7 +1755,7 @@
+ 		return Min_add;
+ 	}	
+ 	
+-	public static double getItemPremiumDrop_Rate(L2PcInstance cha, int idItem, boolean getPorcenforFinalResult, float _valueIn){
++	public static double getItemPremiumDrop_Rate(L2PcInstance cha, int idItem){
+ 		float retornar = 0;
+ 		if(isPremiumItem_Rate(cha, idItem)){
+ 			int _Clan=0;
+@@ -1781,26 +1773,13 @@
+ 						_Account = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getPremiumItemRate(idItem);
+ 					}					
+ 				}
+-				if(!getPorcenforFinalResult){
+-					int _porcent = (_Clan >= _Account ? _Clan : _Account);
+-					retornar = _porcent;
+-					if(general.PREMIUM_MESSAGE){
+-						//central.msgbox("*** Premium Drop Item Rate ("+ central.getNombreITEMbyID(idItem) +"): " + String.valueOf(retornar).replace(".0", "") + " ***" , cha);
+-					}
+-				}else{
+-					int _porcent = (_Clan >= _Account ? _Clan : _Account);
+-					float _valTemp = ( 100 * _porcent ) / _valueIn;
+-					retornar = _valTemp;
+-					if(general.PREMIUM_MESSAGE){
+-						//central.msgbox("*** Premium Drop Item Rate ("+ central.getNombreITEMbyID(idItem) +"): " + String.valueOf(retornar).replace(".0", "") + " ***" , cha);
+-					}
+-				}
++				retornar = _Clan > _Account ? _Clan : _Account;
+ 			}
+ 		}
+ 		return retornar;				
+ 	}
+ 	
+-	public static double getItemPremiumDrop_Chance(L2PcInstance cha, int idItem, boolean getPorcenforFinalResult, float _valueIn){
++	public static double getItemPremiumDrop_Chance(L2PcInstance cha, int idItem, float chanceINSERVER){
+ 		float retornar = 0;
+ 		int _Clan=0;
+ 		int _Account=0;
+@@ -1818,70 +1797,30 @@
+ 						_Account = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getPremiumItemChance(idItem);
+ 					}					
+ 				}
+-				if(!getPorcenforFinalResult){
+-					int _porcent = (_Clan >= _Account ? _Clan : _Account);
+-					//float _valTemp = ( 100 * _porcent ) / _valueIn;
+-					retornar = _porcent;
+-					if(general.PREMIUM_MESSAGE){
+-						//central.msgbox("*** Premium Drop Item Chance ("+ central.getNombreITEMbyID(idItem) +"): " + String.valueOf(retornar).replace(".0", "") + " ***" , cha);
+-					}
+-				}else{
+-					int _porcent = (_Clan >= _Account ? _Clan : _Account);
+-					float _valTemp = ( 100 * _porcent ) / _valueIn;
+-					retornar = _valTemp;
+-					if(general.PREMIUM_MESSAGE){
+-						//central.msgbox("*** Premium Drop Item Chance ("+ central.getNombreITEMbyID(idItem) +"): " + String.valueOf(retornar).replace(".0", "") + " ***" , cha);
+-					}
+-				}
++				retornar = _Clan > _Account ? _Clan : _Account;
+ 			}
+ 		}
+ 		return retornar;				
+ 	}	
+ 	
+-	public static double getPremiumDropSpoil_Rate(L2PcInstance cha){
++	/*public static double getPremiumDropSpoil_Rate(L2PcInstance cha){
+ 		return getPremiumDropSpoil_Rate(cha, false, 0);
+ 	}
+ 	
+ 	public static double getPremiumDropSpoil_Rate(L2PcInstance cha, boolean getPorcenforFinalResult){
+ 		return getPremiumDropSpoil_Rate(cha, getPorcenforFinalResult, 0);
+-	}
++	}*/
+ 	
+-	public static double getPremiumDropSpoil_Rate(L2PcInstance cha, boolean getPorcenforFinalResult, float _valueIn){
++	public static double getPremiumDropSpoil_Rate(L2PcInstance cha){
+ 		float retornar = 1;
+ 		float ClanValue = 0;
+ 		float PlayerValue = 0;
+ 		if(isPremium(cha)){
+ 			if(opera.isPremium_Clan(cha)){
+-				if(general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().useValueForNewRate()) {
+-					ClanValue = general.getPremiumDataFromPlayerOrClan(cha.getClan().getId()).getPremiumData().getSpoil_rate(false);
+-				}else {
+-					int PremiumValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getSpoil_rate(true);
+-					if(!getPorcenforFinalResult){
+-						ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getSpoil_rate(false);
+-					}else{
+-						if(_valueIn>0){
+-							ClanValue = ( _valueIn * PremiumValue ) / 100;
+-						}else{
+-							ClanValue = PremiumValue;
+-						}
+-					}
+-				}
++				ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getSpoil_rate();
+ 			}
+ 			if(opera.isPremium_Player(cha)){
+-				if(general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getAccountName())).getPremiumData().useValueForNewRate()) {
+-					PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getSpoil_rate(false);
+-				}else {
+-					int PremiumValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getSpoil_rate(true);
+-					if(!getPorcenforFinalResult){
+-						PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getSpoil_rate(false);
+-					}else{
+-						if(_valueIn >0){
+-							PlayerValue = ( _valueIn * PremiumValue ) / 100;
+-						}else{
+-							PlayerValue = PremiumValue;
+-						}
+-					}
+-				}
++				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getSpoil_rate();
+ 			}
+ 			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+ 			if(general.PREMIUM_MESSAGE){
+@@ -1891,42 +1830,24 @@
+ 		return retornar;
+ 	}
+ 
+-	public static double getPremiumDropSpoil_Chance(L2PcInstance cha){
++	/*public static double getPremiumDropSpoil_Chance(L2PcInstance cha){
+ 		return getPremiumDropSpoil_Chance(cha, false, 0);
+ 	}
+ 	
+ 	public static double getPremiumDropSpoil_Chance(L2PcInstance cha, boolean getPorcenforFinalResult){
+ 		return getPremiumDropSpoil_Chance(cha, getPorcenforFinalResult, 0);
+-	}
++	}*/
+ 	
+-	public static double getPremiumDropSpoil_Chance(L2PcInstance cha, boolean getPorcenforFinalResult, float _valueIn){
++	public static double getPremiumDropSpoil_Chance(L2PcInstance cha, float chanceINSERVER){
+ 		float retornar = 1;
+ 		float ClanValue = 0;
+ 		float PlayerValue = 0;
+ 		if(isPremium(cha)){
+ 			if(opera.isPremium_Clan(cha)){
+-				int PremiumValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getSpoil_chance(true);
+-				if(!getPorcenforFinalResult){
+-					ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getSpoil_chance(false);
+-				}else{
+-					if(_valueIn>0){
+-						ClanValue = ( _valueIn* PremiumValue ) / 100;
+-					}else{
+-						ClanValue = PremiumValue;
+-					}
+-				}
++				ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getSpoil_chance(chanceINSERVER);
+ 			}
+ 			if(opera.isPremium_Player(cha)){
+-				int PremiumValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getSpoil_chance(true);
+-				if(!getPorcenforFinalResult){
+-					PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getSpoil_chance(false);
+-				}else{
+-					if(_valueIn >0){
+-						PlayerValue = ( _valueIn * PremiumValue ) / 100;
+-					}else{
+-						PlayerValue = PremiumValue;
+-					}
+-				}
++				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getSpoil_chance(chanceINSERVER);
+ 			}
+ 			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+ 			if(general.PREMIUM_MESSAGE){
+@@ -1937,86 +1858,36 @@
+ 	}
+ 	
+ 	public static float getPremiumDropAdena_Rate(L2PcInstance cha){
+-		return getPremiumDropAdena_Rate(cha, false,0);
+-	}
+-	
+-	public static float getPremiumDropAdena_Rate(L2PcInstance cha, boolean getPorcenforFinalResult, float _valueIn){
+ 		float retornar = 1;
+ 		float ClanValue = 0;
+ 		float PlayerValue = 0;
++		
+ 		if(isPremium(cha)){
+ 			if(opera.isPremium_Clan(cha)){
+-				if(general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().useValueForNewRate()) {
+-					ClanValue = general.getPremiumDataFromPlayerOrClan(cha.getClan().getId()).getPremiumData().getadena_rate(false);
+-				}else {
+-					int PremiumValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getadena_rate(true);
+-					if(!getPorcenforFinalResult){
+-						ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getadena_rate(false);
+-					}else{
+-						if(_valueIn>0){
+-							ClanValue = ( _valueIn * PremiumValue ) / 100;
+-						}else{
+-							ClanValue = PremiumValue;
+-						}
+-					}
+-				}
++				ClanValue = general.getPremiumDataFromPlayerOrClan(cha.getClan().getId()).getPremiumData().getadena_rate();
+ 			}
+ 			if(opera.isPremium_Player(cha)){
+-				if(general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getAccountName())).getPremiumData().useValueForNewRate()) {
+-					return general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getadena_rate(false);
+-				}else {
+-					int PremiumValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getadena_rate(true);
+-					if(!getPorcenforFinalResult){
+-						PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getadena_rate(false);
+-					}else{
+-						if(_valueIn >0){
+-							PlayerValue = ( _valueIn * PremiumValue ) / 100;
+-						}else{
+-							PlayerValue = PremiumValue;
+-						}
+-					}
+-				}
++				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getadena_rate();
+ 			}
+ 			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+-			if(general.PREMIUM_MESSAGE){
+-				//central.msgbox("*** Premium Adena Rate: " + String.valueOf(retornar).replace(".0", "") + " ***" , cha);
+-			}						
+ 		}
+ 		return retornar;
+ 	}
+ 	
+-	public static double getPremiumDropAdena_Chance(L2PcInstance cha){
+-		return getPremiumDropAdena_Rate(cha, false,0);
+-	}
++	/*public static double getPremiumDropAdena_Chance(L2PcInstance cha){
++		return getPremiumDropAdena_Chance(cha, 0);
++	}*/
+ 	
+-	public static double getPremiumDropAdena_Chance(L2PcInstance cha, boolean getPorcenforFinalResult, float _valueIn){
++	public static double getPremiumDropAdena_Chance(L2PcInstance cha, float chanceINSERVER){
+ 		float retornar = 1;
+ 		float ClanValue = 0;
+ 		float PlayerValue = 0;
+ 		if(isPremium(cha)){
+ 			if(opera.isPremium_Clan(cha)){
+-				int PremiumValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getadena_chance(true);
+-				if(!getPorcenforFinalResult){
+-					ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getadena_chance(false);
+-				}else{
+-					if(_valueIn>0){
+-						ClanValue = ( _valueIn * PremiumValue ) / 100;
+-					}else{
+-						ClanValue = PremiumValue;
+-					}
+-				}
++				ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getadena_chance(chanceINSERVER);
+ 			}
+ 			if(opera.isPremium_Player(cha)){
+-				int PremiumValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getadena_chance(true);
+-				if(!getPorcenforFinalResult){
+-					PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getadena_chance(false);
+-				}else{
+-					if(_valueIn >0){
+-						PlayerValue = ( _valueIn * PremiumValue ) / 100;
+-					}else{
+-						PlayerValue = PremiumValue;
+-					}
+-				}
++				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getadena_chance(chanceINSERVER);
+ 			}
+ 			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+ 			if(general.PREMIUM_MESSAGE){
+@@ -2026,50 +1897,24 @@
+ 		return retornar;
+ 	}	
+ 	
+-	public static double getPremiumDropItem_Rate(L2PcInstance cha, boolean _porcent){
++	/*public static double getPremiumDropItem_Rate(L2PcInstance cha, boolean _porcent){
+ 		return getPremiumDropItem_Rate(cha, _porcent, 0);
+ 	}	
+ 	
+ 	public static double getPremiumDropItem_Rate(L2PcInstance cha){
+ 		return getPremiumDropItem_Rate(cha, false, 0);
+-	}
++	}*/
+ 	
+-	public static double getPremiumDropItem_Rate(L2PcInstance cha, boolean _porcent, float _value){
++	public static double getPremiumDropItem_Rate(L2PcInstance cha){
+ 		float retornar = 1;
+ 		float ClanValue = 0;
+ 		float PlayerValue = 0;
+ 		if(isPremium(cha)){
+ 			if(opera.isPremium_Clan(cha)){
+-				if(general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().useValueForNewRate()) {
+-					ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getDrop_rate(false);
+-				}else {
+-					int PremiumValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getDrop_rate(true);
+-					if(!_porcent){
+-						ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getDrop_rate(false);
+-					}else{
+-						if(_value>0){
+-							ClanValue = ( _value * PremiumValue ) / 100;
+-						}else{
+-							ClanValue = PremiumValue;
+-						}
+-					}
+-				}
++				ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getDrop_rate();
+ 			}
+ 			if(opera.isPremium_Player(cha)){
+-				if(general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().useValueForNewRate()) {
+-					PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getDrop_rate(false);
+-				}else {
+-					int PremiumValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getDrop_rate(true);
+-					if(!_porcent){
+-						PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getDrop_rate(false);
+-					}else{
+-						if(_value >0){
+-							PlayerValue = ( _value * PremiumValue ) / 100;
+-						}else{
+-							PlayerValue = PremiumValue;
+-						}
+-					}
+-				}
++				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getDrop_rate();
+ 			}
+ 			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+ 			if(general.PREMIUM_MESSAGE){
+@@ -2079,30 +1924,20 @@
+ 		return retornar;
+ 	}
+ 	
+-	public static double getPremiumDropItem_Chance(L2PcInstance cha){
++	/*public static double getPremiumDropItem_Chance(L2PcInstance cha){
+ 		return getPremiumDropItem_Chance(cha, false, 0);
+-	}
++	}*/
+ 	
+-	public static double getPremiumDropItem_Chance(L2PcInstance cha, boolean _porcent, double _value){
++	public static double getPremiumDropItem_Chance(L2PcInstance cha, float chanceINSERVER){
+ 		double retornar = 1;
+ 		double ClanValue = 0;
+ 		double PlayerValue = 0;
+ 		if(isPremium(cha)){
+ 			if(opera.isPremium_Clan(cha)){
+-				int PremiumValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getDrop_chance(true);
+-				if(!_porcent){
+-					ClanValue = PremiumValue >= retornar ? PremiumValue : retornar ;
+-				}else{
+-					ClanValue = ( _value * PremiumValue ) / 100;
+-				}
++				ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getDrop_chance(chanceINSERVER);
+ 			}
+ 			if(opera.isPremium_Player(cha)){
+-				int PremiumValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getDrop_chance(true);
+-				if(!_porcent){
+-					PlayerValue = PremiumValue >= retornar ? PremiumValue : retornar ;
+-				}else{
+-					PlayerValue = ( _value * PremiumValue ) / 100;
+-				}
++				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData().getDrop_chance(chanceINSERVER);
+ 			}
+ 			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+ 			if(general.PREMIUM_MESSAGE){

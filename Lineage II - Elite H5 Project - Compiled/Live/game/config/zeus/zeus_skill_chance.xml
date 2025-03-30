@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<skill id="1169" name="Curse Fear" path="1" >
+		<set name="pvp_chance" value="10" />
+		<set name="oly_chance" value="10" />
+	</skill>
+</list>

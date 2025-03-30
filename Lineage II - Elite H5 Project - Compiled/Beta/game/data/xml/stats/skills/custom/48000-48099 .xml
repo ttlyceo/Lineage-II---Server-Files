@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skills.xsd">
+	<skill id="48021" levels="1" name="Bracelet of Duty Lv. 1">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="1" />
+			</effect>
+			<add stat="darkRes" val="5" />
+			<add stat="holyRes" val="5" />
+			<add stat="fireRes" val="5" />
+			<add stat="waterRes" val="5" />
+			<add stat="earthRes" val="5" />
+			<add stat="windRes" val="5" />
+		</for>
+	</skill>
+	<skill id="48022" levels="1" name="Bracelet of Duty Lv. 2">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_b_i01" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="2" />
+			</effect>
+			<add stat="darkRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="windRes" val="10" />
+		</for>
+	</skill>
+	<skill id="48023" levels="1" name="Bracelet of Duty Lv. 3">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_a_i02" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="3" />
+			</effect>
+			<add stat="darkRes" val="20" />
+			<add stat="holyRes" val="20" />
+			<add stat="fireRes" val="20" />
+			<add stat="waterRes" val="20" />
+			<add stat="earthRes" val="20" />
+			<add stat="windRes" val="20" />
+		</for>
+	</skill>
+	<skill id="48024" levels="1" name="Bracelet of Duty Lv. 4">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="magicLvl" val="61" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="4" />
+			</effect>
+			<add stat="MEN" val="1" />
+			<add stat="CON" val="1" />
+			<add stat="darkRes" val="20" />
+			<add stat="holyRes" val="20" />
+			<add stat="fireRes" val="20" />
+			<add stat="waterRes" val="20" />
+			<add stat="earthRes" val="20" />
+			<add stat="windRes" val="20" />
+		</for>
+	</skill>
+	<skill id="48025" levels="1" name="Bracelet of Duty Lv. 5">
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="5" />
+			</effect>
+			<add stat="MEN" val="1" />
+			<add stat="CON" val="1" />
+			<add stat="WIT" val="1" />
+			<add stat="DEX" val="1" />
+			<add stat="darkRes" val="20" />
+			<add stat="holyRes" val="20" />
+			<add stat="fireRes" val="20" />
+			<add stat="waterRes" val="20" />
+			<add stat="earthRes" val="20" />
+			<add stat="windRes" val="20" />
+		</for>
+	</skill>
+	<skill id="48026" levels="1" name="Bracelet of Duty Lv. 6">
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="6" />
+			</effect>
+			<add stat="MEN" val="1" />
+			<add stat="CON" val="1" />
+			<add stat="WIT" val="1" />
+			<add stat="DEX" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="STR" val="1" />
+			<add stat="darkRes" val="20" />
+			<add stat="holyRes" val="20" />
+			<add stat="fireRes" val="20" />
+			<add stat="waterRes" val="20" />
+			<add stat="earthRes" val="20" />
+			<add stat="windRes" val="20" />
+			</for>
+	</skill>
+	<skill id="48027" levels="1" name="Bracelet of Justice Lv. 1">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="1" />
+			</effect>
+			<add stat="pAtk" val="100" />
+			<add stat="mAtk" val="100" />
+			<add stat="pDef" val="50" />
+			<add stat="mDef" val="50" />
+		</for>
+	</skill>
+	<skill id="48028" levels="1" name="Bracelet of Justice Lv. 2">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_b_i01" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="2" />
+			</effect>
+			<add stat="pAtk" val="200" />
+			<add stat="mAtk" val="200" />
+			<add stat="pDef" val="75" />
+			<add stat="mDef" val="75" />
+		</for>
+	</skill>
+	<skill id="48029" levels="1" name="Bracelet of Justice Lv. 3">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_a_i02" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="3" />
+			</effect>
+			<add stat="pAtk" val="300" />
+			<add stat="mAtk" val="300" />
+			<add stat="pDef" val="100" />
+			<add stat="mDef" val="100" />
+		</for>
+	</skill>
+	<skill id="48030" levels="1" name="Bracelet of Justice Lv. 4">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="magicLvl" val="61" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="4" />
+			</effect>
+			<add stat="pAtk" val="400" />
+			<add stat="mAtk" val="400" />
+			<add stat="pDef" val="125" />
+			<add stat="mDef" val="125" />
+		</for>
+	</skill>
+	<skill id="48031" levels="1" name="Bracelet of Justice Lv. 5">
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="TalismanSlot" noicon="1" >
+				<param slots="5" />
+			</effect>
+			<add stat="pAtk" val="500" />
+			<add stat="mAtk" val="500" />
+			<add stat="pDef" val="150" />
+			<add stat="mDef" val="150" />
+		</for>
+	</skill>
+</list>

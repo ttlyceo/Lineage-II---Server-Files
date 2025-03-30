@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Possible name's see final of file-->
+<!--
+name = Closest Town
+type = type walker will walk
+    RANDOM = random
+    LINEAR = will follow the location in order
+	
+	name = city
+	 x y z at name = proximity that the player will teleport to if he choses to change walker city
+	 
+	 location nodes are the possible points that the player will visit when walking the city
+-->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/phantomWalker.xsd">
+
+    <WalkerAI name="Rune Town" x="43769" y="-48133" z="-792" type="RANDOM">
+        <location x="43812" y="-47744" z="-793" />
+        <location x="43557" y="-49459" z="-823" />
+        <location x="46300" y="-50286" z="-823" />
+        <location x="45387" y="-50286" z="-823" />
+        <location x="45198" y="-47501" z="-823" />
+        <location x="44592" y="-47914" z="-792" />
+        <location x="36097" y="-48175" z="-1096" />
+        <location x="44977" y="-47489" z="-823" />
+        <location x="36320" y="-49536" z="-1128" />
+        <location x="38432" y="-49568" z="-1128" />
+    </WalkerAI>
+    <WalkerAI name="Aden Castle Town" x="147974" y="26883" z="-2200" type="RANDOM">
+        <location x="147454" y="22679" z="-2018" />
+        <location x="147662" y="23053" z="-2018" />
+        <location x="147391" y="27366" z="-2230" />
+        <location x="147502" y="27336" z="-2200" />
+        <location x="148487" y="26595" z="-2231" />
+        <location x="148528" y="27091" z="-2231" />
+        <location x="148398" y="28426" z="-2295" />
+        <location x="148209" y="26287" z="-2216" />
+        <location x="148939" y="26191" z="-2217" />
+        <location x="148861" y="27234" z="-2216" />
+        <location x="148849" y="28052" z="-2280" />
+        <location x="149002" y="29070" z="-2248" />
+        <location x="148217" y="28991" z="-2280" />
+        <location x="146816" y="28990" z="-2280" />
+        <location x="146058" y="28035" z="-2280" />
+        <location x="146080" y="27209" z="-2216" />
+        <location x="146722" y="29259" z="-2184" />
+        <location x="147748" y="26606" z="-2200" />
+        <location x="147786" y="26775" z="-2200" />
+        <location x="147828" y="26693" z="-2200" />
+        <location x="147926" y="26652" z="-2200" />
+        <location x="147941" y="26714" z="-2200" />
+        <location x="148000" y="26820" z="-2200" />
+        <location x="148055" y="26704" z="-2200" />
+        <location x="148190" y="26749" z="-2200" />
+        <location x="148237" y="26765" z="-2200" />
+        <location x="148287" y="26673" z="-2200" />
+        <location x="148346" y="26657" z="-2200" />
+        <location x="148405" y="26671" z="-2200" />
+        <location x="148376" y="26766" z="-2200" />
+        <location x="148452" y="26833" z="-2200" />
+        <location x="148409" y="26855" z="-2200" />
+        <location x="148426" y="26929" z="-2200" />
+        <location x="148413" y="27018" z="-2200" />
+        <location x="148340" y="26933" z="-2200" />
+        <location x="148234" y="26844" z="-2200" />
+        <location x="148164" y="26911" z="-2200" />
+        <location x="148140" y="26984" z="-2200" />
+        <location x="148045" y="26892" z="-2200" />
+        <location x="147946" y="26911" z="-2200" />
+        <location x="147897" y="26938" z="-2200" />
+        <location x="147831" y="26851" z="-2200" />
+        <location x="147704" y="26885" z="-2200" />
+        <location x="147776" y="26972" z="-2200" />
+        <location x="147745" y="27076" z="-2200" />
+        <location x="147810" y="27115" z="-2200" />
+        <location x="147873" y="27129" z="-2200" />
+        <location x="148051" y="27049" z="-2200" />
+        <location x="148107" y="27154" z="-2200" />
+        <location x="148198" y="27100" z="-2200" />
+        <location x="148268" y="27068" z="-2200" />
+        <location x="148310" y="27156" z="-2200" />
+        <location x="148389" y="27103" z="-2200" />
+        <location x="148474" y="27089" z="-2200" />
+        <location x="148473" y="27198" z="-2200" />
+        <location x="148495" y="27301" z="-2200" />
+        <location x="148402" y="27359" z="-2200" />
+        <location x="148350" y="27279" z="-2200" />
+        <location x="148259" y="27314" z="-2200" />
+        <location x="148179" y="27337" z="-2200" />
+        <location x="148073" y="27247" z="-2200" />
+        <location x="148019" y="27363" z="-2200" />
+        <location x="147922" y="27304" z="-2200" />
+        <location x="147834" y="27284" z="-2200" />
+        <location x="147759" y="27323" z="-2200" />
+        <location x="147780" y="27695" z="-2264" />
+        <location x="147888" y="27676" z="-2264" />
+        <location x="147943" y="27737" z="-2264" />
+        <location x="148011" y="27746" z="-2264" />
+        <location x="148103" y="27680" z="-2264" />
+        <location x="148167" y="27756" z="-2264" />
+        <location x="148256" y="27744" z="-2264" />
+        <location x="148339" y="27687" z="-2264" />
+        <location x="148362" y="27838" z="-2264" />
+        <location x="148424" y="27893" z="-2264" />
+        <location x="148471" y="27973" z="-2264" />
+        <location x="148411" y="28018" z="-2264" />
+        <location x="148298" y="27955" z="-2264" />
+        <location x="148222" y="27897" z="-2264" />
+        <location x="148120" y="27907" z="-2264" />
+        <location x="148062" y="27983" z="-2264" />
+        <location x="148039" y="27888" z="-2264" />
+        <location x="147960" y="27898" z="-2264" />
+        <location x="147889" y="27981" z="-2264" />
+        <location x="147784" y="27991" z="-2264" />
+        <location x="147760" y="27893" z="-2264" />
+        <location x="147828" y="27864" z="-2264" />
+        <location x="147854" y="28081" z="-2264" />
+        <location x="147767" y="28102" z="-2264" />
+        <location x="147768" y="28203" z="-2264" />
+        <location x="147851" y="28235" z="-2264" />
+        <location x="147849" y="28326" z="-2264" />
+        <location x="147762" y="28367" z="-2264" />
+        <location x="147752" y="28476" z="-2264" />
+        <location x="147828" y="28563" z="-2264" />
+        <location x="147884" y="28486" z="-2264" />
+        <location x="147890" y="28396" z="-2264" />
+        <location x="147971" y="28451" z="-2264" />
+        <location x="147992" y="28551" z="-2264" />
+        <location x="148074" y="28509" z="-2264" />
+        <location x="148090" y="28376" z="-2264" />
+        <location x="148096" y="28266" z="-2264" />
+        <location x="148182" y="28238" z="-2264" />
+        <location x="148323" y="28222" z="-2264" />
+        <location x="148417" y="28224" z="-2264" />
+        <location x="148390" y="28302" z="-2264" />
+        <location x="148353" y="28405" z="-2264" />
+        <location x="148233" y="28412" z="-2264" />
+        <location x="148216" y="28502" z="-2264" />
+        <location x="148206" y="28625" z="-2264" />
+        <location x="147155" y="28577" z="-2264" />
+        <location x="147151" y="28465" z="-2264" />
+        <location x="147064" y="28449" z="-2264" />
+        <location x="147020" y="28561" z="-2264" />
+        <location x="146936" y="28584" z="-2264" />
+        <location x="146918" y="28482" z="-2264" />
+        <location x="146961" y="28386" z="-2264" />
+        <location x="146841" y="28398" z="-2264" />
+        <location x="146806" y="28501" z="-2264" />
+        <location x="146732" y="28570" z="-2264" />
+        <location x="146696" y="28508" z="-2264" />
+        <location x="146687" y="28363" z="-2264" />
+        <location x="146696" y="28289" z="-2264" />
+        <location x="146567" y="28259" z="-2264" />
+        <location x="146467" y="28184" z="-2264" />
+        <location x="146560" y="28186" z="-2264" />
+        <location x="146710" y="28186" z="-2264" />
+        <location x="146829" y="28234" z="-2264" />
+        <location x="146937" y="28208" z="-2264" />
+        <location x="147030" y="28259" z="-2264" />
+        <location x="147111" y="28179" z="-2264" />
+        <location x="147136" y="28113" z="-2264" />
+        <location x="147079" y="27984" z="-2264" />
+        <location x="147091" y="27913" z="-2264" />
+        <location x="147125" y="27797" z="-2264" />
+        <location x="147042" y="27801" z="-2264" />
+        <location x="146954" y="27773" z="-2264" />
+        <location x="146880" y="27664" z="-2264" />
+        <location x="146841" y="27766" z="-2264" />
+        <location x="146863" y="27912" z="-2264" />
+        <location x="146870" y="28043" z="-2264" />
+        <location x="146741" y="28061" z="-2264" />
+        <location x="146734" y="27957" z="-2264" />
+        <location x="146711" y="27834" z="-2264" />
+        <location x="146704" y="27705" z="-2264" />
+        <location x="146620" y="27663" z="-2264" />
+        <location x="146595" y="27767" z="-2264" />
+        <location x="146573" y="27898" z="-2264" />
+        <location x="146602" y="28041" z="-2264" />
+        <location x="146550" y="28135" z="-2264" />
+        <location x="146418" y="27376" z="-2204" />
+        <location x="146384" y="27169" z="-2200" />
+        <location x="146406" y="27037" z="-2200" />
+        <location x="146415" y="26868" z="-2200" />
+        <location x="146449" y="26730" z="-2200" />
+        <location x="146451" y="26659" z="-2200" />
+        <location x="146643" y="26689" z="-2200" />
+        <location x="146621" y="26806" z="-2200" />
+        <location x="146689" y="26880" z="-2200" />
+        <location x="146645" y="26988" z="-2200" />
+        <location x="146727" y="27053" z="-2200" />
+        <location x="146695" y="27145" z="-2200" />
+        <location x="146759" y="27240" z="-2200" />
+        <location x="146703" y="27305" z="-2200" />
+        <location x="146863" y="27364" z="-2200" />
+        <location x="146973" y="27362" z="-2200" />
+        <location x="146913" y="27243" z="-2200" />
+        <location x="146933" y="27143" z="-2200" />
+        <location x="146922" y="27049" z="-2200" />
+        <location x="146937" y="26926" z="-2200" />
+        <location x="146909" y="26811" z="-2200" />
+        <location x="146913" y="26669" z="-2200" />
+        <location x="147019" y="26618" z="-2200" />
+        <location x="147015" y="26732" z="-2200" />
+        <location x="147124" y="26806" z="-2200" />
+        <location x="147049" y="26892" z="-2200" />
+        <location x="147150" y="26974" z="-2200" />
+        <location x="147079" y="27144" z="-2200" />
+        <location x="147082" y="27242" z="-2200" />
+        <location x="147164" y="27303" z="-2200" />
+    </WalkerAI>
+    <WalkerAI name="Giran Habor" x="47938" y="186864" z="-3480" type="RANDOM">
+        <location x="48281" y="187247" z="-3552" />
+        <location x="47826" y="187154" z="-3582" />
+        <location x="47055" y="187237" z="-3512" />
+        <location x="46836" y="186871" z="-3512" />
+        <location x="46751" y="186655" z="-3512" />
+        <location x="46740" y="186323" z="-3480" />
+        <location x="46626" y="186411" z="-3512" />
+        <location x="47874" y="186861" z="-3480" />
+        <location x="47983" y="186827" z="-3480" />
+        <location x="48614" y="186426" z="-3512" />
+        <location x="46636" y="186139" z="-3480" />
+        <location x="46747" y="186654" z="-3512" />
+        <location x="47124" y="186502" z="-3480" />
+        <location x="47846" y="186539" z="-3480" />
+        <location x="48617" y="186385" z="-3512" />
+        <location x="48542" y="187139" z="-3582" />
+        <location x="47655" y="187662" z="-3582" />
+        <location x="47930" y="187107" z="-3582" />
+        <location x="48050" y="187132" z="-3582" />
+        <location x="48408" y="186948" z="-3582" />
+        <location x="49669" y="185853" z="-3582" />
+        <location x="48191" y="185972" z="-3480" />
+        <location x="47682" y="186053" z="-3512" />
+        <location x="47724" y="186979" z="-3512" />
+        <location x="47310" y="186787" z="-3480" />
+        <location x="47081" y="186778" z="-3480" />
+        <location x="47016" y="186722" z="-3512" />
+        <location x="47133" y="186399" z="-3480" />
+        <location x="47199" y="186112" z="-3480" />
+        <location x="47195" y="186160" z="-3512" />
+        <location x="47584" y="186050" z="-3480" />
+        <location x="47612" y="186314" z="-3512" />
+        <location x="47806" y="186447" z="-3480" />
+        <location x="48012" y="186253" z="-3480" />
+        <location x="48204" y="186110" z="-3480" />
+        <location x="48061" y="186555" z="-3480" />
+        <location x="47691" y="186881" z="-3512" />
+        <location x="47540" y="187096" z="-3512" />
+        <location x="47320" y="187100" z="-3512" />
+        <location x="47145" y="187011" z="-3480" />
+        <location x="46967" y="187084" z="-3480" />
+        <location x="46969" y="187204" z="-3512" />
+        <location x="46787" y="186905" z="-3480" />
+        <location x="46862" y="186529" z="-3480" />
+        <location x="46925" y="186029" z="-3480" />
+        <location x="46636" y="186139" z="-3480" />
+        <location x="46747" y="186654" z="-3512" />
+    </WalkerAI>
+    <WalkerAI name="Giran Castle Town" x="82344" y="148945" z="-3464" type="RANDOM">
+        <location x="81121" y="147774" z="-3464" />
+        <location x="81104" y="147886" z="-3464" />
+        <location x="80951" y="149329" z="-3464" />
+        <location x="80991" y="149327" z="-3464" />
+        <location x="81057" y="149393" z="-3464" />
+        <location x="81093" y="149426" z="-3464" />
+        <location x="81116" y="149473" z="-3464" />
+        <location x="81184" y="149424" z="-3464" />
+        <location x="82301" y="149525" z="-3464" />
+        <location x="82594" y="149523" z="-3464" />
+        <location x="82640" y="149527" z="-3464" />
+        <location x="82577" y="149236" z="-3464" />
+        <location x="82782" y="149371" z="-3464" />
+        <location x="82809" y="149372" z="-3464" />
+        <location x="82819" y="149394" z="-3464" />
+        <location x="82870" y="149403" z="-3464" />
+        <location x="82888" y="149384" z="-3464" />
+        <location x="82914" y="149388" z="-3464" />
+        <location x="83070" y="149344" z="-3464" />
+        <location x="83070" y="149284" z="-3464" />
+        <location x="83324" y="149268" z="-3400" />
+        <location x="83415" y="149266" z="-3400" />
+        <location x="83344" y="149075" z="-3400" />
+        <location x="83471" y="148962" z="-3400" />
+        <location x="83642" y="149245" z="-3400" />
+        <location x="83670" y="149270" z="-3400" />
+        <location x="83703" y="149193" z="-3400" />
+        <location x="83684" y="148901" z="-3400" />
+        <location x="83631" y="148865" z="-3400" />
+        <location x="83649" y="148826" z="-3400" />
+        <location x="83688" y="148796" z="-3400" />
+        <location x="83429" y="148829" z="-3400" />
+        <location x="83549" y="148690" z="-3400" />
+        <location x="83355" y="148519" z="-3400" />
+        <location x="83456" y="148457" z="-3400" />
+        <location x="83669" y="148439" z="-3400" />
+        <location x="83633" y="148396" z="-3400" />
+        <location x="83660" y="148322" z="-3400" />
+        <location x="83402" y="148324" z="-3400" />
+        <location x="83523" y="148254" z="-3400" />
+        <location x="83384" y="148121" z="-3400" />
+        <location x="83510" y="148050" z="-3400" />
+        <location x="83675" y="148028" z="-3400" />
+        <location x="83653" y="147982" z="-3400" />
+        <location x="83685" y="147945" z="-3400" />
+        <location x="83512" y="147908" z="-3400" />
+        <location x="83567" y="147596" z="-3400" />
+        <location x="83613" y="147578" z="-3400" />
+        <location x="83498" y="147944" z="-3400" />
+        <location x="83458" y="147951" z="-3400" />
+        <location x="83410" y="147933" z="-3400" />
+        <location x="83421" y="148009" z="-3400" />
+        <location x="83152" y="147974" z="-3432" />
+        <location x="83080" y="147928" z="-3464" />
+        <location x="83244" y="147518" z="-3464" />
+        <location x="83129" y="147521" z="-3464" />
+        <location x="83035" y="147520" z="-3464" />
+        <location x="82891" y="147859" z="-3464" />
+        <location x="82857" y="147844" z="-3464" />
+        <location x="82793" y="147766" z="-3464" />
+        <location x="82725" y="147724" z="-3464" />
+        <location x="82081" y="147682" z="-3464" />
+        <location x="82100" y="147574" z="-3464" />
+        <location x="82065" y="147576" z="-3464" />
+        <location x="82017" y="147612" z="-3464" />
+        <location x="82030" y="147569" z="-3464" />
+        <location x="82013" y="147541" z="-3464" />
+        <location x="82215" y="147983" z="-3464" />
+        <location x="82246" y="148122" z="-3464" />
+        <location x="82375" y="148169" z="-3464" />
+        <location x="82348" y="148300" z="-3464" />
+        <location x="82265" y="148364" z="-3464" />
+        <location x="82715" y="148138" z="-3464" />
+        <location x="82526" y="148360" z="-3464" />
+        <location x="82290" y="148571" z="-3464" />
+        <location x="82299" y="148709" z="-3464" />
+        <location x="82430" y="148612" z="-3464" />
+        <location x="82509" y="148547" z="-3464" />
+        <location x="82551" y="148586" z="-3464" />
+        <location x="82557" y="148649" z="-3464" />
+        <location x="82486" y="148673" z="-3464" />
+        <location x="82398" y="148985" z="-3464" />
+        <location x="82537" y="148979" z="-3464" />
+        <location x="82418" y="149144" z="-3464" />
+        <location x="82739" y="148929" z="-3464" />
+        <location x="82825" y="148690" z="-3464" />
+        <location x="83060" y="148812" z="-3464" />
+        <location x="83060" y="148852" z="-3464" />
+        <location x="83111" y="148794" z="-3464" />
+        <location x="83101" y="148442" z="-3464" />
+        <location x="83076" y="148403" z="-3464" />
+        <location x="83075" y="148359" z="-3464" />
+        <location x="83210" y="150168" z="-3512" />
+        <location x="83249" y="150209" z="-3512" />
+        <location x="83208" y="150518" z="-3512" />
+        <location x="77497" y="148180" z="-3592" />
+        <location x="77474" y="148245" z="-3592" />
+        <location x="80435" y="149233" z="-3504" />
+        <location x="79658" y="150686" z="-3512" />
+        <location x="79694" y="145495" z="-3488" />
+        <location x="79683" y="145541" z="-3488" />
+        <location x="79783" y="146565" z="-3520" />
+        <location x="79746" y="146566" z="-3520" />
+        <location x="80448" y="147894" z="-3504" />
+    </WalkerAI>
+    <WalkerAI name="Gludio Castle Town" x="-12730" y="122683" z="-3112" type="RANDOM">
+        <location x="-12738" y="122780" z="-3112" />
+        <location x="-12670" y="122784" z="-3143" />
+        <location x="-12183" y="122695" z="-3096" />
+        <location x="-14188" y="123787" z="-3112" />
+        <location x="-13978" y="121993" z="-2984" />
+        <location x="-12831" y="121702" z="-2960" />
+        <location x="-13263" y="121567" z="-2968" />
+        <location x="-13684" y="121637" z="-2994" />
+        <location x="-12868" y="123127" z="-3096" />
+        <location x="-15107" y="123365" z="-3104" />
+        <location x="-13573" y="122959" z="-3131" />
+        <location x="-15224" y="124716" z="-3112" />
+        <location x="-15375" y="124624" z="-3141" />
+    </WalkerAI>
+    <WalkerAI name="Goddard Town" x="147725" y="-56649" z="-2776" type="RANDOM">
+        <location x="147960" y="-55266" z="-2728" />
+        <location x="147517" y="-55249" z="-2759" />
+        <location x="147404" y="-55312" z="-2728" />
+        <location x="146821" y="-56393" z="-2807" />
+        <location x="147713" y="-52746" z="-2728" />
+        <location x="145056" y="-54633" z="-2993" />
+        <location x="144428" y="-55720" z="-2960" />
+        <location x="146403" y="-57568" z="-2993" />
+        <location x="146658" y="-58923" z="-2968" />
+        <location x="148928" y="-58832" z="-2960" />
+        <location x="149289" y="-57592" z="-2968" />
+        <location x="148164" y="-55549" z="-2736" />
+        <location x="148097" y="-55577" z="-2736" />
+        <location x="148020" y="-55602" z="-2736" />
+        <location x="147955" y="-55623" z="-2736" />
+        <location x="147842" y="-55640" z="-2736" />
+        <location x="147737" y="-55644" z="-2736" />
+        <location x="147621" y="-55631" z="-2736" />
+        <location x="147518" y="-55643" z="-2736" />
+        <location x="147428" y="-55615" z="-2736" />
+        <location x="147339" y="-55584" z="-2736" />
+        <location x="147250" y="-55560" z="-2736" />
+        <location x="147308" y="-55677" z="-2744" />
+        <location x="147432" y="-55709" z="-2744" />
+        <location x="147565" y="-55736" z="-2744" />
+        <location x="147692" y="-55755" z="-2744" />
+        <location x="147793" y="-55741" z="-2744" />
+        <location x="147907" y="-55734" z="-2744" />
+        <location x="148022" y="-55702" z="-2744" />
+        <location x="148121" y="-55682" z="-2744" />
+        <location x="148097" y="-55790" z="-2783" />
+        <location x="148006" y="-55809" z="-2752" />
+        <location x="147909" y="-55839" z="-2760" />
+        <location x="147812" y="-55855" z="-2752" />
+        <location x="147719" y="-55846" z="-2752" />
+        <location x="147605" y="-55846" z="-2752" />
+        <location x="147526" y="-55827" z="-2760" />
+        <location x="147438" y="-55803" z="-2752" />
+        <location x="147352" y="-55790" z="-2752" />
+        <location x="147430" y="-55898" z="-2791" />
+        <location x="147534" y="-55910" z="-2791" />
+        <location x="147657" y="-55938" z="-2760" />
+        <location x="147774" y="-55934" z="-2760" />
+        <location x="147889" y="-55913" z="-2760" />
+        <location x="147987" y="-55893" z="-2760" />
+        <location x="147390" y="-55983" z="-2799" />
+        <location x="147807" y="-56009" z="-2799" />
+        <location x="147631" y="-56009" z="-2799" />
+        <location x="147496" y="-55976" z="-2768" />
+        <location x="147473" y="-56178" z="-2807" />
+        <location x="147557" y="-56346" z="-2776" />
+        <location x="147754" y="-56225" z="-2776" />
+        <location x="147958" y="-56303" z="-2776" />
+        <location x="148056" y="-56135" z="-2776" />
+        <location x="147984" y="-56063" z="-2776" />
+        <location x="147716" y="-56510" z="-2807" />
+        <location x="147657" y="-56689" z="-2776" />
+        <location x="147873" y="-56689" z="-2807" />
+        <location x="147869" y="-56591" z="-2776" />
+        <location x="147867" y="-56918" z="-2776" />
+        <location x="147759" y="-56999" z="-2807" />
+        <location x="147605" y="-56942" z="-2776" />
+        <location x="147617" y="-57186" z="-2776" />
+        <location x="147824" y="-57224" z="-2807" />
+    </WalkerAI>
+    <WalkerAI name="Heine Town" x="111381" y="218981" z="-3536" type="RANDOM">
+        <location x="111391" y="219335" z="-3544" />
+        <location x="111562" y="219320" z="-3572" />
+        <location x="111592" y="219727" z="-3672" />
+        <location x="112261" y="220087" z="-3600" />
+        <location x="112288" y="220270" z="-3628" />
+        <location x="109811" y="219280" z="-3505" />
+        <location x="109666" y="220191" z="-3512" />
+        <location x="107086" y="216763" z="-3592" />
+        <location x="107969" y="218942" z="-3685" />
+        <location x="108629" y="218928" z="-3701" />
+        <location x="147713" y="-52746" z="-2728" />
+    </WalkerAI>
+    <WalkerAI name="Oren Castle Town" x="82760" y="53578" z="-1488" type="RANDOM">
+        <location x="82965" y="53176" z="-1522" />
+        <location x="82701" y="53099" z="-1488" />
+        <location x="82018" y="54009" z="-1488" />
+        <location x="82420" y="55610" z="-1520" />
+        <location x="83643" y="56078" z="-1520" />
+        <location x="83715" y="55425" z="-1512" />
+        <location x="83572" y="55629" z="-1538" />
+        <location x="83637" y="53037" z="-1456" />
+        <location x="83201" y="54997" z="-1504" />
+        <location x="81708" y="54809" z="-1536" />
+        <location x="79562" y="54888" z="-1573" />
+        <location x="79206" y="53614" z="-1571" />
+    </WalkerAI>
+</list>
+
+<!--
+GM Consultation Service
+Floran Town
+Dion Castle Town
+Southern Wasteland
+Rune Town
+Dwarven Town
+Fantasy Island
+Orc Town
+Fantasy Island
+Fantasy Island
+Dimensional Rift
+GM Consultation Service
+Gludin Castle Town
+Oren Castle Town
+Fantasy Island
+Dwarven Town
+Giran Castle Town
+GM Consultation Service
+Heine Town
+Union Base Of Kserth
+Giran Habor
+Aden Castle Town
+Rim Kamaroka
+Seed of Infinity
+Talking Island Town
+Elven Town
+Seed of Annihilation
+Hunters Village
+Seed of Annihilation
+Seed of Destruction
+Gludin Castle Town
+Border of Nightmare
+Orc Town
+Aerial Cleft
+Kamaloka
+Coliseum
+The Royal Family's Catacomb
+Soul Island
+Gludin Castle Town
+Darkelven Town
+Ironcastle Inner Oasis
+Talking Island Town
+Rune Town
+Neutral Zone
+Elven Town
+Soul Island
+Gludio Castle Town
+Floran Town
+Floran Town
+Talking Island Town
+Darkelven Town
+Primeval Island
+Town of Schuttgart
+Goddard Town
+Nia Kamaloka
+
+-->

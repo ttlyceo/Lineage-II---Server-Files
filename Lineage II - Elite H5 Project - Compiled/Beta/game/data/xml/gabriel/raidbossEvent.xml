@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--Zone id needs to be the same ID as the npcId from raidboss!-->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/gabriel/raidbossEvent.xsd">
+    <raidboss ENABLED="true" npcId="51000" name="Dragon Valley - Entrance" spawnX="70566" spawnY="118153" spawnZ="-3672" heading="63004" DURATION="90" NOTIFY_DELAY="5" MODE="DAILY" DAY="0" HOUR="20" MINUTE="00" RANDOM_MINUTE="0">
+ <dropLists>
+            <item id="13457" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Cutter -->
+            <item id="13458" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Slasher -->
+            <item id="13459" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Buster -->
+            <item id="13460" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shaper -->
+            <item id="13461" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Fighter -->
+            <item id="13462" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Stormer -->
+            <item id="13463" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Avanger -->
+            <item id="13464" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Retributer -->
+            <item id="13465" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Caster -->
+            <item id="13466" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Singer -->
+            <item id="13467" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Thrower -->
+            <item id="13468" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Pincer -->
+            <item id="13469" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shooter -->
+            <item id="13470" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Nagan -->
+            <item id="13484" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Dual Dagger -->
+            <item id="52" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Dual Sword -->
+			<item id="21707" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Olf's Shirt Enchant -->
+			<item id="6578" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Armor S -->
+			<item id="6577" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Weapon S -->
+            <item id="6673" min="1" max="50" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Festival Adena -->
+			<item id="49002" min="1" max="10" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Daily Coin -->
+            <item id="9627" min="1" max="10" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Mastery -->
+            <item id="6622" min="1" max="15" chance="20" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex  -->
+            <item id="9626" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Discipline -->
+            <item id="9625" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Oblivion -->
+            <item id="10210" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Enhanced Mithril Bracelet -->
+            <item id="10514" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - CP -->
+            <item id="10513" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - MP -->
+            <item id="10512" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - HP -->
+            <item id="9552" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Fire Crystal -->
+            <item id="9553" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Water Crystal -->
+            <item id="9554" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Earth Crystal -->
+            <item id="9555" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Wind Crystal -->
+            <item id="9556" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Dark Crystal -->
+            <item id="9557" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Divine Crystal -->
+            <item id="5126" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Dual Craft Stamp -->
+            <item id="16161" min="1" max="10" chance="20" maxOccurs="1" minOccurs="1" /> <!--  Mid-Grade Life Stone - Level 85 -->
+            <item id="16162" min="1" max="5" chance="17" maxOccurs="1" minOccurs="1" /> <!--  High-Grade Life Stone - Level 85 -->
+            <item id="16163" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Top-Grade Life Stone - Level 85 -->
+            <item id="9570" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Red Soul Crystal: Stage 14 -->
+            <item id="9572" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Green Soul Crystal: Stage 14 -->
+            <item id="9571" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Blue Soul Crystal: Stage 14 -->			
+        </dropLists>
+    </raidboss>
+	    <raidboss ENABLED="true" npcId="41004" name="Giran Castle Area" spawnX="98367" spawnY="149287" spawnZ="-3248" heading="20924" DURATION="30" NOTIFY_DELAY="5" MODE="DAILY" DAY="0" HOUR="14" MINUTE="00" RANDOM_MINUTE="0">
+ <dropLists>
+            <item id="6673" min="1" max="30" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Festival Adena -->
+			<item id="49002" min="1" max="10" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Daily Coin -->
+            <item id="6577" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Weapon S -->
+            <item id="6578" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Armor S -->
+            <item id="21707" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Olf's Shirt Enchant -->
+            <item id="5908" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Red Soul Crystal: Stage 13 -->
+            <item id="5911" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Green Soul Crystal: Stage 13 -->
+            <item id="5914" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Blue Soul Crystal: Stage 13 -->
+            <item id="9627" min="1" max="3" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Mastery -->
+            <item id="6622" min="1" max="10" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex  -->
+            <item id="9626" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Discipline -->
+            <item id="9625" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Oblivion -->
+            <item id="10210" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Enhanced Mithril Bracelet -->
+            <item id="10514" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - CP -->
+            <item id="10513" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - MP -->
+            <item id="10512" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - HP -->
+            <item id="9552" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Fire Crystal -->
+            <item id="9553" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Water Crystal -->
+            <item id="9554" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Earth Crystal -->
+            <item id="9555" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Wind Crystal -->
+            <item id="9556" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Dark Crystal -->
+            <item id="9557" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Divine Crystal -->
+            <item id="5126" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Dual Craft Stamp -->
+            <item id="16161" min="1" max="10" chance="20" maxOccurs="1" minOccurs="1" /> <!--  Mid-Grade Life Stone - Level 85 -->
+            <item id="16162" min="1" max="5" chance="17" maxOccurs="1" minOccurs="1" /> <!--  High-Grade Life Stone - Level 85 -->
+            <item id="16163" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Top-Grade Life Stone - Level 85 -->
+            <item id="13143" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Helmet -->
+            <item id="14105" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Breastplate -->
+            <item id="14108" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gaiters -->
+            <item id="14109" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gauntlets -->
+            <item id="14110" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Boots -->
+            <item id="14111" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shield -->
+            <item id="13144" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Helmet -->
+            <item id="14106" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Breastplate -->
+            <item id="14112" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Leggings -->
+            <item id="14113" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Gloves -->
+            <item id="14114" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Boots -->
+            <item id="13145" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Circlet -->
+            <item id="14107" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Tunic -->
+            <item id="14115" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Stockings -->
+            <item id="14116" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gloves -->
+            <item id="14117" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shoes -->
+            <item id="13887" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!-- Vesper Sigil -->
+        </dropLists>
+    </raidboss>
+		    <raidboss ENABLED="true" npcId="41003" name="Aden Castle Area" spawnX="146928" spawnY="36888" spawnZ="-3272" heading="46831" DURATION="30" NOTIFY_DELAY="5" MODE="DAILY" DAY="0" HOUR="16" MINUTE="00" RANDOM_MINUTE="0">
+ <dropLists>
+            <item id="6673" min="1" max="30" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Festival Adena -->
+			<item id="49002" min="1" max="10" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Daily Coin -->
+            <item id="6577" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Weapon S -->
+            <item id="6578" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Armor S -->
+            <item id="21707" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Olf's Shirt Enchant -->
+            <item id="5908" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Red Soul Crystal: Stage 13 -->
+            <item id="5911" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Green Soul Crystal: Stage 13 -->
+            <item id="5914" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Blue Soul Crystal: Stage 13 -->
+            <item id="9627" min="1" max="3" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Mastery -->
+            <item id="6622" min="1" max="10" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex  -->
+            <item id="9626" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Discipline -->
+            <item id="9625" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Oblivion -->
+            <item id="10210" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Enhanced Mithril Bracelet -->
+            <item id="10514" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - CP -->
+            <item id="10513" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - MP -->
+            <item id="10512" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - HP -->
+            <item id="9552" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Fire Crystal -->
+            <item id="9553" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Water Crystal -->
+            <item id="9554" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Earth Crystal -->
+            <item id="9555" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Wind Crystal -->
+            <item id="9556" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Dark Crystal -->
+            <item id="9557" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Divine Crystal -->
+            <item id="5126" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Dual Craft Stamp -->
+            <item id="16161" min="1" max="10" chance="20" maxOccurs="1" minOccurs="1" /> <!--  Mid-Grade Life Stone - Level 85 -->
+            <item id="16162" min="1" max="5" chance="17" maxOccurs="1" minOccurs="1" /> <!--  High-Grade Life Stone - Level 85 -->
+            <item id="16163" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Top-Grade Life Stone - Level 85 -->
+            <item id="13143" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Helmet -->
+            <item id="14105" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Breastplate -->
+            <item id="14108" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gaiters -->
+            <item id="14109" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gauntlets -->
+            <item id="14110" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Boots -->
+            <item id="14111" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shield -->
+            <item id="13144" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Helmet -->
+            <item id="14106" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Breastplate -->
+            <item id="14112" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Leggings -->
+            <item id="14113" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Gloves -->
+            <item id="14114" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Boots -->
+            <item id="13145" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Circlet -->
+            <item id="14107" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Tunic -->
+            <item id="14115" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Stockings -->
+            <item id="14116" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gloves -->
+            <item id="14117" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shoes -->
+            <item id="13887" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!-- Vesper Sigil -->
+        </dropLists>
+    </raidboss>
+			    <raidboss ENABLED="true" npcId="41001" name="Shuttgard Castle Area" spawnX="76704" spawnY="-133814" spawnZ="-3136" heading="45921" DURATION="30" NOTIFY_DELAY="5" MODE="DAILY" DAY="0" HOUR="18" MINUTE="00" RANDOM_MINUTE="0">
+ <dropLists>
+            <item id="6673" min="1" max="30" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Festival Adena -->
+			<item id="49002" min="1" max="10" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Daily Coin -->
+            <item id="6577" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Weapon S -->
+            <item id="6578" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Armor S -->
+            <item id="21707" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Olf's Shirt Enchant -->
+            <item id="5908" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Red Soul Crystal: Stage 13 -->
+            <item id="5911" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Green Soul Crystal: Stage 13 -->
+            <item id="5914" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Blue Soul Crystal: Stage 13 -->
+            <item id="9627" min="1" max="3" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Mastery -->
+            <item id="6622" min="1" max="10" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex  -->
+            <item id="9626" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Discipline -->
+            <item id="9625" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Oblivion -->
+            <item id="10210" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Enhanced Mithril Bracelet -->
+            <item id="10514" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - CP -->
+            <item id="10513" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - MP -->
+            <item id="10512" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - HP -->
+            <item id="9552" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Fire Crystal -->
+            <item id="9553" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Water Crystal -->
+            <item id="9554" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Earth Crystal -->
+            <item id="9555" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Wind Crystal -->
+            <item id="9556" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Dark Crystal -->
+            <item id="9557" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Divine Crystal -->
+            <item id="5126" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Dual Craft Stamp -->
+            <item id="16161" min="1" max="10" chance="20" maxOccurs="1" minOccurs="1" /> <!--  Mid-Grade Life Stone - Level 85 -->
+            <item id="16162" min="1" max="5" chance="17" maxOccurs="1" minOccurs="1" /> <!--  High-Grade Life Stone - Level 85 -->
+            <item id="16163" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Top-Grade Life Stone - Level 85 -->
+            <item id="13143" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Helmet -->
+            <item id="14105" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Breastplate -->
+            <item id="14108" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gaiters -->
+            <item id="14109" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gauntlets -->
+            <item id="14110" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Boots -->
+            <item id="14111" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shield -->
+            <item id="13144" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Helmet -->
+            <item id="14106" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Breastplate -->
+            <item id="14112" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Leggings -->
+            <item id="14113" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Gloves -->
+            <item id="14114" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Boots -->
+            <item id="13145" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Circlet -->
+            <item id="14107" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Tunic -->
+            <item id="14115" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Stockings -->
+            <item id="14116" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gloves -->
+            <item id="14117" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shoes -->
+            <item id="13887" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!-- Vesper Sigil -->
+        </dropLists>
+    </raidboss>
+				    <raidboss ENABLED="true" npcId="41005" name="Gludio Castle Area" spawnX="-5936" spawnY="121355" spawnZ="-2952" heading="20361" DURATION="30" NOTIFY_DELAY="5" MODE="DAILY" DAY="0" HOUR="22" MINUTE="00" RANDOM_MINUTE="0">
+ <dropLists>
+            <item id="6673" min="1" max="30" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Festival Adena -->
+			<item id="49002" min="1" max="10" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Daily Coin -->
+            <item id="6577" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Weapon S -->
+            <item id="6578" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Armor S -->
+            <item id="21707" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Olf's Shirt Enchant -->
+            <item id="5908" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Red Soul Crystal: Stage 13 -->
+            <item id="5911" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Green Soul Crystal: Stage 13 -->
+            <item id="5914" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Blue Soul Crystal: Stage 13 -->
+            <item id="9627" min="1" max="3" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Mastery -->
+            <item id="6622" min="1" max="10" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex  -->
+            <item id="9626" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Discipline -->
+            <item id="9625" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Oblivion -->
+            <item id="10210" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Enhanced Mithril Bracelet -->
+            <item id="10514" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - CP -->
+            <item id="10513" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - MP -->
+            <item id="10512" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - HP -->
+            <item id="9552" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Fire Crystal -->
+            <item id="9553" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Water Crystal -->
+            <item id="9554" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Earth Crystal -->
+            <item id="9555" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Wind Crystal -->
+            <item id="9556" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Dark Crystal -->
+            <item id="9557" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Divine Crystal -->
+            <item id="5126" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Dual Craft Stamp -->
+            <item id="16161" min="1" max="10" chance="20" maxOccurs="1" minOccurs="1" /> <!--  Mid-Grade Life Stone - Level 85 -->
+            <item id="16162" min="1" max="5" chance="17" maxOccurs="1" minOccurs="1" /> <!--  High-Grade Life Stone - Level 85 -->
+            <item id="16163" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Top-Grade Life Stone - Level 85 -->
+            <item id="13143" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Helmet -->
+            <item id="14105" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Breastplate -->
+            <item id="14108" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gaiters -->
+            <item id="14109" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gauntlets -->
+            <item id="14110" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Boots -->
+            <item id="14111" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shield -->
+            <item id="13144" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Helmet -->
+            <item id="14106" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Breastplate -->
+            <item id="14112" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Leggings -->
+            <item id="14113" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Gloves -->
+            <item id="14114" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Boots -->
+            <item id="13145" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Circlet -->
+            <item id="14107" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Tunic -->
+            <item id="14115" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Stockings -->
+            <item id="14116" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gloves -->
+            <item id="14117" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shoes -->
+            <item id="13887" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!-- Vesper Sigil -->
+        </dropLists>
+    </raidboss>
+					    <raidboss ENABLED="true" npcId="41002" name="Dion Castle Area" spawnX="26714" spawnY="142977" spawnZ="-2856" heading="32548" DURATION="30" NOTIFY_DELAY="5" MODE="DAILY" DAY="0" HOUR="23" MINUTE="59" RANDOM_MINUTE="0">
+ <dropLists>
+            <item id="6673" min="1" max="30" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Festival Adena -->
+			<item id="49002" min="1" max="10" chance="100" maxOccurs="1" minOccurs="1" /> <!--  Daily Coin -->
+            <item id="6577" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Weapon S -->
+            <item id="6578" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Blessed Enchant Armor S -->
+            <item id="21707" min="1" max="3" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Blessed Olf's Shirt Enchant -->
+            <item id="5908" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Red Soul Crystal: Stage 13 -->
+            <item id="5911" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Green Soul Crystal: Stage 13 -->
+            <item id="5914" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Blue Soul Crystal: Stage 13 -->
+            <item id="9627" min="1" max="3" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Mastery -->
+            <item id="6622" min="1" max="10" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex  -->
+            <item id="9626" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Discipline -->
+            <item id="9625" min="1" max="5" chance="5" maxOccurs="1" minOccurs="1" /> <!--  Giant Codex - Oblivion -->
+            <item id="10210" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Enhanced Mithril Bracelet -->
+            <item id="10514" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - CP -->
+            <item id="10513" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - MP -->
+            <item id="10512" min="1" max="1" chance="7" maxOccurs="1" minOccurs="1" /> <!--  Stripped Mithril Shirt - HP -->
+            <item id="9552" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Fire Crystal -->
+            <item id="9553" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Water Crystal -->
+            <item id="9554" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Earth Crystal -->
+            <item id="9555" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Wind Crystal -->
+            <item id="9556" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Dark Crystal -->
+            <item id="9557" min="1" max="5" chance="13" maxOccurs="1" minOccurs="1" /> <!--  Divine Crystal -->
+            <item id="5126" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!--  Dual Craft Stamp -->
+            <item id="16161" min="1" max="10" chance="20" maxOccurs="1" minOccurs="1" /> <!--  Mid-Grade Life Stone - Level 85 -->
+            <item id="16162" min="1" max="5" chance="17" maxOccurs="1" minOccurs="1" /> <!--  High-Grade Life Stone - Level 85 -->
+            <item id="16163" min="1" max="3" chance="15" maxOccurs="1" minOccurs="1" /> <!--  Top-Grade Life Stone - Level 85 -->
+            <item id="13143" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Helmet -->
+            <item id="14105" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Breastplate -->
+            <item id="14108" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gaiters -->
+            <item id="14109" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gauntlets -->
+            <item id="14110" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Boots -->
+            <item id="14111" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shield -->
+            <item id="13144" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Helmet -->
+            <item id="14106" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Breastplate -->
+            <item id="14112" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Leggings -->
+            <item id="14113" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Gloves -->
+            <item id="14114" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Leather Boots -->
+            <item id="13145" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Circlet -->
+            <item id="14107" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Tunic -->
+            <item id="14115" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Stockings -->
+            <item id="14116" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Gloves -->
+            <item id="14117" min="1" max="1" chance="5" maxOccurs="1" minOccurs="1" /> <!-- Vesper Shoes -->
+            <item id="13887" min="1" max="1" chance="10" maxOccurs="1" minOccurs="1" /> <!-- Vesper Sigil -->
+        </dropLists>
+    </raidboss>
+    <raidboss ENABLED="false" npcId="55010" name="Death Pass" spawnX="71640" spawnY="117976" spawnZ="-3680" DURATION="10" heading="0" NOTIFY_DELAY="5" MODE="WEEKLY" DAY="2" HOUR="11" MINUTE="18" RANDOM_MINUTE="0">
+        <dropLists>
+            <item id="57" min="100000000" max="300000000" chance="5" maxOccurs="2" minOccurs="1" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="5" maxOccurs="0" minOccurs="1" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="5" maxOccurs="0" minOccurs="1" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="3" maxOccurs="1" minOccurs="0" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="3" maxOccurs="1" minOccurs="0" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="3" maxOccurs="1" minOccurs="0" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="3" maxOccurs="1" minOccurs="0" /> <!-- Adena -->
+        </dropLists>
+    </raidboss>
+    <raidboss ENABLED="false" npcId="55011" name="Death Pass" spawnX="71640" spawnY="117976" spawnZ="-3680" DURATION="10" heading="0" NOTIFY_DELAY="5" MODE="MONTHLY" DAY="19" HOUR="11" MINUTE="18" RANDOM_MINUTE="0">
+        <dropLists>
+            <item id="57" min="100000000" max="300000000" chance="5" maxOccurs="2" minOccurs="1" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="5" maxOccurs="0" minOccurs="1" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="5" maxOccurs="0" minOccurs="1" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="3" maxOccurs="1" minOccurs="0" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="3" maxOccurs="1" minOccurs="0" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="3" maxOccurs="1" minOccurs="0" /> <!-- Adena -->
+            <item id="57" min="1" max="1" chance="3" maxOccurs="1" minOccurs="0" /> <!-- Adena -->
+        </dropLists>
+    </raidboss>
+
+</list>
+
+<!-- ENABLED option is global that means if it is false Raid will be disabled -->
+<!-- DURATION option is the time that the boss will be alive in the workd (minutes) -->
+<!-- NOTIFY_DELAY option is a schedule time that will send notification of raid location after spawned (minutes) -->
+<!-- MODE = Options: DAILY, WEEKLY, MONTHLY -->
+
+<!-- IF MODE WEEKLY
+SUNDAY = 1
+MONDAY = 2
+TUESDAY = 3
+WEDNESDAY = 4
+THURSDAY = 5
+FRIDAY = 6
+SATURDAY = 7
+
+IF MONTHLY
+Day of the month
+ -->
+<!-- DAY option is to set which day of month boss will spawn, make sure if this is higher than 0, if DAILY, then this is 0 -->
+<!-- HOUR option is a 24 hour format about the time boss will spawn -->
+<!-- MINUTE option is the minute of hour boss will spawn -->
+<!-- RANDOM_MINUTE option is to add a random time in minutes so time won't be the same. -->

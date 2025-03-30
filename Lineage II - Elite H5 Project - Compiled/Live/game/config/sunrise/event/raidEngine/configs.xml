@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./xsd/configs.xsd">
+	<config ENABLED="false" DURATION="10" NOTIFY_DELAY ="5" DAILY="true" DAY="0" HOUR="00" MINUTE="00" RANDOM_MINUTE="5"/>
+</list>
+
+<!-- ENABLED 全域啟用選項，若設定為false，則Raid事件將完全停用 -->
+<!-- DURATION Boss（首領）在遊戲世界中存在的持續時間（單位：分鐘）-->
+<!-- NOTIFY_DELAY 發送Raid位置通知的提前通知時間（單位：分鐘）-->
+<!-- DAILY 若設定為true，Raid事件將每天執行，若此選項為true，DAY選項必須設定為0 -->
+<!-- DAY 每月的第幾天Boss會出現，若設置大於0，則必須將DAILY設定為false -->
+<!-- HOUR Boss出現時間（24小時制，範圍為00~23）-->
+<!-- MINUTE Boss出現的分鐘時間（範圍00~59）-->
+<!-- RANDOM_MINUTE 在原定的時間基礎上增加隨機的分鐘數，避免每天Raid事件的時間完全一致 -->

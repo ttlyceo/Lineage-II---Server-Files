@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="15610" count="1" /><!-- Moirai Leather Breastplate -->
+   <item id="15613" count="1" /><!-- Moirai Leather Legging -->
+   <item id="15607" count="1" /><!-- Moirai Leather Helmet -->
+   <item id="15616" count="1" /><!-- Moirai Leather Gloves -->
+   <item id="15619" count="1" /><!-- Moirai Leather Boots -->
+</list>

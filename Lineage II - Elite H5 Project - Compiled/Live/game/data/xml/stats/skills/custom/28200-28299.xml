@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">	
+	
+	<skill id="28247" levels="1" name="Mount Griffin">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="transform" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="transformId" val="10000" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation" abnormalTime="3600" abnormalLvl="1" abnormalType="transform" />
+		</for>
+	</skill>
+		<skill id="28248" levels="1" name="Mount Sallamander">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="transform" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="transformId" val="10001" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation" abnormalTime="3600" abnormalLvl="1" abnormalType="transform" />
+		</for>
+	</skill>
+			<skill id="28249" levels="1" name="Mount Eligor">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="transform" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="transformId" val="10002" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation" abnormalTime="3600" abnormalLvl="1" abnormalType="transform" />
+		</for>
+	</skill>
+				<skill id="28250" levels="1" name="Mount Sabertooth">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="transform" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="transformId" val="10003" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation" abnormalTime="3600" abnormalLvl="1" abnormalType="transform" />
+		</for>
+	</skill>
+				<skill id="28251" levels="1" name="Lindvior Eligor">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="transform" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="transformId" val="10004" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation" abnormalTime="3600" abnormalLvl="1" abnormalType="transform" />
+		</for>
+	</skill>
+				<skill id="28252" levels="1" name="Mangkorn Eligor">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="transform" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="transformId" val="10005" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation" abnormalTime="3600" abnormalLvl="1" abnormalType="transform" />
+		</for>
+	</skill>
+	
+	
+</list>

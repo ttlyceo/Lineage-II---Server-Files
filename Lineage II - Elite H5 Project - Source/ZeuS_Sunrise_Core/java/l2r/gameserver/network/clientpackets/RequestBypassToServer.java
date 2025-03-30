@@ -1,0 +1,552 @@
+/*
+ * Copyright (C) 2004-2015 L2J Server
+ * 
+ * This file is part of L2J Server.
+ * 
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package l2r.gameserver.network.clientpackets;
+
+import java.util.StringTokenizer;
+
+import ZeuS.Comunidad.Engine;
+import ZeuS.Comunidad.cbManager;
+import gabriel.phantomEngine.PhantomControl;
+import gabriel.scriptsGab.Scripts;
+import gabriel.scriptsGab.forge.Forge;
+import gabriel.scriptsGab.gab.GabrielCBB;
+import l2r.Config;
+import l2r.gameserver.GameTimeController;
+import l2r.gameserver.ThreadPoolManager;
+import l2r.gameserver.cache.HtmCache;
+import l2r.gameserver.communitybbs.BoardsManager;
+import l2r.gameserver.data.xml.impl.AdminData;
+import l2r.gameserver.data.xml.impl.MultisellData;
+import l2r.gameserver.enums.CtrlIntention;
+import l2r.gameserver.enums.ZoneIdType;
+import l2r.gameserver.handler.AdminCommandHandler;
+import l2r.gameserver.handler.BypassHandler;
+import l2r.gameserver.handler.IAdminCommandHandler;
+import l2r.gameserver.handler.IBypassHandler;
+import l2r.gameserver.instancemanager.SiegeManager;
+import l2r.gameserver.instancemanager.TownManager;
+import l2r.gameserver.model.L2Object;
+import l2r.gameserver.model.L2World;
+import l2r.gameserver.model.Location;
+import l2r.gameserver.model.actor.L2Npc;
+import l2r.gameserver.model.actor.instance.L2PcInstance;
+import l2r.gameserver.model.entity.Hero;
+import l2r.gameserver.model.entity.olympiad.OlympiadManager;
+import l2r.gameserver.model.events.EventDispatcher;
+import l2r.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
+import l2r.gameserver.model.events.impl.character.player.OnPlayerBypass;
+import l2r.gameserver.model.items.instance.L2ItemInstance;
+import l2r.gameserver.network.SystemMessageId;
+import l2r.gameserver.network.serverpackets.ActionFailed;
+import l2r.gameserver.network.serverpackets.ConfirmDlg;
+import l2r.gameserver.network.serverpackets.ExBuyList;
+import l2r.gameserver.network.serverpackets.ExBuySellList;
+import l2r.gameserver.network.serverpackets.MagicSkillUse;
+import l2r.gameserver.network.serverpackets.NpcHtmlMessage;
+import l2r.gameserver.network.serverpackets.SetupGauge;
+import l2r.gameserver.network.serverpackets.ShowBoard;
+import l2r.gameserver.util.Broadcast;
+import l2r.gameserver.util.GMAudit;
+import l2r.gameserver.util.Util;
+
+import gr.sr.aioItem.AioItemNpcs;
+import gr.sr.configsEngine.configs.impl.AioItemsConfigs;
+import gr.sr.configsEngine.configs.impl.BufferConfigs;
+import gr.sr.configsEngine.configs.impl.IndividualVoteSystemConfigs;
+import gr.sr.interf.SunriseEvents;
+import gr.sr.javaBuffer.buffItem.AioItemBuffer;
+import gr.sr.voteEngine.old.VoteHandler;
+import ZeuS.Comunidad.EngineForm.C_oly_buff;
+import ZeuS.ZeuS.ZeuS;
+
+/**
+ * This class ...
+ * @version $Revision: 1.12.4.5 $ $Date: 2005/04/11 10:06:11 $
+ */
+public final class RequestBypassToServer extends L2GameClientPacket
+{
+	private static final String _C__23_REQUESTBYPASSTOSERVER = "[C] 23 RequestBypassToServer";
+	// FIXME: This is for compatibility, will be changed when bypass functionality got an overhaul by NosBit
+	private static final String[] _possibleNonHtmlCommands =
+	{
+		"_bbs",
+		"bbs",
+		"nxs",
+		"voice",
+		"_mail",
+		"_friend",
+		"_match",
+		"_diary",
+		"_olympiad?command",
+		"manor_menu_select",
+		"admin_",
+        "script_",
+        "_bbsforge",
+        "extra_",
+        "gab_"
+	};
+	
+	// S
+	private String _command;
+	
+	@Override
+	protected void readImpl()
+	{
+		_command = readS();
+	}
+	private boolean debugGabriel = false;
+	@Override
+	protected void runImpl()
+	{
+		final L2PcInstance activeChar = getClient().getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		
+		if (_command.isEmpty())
+		{
+			_log.info(activeChar.getName() + " send empty requestbypass");
+			activeChar.logout();
+			return;
+		}
+
+		if(debugGabriel)
+			System.out.println(_command);
+
+		if(_command.startsWith("_bbsloc") && SunriseEvents.isInEvent(activeChar)) {
+			ZeuS.isCMDFromZeuS(activeChar, "ZeuS openCB buffer");
+			return;
+		}
+		if(_command.startsWith("_bbshome") && SunriseEvents.isInEvent(activeChar)) {
+			ZeuS.isCMDFromZeuS(activeChar, "ZeuS openCB buffer");
+			return;
+		}
+		if(_command.startsWith("ZeuS v_buffer")) {
+			ZeuS.isCMDFromZeuS(activeChar, _command);
+			return;
+		}
+		if(this._command.startsWith("_maillist_0_1_0_;OlyBuffer;")) {
+			cbManager.separateAndSend(C_oly_buff.bypass(activeChar,this._command), activeChar);
+			return;
+		}if(this._command.startsWith("_maillist_0_1_0_;Buffer;")) {
+			cbManager.separateAndSend(Engine.delegar(activeChar, _command),activeChar);
+			return;
+		}
+		if(this._command.startsWith("ZeuS olyscheme")) {
+			ZeuS.isCMDFromZeuS(activeChar, _command);
+			return;
+		}
+		
+		
+		if (ZeuS.isCMDFromZeuS(activeChar, this._command))
+		{
+			return;
+		}
+
+		boolean requiresBypassValidation = true;
+		for (String possibleNonHtmlCommand : _possibleNonHtmlCommands)
+		{
+			if (_command.startsWith(possibleNonHtmlCommand))
+			{
+				requiresBypassValidation = false;
+				break;
+			}
+		}
+		
+		int bypassOriginId = 0;
+		if (requiresBypassValidation)
+		{
+			bypassOriginId = activeChar.validateHtmlAction(_command);
+			if ((bypassOriginId == -1) && !ZeuS.isVoiceFromZeuS(activeChar, _command) && !ZeuS.isHtml(activeChar, _command))
+			{
+				_log.warn("Player " + activeChar.getName() + " sent non cached bypass: '" + _command + "'");
+				return;
+			}
+			
+			if ((bypassOriginId > 0) && !Util.isInsideRangeOfObjectId(activeChar, bypassOriginId, L2Npc.INTERACTION_DISTANCE))
+			{
+				// No logging here, this could be a common case where the player has the html still open and run too far away and then clicks a html action
+				return;
+			}
+		}
+		
+		if (!getClient().getFloodProtectors().getServerBypass().tryPerformAction(_command))
+		{
+			return;
+		}
+		
+		try
+		{
+			if (SunriseEvents.onBypass(activeChar, _command))
+			{
+				return;
+			}
+			
+			if (_command.startsWith("admin_"))
+			{
+				String command = _command.split(" ")[0];
+				
+				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
+				
+				if (ach == null)
+				{
+					if (activeChar.isGM())
+					{
+						activeChar.sendMessage("The command " + command.substring(6) + " does not exist!");
+					}
+					_log.warn(activeChar + " requested not registered admin command '" + command + "'");
+					return;
+				}
+				
+				if (!AdminData.getInstance().hasAccess(command, activeChar.getAccessLevel()))
+				{
+					activeChar.sendMessage("You don't have the access rights to use this command!");
+					_log.warn("Character " + activeChar.getName() + " tried to use admin command " + command + ", without proper access level!");
+					return;
+				}
+				
+				if (SunriseEvents.adminCommandRequiresConfirm(_command))
+				{
+					activeChar.setAdminConfirmCmd(_command);
+					ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1);
+					dlg.addString("Are you sure you want execute command " + _command.split(" ")[1] + " ?");
+					activeChar.sendPacket(dlg);
+					return;
+				}
+				
+				if (AdminData.getInstance().requireConfirm(command))
+				{
+					activeChar.setAdminConfirmCmd(_command);
+					ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1);
+					dlg.addString("Are you sure you want execute command " + _command.substring(6) + " ?");
+					activeChar.sendPacket(dlg);
+				}
+				else
+				{
+					if (Config.GMAUDIT)
+					{
+						GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", _command, (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target"));
+					}
+					
+					ach.useAdminCommand(_command, activeChar);
+				}
+			}
+			else if (_command.equals("come_here") && activeChar.isGM())
+			{
+				comeHere(activeChar);
+			}
+
+			else if (_command.startsWith("extra_"))
+			{
+				if(_command.equals("extra_communitySell")) {					
+					ZeuS.isCMDFromZeuS(activeChar, "ZeuS openCB shop");
+					activeChar.sendPacket(new ExBuyList(activeChar));
+					activeChar.sendPacket(new ExBuySellList(activeChar, 0, true));
+					return;
+				}
+				if(_command.startsWith("extra_teleport")) {					
+					if (activeChar.isInCombat() || activeChar.getKarma() > 0 || activeChar.getPvpFlag() >  0 || activeChar.isDead() || activeChar.isJailed() || activeChar.isAlikeDead() || activeChar.isInOlympiadMode() || activeChar.inObserverMode() || SunriseEvents.isInEvent(activeChar) || OlympiadManager.getInstance().isRegistered(activeChar))
+					{
+						activeChar.sendMessage("Cannot use at the moment.");
+						return;
+					}
+					String tp = commandSeperator(_command);
+					String[] split = tp.trim().split(",");
+					int x = Integer.parseInt(split[0]);
+					int y = Integer.parseInt(split[1]);
+					int z = Integer.parseInt(split[2]);
+					
+					if (SiegeManager.getInstance().getSiege(x, y, z) != null)
+					{
+						activeChar.sendPacket(SystemMessageId.NO_PORT_THAT_IS_IN_SIGE);
+						return;
+					}
+					else if (TownManager.townHasCastleInSiege(x, y) && activeChar.isInsideZone(ZoneIdType.TOWN))
+					{
+						activeChar.sendPacket(SystemMessageId.NO_PORT_THAT_IS_IN_SIGE);
+						return;
+					}
+					
+					activeChar.abortCast();
+					activeChar.abortAttack();
+					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+					activeChar.setTarget(activeChar);
+					activeChar.disableAllSkills();
+					Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, 1050, 1, 1000, 0), 810000);
+					activeChar.sendPacket(new SetupGauge(SetupGauge.BLUE, 1000));
+					activeChar.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(() -> {
+						activeChar.teleToLocation(x, y, z, true);
+						activeChar.setIsCastingNow(false);
+						activeChar.enableAllSkills();
+					}, 1000));
+					activeChar.forceIsCasting(10 + GameTimeController.getInstance().getGameTicks() + (1000 / GameTimeController.MILLIS_IN_TICK));				
+					
+					
+					return;
+				}
+				if(_command.startsWith("extra_catacombs")) {
+			        String html = "";
+		            html = HtmCache.getInstance().getHtm(activeChar, activeChar.getHtmlPrefix(), "data/html/gabriel/cbb/catacombs.htm");
+		            separateAndSend(html, activeChar);
+		            return;
+				}
+				if(_command.startsWith("extra_necropolis")) {
+			        String html = "";
+		            html = HtmCache.getInstance().getHtm(activeChar, activeChar.getHtmlPrefix(), "data/html/gabriel/cbb/necropolis.htm");
+		            separateAndSend(html, activeChar);
+		            return;
+				}
+			}
+			else if (_command.startsWith("_sendMultisell"))
+			{
+				if(!activeChar.isInsideZone(ZoneIdType.PEACE))
+				{
+					activeChar.sendMessage("You cannot use this function outside peace zone.");
+					return;
+				}
+				String multisell = commandSeperator(_command);
+				int multi = Integer.valueOf(multisell);
+				MultisellData.getInstance().separateAndSend(multi, activeChar, null, false);
+			}
+			else if (_command.startsWith("npc_"))
+			{
+				activeChar.setIsUsingAioWh(false);
+				activeChar.setIsUsingAioMultisell(false);
+				
+				int endOfId = _command.indexOf('_', 5);
+				String id = endOfId > 0 ? _command.substring(4, endOfId) : _command.substring(4);
+				
+				if (Util.isDigit(id))
+				{
+					L2Object object = L2World.getInstance().findObject(Integer.parseInt(id));
+					
+					if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false))
+					{
+						((L2Npc) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
+					}
+				}
+				
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			}
+			else if (_command.startsWith("item_"))
+			{
+				int endOfId = _command.indexOf('_', 5);
+				String id = endOfId > 0 ? _command.substring(5, endOfId) : _command.substring(5);
+				
+				try
+				{
+					L2ItemInstance item = activeChar.getInventory().getItemByObjectId(Integer.parseInt(id));
+					
+					if ((item != null) && (endOfId > 0))
+					{
+						item.onBypassFeedback(activeChar, _command.substring(endOfId + 1));
+					}
+					
+					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				}
+				catch (NumberFormatException nfe)
+				{
+					_log.warn("NFE for command [" + _command + "]", nfe);
+				}
+			}
+			else if (_command.startsWith("manor_menu_select"))
+			{
+				final L2Npc lastNpc = activeChar.getLastFolkNPC();
+				if (Config.ALLOW_MANOR && (lastNpc != null) && lastNpc.canInteract(activeChar))
+				{
+					final String[] split = _command.substring(_command.indexOf("?") + 1).split("&");
+					final int ask = Integer.parseInt(split[0].split("=")[1]);
+					final int state = Integer.parseInt(split[1].split("=")[1]);
+					final boolean time = split[2].split("=")[1].equals("1");
+					EventDispatcher.getInstance().notifyEventAsync(new OnNpcManorBypass(activeChar, lastNpc, ask, state, time), lastNpc);
+				}
+			}
+            else if (_command.startsWith("gab_"))
+            {
+                GabrielCBB.getInstance().parseCommand(_command, activeChar);
+                return;
+            }
+            else if (_command.startsWith("scripts_")) {
+                Scripts.getInstance().parseCommand(_command, activeChar);
+            }
+            else if (_command.startsWith("_bbsforge")) {
+                Forge.getInstance().parseCommand(_command, activeChar);
+            }
+			else if (_command.startsWith("_bbs") || _command.startsWith("bbs") || _command.startsWith("_maillist") || _command.startsWith("_friendlist"))
+			{
+				BoardsManager.getInstance().handleCommands(getClient(), _command);
+			}
+			else if (_command.startsWith("_match"))
+			{
+				String params = _command.substring(_command.indexOf("?") + 1);
+				StringTokenizer st = new StringTokenizer(params, "&");
+				int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
+				int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
+				int heroid = Hero.getInstance().getHeroByClass(heroclass);
+				if (heroid > 0)
+				{
+					Hero.getInstance().showHeroFights(activeChar, heroclass, heroid, heropage);
+				}
+			}
+			else if (_command.startsWith("Aioitem"))
+			{
+				if (AioItemsConfigs.ENABLE_AIO_NPCS)
+				{
+					AioItemNpcs.onBypassFeedback(activeChar, _command.substring(8));
+				}
+			}
+			else if (_command.startsWith("Aiobuff"))
+			{
+				if (BufferConfigs.ENABLE_ITEM_BUFFER)
+				{
+					AioItemBuffer.onBypassFeedback(activeChar, _command.substring(8));
+				}
+			}
+			else if (_command.startsWith("Vote"))
+			{
+				if (IndividualVoteSystemConfigs.ENABLE_VOTE_SYSTEM)
+				{
+					VoteHandler.onBypassFeedback(activeChar, _command.substring(5));
+				}
+			}
+			else if (_command.startsWith("_diary"))
+			{
+				String params = _command.substring(_command.indexOf("?") + 1);
+				StringTokenizer st = new StringTokenizer(params, "&");
+				int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
+				int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
+				int heroid = Hero.getInstance().getHeroByClass(heroclass);
+				if (heroid > 0)
+				{
+					Hero.getInstance().showHeroDiary(activeChar, heroclass, heroid, heropage);
+				}
+			}
+			else if (this._command.startsWith("ZeuSNPC "))
+			{
+				ZeuS.talkNpc(activeChar, _command.substring(8));
+			}
+			else if (_command.startsWith("_olympiad?command"))
+			{
+				int arenaId = Integer.parseInt(_command.split("=")[2]);
+				final IBypassHandler handler = BypassHandler.getInstance().getHandler("arenachange");
+				if (handler != null)
+				{
+					handler.useBypass("arenachange " + (arenaId - 1), activeChar, null);
+				}
+			}
+			else
+			{
+				final IBypassHandler handler = BypassHandler.getInstance().getHandler(_command);
+				if (handler != null)
+				{
+					handler.useBypass(_command, activeChar, null);
+				}
+				else if (!ZeuS.isMultisell(activeChar, _command))
+				{
+					_log.warn(getClient() + " sent not handled RequestBypassToServer: [" + _command + "]");
+				}
+			}
+            PhantomControl.getInstance().onBypass(activeChar, _command);
+
+        }
+		catch (Exception e)
+		{
+			_log.warn(getClient() + " sent bad RequestBypassToServer: \"" + _command + "\"", e);
+			if (activeChar.isGM())
+			{
+				StringBuilder sb = new StringBuilder(200);
+				sb.append("<html><body>");
+				sb.append("Bypass error: " + e + "<br1>");
+				sb.append("Bypass command: " + _command + "<br1>");
+				sb.append("StackTrace:<br1>");
+				for (StackTraceElement ste : e.getStackTrace())
+				{
+					sb.append(ste.toString() + "<br1>");
+				}
+				sb.append("</body></html>");
+				// item html
+				NpcHtmlMessage msg = new NpcHtmlMessage(0, 12807);
+				msg.setHtml(sb.toString());
+				msg.disableValidation();
+				activeChar.sendPacket(msg);
+			}
+		}
+		
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerBypass(activeChar, _command), activeChar);
+	}
+	
+	/**
+	 * @param activeChar
+	 */
+	private static void comeHere(L2PcInstance activeChar)
+	{
+		L2Object obj = activeChar.getTarget();
+		if (obj == null)
+		{
+			return;
+		}
+		if (obj instanceof L2Npc)
+		{
+			L2Npc temp = (L2Npc) obj;
+			temp.setTarget(activeChar);
+			temp.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(activeChar.getX(), activeChar.getY(), activeChar.getZ(), 0));
+		}
+	}
+	
+	public static void separateAndSend(String html, L2PcInstance acha)
+    {
+        if (html == null)
+        {
+            return;
+        }
+        html = html.replace("\t", "");
+        if (html.length() < 8180)
+        {
+            acha.sendPacket(new ShowBoard(html, "101"));
+            acha.sendPacket(new ShowBoard(null, "102"));
+            acha.sendPacket(new ShowBoard(null, "103"));
+        }
+        else if (html.length() < (8180 * 2))
+        {
+            acha.sendPacket(new ShowBoard(html.substring(0, 8180), "101"));
+            acha.sendPacket(new ShowBoard(html.substring(8180, html.length()), "102"));
+            acha.sendPacket(new ShowBoard(null, "103"));
+        }
+        else if (html.length() < (8180 * 3))
+        {
+            acha.sendPacket(new ShowBoard(html.substring(0, 8180), "101"));
+            acha.sendPacket(new ShowBoard(html.substring(8180, 8180 * 2), "102"));
+            acha.sendPacket(new ShowBoard(html.substring(8180 * 2, html.length()), "103"));
+        }
+    }
+	private String commandSeperator(String command)
+	{
+		StringTokenizer st = new StringTokenizer(command, " ");
+		st.nextToken();
+		String dat = st.nextToken();
+		return dat;
+	}
+	@Override
+	public String getType()
+	{
+		return _C__23_REQUESTBYPASSTOSERVER;
+	}
+}

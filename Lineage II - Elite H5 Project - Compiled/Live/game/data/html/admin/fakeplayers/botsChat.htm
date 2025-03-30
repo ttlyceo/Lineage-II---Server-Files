@@ -1,0 +1,67 @@
+<html>
+<title>Community Board Services</title>
+<body><br>
+<table width=600>
+    <tr>
+        <td>
+            <table border=0 cellpadding=2 cellspacing=2 width=755>
+                <tr>
+                    <td width="100">
+                        %name%
+                    </td>
+                    <td width="100">
+                        %lv% %class%
+                    </td>
+                    <td width="100">
+                        <button value="Refresh" action="bypass -h admin_fakeTmp chat %id%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" />
+                    </td>
+                    <td width="100">
+                        <button value="Despawn" action="bypass -h admin_fakeTmp dsp %id%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" />
+                    </td>
+                    <td width="100">
+                        <button value="Control" action="bypass -h admin_fakeTmp control %id%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" />
+                    </td>
+                    <td width="100">
+                        <button value="GOTO" action="bypass -h admin_fakeTmp goto %id%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" />
+                    </td>
+                    <td width="100">
+                        <button value="Back" action="bypass -h admin_fakeWindow 1" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+
+    </tr>
+    <tr>
+        <td align=center valign="top" width=600>
+            <table border=0 cellpadding=2 cellspacing=2 width=755>
+                %list%
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td valign="top" width=560>
+            <table width=560>
+               <tr>
+                   <td width="400">
+                       <br>
+                       <br>
+                       <br>
+                       <MultiEdit var="Content" width=400 height=50>
+                   </td>
+                   <td width="60">
+                       <br>
+                       <br>
+                       <br>
+                       <button value="Send" action="bypass -h admin_fakeChat %id% ¬/ $Content" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" />
+                   </td>
+               </tr>
+            </table>
+        </td>
+
+    </tr>
+
+</table>
+</body>
+</html>

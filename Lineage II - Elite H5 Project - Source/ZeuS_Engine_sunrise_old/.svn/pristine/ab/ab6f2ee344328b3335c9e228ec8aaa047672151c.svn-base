@@ -1,0 +1,2440 @@
+Index: src/ZeuS/Config/general.java
+===================================================================
+--- src/ZeuS/Config/general.java	(revision 17)
++++ src/ZeuS/Config/general.java	(working copy)
+@@ -1577,7 +1577,7 @@
+ 				    			DROP_LIST_ITEM.get(IdDrop).get(IdMob).put("CATEGORY", DropIn.getCategoryTypeSTR());
+ 				    			DROP_LIST_ITEM.get(IdDrop).get(IdMob).put("MIN", String.valueOf(DropIn.getMin()));
+ 				    			DROP_LIST_ITEM.get(IdDrop).get(IdMob).put("MAX", String.valueOf(DropIn.getMax()));
+-				    			DROP_LIST_ITEM.get(IdDrop).get(IdMob).put("CHANCE", opera.getChancePorcentaje(String.valueOf(DropIn.getChance())));
++				    			DROP_LIST_ITEM.get(IdDrop).get(IdMob).put("CHANCE", opera.getFormatNumbers(DropIn.getChance()));
+ 				    			DROP_LIST_ITEM.get(IdDrop).get(IdMob).put("TELEPORT", String.valueOf(NpcSpawn.getLocation().getX()) + ","+String.valueOf(NpcSpawn.getLocation().getY())+","+String.valueOf(NpcSpawn.getLocation().getZ()));
+ 				    			String NpcForSearch = tmpl.getName() + ":" + String.valueOf(tmpl.getLevel()) + ":" + String.valueOf(IdMob);
+ 								v_dropsearch.setNPCInfoForSearch(NpcForSearch);
+Index: src/ZeuS/Config/_InfoGeneralDrop.java
+===================================================================
+--- src/ZeuS/Config/_InfoGeneralDrop.java	(revision 17)
++++ src/ZeuS/Config/_InfoGeneralDrop.java	(working copy)
+@@ -20,7 +20,7 @@
+ 		this.ITEM_MAX = MaxItem;
+ 		this.ITEM_IS_DROP = isDrop;
+ 		this.MOD_ID = IdMob;
+-		String Chance = opera.getFormatNumbers(String.valueOf((100 * ChanceItem)/1000000.0));
++		String Chance = opera.getFormatNumbers(ChanceItem);
+ 		ITEM_CHANCE_STR = Chance;
+ 		this.CATEGORY_TYPE = CategoryType;
+ 		this.ITEM_IS_QUEST = isQuest;
+Index: src/ZeuS/event/RaidBossEvent.java
+===================================================================
+--- src/ZeuS/event/RaidBossEvent.java	(revision 17)
++++ src/ZeuS/event/RaidBossEvent.java	(working copy)
+@@ -355,11 +355,17 @@
+ 		return general.EVENT_RAIDBOSS_PLAYER_MAX_REGIS > players;
+ 	}
+ 	
+-	public static void setTeamPos()
++	public static boolean setTeamPos()
+ 	{
+-		_startX = Integer.valueOf(general.EVENT_RAIDBOSS_PLAYER_POSITION.split(",")[0]);
+-		_startY = Integer.valueOf(general.EVENT_RAIDBOSS_PLAYER_POSITION.split(",")[1]);
+-		_startZ = Integer.valueOf(general.EVENT_RAIDBOSS_PLAYER_POSITION.split(",")[2]);
++		try {
++			_startX = Integer.valueOf(general.EVENT_RAIDBOSS_PLAYER_POSITION.split(",")[0]);
++			_startY = Integer.valueOf(general.EVENT_RAIDBOSS_PLAYER_POSITION.split(",")[1]);
++			_startZ = Integer.valueOf(general.EVENT_RAIDBOSS_PLAYER_POSITION.split(",")[2]);
++			return true;
++		}catch(Exception a) {
++			_log.warning("Error setting the raid boss player spot position: " + general.EVENT_RAIDBOSS_PLAYER_POSITION + " ("+ a.getMessage() +")");
++		}
++		return false;
+ 	}
+ 	
+ 	public static boolean checkTeamOk()
+@@ -369,12 +375,17 @@
+ 	
+ 	public static boolean startJoin()
+ 	{
+-		setIdBoss();
+-		setTeamPos();
+-		setBossPos();
+-		spawnEventBoss();
++		if(!setIdBoss()) {
++			return false;
++		}
++		
++		if(!setTeamPos()) {
++			return false;
++		}
++		setBossPos();if(general.DEBUG_CONSOLA_ENTRADAS) {_log.warning("SetBossPos: DONE");}
++		spawnEventBoss(); if(general.DEBUG_CONSOLA_ENTRADAS) {_log.warning("EventBoss: DONE");}
+ 		_joining = true;
+-		MensajeRegistro(true);
++		MensajeRegistro(true);if(general.DEBUG_CONSOLA_ENTRADAS) {_log.warning("setShowMsjeJoin: DONE");}
+ 		return true;
+ 	}
+ 	
+@@ -1056,11 +1067,18 @@
+ 		}
+ 	}
+ 	
+-	private static void setIdBoss(){
+-		Random r = new Random();
+-		int RanBossSelec = r.nextInt( general.EVENT_RAIDBOSS_RAID_ID.size() );
+-		_bossId = general.EVENT_RAIDBOSS_RAID_ID.get(RanBossSelec);
+-		NomRaid();
++	private static boolean setIdBoss(){
++		try {
++			Random r = new Random();
++			int RanBossSelec = r.nextInt( general.EVENT_RAIDBOSS_RAID_ID.size() );
++			_bossId = general.EVENT_RAIDBOSS_RAID_ID.get(RanBossSelec);
++			NomRaid();
++			return true;
++		}catch(Exception a) {
++			_log.warning("Error on raid boss Event. Can load the Raid Boss for the Event");
++		}
++		return false;
++
+ 	}
+ 	
+ 	private static void NomRaid()
+Index: src/ZeuS/admin/menu.java
+===================================================================
+--- src/ZeuS/admin/menu.java	(revision 17)
++++ src/ZeuS/admin/menu.java	(working copy)
+@@ -1112,7 +1112,7 @@
+ 
+ 		MAIN_HTML += central.LineaDivisora(2) + central.headFormat(BOTON) + central.LineaDivisora(2);
+ 
+-		MAIN_HTML += setFilaBoolean("lvl 85 Challenge", general.DESAFIO_LVL85, inSeccion, "273");
++		/*MAIN_HTML += setFilaBoolean("lvl 85 Challenge", general.DESAFIO_LVL85, inSeccion, "273");
+ 
+ 		MAIN_HTML += setFilaModif("Number of lvl 85 to Win", String.valueOf(general.DESAFIO_MAX_LVL85), inSeccion, "271");
+ 		if(idBox.equals("271")){
+@@ -1140,7 +1140,7 @@
+ 		if(idBox.equals("87")){
+ 			MAIN_HTML += getEditListaNPC_VectorInteger("NPC For Search.",general.DESAFIO_NPC_BUSQUEDAS,inSeccion,"87");
+ 		}
+-
++*/
+ 		MAIN_HTML += setFilaBoolean("Event Lv clan & reputation", general.EVENT_REPUTATION_CLAN, inSeccion, "534");
+ 
+ 		MAIN_HTML += setFilaModif("Event Lv clan NPC ID", String.valueOf(general.EVENT_REPUTATION_CLAN_ID_NPC), inSeccion, "535");
+Index: src/ZeuS/Comunidad/EngineForm/v_dropsearch.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_dropsearch.java	(revision 17)
++++ src/ZeuS/Comunidad/EngineForm/v_dropsearch.java	(working copy)
+@@ -33,6 +33,7 @@
+ import l2r.gameserver.model.actor.instance.L2PcInstance;
+ import l2r.gameserver.model.actor.templates.L2NpcTemplate;
+ import l2r.gameserver.network.serverpackets.NpcHtmlMessage;
++import l2r.log.filter.Log;
+ 
+ public class v_dropsearch{
+ 	
+@@ -84,11 +85,16 @@
+ 	}
+ 	
+ 	private static String getMonsterDropList(int idMonster, int pagina, L2PcInstance player){
+-		NpcHtmlMessage html = comun.htmlMaker(player, "./config/zeus/htm/" + language.getInstance().getFolder(player) + "/communityboard/engine-dropsearch-droplist.htm");
++		String URLHTML = "./config/zeus/htm/" + language.getInstance().getFolder(player) + "/communityboard/engine-dropsearch-droplist.htm";
++		NpcHtmlMessage html = comun.htmlMaker(player, URLHTML);
+ 		String LinkBack = "bypass _bbslink;DropSearch;showmonsterinfo;"+ String.valueOf(idMonster) +";0;0;0;0;0";
+ 		String DropData = "";
+ 		String GrillaDropBox = opera.getGridFormatFromHtml(html, 1, "%DATA_GRID%");
+ 
++		if(GrillaDropBox == "") {
++			_log.warning("Error trying found Grid Information on: " + URLHTML);
++		}
++		
+ 		Vector<_InfoGeneralDrop>vTemporal = _GeneralDropInfo.getAllDropFromMob(idMonster);		
+ 		
+ 		int max=15;
+@@ -101,7 +107,7 @@
+ 		for(_InfoGeneralDrop Dat : vTemporal){
+ 			if(contDrop>=Desde && contDrop<Hasta){
+ 				String Nombre = Dat.getItemName();
+-				String IMAGEN_ID = Dat.getItemIcon();
++				String IMAGEN_ID = Dat.getItemIcon() == null ? "icon.Magic13" : Dat.getItemIcon() ;
+ 				String MIN = opera.getFormatNumbers(Dat.getMin() );
+ 				String MAX = opera.getFormatNumbers(Dat.getMax() );
+ 				String CHANCE = Dat.getChanceSTR();
+@@ -109,7 +115,6 @@
+ 				if(contador==0){
+ 					DropData +="<tr>";
+ 				}
+-				
+ 				DropData += GrillaDropBox.replace("%IDIMG%", IMAGEN_ID).replace("%NOMBRE%", Nombre).replace("%DROPMIN%", MIN).replace("%DROPMAX%", MAX).replace("%PORCENTAJE%", CHANCE).replace("%TIPODROP%", CATE);
+ 				contador++;
+ 				if(contador==3){
+@@ -130,8 +135,8 @@
+ 			DropData += "</tr>";
+ 		}
+ 		
+-		String bypassAntes = "bypass " + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC()+";" + Engine.enumBypass.DropSearch.name() + ";showDrop;" + String.valueOf(idMonster) + ";" +String.valueOf(pagina-1)+";0;0;0"; 
+-		String bypassProx = "bypass " + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC()+";" + Engine.enumBypass.DropSearch.name() + ";showDrop;" + String.valueOf(idMonster) + ";" +String.valueOf(pagina+1)+";0;0;0";
++		String bypassAntes = "bypass " + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC()+";" + Engine.enumBypass.DropSearch.name() + ";showDrop;" + String.valueOf(idMonster) + ";" +String.valueOf(pagina-1)+";0;0;0;0"; 
++		String bypassProx = "bypass " + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC()+";" + Engine.enumBypass.DropSearch.name() + ";showDrop;" + String.valueOf(idMonster) + ";" +String.valueOf(pagina+1)+";0;0;0;0";
+ 
+ 		html.replace("%PAG_NUMBERS%", String.valueOf(pagina+1));
+ 		html.replace("%BYPASS_PREV%", (pagina <=0 ? "" : bypassAntes));
+@@ -266,7 +271,6 @@
+ 		}
+ 		
+ 		if(Monster == null){
+-			_log.warning("IdMonster: " + idMonster );
+ 			central.msgbox("This NPC Have problem. We cant load the NPC / Monster Information.", player);
+ 			cbFormato.cerrarCB(player);
+ 			return "";
+Index: src/ZeuS/Comunidad/EngineForm/v_Dressme.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_Dressme.java	(revision 17)
++++ src/ZeuS/Comunidad/EngineForm/v_Dressme.java	(working copy)
+@@ -255,6 +255,11 @@
+ 				continue;
+ 			}
+ 			if(sortLikeMyWeapon) {
++				
++				if(player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND) == null) {
++					continue;
++				}
++				
+ 				 L2Item _Weapon = player.getInventory().getPaperdollItem( Inventory.PAPERDOLL_RHAND ).getItem(); //.unEquipItemInBodySlot(L2Item.SLOT_R_HAND);
+ 				if(_Weapon != null) {
+ 					if(_Weapon.getItemType() != ItemDressme.getItem().getItemType()) {
+Index: src/ZeuS/Comunidad/EngineForm/v_donation.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_donation.java	(revision 17)
++++ src/ZeuS/Comunidad/EngineForm/v_donation.java	(working copy)
+@@ -1730,15 +1730,13 @@
+ 					opera.removeItem(general.DONA_ID_ITEM, dc, player);
+ 					
+ 					final L2Clan clan = player.getClan();
+-					final Map<Integer, L2SkillLearn> _skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan, true);
++					final Map<Integer, L2SkillLearn> _skills = SkillTreesData.getInstance().getMaxPledgeSkills(clan, true, lvlClanRequest);
+ 					int Contador = 0;
+ 
+ 					for (L2SkillLearn s : _skills.values())
+ 					{
+-						if(s.getGetLevel() >= lvlClanRequest) {
+-							clan.addNewSkill(SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));
+-							Contador++;							
+-						}						
++						clan.addNewSkill(SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()));
++						Contador++;							
+ 					}
+ 					
+ 					// Notify target and active char
+@@ -1747,7 +1745,7 @@
+ 					{
+ 						member.sendSkillList();
+ 					}
+-					clan.store();
++					//clan.store();
+ 					//activeChar.sendMessage("You gave " + skills.size() + " skills to " + player.getName() + "'s clan " + clan.getName() + ".");
+ 					central.msgbox(language.getInstance().getMsg(player).DONATION_CONGRATULATION_YOUR_RECEIVED_CLAN_SKILLS.replace("$quantity",String.valueOf(Contador)), player);					
+ 				}
+Index: src/ZeuS/Comunidad/EngineForm/v_RaidBossInfo.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_RaidBossInfo.java	(revision 17)
++++ src/ZeuS/Comunidad/EngineForm/v_RaidBossInfo.java	(working copy)
+@@ -734,17 +734,79 @@
+ 			Retorno = getInfoNPC(player, Integer.valueOf(Buscar), SortType, pagina);
+ 			return Retorno;
+ 		}else if(Params.equals("showDrop")){
+-			String PagCen = PaginaAntes.get(player.getObjectId());
++			/*String PagCen = PaginaAntes.get(player.getObjectId());
+ 			Retorno = getMonsterDropList(Integer.valueOf(Buscar), pagina, SortType);
+ 			html = comun.htmlMaker(player, general.DIR_HTML + language.getInstance().getFolder(player) + "/communityboard/engine-raidboss-drop-list.htm");
+ 			String BypassBackInfo = "bypass "+ general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() +";"+ Engine.enumBypass.RaidBossInfo +";shownpcinfo;"+ Integer.valueOf(Buscar) +";"+ PagCen +";0;0;0;0";
+ 			html.replace("%DATA%", Retorno);
+-			html.replace("%BYPASS_DROP_BACK%", BypassBackInfo);
++			html.replace("%BYPASS_DROP_BACK%", BypassBackInfo);*/
++			Retorno = getDroplistWindows(player, pagina, Integer.valueOf(Buscar), SortType);
++			return Retorno;
+ 		}
+ 		html.replace("%BYPASS%", general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC());
+ 		return html.getHtml();
+ 	}
+ 	
++	private static String getDroplistWindows(L2PcInstance player, int pagina, int idRB, String SortType) {
++		NpcHtmlMessage html = comun.htmlMaker(player, "./config/zeus/htm/" + language.getInstance().getFolder(player) + "/communityboard/engine-raidboss-drop-list.htm");
++		String LinkBack = "bypass "+ general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() +";"+ Engine.enumBypass.RaidBossInfo +";shownpcinfo;"+ Integer.valueOf(idRB) +";"+ pagina +";0;0;0;0";
++		String DropData = "";
++		String GrillaDropBox = opera.getGridFormatFromHtml(html, 1, "%DATA_GRID%");
++
++		//Vector<_InfoGeneralDrop>vTemporal = _GeneralDropInfo.getAllDropFromMob(idMonster, player);
++		Vector<_InfoGeneralDrop>vTemporal = _GeneralDropInfo.getAllDropFromMob(idRB);
++		
++		int max=15;
++		int contador=0;
++		int contDrop = 0;
++		int Desde = pagina * max;
++		int Hasta = Desde + max;
++		boolean haveNext = false;
++		
++		for(_InfoGeneralDrop Dat : vTemporal){
++			if(contDrop>=Desde && contDrop<Hasta){
++				String Nombre = Dat.getItemName();
++				String IMAGEN_ID = Dat.getItemIcon() == null ? "icon.Magic13" : Dat.getItemIcon() ;
++				String MIN = opera.getFormatNumbers(Dat.getMin() );
++				String MAX = opera.getFormatNumbers(Dat.getMax() );
++				String CHANCE = Dat.getChanceSTR();
++				String CATE = Dat.isDrop() ? "DROP" : "SWEET";
++				if(contador==0){
++					DropData +="<tr>";
++				}
++				DropData += GrillaDropBox.replace("%IDIMG%", IMAGEN_ID).replace("%NOMBRE%", Nombre).replace("%DROPMIN%", MIN).replace("%DROPMAX%", MAX).replace("%PORCENTAJE%", CHANCE).replace("%TIPODROP%", CATE);
++				contador++;
++				if(contador==3){
++					DropData += "</tr>";
++					contador=0;
++				}
++			}
++			contDrop++;
++			if(contDrop>Hasta){
++				haveNext=true;
++			}			
++		}
++		
++		if(contador>0 && contador<3){
++			for(int i=contador;i<3;i++){
++				DropData += GrillaDropBox.replace("%IDIMG%", "").replace("%NOMBRE%", "").replace("%DROPMIN%", "").replace("%DROPMAX%", "").replace("%PORCENTAJE%", "").replace("%TIPODROP%", "");
++			}
++			DropData += "</tr>";
++		}
++		
++		String bypassAntes = "bypass " + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC()+";" + Engine.enumBypass.RaidBossInfo.name() + ";showDrop;" + String.valueOf(idRB) + ";" +String.valueOf(pagina-1)+";"+ SortType +";0;0;0"; 
++		String bypassProx = "bypass " + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC()+";" + Engine.enumBypass.RaidBossInfo.name() + ";showDrop;" + String.valueOf(idRB) + ";" +String.valueOf(pagina+1)+";"+ SortType +";0;0;0";
++
++		html.replace("%PAG_NUMBERS%", String.valueOf(pagina+1));
++		html.replace("%BYPASS_PREV%", (pagina <=0 ? "" : bypassAntes));
++		html.replace("%BYPASS_NEXT%", (haveNext ? bypassProx : ""));			
++
++		html.replace("%DATA_GRID%", DropData);
++		html.replace("%LINK_BACK%", LinkBack);
++		
++		return html.getHtml();
++	}
++	
+ 	@SuppressWarnings("unused")
+ 	public static String bypass(L2PcInstance player, String params){
+ 		if(!general.STATUS_RAIDBOSS_INFO) {
+Index: src/ZeuS/ZeuS/ZeuS.java
+===================================================================
+--- src/ZeuS/ZeuS/ZeuS.java	(revision 17)
++++ src/ZeuS/ZeuS/ZeuS.java	(working copy)
+@@ -88,7 +88,9 @@
+ import ZeuS.interfase.sellAccount;
+ import ZeuS.interfase.sellBuff;
+ import ZeuS.interfase.sellClan;
++import ZeuS.interfase.shop;
+ import ZeuS.interfase.showMyStat;
++import ZeuS.interfase.teleport;
+ import ZeuS.interfase.votereward;
+ import ZeuS.interfase.wishList;
+ import ZeuS.language.language;
+@@ -337,6 +339,16 @@
+ 		
+ 		try {
+ 			if(Command != "") {
++				if(opera.isMaster(player)){
++					if(Command.startsWith("admin_zeus_shop")) {
++						shop.ShopByPass(player, Command);
++						return true;			
++					}else if(Command.startsWith("admin_zeus_tele")){
++						String HTML = teleport.CentralHTML(player, true);
++						player.sendPacket(new NpcHtmlMessage(0, HTML));
++						return true;
++					}
++				}
+ 				String MenuSec = "Zeus";
+ 				if(Command.indexOf(";")>0) {
+ 					if(zeusByPass(player, Command.substring(MenuSec.length()+1, Command.length() ))){
+@@ -1732,7 +1744,7 @@
+ 		return Min_add;
+ 	}	
+ 	
+-	public static float getItemPremiumDrop_Rate(L2PcInstance cha, int idItem, boolean getPorcenforFinalResult, float _valueIn){
++	public static double getItemPremiumDrop_Rate(L2PcInstance cha, int idItem, boolean getPorcenforFinalResult, float _valueIn){
+ 		float retornar = 0;
+ 		if(isPremiumItem_Rate(cha, idItem)){
+ 			int _Clan=0;
+@@ -1769,7 +1781,7 @@
+ 		return retornar;				
+ 	}
+ 	
+-	public static float getItemPremiumDrop_Chance(L2PcInstance cha, int idItem, boolean getPorcenforFinalResult, float _valueIn){
++	public static double getItemPremiumDrop_Chance(L2PcInstance cha, int idItem, boolean getPorcenforFinalResult, float _valueIn){
+ 		float retornar = 0;
+ 		int _Clan=0;
+ 		int _Account=0;
+@@ -1807,15 +1819,15 @@
+ 		return retornar;				
+ 	}	
+ 	
+-	public static float getPremiumDropSpoil_Rate(L2PcInstance cha){
++	public static double getPremiumDropSpoil_Rate(L2PcInstance cha){
+ 		return getPremiumDropSpoil_Rate(cha, false, 0);
+ 	}
+ 	
+-	public static float getPremiumDropSpoil_Rate(L2PcInstance cha, boolean getPorcenforFinalResult){
++	public static double getPremiumDropSpoil_Rate(L2PcInstance cha, boolean getPorcenforFinalResult){
+ 		return getPremiumDropSpoil_Rate(cha, getPorcenforFinalResult, 0);
+ 	}
+ 	
+-	public static float getPremiumDropSpoil_Rate(L2PcInstance cha, boolean getPorcenforFinalResult, float _valueIn){
++	public static double getPremiumDropSpoil_Rate(L2PcInstance cha, boolean getPorcenforFinalResult, float _valueIn){
+ 		float retornar = 1;
+ 		float ClanValue = 0;
+ 		float PlayerValue = 0;
+@@ -1860,15 +1872,15 @@
+ 		return retornar;
+ 	}
+ 
+-	public static float getPremiumDropSpoil_Chance(L2PcInstance cha){
++	public static double getPremiumDropSpoil_Chance(L2PcInstance cha){
+ 		return getPremiumDropSpoil_Chance(cha, false, 0);
+ 	}
+ 	
+-	public static float getPremiumDropSpoil_Chance(L2PcInstance cha, boolean getPorcenforFinalResult){
++	public static double getPremiumDropSpoil_Chance(L2PcInstance cha, boolean getPorcenforFinalResult){
+ 		return getPremiumDropSpoil_Chance(cha, getPorcenforFinalResult, 0);
+ 	}
+ 	
+-	public static float getPremiumDropSpoil_Chance(L2PcInstance cha, boolean getPorcenforFinalResult, float _valueIn){
++	public static double getPremiumDropSpoil_Chance(L2PcInstance cha, boolean getPorcenforFinalResult, float _valueIn){
+ 		float retornar = 1;
+ 		float ClanValue = 0;
+ 		float PlayerValue = 0;
+@@ -1954,11 +1966,11 @@
+ 		return retornar;
+ 	}
+ 	
+-	public static float getPremiumDropAdena_Chance(L2PcInstance cha){
++	public static double getPremiumDropAdena_Chance(L2PcInstance cha){
+ 		return getPremiumDropAdena_Rate(cha, false,0);
+ 	}
+ 	
+-	public static float getPremiumDropAdena_Chance(L2PcInstance cha, boolean getPorcenforFinalResult, float _valueIn){
++	public static double getPremiumDropAdena_Chance(L2PcInstance cha, boolean getPorcenforFinalResult, float _valueIn){
+ 		float retornar = 1;
+ 		float ClanValue = 0;
+ 		float PlayerValue = 0;
+@@ -1995,15 +2007,15 @@
+ 		return retornar;
+ 	}	
+ 	
+-	public static float getPremiumDropItem_Rate(L2PcInstance cha, boolean _porcent){
++	public static double getPremiumDropItem_Rate(L2PcInstance cha, boolean _porcent){
+ 		return getPremiumDropItem_Rate(cha, _porcent, 0);
+ 	}	
+ 	
+-	public static float getPremiumDropItem_Rate(L2PcInstance cha){
++	public static double getPremiumDropItem_Rate(L2PcInstance cha){
+ 		return getPremiumDropItem_Rate(cha, false, 0);
+ 	}
+ 	
+-	public static float getPremiumDropItem_Rate(L2PcInstance cha, boolean _porcent, float _value){
++	public static double getPremiumDropItem_Rate(L2PcInstance cha, boolean _porcent, float _value){
+ 		float retornar = 1;
+ 		float ClanValue = 0;
+ 		float PlayerValue = 0;
+@@ -2048,14 +2060,14 @@
+ 		return retornar;
+ 	}
+ 	
+-	public static float getPremiumDropItem_Chance(L2PcInstance cha){
++	public static double getPremiumDropItem_Chance(L2PcInstance cha){
+ 		return getPremiumDropItem_Chance(cha, false, 0);
+ 	}
+ 	
+-	public static float getPremiumDropItem_Chance(L2PcInstance cha, boolean _porcent, float _value){
+-		float retornar = 1;
+-		float ClanValue = 0;
+-		float PlayerValue = 0;
++	public static double getPremiumDropItem_Chance(L2PcInstance cha, boolean _porcent, double _value){
++		double retornar = 1;
++		double ClanValue = 0;
++		double PlayerValue = 0;
+ 		if(isPremium(cha)){
+ 			if(opera.isPremium_Clan(cha)){
+ 				int PremiumValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId())).getPremiumData().getDrop_chance(true);
+Index: src/ZeuS/procedimientos/adminHandler.java
+===================================================================
+--- src/ZeuS/procedimientos/adminHandler.java	(revision 17)
++++ src/ZeuS/procedimientos/adminHandler.java	(working copy)
+@@ -296,6 +296,7 @@
+ 				indelegar(command,activeChar);
+ 			}else if(command.startsWith("admin_zeus_shop")){
+ 				shop.ShopByPass(activeChar,command);
++				return true;
+ 			}else if(command.equalsIgnoreCase("admin_zeus_tele")){
+ 				if(opera.isMaster(activeChar)){
+ 					String HTML = teleport.CentralHTML(activeChar,true);
+@@ -517,11 +518,11 @@
+ 	@Override
+ 	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
+ 		// TODO Auto-generated method stub
+-		return false;
++		return true;
+ 	}
+ 	@Override
+ 	public String[] getAdminCommandList() {
+-		// TODO Auto-generated method stub
++
+ 		return null;
+ 	}
+ 
+Index: src/ZeuS/procedimientos/opera.java
+===================================================================
+--- src/ZeuS/procedimientos/opera.java	(revision 17)
++++ src/ZeuS/procedimientos/opera.java	(working copy)
+@@ -53,6 +53,7 @@
+ import l2r.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
+ import l2r.gameserver.network.serverpackets.WareHouseWithdrawalList;
+ import l2r.gameserver.util.Broadcast;
++import l2r.log.filter.Log;
+ import ZeuS.Comunidad.EngineForm.cbFormato;
+ import ZeuS.Config._itemInfo;
+ import ZeuS.Config.general;
+@@ -96,15 +97,19 @@
+ 	public static final String getGridFormatFromHtml(NpcHtmlMessage html, int idGrid, String ReplaceVar){
+ 		String _retorn = "";
+ 		String forSearch = "/*GRID_FORMAT_"+ String.valueOf(idGrid) + "=";
+-		int startIn = html.getHtml().indexOf(forSearch);
+-		int endIn = html.getHtml().indexOf("*/", startIn);
+-		if(startIn>0){
+-			_retorn = html.getHtml().substring(startIn + forSearch.length(), endIn);
+-			
++		try {
++			int startIn = html.getHtml().indexOf(forSearch);
++			int endIn = html.getHtml().indexOf("*/", startIn);
++			if(startIn>0){
++				_retorn = html.getHtml().substring(startIn + forSearch.length(), endIn);
++			}
++			String Newhtml = html.getHtml().substring(0, startIn) + ReplaceVar + html.getHtml().substring(endIn+2);
++			html.setHtml(Newhtml);
++			return _retorn;
++		}catch(Exception a) {
++			_log.warning("Error found it /*GRID_FORMAT_" + String.valueOf(idGrid) );
+ 		}
+-		String Newhtml = html.getHtml().substring(0, startIn) + ReplaceVar + html.getHtml().substring(endIn+2);
+-		html.setHtml(Newhtml);
+-		return _retorn;
++		return "";
+ 	}	
+ 	
+ 	public static String getImageLogo(L2PcInstance player){
+@@ -1981,21 +1986,21 @@
+ 
+ 
+ 	public static String getTemplateItem(int IdItem){
+-		  String retorno = null;
++		  String retorno = "";
+ 		  try{
+ 			  retorno = ItemData.getInstance().getTemplate(IdItem).getIcon();
+ 		  }catch (Exception e) {
+-			  retorno = null;
++			  retorno = "";
+ 		  }
+ 		  return retorno;
+ 	}
+ 
+ 	public static String getTemplateItemStatic(int IdItem){
+-		  String retorno = null;
++		  String retorno = "";
+ 		  try{
+ 			  retorno = ItemData.getInstance().getTemplate(IdItem).getIcon();
+ 		  }catch (Exception e) {
+-			  retorno = null;
++			  retorno = "";
+ 		  }
+ 		  return retorno;
+ 	}
+Index: config/config/zeus/htm/eng/oly-monument-windows-main.html
+===================================================================
+--- config/config/zeus/htm/eng/oly-monument-windows-main.html	(revision 17)
++++ config/config/zeus/htm/eng/oly-monument-windows-main.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<button value="Create" action="%BYPASS_CREATE%" width="75" height="26" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+ 		<button value="Remove" action="%BYPASS_RESET%" width="75" height="26" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+ 		<button value="take me to the Olympus of champions" action="%BYPASS_GOTO%" width="280" height="26" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+Index: config/config/zeus/htm/eng/sellClan-sender.html
+===================================================================
+--- config/config/zeus/htm/eng/sellClan-sender.html	(revision 17)
++++ config/config/zeus/htm/eng/sellClan-sender.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>L2 Sword - Clan Seller System</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br1>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font color="LEVEL" name="hs12">Wellcome, </font><font color="FE9A2E" name="hs12">%SELLER%</font> <font color="LEVEL" name="hs12"><br1>want to sell you his Clan.</font><br1>
+ 		<font color="LEVEL" name="hs12">The Clan Price is This:</font><br1>
+ 		<center>%TABLE_ITEM%</center><br1><br>
+Index: config/config/zeus/htm/eng/fortress.html
+===================================================================
+--- config/config/zeus/htm/eng/fortress.html	(revision 17)
++++ config/config/zeus/htm/eng/fortress.html	(working copy)
+@@ -1,7 +1,7 @@
+ <html>
+ 	<title>Fortress System - ZeuS Engine</title>
+ 	<body><center>
+-    <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++    <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font name="hs12" color="F2F5A9">%FORTRESS_NAME%</font><br>
+ 		%FORTRESS_IMAGE%<br>
+ 		<font name="hs12">Owner</font>: <font name="hs12" color="F7BE81">%CLAN_NAME%</font><br>
+Index: config/config/zeus/htm/eng/deposit.html
+===================================================================
+--- config/config/zeus/htm/eng/deposit.html	(revision 17)
++++ config/config/zeus/htm/eng/deposit.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>Bank System - ZeuS Engine</title>
+ 	<body><center>
+ 	%SERVER_LOGO%
+-    	<table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++    	<table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<multiedit var="txtGoldBar" width=210 height=24>
+ 		<button value="Deposit" action="%LINK_SEND%" width=100 height=24 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+         </td></tr></table>
+Index: config/config/zeus/htm/eng/AccountRecovery.html
+===================================================================
+--- config/config/zeus/htm/eng/AccountRecovery.html	(revision 17)
++++ config/config/zeus/htm/eng/AccountRecovery.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - Account Recovery</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><font color="81F7D8">Wellcome<br1>This is the Recovery Account System. Just need have an Email link to all your Account's</font></center><br1>
+ 		<center><font name="hs12" color="LEVEL">%ACCOUNT%</font></center>
+ 		<center><button value="Send Code to my Email" action="%LINK_SENDER%" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_Back" fore="L2UI_CT1.OlympiadWnd_DF_Back"></center>
+Index: config/config/zeus/htm/eng/sellAccount.html
+===================================================================
+--- config/config/zeus/htm/eng/sellAccount.html	(revision 17)
++++ config/config/zeus/htm/eng/sellAccount.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>L2 Sword - Account Seller System</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><font color="81F7D8">Wellcome, you can sell your account easy with<br1>this System. You just Need to Put the Item<br1>requested, Price & the name of you the receiver<br1>payment char</font></center>
+ 		<center><br1><table width=210>
+ 			<tr>
+Index: config/config/zeus/htm/eng/sellClan.html
+===================================================================
+--- config/config/zeus/htm/eng/sellClan.html	(revision 17)
++++ config/config/zeus/htm/eng/sellClan.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>L2 Sword - Clan Seller System</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><font color="81F7D8">Wellcome, you can sell your clan easy with<br1>this System. You just Need to Put the Item<br1>requested, Price & give clan to the Buyer</font></center>
+ 		<center><br1><table width=210>
+ 			<tr>
+Index: config/config/zeus/htm/eng/survey.html
+===================================================================
+--- config/config/zeus/htm/eng/survey.html	(revision 17)
++++ config/config/zeus/htm/eng/survey.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>L2 Sword - Survey</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><font color="81F7D8">We need your Opinion on this Survey</font></center><br1>
+ 		<center><font name="hs12" color="LEVEL">%QUESTION%</font></center><br>
+ 		<center>%ANSWER_BOX%</center>
+Index: config/config/zeus/htm/eng/buffstore_seller_main.html
+===================================================================
+--- config/config/zeus/htm/eng/buffstore_seller_main.html	(revision 17)
++++ config/config/zeus/htm/eng/buffstore_seller_main.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - %CHAR_NAME% Buffstore</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<table>
+ 			<tr>
+ 				<td fixwidth=280 align=CENTER>
+Index: config/config/zeus/htm/eng/jail_bail.html
+===================================================================
+--- config/config/zeus/htm/eng/jail_bail.html	(revision 17)
++++ config/config/zeus/htm/eng/jail_bail.html	(working copy)
+@@ -3,7 +3,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			This is the Jail Bail System<br>
+ 			%PRICE%<br>
+ 			<button value="Pay the Bail" action="%LINK%" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_Back" fore="L2UI_CT1.OlympiadWnd_DF_Back">
+Index: config/config/zeus/htm/eng/buffstore_config.html
+===================================================================
+--- config/config/zeus/htm/eng/buffstore_config.html	(revision 17)
++++ config/config/zeus/htm/eng/buffstore_config.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - Buffstore System</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<table width=280 background=L2UI_CT1.Windows_DF_Drawer_Bg_Darker border=0>
+ 			<tr>
+ 				<td align=CENTER>
+Index: config/config/zeus/htm/eng/RaidBossEvent-joinWindows.html
+===================================================================
+--- config/config/zeus/htm/eng/RaidBossEvent-joinWindows.html	(revision 17)
++++ config/config/zeus/htm/eng/RaidBossEvent-joinWindows.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - Join Raid Boss Event</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			<font color="81F7D8">Congratulation!!! Now you are registered.<br></font><br1>
+ 			Players Joined: %PLAYER_JOINED% <br>
+Index: config/config/zeus/htm/eng/RaidBossEvent-NoKill.html
+===================================================================
+--- config/config/zeus/htm/eng/RaidBossEvent-NoKill.html	(revision 17)
++++ config/config/zeus/htm/eng/RaidBossEvent-NoKill.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>L2 Sword - Raid Boss Event</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><font color="81F7D8">We are sorry but failed to kill the Raid Boss<br></font></center><br1>
+ 		<center><font color="81F7D8">But anyway you'll get a consolation Reward</font></center><br1>
+         </td></tr></table>
+Index: config/config/zeus/htm/eng/buffer_change_scheme_icon.html
+===================================================================
+--- config/config/zeus/htm/eng/buffer_change_scheme_icon.html	(revision 17)
++++ config/config/zeus/htm/eng/buffer_change_scheme_icon.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine</title>
+ 		<body>
+ 			<center>
+-	            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 				<table width=280 border=0>
+ 					<tr>
+ 						<td align=center>
+Index: config/config/zeus/htm/eng/donation_notification.html
+===================================================================
+--- config/config/zeus/htm/eng/donation_notification.html	(revision 17)
++++ config/config/zeus/htm/eng/donation_notification.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine</title>
+ 	<body>
+ 		<center>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			Thanks for your Donation.<br>
+ 			You will Receive an Email <br>
+ 			%EMAIL%<br>
+Index: config/config/zeus/htm/eng/AccountRecovery-2.html
+===================================================================
+--- config/config/zeus/htm/eng/AccountRecovery-2.html	(revision 17)
++++ config/config/zeus/htm/eng/AccountRecovery-2.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine Account Recovery System</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font name=hs12 color="LEVEL">Welcome to ZeuS Engine</font><br>
+ 		Please check you inbox or spawn folder of u Email.<br>
+ 		When you have the Validation Code, you need to put it the text box.<br>
+Index: config/config/zeus/htm/eng/charPanel.html
+===================================================================
+--- config/config/zeus/htm/eng/charPanel.html	(revision 17)
++++ config/config/zeus/htm/eng/charPanel.html	(working copy)
+@@ -5,7 +5,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			%DATA%
+             </td></tr></table>
+ 		</center>
+Index: config/config/zeus/htm/eng/levelspot.html
+===================================================================
+--- config/config/zeus/htm/eng/levelspot.html	(revision 17)
++++ config/config/zeus/htm/eng/levelspot.html	(working copy)
+@@ -5,7 +5,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<font name="hs12" color="LEVEL">Welcome to ZeuS Engine</font><br>
+ 			You are a lot better now!!<br1>Let's get you somewhere whitd more Exp.<br>
+ 			%IMAGE_MONSTER_BY_LEVEL%<br>
+Index: config/config/zeus/htm/eng/bank.html
+===================================================================
+--- config/config/zeus/htm/eng/bank.html	(revision 17)
++++ config/config/zeus/htm/eng/bank.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>Bank System - ZeuS Engine</title>
+ 	<body><center>
+ 	%SERVER_LOGO%
+-    	<table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++    	<table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<button value="DEPOSIT" action="%LINK_DEPOSIT%" width=128 height=26 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"><br>
+ 		<button value="WITHDRAW" action="%LINK_WITHDRAW%" width=128 height=26 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"><br>
+ 		%ADENA% = %GOLD_BAR%<br>
+Index: config/config/zeus/htm/eng/buffer_remove_buff_from_scheme.html
+===================================================================
+--- config/config/zeus/htm/eng/buffer_remove_buff_from_scheme.html	(revision 17)
++++ config/config/zeus/htm/eng/buffer_remove_buff_from_scheme.html	(working copy)
+@@ -3,7 +3,7 @@
+ 	<body>
+ 		<center>
+         	%SERVER_LOGO%
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<table width=280 border=0>
+ 				<tr>
+ 					<td align=center>
+Index: config/config/zeus/htm/eng/communityboard/engine-donation-charlevel-charfame-charpk-clanlevel-clanskill-clanreputation.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-donation-charlevel-charfame-charpk-clanlevel-clanskill-clanreputation.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-donation-charlevel-charfame-charpk-clanlevel-clanskill-clanreputation.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ /*GRID_FORMAT_1=char_level_icon,icon.etc_exp_point_i00;char_level_box_title,Character Level:;char_level_windows_title,Character Level*/
+ /*GRID_FORMAT_2=char_fame_icon,icon.skill1409;char_fame_box_title,Character Fame:;char_fame_windows_title,Character Fame*/
+ /*GRID_FORMAT_3=char_pk_icon,icon.etc_quest_pkcount_reward_i00;char_pk_box_title,Reduce PK:;char_fame_windows_title,Reduce PK*/
+Index: config/config/zeus/htm/eng/communityboard/engine-buffer.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-buffer.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-buffer.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+ 		</center>
+Index: config/config/zeus/htm/eng/communityboard/engine-auctionhouse-show-item-info.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-auctionhouse-show-item-info.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-auctionhouse-show-item-info.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>Auction House - Item Information</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			<table width=257 background=L2UI_CT1.Windows_DF_TooltipBG cellspacing=2 cellpadding=2>
+ 				<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-raidboss-index.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-raidboss-index.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-raidboss-index.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/index.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/index.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/index.htm	(working copy)
+@@ -6,7 +6,7 @@
+ */
+ 
+ <title>Community Board - L2ZeuS Engine  </title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br><br><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br><br><br>
+         <center>
+         <img src="L2UI.SquareGray" width=790 height=2><img src="L2UI.SquareBlank" width=720 height=3>
+         <table width=770 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/engine-dressme-buy-exclusive-char.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-dressme-buy-exclusive-char.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-dressme-buy-exclusive-char.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>L2 Sword - Dressme Esclusive Char</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		%SERVER_LOGO%<br>
+ 		<table>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-party-matching-invitation-windows.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-party-matching-invitation-windows.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-party-matching-invitation-windows.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>Party Matching</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			<table width=280 border=0 background=L2UI_CT1.Windows_DF_TooltipBG height=35>
+ 				<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-herolist.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-herolist.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-herolist.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 			<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/engine-buffer-buff-indi.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-buffer-buff-indi.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-buffer-buff-indi.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			
+ 			<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/engine-dressme-buy-exclusive-clan.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-dressme-buy-exclusive-clan.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-dressme-buy-exclusive-clan.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>L2 Sword - Dressme Esclusive Clan</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		%SERVER_LOGO%<br>
+ 		<table>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-subclass-wait.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-subclass-wait.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-subclass-wait.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 
+ 		<img src="L2UI.SquareGray" width="766" height="2">
+ 		<table width=730 border=0 cellpadding=0>
+Index: config/config/zeus/htm/eng/communityboard/engine-special-augment-doit.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-special-augment-doit.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-special-augment-doit.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br><center>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br><center>
+ 		Augment Type: <font color=LEVEL>%TYPE_AUGMENT%</font><br1>
+ 		Augment Descript: <font color=LEVEL>%DESCRIPT_AUGMENT%</font><br1>
+ 		Augment Skill Level: <font color=LEVEL>%LEVEL_AUGMENT%</font><br1>
+Index: config/config/zeus/htm/eng/communityboard/engine-donation-change-clan-name.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-donation-change-clan-name.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-donation-change-clan-name.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine - Change Clan Name</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<img src=L2UI.SquareGray width=280 height=2>
+ 		<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/index-2.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/index-2.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/index-2.htm	(working copy)
+@@ -1,6 +1,6 @@
+ ﻿<html>
+ 	<title>ZeuS Community Board</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+     	<center>
+ 		<p>Pruebaaaaaaaaaa</p>
+ 	</center>
+Index: config/config/zeus/htm/eng/communityboard/engine-bid-house-bids.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-bid-house-bids.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-bid-house-bids.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 
+Index: config/config/zeus/htm/eng/communityboard/engine-dropsearch-npc-found.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-dropsearch-npc-found.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-dropsearch-npc-found.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareGray" width="766" height="2">
+Index: config/config/zeus/htm/eng/communityboard/engine-subclass.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-subclass.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-subclass.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 
+ 		<img src="L2UI.SquareGray" width="766" height="2">
+ 		<table width=730 border=0 cellpadding=0>
+Index: config/config/zeus/htm/eng/communityboard/index-FeaturesEventsPlaygame.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/index-FeaturesEventsPlaygame.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/index-FeaturesEventsPlaygame.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 		<font color=86AB98>ZeuS Engine - Community Board</font>
+ 		<br1>
+Index: config/config/zeus/htm/eng/communityboard/engine-buffstore-search.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-buffstore-search.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-buffstore-search.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 	      <center><br> 
+ 	      		<table width=730 border=0 cellpadding=0>
+ 				<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-dressme.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-dressme.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-dressme.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			<img src="L2UI.SquareGray" width="766" height="2">
+ 			<table width=730 border=0 cellpadding=0>
+Index: config/config/zeus/htm/eng/communityboard/engine-flag-finder.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-flag-finder.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-flag-finder.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/index-staff.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/index-staff.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/index-staff.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 		<font color=86AB98>ZeuS Engine - Community Board</font>
+ 		<br1>
+Index: config/config/zeus/htm/eng/communityboard/engine-index-auto.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-index-auto.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-index-auto.htm	(working copy)
+@@ -1,7 +1,7 @@
+ <html>
+ 	/*GRID_FORMAT_1=BACKGROUND:333333,1A1A1A */
+ 	<title>ZeuS Engine System</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<font color=86AB98>ZeuS Engine - Community Board</font>
+ 			<img src="L2UI.SquareGray" width=620 height=1><img src="L2UI.SquareBlank" width=620 height=2>
+Index: config/config/zeus/htm/eng/communityboard/index-rules.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/index-rules.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/index-rules.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 		<font color=86AB98>ZeuS Engine - Community Board</font>
+ 		<br1>
+Index: config/config/zeus/htm/eng/communityboard/engine-auctionhouse-create-auction-cancel-auction-system.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-auctionhouse-create-auction-cancel-auction-system.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-auctionhouse-create-auction-cancel-auction-system.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>Auction house - Cancel Auction System Success</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			Done!!!<br>
+ 		</center>
+Index: config/config/zeus/htm/eng/communityboard/engine-findparty-player-list.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-findparty-player-list.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-findparty-player-list.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine -  Find Party</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			<table width=280 border=0 background=L2UI_CT1.Windows_DF_TooltipBG height=35>
+ 				<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-donation-change-player-name.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-donation-change-player-name.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-donation-change-player-name.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine - Change Player Name</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<img src=L2UI.SquareGray width=280 height=2>
+ 		<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-dropsearch-npc-info.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-dropsearch-npc-info.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-dropsearch-npc-info.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareGray" width="766" height="2">
+Index: config/config/zeus/htm/eng/communityboard/engine-bidhouse-create-bid-done.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-bidhouse-create-bid-done.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-bidhouse-create-bid-done.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>Bidhouse - Creation Success</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			Done!!!<br>
+ 		</center>
+Index: config/config/zeus/htm/eng/communityboard/engine-dropsearch-droplist.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-dropsearch-droplist.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-dropsearch-droplist.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareGray" width="766" height="2">
+ 			<table width=730 border=0 cellpadding=0>
+Index: config/config/zeus/htm/eng/communityboard/engine-miscelanius.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-miscelanius.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-miscelanius.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 		<table width=730 border=0 cellpadding=0><tr><td width=720 fixwidth=720><img src="L2UI.SquareGray" width=766 height=2><table width=760 bgcolor="1F1F1F" height=48><tr><td width=32><table width=32><tr><td width=32><img src="icon.skill6319" width=32 height=32></td></tr></table></td><td width=644><table width=604 border=0><tr><td><table cellpadding=0 cellspacing=0 border=0><tr><td><font name="hs12" color="B4B9D8">Miscelanius</font></td><td><button action="bypass %BYPASS%" width=32 height=32 back="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" fore="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" value=" " ></td></tr></table></td></tr><tr><td><font color="82869E">Noble, lv85, change Names, Aio, Others</font></td></tr></table></td><td width=64 align="RIGHT"></td></tr></table><img src="L2UI.SquareGray" width="756" height=2></td></tr></table><br>
+ 		<table width=720 cellpadding=1 cellspacing=1><tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-dropsearch-item-list.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-dropsearch-item-list.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-dropsearch-item-list.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 
+ 			<img src="L2UI.SquareGray" width="766" height="2">
+Index: config/config/zeus/htm/eng/communityboard/engine-blacksmith.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-blacksmith.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-blacksmith.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br><br>
+ 		<center>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 
+Index: config/config/zeus/htm/eng/communityboard/index-class-stadistic.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/index-class-stadistic.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/index-class-stadistic.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>L2 Sword - Class Stadistic</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 			<center><br>
+ 
+ 				<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/index-topplayer.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/index-topplayer.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/index-topplayer.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 		<font color=86AB98>ZeuS Engine - Community Board</font>
+ 		<br1>
+Index: config/config/zeus/htm/eng/communityboard/engine-buffer-create-scheme-buff.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-buffer-create-scheme-buff.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-buffer-create-scheme-buff.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 		<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 		<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/engine-teleport.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-teleport.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-teleport.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/engine-pvplog-players-logs.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-pvplog-players-logs.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-pvplog-players-logs.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 			<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/index-annoucement.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/index-annoucement.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/index-annoucement.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 		<font color=86AB98>ZeuS Engine - Community Board</font>
+ 		<br1>
+Index: config/config/zeus/htm/eng/communityboard/engine-augment-manager.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-augment-manager.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-augment-manager.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>Augment Manager System</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 			<center><br>
+ 				<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+ 			</center>
+Index: config/config/zeus/htm/eng/communityboard/engine-auction-house-my-auction.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-auction-house-my-auction.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-auction-house-my-auction.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 
+Index: config/config/zeus/htm/eng/communityboard/engine-special-augment.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-special-augment.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-special-augment.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine - Special Augment Manager System</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 			<center><br>
+ 
+ 				<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/engine-bid-house-bid-creation.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-bid-house-bid-creation.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-bid-house-bid-creation.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 
+Index: config/config/zeus/htm/eng/communityboard/engine-special-enchant.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-special-enchant.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-special-enchant.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine - Enchant Manager System</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 			<center><br>
+ 				<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 				<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/index-changelog.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/index-changelog.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/index-changelog.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 		<font color=86AB98>ZeuS Engine - Community Board</font>
+ 		<br1>
+Index: config/config/zeus/htm/eng/communityboard/engine-donation-elemental-armor-and-weapon.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-donation-elemental-armor-and-weapon.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-donation-elemental-armor-and-weapon.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=580 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=580 width=256 ><tr><td valign="top" align="center"><br>
+ 		<img src=L2UI.SquareGray width=280 height=2>
+ 		<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-donation-premium-chance-list.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-donation-premium-chance-list.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-donation-premium-chance-list.htm	(working copy)
+@@ -2,7 +2,7 @@
+ 	/*GRID_FORMAT_2= <font color=B4B9D8 name=hs12>THIS LIST IS EMPTY</font>
+ 	*/
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font color=B4B9D8 name=hs12>Premium System<br1>%PREMIUM_NAME%<br1>Chance List</font><br>
+ 		<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG border=0 height=48>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-donation-premium-rate-list.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-donation-premium-rate-list.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-donation-premium-rate-list.htm	(working copy)
+@@ -2,7 +2,7 @@
+ 	/*GRID_FORMAT_2= <font color=B4B9D8 name=hs12>THIS LIST IS EMPTY</font>
+ 	*/
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font color=B4B9D8 name=hs12>Premium System<br1>%PREMIUM_NAME%<br1>Rate List</font><br>
+ 		<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG border=0 height=48>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-find-party.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-find-party.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-find-party.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine - Find Party System</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/engine-pvplog-searching.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-pvplog-searching.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-pvplog-searching.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 			<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/engine-donation-premium-list.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-donation-premium-list.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-donation-premium-list.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<img src="L2UI.SquareGray" width="280" height=2>
+ 		<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-donation.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-donation.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-donation.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>Donation Market</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+         	<img src="L2UI.SquareGray" width="766" height="2">
+             <table width=730 border=0 cellpadding=0>
+                 <tr>
+Index: config/config/zeus/htm/eng/communityboard/gmlist.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/gmlist.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/gmlist.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 			<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/engine-donation-premium-explain.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-donation-premium-explain.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-donation-premium-explain.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine - Premium Information</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 
+ 		/*GRID_FORMAT_1=<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-transformation-manager.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-transformation-manager.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-transformation-manager.htm	(working copy)
+@@ -4,7 +4,7 @@
+ 	/*GRID_FORMAT_2=FontColorSelect:89F4FF
+ 	*/
+ 	<title>ZeuS Engine - Transformation Manager</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/region-CharInformation.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/region-CharInformation.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/region-CharInformation.htm	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine Player Information</title>
+ 	<body>
+ 		<center>
+-			<table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++			<table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			%SERVER_LOGO%
+ 			<img src="L2UI.SquareBlank" width=280 height=1>
+ 			<table width=280 border=0 bgcolor=151515>
+Index: config/config/zeus/htm/eng/communityboard/engine-bidhouse-show-active-biddings-list.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-bidhouse-show-active-biddings-list.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-bidhouse-show-active-biddings-list.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+       <title>Active Biddings</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br><center><br><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br><center><br><br>
+       	    <font color="LEVEL">%ITEM_NAME%</font><br>
+ 	    <table width=280>
+ 	    	   <tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-dropsearch-npc-list.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-dropsearch-npc-list.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-dropsearch-npc-list.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ <img src="L2UI.SquareGray" width="766" height="2">
+ 			<table width=730 border=0 cellpadding=0>
+Index: config/config/zeus/htm/eng/communityboard/engine-auction-house-all-auction.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-auction-house-all-auction.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-auction-house-all-auction.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 
+Index: config/config/zeus/htm/eng/communityboard/engine-dressme-items.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-dressme-items.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-dressme-items.htm	(working copy)
+@@ -21,7 +21,7 @@
+ 	*/
+ 
+ 	<title>L2 Sword - Dressme Items</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		%SERVER_LOGO%<br>
+ 		<table width=280>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/serverMarket.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/serverMarket.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/serverMarket.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html noscrollbar>
+ 	<title>Exclusive Shop</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br><br><center><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br><br><center><br>
+ <table width=730 border=0 cellpadding=0><tr><td width=720 fixwidth=720>
+ 	<tr>
+ 		<td>
+Index: config/config/zeus/htm/eng/communityboard/engine-pvplog.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-pvplog.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-pvplog.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 			<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/engine-go-party-leader.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-go-party-leader.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-go-party-leader.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/engine-dropsearch.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-dropsearch.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-dropsearch.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 				<img src="L2UI.SquareGray" width="766" height="2">
+ 				<table width=730 border=0 cellpadding=0>
+Index: config/config/zeus/htm/eng/communityboard/region.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/region.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/region.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			<font color=86AB98>ZeuS Engine - Community Board</font>
+ 			<br1><img src="L2UI.SquareGray" width=620 height=1><img src="L2UI.SquareBlank" width=620 height=2>
+Index: config/config/zeus/htm/eng/communityboard/engine-buffer-change.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-buffer-change.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-buffer-change.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 
+ 			<img src="L2UI.SquareGray" width="766" height="2">
+Index: config/config/zeus/htm/eng/communityboard/engine-symbol-maker.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-symbol-maker.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-symbol-maker.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>L2 Sword - Augment Manager System</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 			<center><br>
+ 
+ 				<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/engine-miscelanius-show-information.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-miscelanius-show-information.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-miscelanius-show-information.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			%IMG_SERVER%
+ 			<font name=hs12 color=LEVEL>%SECTION_NAME%</font>
+Index: config/config/zeus/htm/eng/communityboard/engine-special-element.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-special-element.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-special-element.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine - Augment Manager System</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 			<center><br>
+ 				<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 				<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/engine-bug-report.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-bug-report.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-bug-report.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine - Bug Report</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/engine-index-manual-ORIGINAL.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-index-manual-ORIGINAL.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-index-manual-ORIGINAL.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine System</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<font color=86AB98>ZeuS Engine - Community Board</font>
+ 			<img src="L2UI.SquareGray" width=620 height=1><img src="L2UI.SquareBlank" width=620 height=2>
+Index: config/config/zeus/htm/eng/communityboard/engine-raidboss-info-npc.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-raidboss-info-npc.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-raidboss-info-npc.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 			<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/engine-buffer-create-scheme.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-buffer-create-scheme.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-buffer-create-scheme.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><table width=616 bgcolor=171717><tr><td width=16></td><td align=CENTER width=560><center><font color=86AB98>ZeuS Engine - Community Board</font></center><br1></td><td width=16></td></tr></table><img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1></center><center><img src="L2UI.SquareGray" width="766" height="2"><table width=730 border=0 cellpadding=0><tr><td width=720 fixwidth=720><img src="L2UI.SquareGray" width=766 height=2><table width=760 bgcolor="1F1F1F" height=48><tr><td width=32><table width=32><tr><td width=32><img src="icon.skill1297" width=32 height=32></td></tr></table></td><td width=644><table width=604 border=0><tr><td><table cellpadding=0 cellspacing=0 border=0><tr><td><font name="hs12" color="B4B9D8">Buffer</font></td></tr><tr><td><button action="bypass _bbslink" width=32 height=32 back="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" fore="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" value=" " ></td></tr></table></td></tr><tr><td><font color="82869E">ALL THE BUFF YOU CAN USE</font></td></tr></table></td><td width=64 align="RIGHT"><button action="bypass %BYPASS%;Buffer;0;0;0;0;0;0" width=64 height=64 back="L2UI_CT1.ICON_DF_CHARACTERTURN_RIGHT" fore="L2UI_CT1.ICON_DF_CHARACTERTURN_RIGHT" value= " " ></td></tr></table><img src="L2UI.SquareGray" width="756" height=2></td></tr></table><br><table width=720 background=L2UI_CT1.Windows_DF_TooltipBG cellspacing=1 cellpadding=4><tr><td width=720 align=center><font name=hs12 color=FFD751>Create Scheme</font></td></tr><tr><td width=720 align=center><font color=F5DA81>Choose Your Icon</font></td></tr><tr><td width=720>
+ 		<br>%DATA%<br>
+ 		</td></tr></table><br><table width=720 background=L2UI_CT1.Windows_DF_TooltipBG cellspacing=1 cellpadding=4><tr><td width=720 align=center><font color=F5DA81 name=hs12>Enter the Scheme Name</font></td></tr><tr><td width=720 align=center><font color=BBA86A>(The Maximum Name lenght need to be 10)</font></td></tr><tr><td width=720 align=center><edit var="txtNewScheme" width=180></td></tr><tr><td width=720 align=center><button value="Create New Scheme" action="%BYPASS_CREATE%" width=200 height=32 back=L2UI_CT1.OlympiadWnd_DF_HeroConfirm fore=L2UI_CT1.OlympiadWnd_DF_HeroConfirm><br></td></tr></table><table width=720 align=CENTER><tr><td width=720 align=CENTER><font color=333333>Zeus Community Engine<br1>By JabberWock 2017 - 2018</font></td></tr></table><br>
+Index: config/config/zeus/htm/eng/communityboard/engine-shop.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-shop.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-shop.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine - Shop</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 			<center><br>
+ 
+ 				<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/engine-warehouse.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-warehouse.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-warehouse.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/engine-bid-house-all-bid.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-bid-house-all-bid.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-bid-house-all-bid.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 
+Index: config/config/zeus/htm/eng/communityboard/engine-bidhouse-cancel-my-offert-done.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-bidhouse-cancel-my-offert-done.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-bidhouse-cancel-my-offert-done.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>Bidhouse - Cancel Offert Success</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			Done!!!<br>
+ 		</center>
+Index: config/config/zeus/htm/eng/communityboard/engine-profession.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-profession.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-profession.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br><br>
+ 
+ 		<img src="L2UI.SquareGray" width="766" height="2">
+ 		<table width=730 border=0 cellpadding=0>
+Index: config/config/zeus/htm/eng/communityboard/engine-commands.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-commands.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-commands.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/communityboard/engine-oly-buffer_scheme.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-oly-buffer_scheme.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-oly-buffer_scheme.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+ 			<table width=616 bgcolor=171717>
+Index: config/config/zeus/htm/eng/communityboard/engine-party-matching.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-party-matching.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-party-matching.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 
+ 		<table width=730 border=0 cellpadding=0>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-donation-enchant-armor-and-weapon.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-donation-enchant-armor-and-weapon.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-donation-enchant-armor-and-weapon.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>ZeuS Engine</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<img src=L2UI.SquareGray width=280 height=2>
+ 		<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+ 			<tr>
+Index: config/config/zeus/htm/eng/communityboard/engine-raidboss-drop-list.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-raidboss-drop-list.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-raidboss-drop-list.htm	(working copy)
+@@ -1,29 +1,28 @@
+-<html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+-		<center>
+-
+-			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+-			<img src="L2UI.SquareGray" width="766" height="2">
++<html>
++	<title>ZeuS Engine</title>	<body>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
++		<center><br>
++			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareGray" width="766" height="2">
+ 			<table width=730 border=0 cellpadding=0>
+ 				<tr>
+ 					<td width=720 fixwidth=720>
+ 						<img src="L2UI.SquareGray" width=766 height=2>
+-							<table width=760 bgcolor="1F1F1F" height=48>
+-								<tr>
+-									<td width=32>
+-										<table width=32>
+-											<tr>
+-												<td width=32>
+-													<img src="icon.skillboss" width=32 height=32>
+-												</td>
+-											</tr>
+-										</table>
+-									</td>
+-									<td width=644>
+-										<table width=604 border=0>
+-											<tr>
+-												<td>
+-													<table cellpadding=0 cellspacing=0 border=0>
++						<table width=760 bgcolor="1F1F1F" height=48>
++							<tr>
++								<td width=32>
++									<table width=32>
++										<tr>
++											<td width=32>
++												<img src="icon.skillboss" width=32 height=32>
++											</td>
++										</tr>
++									</table>
++								</td>
++								<td width=644>
++									<table width=604 border=0>
++										<tr>
++											<td>
++												<table cellpadding=0 cellspacing=0 border=0>
+ 														<tr>
+ 															<td>
+ 																<font name="hs12" color="B4B9D8">Raid Boss Info</font>
+@@ -31,28 +30,73 @@
+ 															<td>
+ 																<button action="bypass %BYPASS%" width=32 height=32 back="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" fore="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" value=" " >
+ 															</td>
+-														</tr>>
+-													</table>
+-												</td>
+-											</tr>
+-											<tr>
+-												<td>
+-													<font color="82869E">Raid Boss Info</font>
+-												</td>
+-											</tr>
+-										</table>
+-									</td>
+-									<td width=64 align="RIGHT">
+-										<button action="%BYPASS_DROP_BACK%" width=64 height=64 back="L2UI_CT1.ICON_DF_CHARACTERTURN_RIGHT" fore="L2UI_CT1.ICON_DF_CHARACTERTURN_RIGHT" value= " " >
+-									</td>
+-								</tr>
+-							</table>
++														</tr>
++												</table>
++											</td>
++										</tr>
++										<tr>
++											<td>
++												<font color="82869E">Raid Boss Info</font>
++											</td>
++										</tr>
++									</table>
++								</td>
++								<td width=64 align="RIGHT">
++									<button action="%LINK_BACK%" width=64 height=64 back="L2UI_CT1.ICON_DF_CHARACTERTURN_RIGHT" fore="L2UI_CT1.ICON_DF_CHARACTERTURN_RIGHT" value= " " >
++								</td>
++							</tr>
++						</table>
+ 						<img src="L2UI.SquareGray" width="756" height=2>
+ 					</td>
+ 				</tr>
+-			</table>
+-			<br>
+-			%DATA%
++			</table><br>
++			<center>
++				<table fixwidth=690 border=0 cellpadding=0 cellspacing=0>
++				/*GRID_FORMAT_1=
++	<td width=230>
++		<table width=230 background=L2UI_CT1.Windows_DF_TooltipBG height=75>
++			<tr>
++				<td fixwidth=32>
++					<table width=32 cellspacing=0>
++						<tr>
++							<td>
++								<img src="%IDIMG%" width=32 height=32>
++							</td>
++						</tr>
++					</table>
++				</td>
++				<td>
++					<table fixwidth=198 border=0 cellspacing=1>
++						<tr>
++							<td fixwidth=218><font color=D8D8D8>%NOMBRE%</font></td>
++						</tr>
++						<tr>
++							<td fixwidth=218><font color=2ECCFA>%DROPMIN%</font> | <font color=2E9AFE>%DROPMAX%</font></td>
++						</tr>
++						<tr>
++							<td fixwidth=218><font color=C6D6DA>Chance: </font><font color=8BC7D9>%PORCENTAJE% %TIPODROP%</font></td>
++						</tr>
++					</table><br>
++				</td>
++			</tr>
++		</table>
++	</td>
++				*/
++				</table>
++				<table fixwidth=767 cellspacing=-4 cellpadding=-1 height=38 bgcolor=0E180B>
++					<tr>
++						<td fixwidth=767 align=CENTER>
++							<br><table with=96>
++								<tr>
++									<td width=32><button  action="%BYPASS_PREV%" width=32 height=16 back="L2UI_CT1.Button_DF_Left" fore="L2UI_CT1.Button_DF_Left" value=""></td>
++									<td width=32 align=CENTER><font name="hs12">%PAG_NUMBERS%</font></td>
++									<td width=32><button  action="%BYPASS_NEXT%" width=32 height=16 back="L2UI_CT1.Button_DF_Right" fore="L2UI_CT1.Button_DF_Right" value=""></td>
++								</tr>
++							</table>
++						</td>
++					</tr>
++				</table>
++			</center>
+ 		</center>
+ 	</td></tr></table></body>
+ </html>
+\ No newline at end of file
+Index: config/config/zeus/htm/eng/communityboard/engine-bidhouse-create-bid-cancel-bid-system.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-bidhouse-create-bid-cancel-bid-system.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-bidhouse-create-bid-cancel-bid-system.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>Bidhouse - Cancel Bid System Success</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			Done!!!<br>
+ 		</center>
+Index: config/config/zeus/htm/eng/communityboard/engine-bidhouse-show-item-info.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-bidhouse-show-item-info.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/engine-bidhouse-show-item-info.htm	(working copy)
+@@ -1,6 +1,6 @@
+ <html>
+ 	<title>Bidhouse - Item Information</title>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center>
+ 			<table width=257 background=L2UI_CT1.Windows_DF_TooltipBG cellspacing=2 cellpadding=2>
+ 				<tr>
+Index: config/config/zeus/htm/eng/communityboard/grand-raid-boss.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/grand-raid-boss.htm	(revision 17)
++++ config/config/zeus/htm/eng/communityboard/grand-raid-boss.htm	(working copy)
+@@ -1,5 +1,5 @@
+ <html>	<body>
+-	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><br>
+ 
+ 			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+Index: config/config/zeus/htm/eng/sellAccount-sender.html
+===================================================================
+--- config/config/zeus/htm/eng/sellAccount-sender.html	(revision 17)
++++ config/config/zeus/htm/eng/sellAccount-sender.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>L2 Sword - Account Seller System</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br1>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font color="LEVEL" name="hs12">Wellcome, </font><font color="FE9A2E" name="hs12">%SELLER%</font> <font color="LEVEL" name="hs12"><br1>want to sell you his account.</font><br1>
+ 		<font color="LEVEL" name="hs12">The Account Price is This</font><br1>
+ 		<center>%TABLE_ITEM%</center><br1>
+Index: config/config/zeus/htm/eng/changeCharAccount.html
+===================================================================
+--- config/config/zeus/htm/eng/changeCharAccount.html	(revision 17)
++++ config/config/zeus/htm/eng/changeCharAccount.html	(working copy)
+@@ -5,7 +5,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<font name="hs12" color="LEVEL">Welcome to ZeuS Engine</font><br>
+ 			<font color=2ECCFA>You need to put the destination account</font><br>
+ 			<edit var="txtAccountTo" width=210><br>
+Index: config/config/zeus/htm/eng/fixme.html
+===================================================================
+--- config/config/zeus/htm/eng/fixme.html	(revision 17)
++++ config/config/zeus/htm/eng/fixme.html	(working copy)
+@@ -4,7 +4,7 @@
+ <br>
+ <center>
+   %SERVER_LOGO%<br>
+-  <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++  <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+   <table width="265">
+     <tr>
+       <td align="left" valign="top"><font color="FF6600">Advanced Management - Repair Char</font></td>
+Index: config/config/zeus/htm/eng/pvpinstance.html
+===================================================================
+--- config/config/zeus/htm/eng/pvpinstance.html	(revision 17)
++++ config/config/zeus/htm/eng/pvpinstance.html	(working copy)
+@@ -1,7 +1,7 @@
+ <html>
+ 	<title>Instance PvP</title>
+ 	%SERVER_LOGO%<br>
+-    <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++    <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 	%BTNS%
+ 	</td></tr></table>
+ </html>
+\ No newline at end of file
+Index: config/config/zeus/htm/eng/oly-monument-windows.html
+===================================================================
+--- config/config/zeus/htm/eng/oly-monument-windows.html	(revision 17)
++++ config/config/zeus/htm/eng/oly-monument-windows.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - %NPC_CLASS%</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		Hello, This Monument belong to %PLAYER_NAME%, who won the %NPC_CLASS% Class on the Olympiad Games from our Server.
+ 		<button value="take me to the Olympus of champions" action="%BYPASS_GOTO%" width="280" height="26" back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+         </td></tr></table>
+Index: config/config/zeus/htm/eng/buffer_change_scheme_name.html
+===================================================================
+--- config/config/zeus/htm/eng/buffer_change_scheme_name.html	(revision 17)
++++ config/config/zeus/htm/eng/buffer_change_scheme_name.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine</title>
+ 	<body>
+     	%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<table width=280 border=0>
+ 			<tr>
+ 				<td align=center>
+Index: config/config/zeus/htm/eng/MyCharInformation.html
+===================================================================
+--- config/config/zeus/htm/eng/MyCharInformation.html	(revision 17)
++++ config/config/zeus/htm/eng/MyCharInformation.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine Personal Information</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<table width=270 align=CENTER>
+ 			<tr>
+ 				<td width=270 align=CENTER>Premium Account Info (%PREMIUM_ACCOUNT_NAME%)</td>
+Index: config/config/zeus/htm/eng/SpasswordRegister.html
+===================================================================
+--- config/config/zeus/htm/eng/SpasswordRegister.html	(revision 17)
++++ config/config/zeus/htm/eng/SpasswordRegister.html	(working copy)
+@@ -5,7 +5,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-           <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++           <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<font name="hs12" color="B4B9D8">Welcome to ZeuS Engine</font><br>
+ 			<font color=82869E>To Stay Safe, you need to add a<br1>Secondary Password!</font><br>
+ 			<font color=82869E>Request to have a Uppercase and a number.<br1>And need to be different than you Account<br1>Password and longer then 5 characters</font><br>
+Index: config/config/zeus/htm/eng/borrowSystem-done.html
+===================================================================
+--- config/config/zeus/htm/eng/borrowSystem-done.html	(revision 17)
++++ config/config/zeus/htm/eng/borrowSystem-done.html	(working copy)
+@@ -5,7 +5,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 
+ 			<font color="82869E">Borrow Account System</font></font><br>
+ 			<font color="82869E">Done. The Password is:</font><br1>
+Index: config/config/zeus/htm/eng/classMaster-Weapons.html
+===================================================================
+--- config/config/zeus/htm/eng/classMaster-Weapons.html	(revision 17)
++++ config/config/zeus/htm/eng/classMaster-Weapons.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>Wellcome to ZeuS Engine</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font color="LEVEL" name="hs12">Welcome to ZeuS Engine</font><br>
+ 		Choose your Weapon<br>
+ 		You can Choose %QUANTITY_WEAPONS% Weapons
+Index: config/config/zeus/htm/eng/npc_skill.html
+===================================================================
+--- config/config/zeus/htm/eng/npc_skill.html	(revision 17)
++++ config/config/zeus/htm/eng/npc_skill.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - NPC Skill</title>
+ 	<body>
+ 		<center>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<table width=270 background=L2UI_CT1.Windows_DF_TooltipBG>
+ 				<tr>
+ 					<td fixwidth=270 align=CENTER>
+Index: config/config/zeus/htm/eng/changeCharAccount-2.html
+===================================================================
+--- config/config/zeus/htm/eng/changeCharAccount-2.html	(revision 17)
++++ config/config/zeus/htm/eng/changeCharAccount-2.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine Change Character Account</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font name=hs12 color="LEVEL">Welcome to ZeuS Engine</font><br>
+ 		Please check you inbox or spawn folder of your <br1>Email.<br>
+ 		<font name="hs12" color="LEVEL">%EMAIL%</font><br1>
+Index: config/config/zeus/htm/eng/buffer_delete_scheme.html
+===================================================================
+--- config/config/zeus/htm/eng/buffer_delete_scheme.html	(revision 17)
++++ config/config/zeus/htm/eng/buffer_delete_scheme.html	(working copy)
+@@ -3,7 +3,7 @@
+ 	<body>
+ 		<center>
+         	%SERVER_LOGO%<br>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<table width=280 border=0>
+ 				<tr>
+ 					<td align=center>
+Index: config/config/zeus/htm/eng/instancezone.html
+===================================================================
+--- config/config/zeus/htm/eng/instancezone.html	(revision 17)
++++ config/config/zeus/htm/eng/instancezone.html	(working copy)
+@@ -1,7 +1,7 @@
+ <html>
+ 	<title>Instance Zones - ZeuS Engine</title>
+ 	<body><center>%SERVER_LOGO%<br>
+-    <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++    <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font color="LEVEL">You need to Enter? U just need pay a bribe</font><br1>
+ 		<font color="LEVEL">Quieres entrar? Solo necesitas pagar un soborno</font><br1>
+ 		<font color="E1F5A9">Cost for Hours</font><br>
+Index: config/config/zeus/htm/eng/borrowSystem-create-password.html
+===================================================================
+--- config/config/zeus/htm/eng/borrowSystem-create-password.html	(revision 17)
++++ config/config/zeus/htm/eng/borrowSystem-create-password.html	(working copy)
+@@ -5,7 +5,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<font color="B4B9D8">Input here the Borrow Password</font>
+ 			<edit var="txtPass1" width=210><br>
+ 			<font color="B4B9D8">Re-enter here the Borrow Password</font>
+Index: config/config/zeus/htm/eng/RaidBossEvent-NoHelp.html
+===================================================================
+--- config/config/zeus/htm/eng/RaidBossEvent-NoHelp.html	(revision 17)
++++ config/config/zeus/htm/eng/RaidBossEvent-NoHelp.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - Raid Boss Event</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><font color="81F7D8">We are sorry, but you dont help to kill<br1>the raid boss in the event<br></font></center><br1>
+ 		<center><font color="81F7D8">So u dont have any Reward</font></center><br1>
+         </td></tr></table>
+Index: config/config/zeus/htm/eng/buffstore_seller_editBuff.html
+===================================================================
+--- config/config/zeus/htm/eng/buffstore_seller_editBuff.html	(revision 17)
++++ config/config/zeus/htm/eng/buffstore_seller_editBuff.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - %CHAR_NAME% Buffstore</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		%BUFF_TABLE%
+         </td></tr></table>
+ 	</center></body>
+Index: config/config/zeus/htm/eng/changePassword.html
+===================================================================
+--- config/config/zeus/htm/eng/changePassword.html	(revision 17)
++++ config/config/zeus/htm/eng/changePassword.html	(working copy)
+@@ -4,7 +4,7 @@
+ 	</title>
+ 	<body>
+ 		<center>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 height=350 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 height=350 ><tr><td valign="top" align="center"><br>
+ 			%SERVER_LOGO%<br>
+ 			<table width=280>
+ 				<tr><td width=280 align=CENTER>Enter you new password</td></tr>
+Index: config/config/zeus/htm/eng/buffstore_seller_macro.html
+===================================================================
+--- config/config/zeus/htm/eng/buffstore_seller_macro.html	(revision 17)
++++ config/config/zeus/htm/eng/buffstore_seller_macro.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - Buffstore Macro</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<table>
+ 			<tr>
+ 				<td fixwidth=280 align=CENTER>
+Index: config/config/zeus/htm/eng/Antibot.html
+===================================================================
+--- config/config/zeus/htm/eng/Antibot.html	(revision 17)
++++ config/config/zeus/htm/eng/Antibot.html	(working copy)
+@@ -1,7 +1,7 @@
+ <html>
+ 	<title>Antibot System - ZeuS Engine</title>
+ 	<body><center>
+-    	<table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++    	<table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		Bot check sent by %NAME_SENDER%<br>
+ 		%DATA%
+ 		You have ony %TRIES% in %TIME% minutes to answer<br>
+Index: config/config/zeus/htm/eng/emailRegistrationWindows_change.html
+===================================================================
+--- config/config/zeus/htm/eng/emailRegistrationWindows_change.html	(revision 17)
++++ config/config/zeus/htm/eng/emailRegistrationWindows_change.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - Change Email System</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font name=hs12 color="LEVEL">Welcome to ZeuS Engine</font><br>
+ 		<font color="">%USING_EMAIL%</font>
+ 		Please enter you New Email for this Account.<br>
+Index: config/config/zeus/htm/eng/fixme_noaccount.html
+===================================================================
+--- config/config/zeus/htm/eng/fixme_noaccount.html	(revision 17)
++++ config/config/zeus/htm/eng/fixme_noaccount.html	(working copy)
+@@ -4,7 +4,7 @@
+ <br>
+ <center>
+   %SERVER_LOGO%<br>
+-  <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++  <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+   <table width="265">
+     <tr>
+       <td align="center" valign="top"><font color="FF6600">Advanced Management - Repair Char</font></td>
+Index: config/config/zeus/htm/eng/wishlist-main.html
+===================================================================
+--- config/config/zeus/htm/eng/wishlist-main.html	(revision 17)
++++ config/config/zeus/htm/eng/wishlist-main.html	(working copy)
+@@ -1,7 +1,7 @@
+ <html>
+ 	<title>ZeuS Engine - My Wish List</title>
+ 	<body>
+-        <table border=0 cellpadding=0 cellspacing=0 width=286 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=286 ><tr><td valign="top" align="center"><br>
+ 		%SERVER_LOGO%<br>
+ 		<font color="81F7D8">Wellcome<br1>Enter the Item Name<br1>
+ 		<multiedit var="txtItem" width=210 height=24>
+Index: config/config/zeus/htm/eng/borrowSystem-index.html
+===================================================================
+--- config/config/zeus/htm/eng/borrowSystem-index.html	(revision 17)
++++ config/config/zeus/htm/eng/borrowSystem-index.html	(working copy)
+@@ -5,7 +5,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<font color="82869E"><font color="B4B9D8">Borrow Account System</font> allows you borrow<br1>your account to other players without<br1>affecting your original password,<br1> among other things.</font><br>
+ 			<font color="B4B9D8">A Barrow Account cannot do:</font><br1>
+ 			<font color="FF9494">* Trade</font><br1>
+Index: config/config/zeus/htm/eng/emailRegistrationWindows.html
+===================================================================
+--- config/config/zeus/htm/eng/emailRegistrationWindows.html	(revision 17)
++++ config/config/zeus/htm/eng/emailRegistrationWindows.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - Account Registration System</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font name=hs12 color="LEVEL">Welcome to ZeuS Engine</font><br>
+ 		Please enter you Email to begin the Account Register.<br>
+ 		%EMAIL_1%<br>
+Index: config/config/zeus/htm/eng/classMaster-Armors.html
+===================================================================
+--- config/config/zeus/htm/eng/classMaster-Armors.html	(revision 17)
++++ config/config/zeus/htm/eng/classMaster-Armors.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>Wellcome to ZeuS Engine</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font color="LEVEL" name="hs12">Welcome to ZeuS Engine</font><br>
+ 		Well, now you need a better Armor<br>
+ 		%BTN_ARMORS%<br>
+Index: config/config/zeus/htm/eng/classMaster.html
+===================================================================
+--- config/config/zeus/htm/eng/classMaster.html	(revision 17)
++++ config/config/zeus/htm/eng/classMaster.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>Profession Manager</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br><br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font name=hs12 color="LEVEL">Welcome to L2 Swor of War</font><br>
+ 		Please schoose you Profesion Class.<br>
+ 		%COST%<br>
+Index: config/config/zeus/htm/eng/buffstore_main.html
+===================================================================
+--- config/config/zeus/htm/eng/buffstore_main.html	(revision 17)
++++ config/config/zeus/htm/eng/buffstore_main.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - Buffstore System</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<table height=250>
+ 			<tr>
+ 				<td></td>
+Index: config/config/zeus/htm/eng/oly-monument-windows-arrived.html
+===================================================================
+--- config/config/zeus/htm/eng/oly-monument-windows-arrived.html	(revision 17)
++++ config/config/zeus/htm/eng/oly-monument-windows-arrived.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		Here, in this place, you can find all the Heroes<br1>
+ 		Maybe, if you try, you will be here too.<br>
+         </td></tr></table>
+Index: config/config/zeus/htm/eng/changePassword-validation-code.html
+===================================================================
+--- config/config/zeus/htm/eng/changePassword-validation-code.html	(revision 17)
++++ config/config/zeus/htm/eng/changePassword-validation-code.html	(working copy)
+@@ -3,7 +3,7 @@
+ 		ZeuS Engine - Change Account Password
+ 	</title>
+ 	<body>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 height=350 background="%L2SOW_LOGO%"><tr><td valign="top" align="center">
++            <table border=0 cellpadding=0 cellspacing=0 width=256 height=350 ><tr><td valign="top" align="center">
+ 		%SERVER_LOGO%<br>
+ 		<table width=280>
+ 			<tr>
+Index: config/config/zeus/htm/eng/emailRegistrationWindows-2.html
+===================================================================
+--- config/config/zeus/htm/eng/emailRegistrationWindows-2.html	(revision 17)
++++ config/config/zeus/htm/eng/emailRegistrationWindows-2.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - Account Registration System</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font name=hs12 color="LEVEL">Welcome to ZeuS Engine</font><br>
+ 		Please check you inbox or spawn folder of u Email.<br>
+ 		When you have the Validation Code, you need to put it the text box.<br>
+Index: config/config/zeus/htm/eng/removeSecondaryPass.html
+===================================================================
+--- config/config/zeus/htm/eng/removeSecondaryPass.html	(revision 17)
++++ config/config/zeus/htm/eng/removeSecondaryPass.html	(working copy)
+@@ -5,7 +5,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<font name="hs12" color="LEVEL">Welcome to ZeuS Engine</font><br>
+ 			<font color=2ECCFA>This Option Will be remove the<br1>Secondary Password to Change it<br1> or just Remove it<br1> Once the process are Correct<br1>u will be Disconnect from Server</font><br>
+ 			<font color=2ECCFA>Please enter your password!</font><br>
+Index: config/config/zeus/htm/eng/SpasswordRegister-2.html
+===================================================================
+--- config/config/zeus/htm/eng/SpasswordRegister-2.html	(revision 17)
++++ config/config/zeus/htm/eng/SpasswordRegister-2.html	(working copy)
+@@ -5,7 +5,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-            <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++            <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<font name="hs12" color="LEVEL">Welcome to ZeuS Engine</font><br>
+ 			<font color=2ECCFA>This Characters account is locked by<br1>Secondary Password</font><br>
+ 			<font color=2ECCFA>You have One chance to write correct password!</font><br>
+Index: config/config/zeus/htm/eng/createClan.html
+===================================================================
+--- config/config/zeus/htm/eng/createClan.html	(revision 17)
++++ config/config/zeus/htm/eng/createClan.html	(working copy)
+@@ -5,7 +5,7 @@
+ 	<body>
+ 		<center>
+ 			%SERVER_LOGO%<br>
+-			<table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++			<table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 			<font name="hs12" color="LEVEL">Welcome to ZeuS Engine</font><br>
+ 			<font color=2ECCFA>You need to Enter the Clan Name to Create</font><br>
+ 			<edit var="txtClan" width=210><br>
+Index: config/config/zeus/htm/eng/classMaster-WeaponQuestion.html
+===================================================================
+--- config/config/zeus/htm/eng/classMaster-WeaponQuestion.html	(revision 17)
++++ config/config/zeus/htm/eng/classMaster-WeaponQuestion.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>Wellcome to ZeuS Engine</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font color="LEVEL" name="hs12">Welcome to ZeuS Engine</font><br>
+ 		Congratulations! You are a %CLASSNAME% now!<br1>
+ 		After reaching level 20, you obtained ability to<br1>
+Index: config/config/zeus/htm/eng/RaidBossEvent-KillIt.html
+===================================================================
+--- config/config/zeus/htm/eng/RaidBossEvent-KillIt.html	(revision 17)
++++ config/config/zeus/htm/eng/RaidBossEvent-KillIt.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>ZeuS Engine - Raid Boss Event</title>
+ 	<body>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<center><font color="81F7D8">Congratulation!!! You help it to kill the Raid Boss!!<br></font></center><br1>
+ 		<center><font color="81F7D8">you will be rewarded</font></center><br1>
+         </td></tr></table>
+Index: config/config/zeus/htm/eng/fortress_tele_ok.html
+===================================================================
+--- config/config/zeus/htm/eng/fortress_tele_ok.html	(revision 17)
++++ config/config/zeus/htm/eng/fortress_tele_ok.html	(working copy)
+@@ -2,7 +2,7 @@
+ 	<title>Fortress System - ZeuS Engine</title>
+ 	<body><center>
+ 		%SERVER_LOGO%<br>
+-        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
++        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+ 		<font name="hs12" color="F2F5A9">READY!!!</font><br>
+         </td></tr></table>
+ 	</center></body>

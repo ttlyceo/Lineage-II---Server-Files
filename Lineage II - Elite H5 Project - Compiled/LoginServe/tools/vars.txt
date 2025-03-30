@@ -1,0 +1,21 @@
+@echo off 
+set config_version=2 
+set cmode=c
+set safe_mode=1 
+set mysqlPath=C:\Program Files\MySQL\MySQL Server 5.7\bin\mysql.exe
+set mysqlBinPath=C:\Program Files\MySQL\MySQL Server 5.7\bin
+set mysqldumpPath=C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqldump.exe
+set lsuser=root
+set lspass=7278452
+set lsdb=l2sow
+set lshost=localhost 
+set cbuser=
+set cbpass=
+set cbdb=
+set cbhost= 
+set gsuser=root
+set gspass=7278452
+set gsdb=l2sow
+set gshost=localhost
+set logdir=.
+set backup=.

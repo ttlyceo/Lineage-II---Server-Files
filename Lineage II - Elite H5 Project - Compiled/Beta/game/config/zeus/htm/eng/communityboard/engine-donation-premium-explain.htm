@@ -1,0 +1,81 @@
+<html>
+	<title>Premium Information</title>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+
+		/*GRID_FORMAT_1=<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+			<tr>
+				<td fixwidth=32 align=CENTER>
+					<font name=hs12 color=819FF7>%CHAR_NAME% Premium System</font>
+				</td>
+			</tr>
+		</table>
+		*/
+		<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+			<tr>
+				<td fixwidth=32 align=CENTER>
+					<img src="%IMG_ICON%" width=32 height=32><br><br><br><br>
+				</td>
+				<td fixwidth=196>
+					<font color=819FF7 name=hs12>%PREMIUM_NAME%</font><br1>
+					<font color=F7BE81>- Applicable to: </font><font color=F5DA81>%APPLICATE_TO%</font><br1>
+					<font color=F7BE81>- Days: </font><font color=F5DA81>%DAYS%</font><br1>
+					<font color=F7BE81>- Cost: </font><font color=F5DA81>%COST_COUNT% %COST_ITEM_NAME%</font><br1>
+				</td>
+				<td fixwidth=52 align=CENTER></td>
+			</tr>
+		</table>
+		<table width=285 background=L2UI_CT1.Windows_DF_TooltipBG>
+			<tr>
+				<td fixwidth=142 align=CENTER>
+					<font color=81BEF7 name=hs12>Bonus & Rate</font>
+				</td>
+				<td fixwidth=142 align=CENTER>
+					<font color=81BEF7 name=hs12>Final Result</font>
+				</td>
+			</tr>
+		</table>
+		<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+			<tr>
+				<td fixwidth=280>
+					/*GRID_FORMAT_2=<table width=280 bgcolor=151515>
+							<tr>
+								<td fixwidth=140 align=CENTER>
+        								<font color=F7BE81>%NAME%</font> <font color=F5DA81>%ORIGINAL_VALUE%</font>
+								</td>
+								<td fixwidth=140 align=CENTER>
+									<font color=FAAC58>%FINAL_RESULT%</font>
+								</td>
+							</tr>
+						</table>
+					*/
+					/*GRID_FORMAT_3=<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+							<tr>
+								<td fixwidth=140 align=CENTER>
+									<button value="Show Premium Items Chance" action="%BYPASS_ITEMS_CHANCE%" width=260 height=28 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+								</td>
+							</tr>
+						</table><br>
+					*/
+					/*GRID_FORMAT_4=<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+							<tr>
+								<td fixwidth=140 align=CENTER>
+									<button value="Show Premium Items Rate" action="%BYPASS_ITEM_RATE%" width=260 height=28 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+								</td>
+							</tr>
+						</table><br>
+					*/
+					<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+						<tr>
+							<td fixwidth=140 align=CENTER>
+								<button value="Buy" action="%BYPASS_BUY_PREMIUM%" width=120 height=28 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+							</td>
+							<td fixwidth=140 align=CENTER>
+								<button value="Back" action="%BYPASS_BACK%" width=120 height=28 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+							</td>
+						</tr>
+					</table><br>
+				</td>
+			</tr>
+		</table>
+	</td></tr></table></body>
+</html>

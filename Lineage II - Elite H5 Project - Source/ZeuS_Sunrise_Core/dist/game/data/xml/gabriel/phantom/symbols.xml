@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+possible classIds:
+See final of file!
+
+MAX OF 3 SYMBOLS!
+usage: symbolId;symbolId;symbolId
+
+Some of the classes only have 2 symbols, try fixing it and finding a new symbol to put in them. 
+-->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/symbols.xsd">
+    <!-- Gladiator -->
+    <symbol classId="duelist" symbols="170;172;110"/>
+
+    <!-- Warlord -->
+    <symbol classId="dreadnought" symbols="170;172;110"/>
+
+    <!-- Paladin -->
+    <symbol classId="phoenixKnight" symbols="172;112;179"/>
+
+    <!-- Dark Avenger -->
+    <symbol classId="hellKnight" symbols="172;112;179"/>
+
+    <!-- Treasure Hunter -->
+    <symbol classId="adventurer" symbols="170;172;110"/>
+
+    <!-- Hawkeye -->
+    <symbol classId="sagittarius" symbols="170;172;110"/>
+
+    <!-- Temple Knight -->
+    <symbol classId="evaTemplar" symbols="172;112;179"/>
+
+    <!-- Sword Singer -->
+    <symbol classId="swordMuse" symbols="172;112;179"/>
+
+    <!-- Plains Walker -->
+    <symbol classId="windRider" symbols="170;172;110"/>
+
+    <!-- Silver Ranger -->
+    <symbol classId="moonlightSentinel" symbols="170;172;110"/>
+
+    <!-- Shillien Knight -->
+    <symbol classId="shillienTemplar" symbols="172;112;179"/>
+
+    <!-- Blade Dancer -->
+    <symbol classId="spectralDancer" symbols="172;112;179"/>
+
+    <!-- Abyss Walker -->
+    <symbol classId="ghostSentinel" symbols="170;172;110"/>
+
+    <!-- Phantom Ranger -->
+    <symbol classId="ghostHunter" symbols="170;172;110"/>
+
+    <!-- Destroyer -->
+    <symbol classId="titan" symbols="170;172;110"/>
+
+    <!-- Tyrant -->
+    <symbol classId="grandKhavatari" symbols="170;172;110"/>
+
+    <!-- Bounty Hunter -->
+    <symbol classId="fortuneSeeker" symbols="170;172;110"/>
+
+    <!-- Warsmith -->
+    <symbol classId="maestro" symbols="170;172;110"/>
+
+    <!-- Sorcerer -->
+    <symbol classId="archmage" symbols="180;175;171"/>
+
+    <!-- Necromancer -->
+    <symbol classId="soultaker" symbols="180;175;171"/>
+
+    <!-- Warlock -->
+    <symbol classId="arcanaLord" symbols="180;120;171"/>
+
+    <!-- Bishop -->
+    <symbol classId="cardinal" symbols="180;120;171"/>
+
+    <!-- Prophet -->
+    <symbol classId="hierophant" symbols="180;120;171"/>
+
+    <!-- Spellsigner -->
+    <symbol classId="mysticMuse" symbols="180;120;171"/>
+
+    <!-- Elemental summoner -->
+    <symbol classId="elementalMaster" symbols="180;120;171"/>
+
+    <!-- Elven elder -->
+    <symbol classId="evaSaint" symbols="180;120;171"/>
+
+    <!-- Spellhowler -->
+    <symbol classId="stormScreamer" symbols="180;120;171"/>
+
+    <!-- Phantom summoner -->
+    <symbol classId="spectralMaster" symbols="180;120;171"/>
+
+    <!-- Shillien elder -->
+    <symbol classId="shillienSaint" symbols="180;120;171"/>
+
+    <!-- Overlord -->
+    <symbol classId="dominator" symbols="180;120;171"/>
+
+    <!-- Warcryer -->
+    <symbol classId="doomcryer" symbols="180;120;171"/>
+
+    <!-- Doombringer -->
+    <symbol classId="doombringer" symbols="169;25;179"/>
+
+    <!-- Male SoulHound -->
+    <symbol classId="maleSoulhound" symbols="179;174;35"/>
+
+    <!-- Trickster -->
+    <symbol classId="trickster" symbols="169;25;179"/>
+
+    <!-- Female SoulHound -->
+    <symbol classId="femaleSoulhound" symbols="179;174;35"/>
+
+</list>
+
+        <!--
+
+        fighter
+        warrior
+        gladiator
+        warlord
+        knight
+        paladin
+        darkAvenger
+        rogue
+        treasureHunter
+        hawkeye
+        mage
+        wizard
+        sorceror
+        necromancer
+        warlock
+        cleric
+        bishop
+        prophet
+        elvenFighter
+        elvenKnight
+        templeKnight
+        swordSinger
+        elvenScout
+        plainsWalker
+        silverRanger
+        elvenMage
+        elvenWizard
+        spellsinger
+        elementalSummonr
+        oracle
+        elder
+        darkFighter
+        palusKnight
+        shillienKnight
+        bladedancer
+        assassin
+        abyssWalker
+        phantomRanger
+        darkMage
+        darkWizard
+        spellhowler
+        phantomSummoner
+        shillienOracle
+        shillenElder
+        orcFighter
+        orcRaider
+        destroyer
+        orcMonk
+        tyrant
+        orcMage
+        orcShaman
+        overlord
+        warcryer
+        dwarvenFighter
+        scavenger
+        bountyHunter
+        artisan
+        warsmith
+        duelist
+        dreadnought
+        phoenixKnight
+        hellKnight
+        sagittarius
+        adventurer
+        archmage
+        soultaker
+        arcanaLord
+        cardinal
+        hierophant
+        evaTemplar
+        swordMuse
+        windRider
+        moonlightSentinel
+        mysticMuse
+        elementalMaster
+        evaSaint
+        shillienTemplar
+        spectralDancer
+        ghostHunter
+        ghostSentinel
+        stormScreamer
+        spectralMaster
+        shillienSaint
+        titan
+        grandKhavatari
+        dominator
+        doomcryer
+        fortuneSeeker
+        maestro
+        maleSoldier
+        femaleSoldier
+        trooper
+        warder
+        berserker
+        maleSoulbreaker
+        femaleSoulbreaker
+        arbalester
+        doombringer
+        maleSoulhound
+        femaleSoulhound
+        trickster
+        inspector
+        judicator
+
+        -->

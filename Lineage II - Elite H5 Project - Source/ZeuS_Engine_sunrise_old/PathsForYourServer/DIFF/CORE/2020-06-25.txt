@@ -1,0 +1,32 @@
+Index: java/l2r/gameserver/data/xml/impl/SkillTreesData.java
+===================================================================
+--- java/l2r/gameserver/data/xml/impl/SkillTreesData.java	(revision 4)
++++ java/l2r/gameserver/data/xml/impl/SkillTreesData.java	(working copy)
+@@ -776,12 +776,13 @@
+ 	 * @param includeSquad if squad skill will be added too
+ 	 * @return all the available pledge skills for a given {@code clan}
+ 	 */
+-	public Map<Integer, L2SkillLearn> getMaxPledgeSkills(L2Clan clan, boolean includeSquad)
++	public Map<Integer, L2SkillLearn> getMaxPledgeSkills(L2Clan clan, boolean includeSquad, int clanLevel)
+ 	{
++		int lvlClan = (clanLevel > 0 ? clanLevel : clan.getLevel());
+ 		final Map<Integer, L2SkillLearn> result = new HashMap<>();
+ 		for (L2SkillLearn skill : _pledgeSkillTree.values())
+ 		{
+-			if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.getGetLevel()))
++			if (!skill.isResidencialSkill() && (lvlClan >= skill.getGetLevel()))
+ 			{
+ 				final L2Skill oldSkill = clan.getSkills().get(skill.getSkillId());
+ 				if ((oldSkill == null) || (oldSkill.getLevel() < skill.getSkillLevel()))
+@@ -808,6 +809,11 @@
+ 		return result;
+ 	}
+ 	
++	public Map<Integer, L2SkillLearn> getMaxPledgeSkills(L2Clan clan, boolean includeSquad)
++	{
++		return getMaxPledgeSkills(clan, includeSquad, -1);
++	}	
++	
+ 	/**
+ 	 * Gets the available sub pledge skills.
+ 	 * @param clan the sub-pledge skill learning clan

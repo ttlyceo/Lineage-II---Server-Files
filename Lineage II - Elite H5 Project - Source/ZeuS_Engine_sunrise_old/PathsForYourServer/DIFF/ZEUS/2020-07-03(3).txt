@@ -1,0 +1,285 @@
+Index: config/config/zeus/htm/eng/communityboard/index.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/index.htm	(revision 19)
++++ config/config/zeus/htm/eng/communityboard/index.htm	(working copy)
+@@ -214,13 +214,13 @@
+ 
+ 			<table width="770" border=0 cellpadding=-1 bgcolor="161414">
+ 				<tr>
+-					<td width=110 align=CENTER>%FAST_MENU_1%</td>
+-					<td width=110 align=CENTER>%FAST_MENU_2%</td>
+-					<td width=110 align=CENTER>%FAST_MENU_3%</td>
+-					<td width=110 align=CENTER>%FAST_MENU_4%</td>
+-					<td width=110 align=CENTER>%FAST_MENU_5%</td>
+-					<td width=110 align=CENTER>%FAST_MENU_6%</td>
+-					<td width=110 align=CENTER>%FAST_MENU_7%</td>
++					<td width=110 align=CENTER><table width=34 height=33 background="icon.skill6280" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB class_statistic" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Class Statistic</td>
++					<td width=110 align=CENTER><table width=34 height=33 background="icon.skillboss" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB raidboss_info" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Raid Boss Info</td>
++					<td width=110 align=CENTER><table width=34 height=33 background="icon.skill0390" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB donation_manager" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Donation</td>
++					<td width=110 align=CENTER><table width=34 height=33 background="icon.skill1297" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB buffer" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Buffer</td>
++					<td width=110 align=CENTER><table width=34 height=33 background="icon.skill1411" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB go_party_leader" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Go Party Leader</td>
++					<td width=110 align=CENTER><table width=34 height=33 background="icon.skill5661" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB flag_finder" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Flag Finder</td>
++					<td width=110 align=CENTER><table width=34 height=33 background="icon.skillelf" border=0 cellspacing=0 cellpadding=-2><tr><td><button action="bypass ZeuS openCB teleport" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34"></td></tr></table>Teleport</td>
+ 				</tr>
+ 			</table>
+ 
+Index: config/config/zeus/htm/eng/communityboard/engine-info-server.htm
+===================================================================
+--- config/config/zeus/htm/eng/communityboard/engine-info-server.htm	(revision 0)
++++ config/config/zeus/htm/eng/communityboard/engine-info-server.htm	(revision 0)
+@@ -0,0 +1,87 @@
++<html>
++	<title>
++		L2ZeuS Engine -  Server Information
++	</title>
++	<body>
++		<center><br>
++		
++			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
++			<table width=616 bgcolor=171717>
++				<tr>
++					<td width=16>
++
++					</td>
++					<td align=CENTER width=560>
++						<center>
++							<font color=86AB98>L2 ZeuS Community</font>
++						</center>
++					</td>
++					<td width=16>
++					</td>
++				</tr>
++			</table>
++			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>		
++		
++	<img src="L2UI.SquareGray" width="756" height="2">
++		<table width=730 border=0 cellpadding=0>
++			<tr>
++				<td width=720 fixwidth=720>
++					<img src="L2UI.SquareGray" width=744 height=2>
++					<table width=760 bgcolor="1F1F1F" height=48>
++						<tr>
++							<td width=32>
++								<table width=32>
++									<tr>
++										<td width=32>
++											<img src="icon.xmas_miracle_i00" width=32 height=32>
++										</td>
++									</tr>
++								</table>
++							</td>
++							<td width=644>
++								<table width=604 border=0>
++									<tr>
++										<td>
++											<table cellpadding=0 cellspacing=0 border=0>
++												<tr>
++													<td>
++														<font name="hs12" color="FF9900">Server Information</font>
++													</td>
++													<td>
++
++													</td>
++												</tr>
++											</table>
++										</td>
++									</tr>
++									<tr>
++										<td>
++											<br><font color="F8F9B7">All the Server information that u need to know.</font>
++										</td>
++									</tr>
++								</table>
++							</td>
++							<td width=64 align="RIGHT"></td>
++						</tr>
++					</table>
++					<img src="L2UI.SquareGray" width="756" height=2>
++				</td>
++			</tr>
++		</table><br>		
++		
++			<table width=770 align=center>
++				/*GRID_FORMAT_1=<td	width=255 align=LEFT fixwidth=258>
++					<font color=919191>%PROPERTY% </font> <font color=LEVEL> %VALUE%</font>
++					</td>
++				*/			
++			</table>
++		</center>
++				<table width=750 align=CENTER>
++					<tr>
++						<td width=80 align=CENTER><button value="Prev." width=60 height=23 action="%PAG_PREV%" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>
++						<td width=590 align=CENTER>Server Config Page %PAGE%</td>
++						<td width=80 align=CENTER><button value="Next" width=60 height=23 action="%PAG_NEXT%" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df></td>
++					</tr>
++				</table>		
++	</body>
++</html>
+\ No newline at end of file
+Index: config/readme.txt
+===================================================================
+--- config/readme.txt	(revision 19)
++++ config/readme.txt	(working copy)
+@@ -116,6 +116,7 @@
+ 		- gm_list
+ 		- oly_buff_scheme
+ 		- all_commands
++		- class_statistic
+ 	3: Example:
+ 		<button value="Open Here to open Teleport" action="bypass ZeuS openCB teleport" width=284 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"> 
+ 
+Index: src/ZeuS/Comunidad/Engine.java
+===================================================================
+--- src/ZeuS/Comunidad/Engine.java	(revision 26)
++++ src/ZeuS/Comunidad/Engine.java	(working copy)
+@@ -366,6 +366,9 @@
+ 	public static void openCBLink(L2PcInstance player, String toOpen){
+ 		String _return = "";
+ 		switch(toOpen.toLowerCase()){
++			case "class_statistic":
++				_return = delegar(player, general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";" + Engine.enumBypass.ClasesStadistic.name() + ";0;Human;0;0;0;0");
++				break;
+ 			case "buffer":
+ 				_return = delegar(player, general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() +";Buffer;0;0;0;0;0;0");
+ 				break;
+Index: src/ZeuS/Comunidad/Comunidad.java
+===================================================================
+--- src/ZeuS/Comunidad/Comunidad.java	(revision 25)
++++ src/ZeuS/Comunidad/Comunidad.java	(working copy)
+@@ -406,17 +406,23 @@
+ 
+ 	@SuppressWarnings("rawtypes")
+ 	public static String getServerInformationRate(L2PcInstance player, int pagina){
+-		String retorno ="<html><body><center>" + cbManager._formTituloComunidad("<font color=" + cbManager.getFontColor(cbManager.enumColor.Naranjo_Claro.name()) + ">Server Config</font>" + btnMain);
++		NpcHtmlMessage html = comun.htmlMaker(player, "./config/zeus/htm/" + language.getInstance().getFolder(player) +"/communityboard/engine-info-server.htm");
++		
++		String DataFormat = opera.getGridFormatFromHtml(html, 1, "%DATA_INFO%");
++		
+ 		Map<String, String> propiedades = getAllProperties(player);
+-		String btnNext = "<button value=\"Next\" width=60 height=23 action=\"bypass " + general.getCOMMUNITY_BOARD_PART_EXEC() + ";RATE;"+ String.valueOf(pagina+1) +";0;0;0\" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>";
+-		String btnPrevi = "<button value=\"Prev.\" width=60 height=23 action=\"bypass " + general.getCOMMUNITY_BOARD_PART_EXEC() + ";RATE;"+ String.valueOf(pagina-1) +";0;0;0\" back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>";
+-
+-		int propiedadesSorportadas = 19 * 3; //57
+-		int desde = pagina * propiedadesSorportadas;//57*0=0: 57*1=57
+-		int hasta = desde + propiedadesSorportadas;//57+0=57: 57+57=114
++		String bypassNext = general.getCOMMUNITY_BOARD_PART_EXEC() + ";RATE;"+ String.valueOf(pagina+1) +";0;0;0";
++		String bypassPrev = general.getCOMMUNITY_BOARD_PART_EXEC() + ";RATE;"+ String.valueOf(pagina-1) +";0;0;0";
++		int propiedadesSorportadas = 19 * 3;
++		int desde = pagina * propiedadesSorportadas;
++		int hasta = desde + propiedadesSorportadas;
+ 		boolean haveNext = false;
++		
++
++		
++		
+ 
+-		String Tabla = "<table width=770 align=center bgcolor=" + cbManager.getFontColor(cbManager.enumColor.COLOR_GRILLA_VIOLETA_OSCURO.name())+"><tr>";
++		String Tabla = "<tr>";
+ 		Iterator itr = propiedades.entrySet().iterator();
+ 		int Contador = 0;
+ 		int Separador = 3;
+@@ -428,7 +434,7 @@
+ 		    		Contador = 0;
+ 		    		Tabla+= "</tr><tr>";
+ 		    	}
+-		    	Tabla += "<td width=255 align=CENTER fixwidth=258><font color="+ cbManager.getFontColor(cbManager.enumColor.Gris.name()) +">"+ Entrada.getKey().toString() +"</font> <font color="+ cbManager.getFontColor(cbManager.enumColor.Naranjo_Claro.name()) +">"+ Entrada.getValue().toString() +"</font></td>";
++		    	Tabla += DataFormat.replace("%VALUE%", Entrada.getValue().toString()).replace("%PROPERTY%", Entrada.getKey().toString()); // "<td width=255 align=CENTER fixwidth=258><font color="+ cbManager.getFontColor(cbManager.enumColor.Gris.name()) +">"+ Entrada.getKey().toString() +"</font> <font color="+ cbManager.getFontColor(cbManager.enumColor.Naranjo_Claro.name()) +">"+ Entrada.getValue().toString() +"</font></td>";
+ 		    	Contador++;
+ 	    	}
+ 	    	ContadorPasadas++;
+@@ -436,35 +442,13 @@
+ 	    		haveNext = true;
+ 	    	}
+ 	    }
+-
+-	    if(propiedadesSorportadas == propiedades.size()){
+-	    	haveNext= false;
+-	    }
+-
+-	    if(Contador <3){
+-	    	for(int i=Contador;i<=Separador;i++){
+-	    		Tabla+="<td></td>";
+-	    	}
+-	    	Tabla+="</tr>";
+-	    }else{
+-	    	Tabla+="</tr>";
+-	    }
+-		Tabla += "</table><br>";
+-
+-		String TablaControles ="<table width=750 align=CENTER gbcolor=" + cbManager.getFontColor(cbManager.enumColor.COLOR_CABECERA.name()) +">"+
+-				"<tr>"+
+-					"<td width=80 align=CENTER>"+ (pagina > 0 ? btnPrevi : "") +"</td>"+
+-					"<td width=590 align=CENTER><font color=" + cbManager.getFontColor(cbManager.enumColor.Naranjo_Claro.name()) + ">Server Config Page "+ String.valueOf(pagina + 1) +"</font></td>"+
+-					"<td width=80 align=CENTER>"+ ( haveNext ? btnNext : "" ) +"</td>"+
+-				"</tr>"+
+-				"</table>";
+-
+-		Tabla += TablaControles;
+-
+-		retorno += cbManager._formBodyComunidad(Tabla, cbManager.getFontColor(cbManager.enumColor.COLOR_GRILLA_VIOLETA_OSCURO.name()));
+-
+-		retorno += "</center>"+cbManager.getPieCommunidad()+"</body></html>";
+-		return retorno;
++	    
++		html.replace("%PAG_PREV%", (pagina <=0 ? "" : bypassPrev));
++		html.replace("%PAG_NEXT%", (haveNext ? bypassNext : ""));	    
++	    html.replace("%DATA_INFO%", Tabla);
++	    html.replace("%PAGE%", pagina + 1);
++	    
++		return html.getHtml();
+ 	}
+ 
+ 	//AQUI
+@@ -2192,13 +2176,9 @@
+ 	}
+ 
+ 	private static NpcHtmlMessage getFastMenu(L2PcInstance player, NpcHtmlMessage html){
+-		int cont = 1;
+-		for(int Data : general.COMMUNITY_MAIN_ACCESS){
+-			String NombreSeccion = CENTRAL_ACCESS[Data];
+-			String DataIn = getInfoAccess(NombreSeccion);
+-			html.replace("%FAST_MENU_"+ String.valueOf(cont) +"%", cbFormato.getBotonForm(DataIn.split(":")[1], "bypass " + DataIn.split(":")[3]) + DataIn.split(":")[2]);
+-			cont++;
+-		}
++
++		
++		
+ 		return html;
+ 	}
+ 	
+@@ -2457,7 +2437,7 @@
+ 		return html;
+ 	}
+ 
+-	public static String getComunidad(L2PcInstance player, String accion, int pagina){
++	public static String getComunidad_original(L2PcInstance player, String accion, int pagina){
+ 		NpcHtmlMessage html = comun.htmlMaker(player, "./config/zeus/htm/" + language.getInstance().getFolder(player) + "/communityboard/index.htm");
+ 		html.replace("%BYPASS%", general.getCOMMUNITY_BOARD_PART_EXEC());
+ 		html.replace("%BYPASS_2%", general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC());
+@@ -2471,6 +2451,26 @@
+ 		btnDealyLoginQuest = btnDealyLoginQuest.replace("%CYCLE%", _dealy_reward_system.getCycle(player)); 
+ 		html.replace("%DEALY_QUEST%", _dealy_reward_system.isInDealyLoginQuest(player) ? btnDealyLoginQuest : "" );
+ 		return html.getHtml();
++	}	
++	
++	public static String getComunidad(L2PcInstance player, String accion, int pagina){
++		if(!opera.canUseCBFunction(player)) {
++			return "";
++		}
++				
++		NpcHtmlMessage html = comun.htmlMaker(player, "./config/zeus/htm/" + language.getInstance().getFolder(player) + "/communityboard/index.htm");
++		html.replace("%BYPASS%", general.getCOMMUNITY_BOARD_PART_EXEC());
++		html.replace("%BYPASS_2%", general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC());
++		html = getCharMenu(player, html);
++		html = getLastAnnoucement(html);
++		html = getOnlineStatusBar(html);
++		
++		html = getMemoryStatusServer(player, html);
++		html = getBugReport(player, html);
++		String btnDealyLoginQuest = opera.getGridFormatFromHtml(html, 7, "%DEALY_QUEST%");
++		btnDealyLoginQuest = btnDealyLoginQuest.replace("%CYCLE%", _dealy_reward_system.getCycle(player)); 
++		html.replace("%DEALY_QUEST%", _dealy_reward_system.isInDealyLoginQuest(player) ? btnDealyLoginQuest : "" );
++		return html.getHtml();
+ 	}
+ 	
+ 

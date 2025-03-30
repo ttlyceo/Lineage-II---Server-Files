@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PrivateStore" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="type" type="xs:string"></xs:attribute>
+						<xs:attribute name="itemId" type="xs:int"></xs:attribute>
+						<xs:attribute name="min" type="xs:int"></xs:attribute>
+						<xs:attribute name="max" type="xs:int"></xs:attribute>
+						<xs:attribute name="minPrice" type="xs:int"></xs:attribute>
+						<xs:attribute name="maxPrice" type="xs:int"></xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

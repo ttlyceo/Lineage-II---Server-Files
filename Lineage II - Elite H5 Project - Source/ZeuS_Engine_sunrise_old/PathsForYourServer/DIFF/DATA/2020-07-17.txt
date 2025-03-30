@@ -1,0 +1,81 @@
+Index: dist/game/data/scripts/ai/npc/DragonVortexRetail/DragonVortexRetail.java
+===================================================================
+--- dist/game/data/scripts/ai/npc/DragonVortexRetail/DragonVortexRetail.java	(revision 4)
++++ dist/game/data/scripts/ai/npc/DragonVortexRetail/DragonVortexRetail.java	(working copy)
+@@ -23,7 +23,7 @@
+ {
+ 	private static final Logger _log = Logger.getLogger(DragonVortexRetail.class.getName());
+ 	private final boolean debug = false;
+-	private final boolean _unlimitedBosses = true; // change this to false in order to allow only one boss per vortex
++	private final boolean _unlimitedBosses = false; // change this to false in order to allow only one boss per vortex
+ 	private static final int VORTEX_1 = 32871;
+ 	private static final int VORTEX_2 = 32892;
+ 	private static final int VORTEX_3 = 32893;
+@@ -152,11 +152,12 @@
+ 						}
+ 						
+ 						takeItems(player, LARGE_DRAGON_BONE, 1);
+-						boss1 = addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, 80, true);
++						boss1 = addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, 0, true);
+ 						progress1 = true;
+ 						bosses1.add(boss1);
+ 						boss1ObjId = boss1.getObjectId();
+-						_despawnTask1 = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnFirstVortexBoss(), DESPAWN_DELAY);
++						//_despawnTask1 = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnFirstVortexBoss(), DESPAWN_DELAY);
++						ThreadPoolManager.getInstance().scheduleGeneral(new checkAndDestroy(boss1, 1), DESPAWN_DELAY);
+ 					}
+ 					else
+ 					{
+@@ -181,18 +182,19 @@
+ 						}
+ 						
+ 						takeItems(player, LARGE_DRAGON_BONE, 1);
+-						boss2 = addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, 80, true);
++						boss2 = addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, 0, true);
+ 						progress2 = true;
+ 						bosses2.add(boss2);
+ 						boss2ObjId = boss2.getObjectId();
+-						_despawnTask2 = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnSecondVortexBoss(), DESPAWN_DELAY);
++						//_despawnTask2 = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnSecondVortexBoss(), DESPAWN_DELAY);
++						ThreadPoolManager.getInstance().scheduleGeneral(new checkAndDestroy(boss2, 2), DESPAWN_DELAY);
+ 					}
+ 					else
+ 					{
+ 						takeItems(player, LARGE_DRAGON_BONE, 1);
+ 						// addSpawn(raid, player.getX(); , player.getY() , player.getZ(), 0, false, DESPAWN_DELAY, true);
+ 						boss2 = addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, true, 0, true);
+-						ThreadPoolManager.getInstance().scheduleGeneral(new checkAndDestroy(boss2, 1), DESPAWN_DELAY);
++						ThreadPoolManager.getInstance().scheduleGeneral(new checkAndDestroy(boss2, 2), DESPAWN_DELAY);
+ 					}
+ 					return "32871-01.html";
+ 				}
+@@ -210,11 +212,12 @@
+ 						}
+ 						
+ 						takeItems(player, LARGE_DRAGON_BONE, 1);
+-						boss3 = addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, 80, true);
++						boss3 = addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, 0, true);
+ 						progress3 = true;
+ 						bosses3.add(boss3);
+ 						boss3ObjId = boss3.getObjectId();
+-						_despawnTask3 = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnThirdVortexBoss(), DESPAWN_DELAY);
++						//_despawnTask3 = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnThirdVortexBoss(), DESPAWN_DELAY);
++						ThreadPoolManager.getInstance().scheduleGeneral(new checkAndDestroy(boss3, 3), DESPAWN_DELAY);
+ 					}
+ 					else
+ 					{
+@@ -239,11 +242,12 @@
+ 						}
+ 						
+ 						takeItems(player, LARGE_DRAGON_BONE, 1);
+-						boss4 = addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, 80, true);
++						boss4 = addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, 0, true);
+ 						progress4 = true;
+ 						bosses4.add(boss4);
+ 						boss4ObjId = boss4.getObjectId();
+-						_despawnTask4 = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnFourthVortexBoss(), DESPAWN_DELAY);
++						//_despawnTask4 = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnFourthVortexBoss(), DESPAWN_DELAY);
++						ThreadPoolManager.getInstance().scheduleGeneral(new checkAndDestroy(boss4, 4), DESPAWN_DELAY);
+ 					}
+ 					else
+ 					{

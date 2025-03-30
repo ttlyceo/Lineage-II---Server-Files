@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- this are the things for the private sell / buy
+//spawnsell will choose here randomly X items (configured in character.ini)
+if buy, will take X randomly with buy and for sell the same
+ -->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/itemsPrivateStore.xsd">
+
+    <PrivateStore type="buy" itemId="1864" min="1" max="10000" minPrice="100" maxPrice="200" />
+    <PrivateStore type="buy" itemId="1865" min="1" max="10000" minPrice="200" maxPrice="400" />
+    <PrivateStore type="buy" itemId="1866" min="1" max="10000" minPrice="300" maxPrice="600" />
+    <PrivateStore type="buy" itemId="1867" min="1" max="10000" minPrice="150" maxPrice="300" />
+    <PrivateStore type="buy" itemId="1868" min="1" max="10000" minPrice="100" maxPrice="200" />
+    <PrivateStore type="buy" itemId="1869" min="1" max="10000" minPrice="200" maxPrice="400" />
+    <PrivateStore type="buy" itemId="1870" min="1" max="10000" minPrice="200" maxPrice="400" />
+    <PrivateStore type="buy" itemId="1871" min="1" max="10000" minPrice="200" maxPrice="400" />
+    <PrivateStore type="buy" itemId="1872" min="1" max="10000" minPrice="150" maxPrice="300" />
+    <PrivateStore type="buy" itemId="1873" min="1" max="10000" minPrice="500" maxPrice="1000" />
+    <PrivateStore type="buy" itemId="1874" min="1" max="10000" minPrice="3000" maxPrice="6000" />
+    <PrivateStore type="buy" itemId="1875" min="1" max="10000" minPrice="3000" maxPrice="6000" />
+    <PrivateStore type="buy" itemId="1876" min="1" max="10000" minPrice="1000" maxPrice="2000" />
+    <PrivateStore type="buy" itemId="1877" min="1" max="10000" minPrice="5000" maxPrice="10000" />
+    <PrivateStore type="buy" itemId="1878" min="1" max="10000" minPrice="500" maxPrice="1000" />
+    <PrivateStore type="buy" itemId="1879" min="1" max="10000" minPrice="1200" maxPrice="2400" />
+    <PrivateStore type="buy" itemId="1880" min="1" max="10000" minPrice="2000" maxPrice="4000" />
+    <PrivateStore type="buy" itemId="1881" min="1" max="10000" minPrice="1500" maxPrice="3000" />
+    <PrivateStore type="buy" itemId="1882" min="1" max="10000" minPrice="900" maxPrice="1800" />
+    <PrivateStore type="buy" itemId="1883" min="1" max="10000" minPrice="4500" maxPrice="9000" />
+    <PrivateStore type="buy" itemId="1884" min="1" max="10000" minPrice="325" maxPrice="750" />
+    <PrivateStore type="buy" itemId="1885" min="1" max="10000" minPrice="2400" maxPrice="4800" />
+    <PrivateStore type="buy" itemId="1886" min="1" max="10000" minPrice="13500" maxPrice="27000" />
+    <PrivateStore type="buy" itemId="1887" min="1" max="10000" minPrice="8100" maxPrice="16200" />
+    <PrivateStore type="buy" itemId="1888" min="1" max="10000" minPrice="6600" maxPrice="13200" />
+    <PrivateStore type="buy" itemId="1889" min="1" max="10000" minPrice="3000" maxPrice="6000" />
+    <PrivateStore type="buy" itemId="1890" min="1" max="10000" minPrice="13100" maxPrice="26200" />
+    <PrivateStore type="buy" itemId="1891" min="1" max="10000" minPrice="95000" maxPrice="190000" />
+    <PrivateStore type="buy" itemId="1892" min="1" max="10000" minPrice="64000" maxPrice="128000" />
+    <PrivateStore type="buy" itemId="1893" min="1" max="10000" minPrice="24600" maxPrice="59200" />
+    <PrivateStore type="buy" itemId="1894" min="1" max="10000" minPrice="5700" maxPrice="14000" />
+    <PrivateStore type="buy" itemId="1895" min="1" max="10000" minPrice="700" maxPrice="1400" />
+
+    <PrivateStore type="sell" itemId="1864" min="1" max="10000" minPrice="100" maxPrice="200" />
+    <PrivateStore type="sell" itemId="1865" min="1" max="10000" minPrice="200" maxPrice="400" />
+    <PrivateStore type="sell" itemId="1866" min="1" max="10000" minPrice="300" maxPrice="600" />
+    <PrivateStore type="sell" itemId="1867" min="1" max="10000" minPrice="150" maxPrice="300" />
+    <PrivateStore type="sell" itemId="1868" min="1" max="10000" minPrice="100" maxPrice="200" />
+    <PrivateStore type="sell" itemId="1869" min="1" max="10000" minPrice="200" maxPrice="400" />
+    <PrivateStore type="sell" itemId="1870" min="1" max="10000" minPrice="200" maxPrice="400" />
+    <PrivateStore type="sell" itemId="1871" min="1" max="10000" minPrice="200" maxPrice="400" />
+    <PrivateStore type="sell" itemId="1872" min="1" max="10000" minPrice="150" maxPrice="300" />
+    <PrivateStore type="sell" itemId="1873" min="1" max="10000" minPrice="500" maxPrice="1000" />
+    <PrivateStore type="sell" itemId="1874" min="1" max="10000" minPrice="3000" maxPrice="6000" />
+    <PrivateStore type="sell" itemId="1875" min="1" max="10000" minPrice="3000" maxPrice="6000" />
+    <PrivateStore type="sell" itemId="1876" min="1" max="10000" minPrice="1000" maxPrice="2000" />
+    <PrivateStore type="sell" itemId="1877" min="1" max="10000" minPrice="5000" maxPrice="10000" />
+    <PrivateStore type="sell" itemId="1878" min="1" max="10000" minPrice="500" maxPrice="1000" />
+    <PrivateStore type="sell" itemId="1879" min="1" max="10000" minPrice="1200" maxPrice="2400" />
+    <PrivateStore type="sell" itemId="1880" min="1" max="10000" minPrice="2000" maxPrice="4000" />
+    <PrivateStore type="sell" itemId="1881" min="1" max="10000" minPrice="1500" maxPrice="3000" />
+    <PrivateStore type="sell" itemId="1882" min="1" max="10000" minPrice="900" maxPrice="1800" />
+    <PrivateStore type="sell" itemId="1883" min="1" max="10000" minPrice="4500" maxPrice="9000" />
+    <PrivateStore type="sell" itemId="1884" min="1" max="10000" minPrice="325" maxPrice="750" />
+    <PrivateStore type="sell" itemId="1885" min="1" max="10000" minPrice="2400" maxPrice="4800" />
+    <PrivateStore type="sell" itemId="1886" min="1" max="10000" minPrice="13500" maxPrice="27000" />
+    <PrivateStore type="sell" itemId="1887" min="1" max="10000" minPrice="8100" maxPrice="16200" />
+    <PrivateStore type="sell" itemId="1888" min="1" max="10000" minPrice="6600" maxPrice="13200" />
+    <PrivateStore type="sell" itemId="1889" min="1" max="10000" minPrice="3000" maxPrice="6000" />
+    <PrivateStore type="sell" itemId="1890" min="1" max="10000" minPrice="13100" maxPrice="26200" />
+    <PrivateStore type="sell" itemId="1891" min="1" max="10000" minPrice="95000" maxPrice="190000" />
+    <PrivateStore type="sell" itemId="1892" min="1" max="10000" minPrice="64000" maxPrice="128000" />
+    <PrivateStore type="sell" itemId="1893" min="1" max="10000" minPrice="24600" maxPrice="59200" />
+    <PrivateStore type="sell" itemId="1894" min="1" max="10000" minPrice="5700" maxPrice="14000" />
+    <PrivateStore type="sell" itemId="1895" min="1" max="10000" minPrice="700" maxPrice="1400" />
+
+</list>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="2375" count="1" /><!-- Wolf Collar -->
+   <item id="3500" count="1" /><!-- Dragonflute of Wind -->
+   <item id="3501" count="1" /><!-- Dragonflute of Star -->
+   <item id="3502" count="1" /><!-- Dragonflute of Twilight -->
+   <item id="4422" count="1" /><!-- Dragon Bugle of Wind -->
+   <item id="4423" count="1" /><!-- Dragon Bugle of Star -->
+   <item id="4424" count="1" /><!-- Dragon Bugle of Twilight -->
+   <item id="4425" count="1" /><!-- Penitent's Manacles -->
+   <item id="6648" count="1" /><!-- Baby Buffalo Panpipe -->
+   <item id="6649" count="1" /><!-- Baby Cougar Chime -->
+   <item id="6650" count="1" /><!-- Baby Kookaburra Ocarina -->
+   <item id="9668" count="1" /><!-- Great Wolf Food -->
+   <item id="10308" count="1" /><!-- Red Dragon Bugle of Wind -->
+   <item id="10309" count="1" /><!-- Red Dragon Bugle of Star -->
+</list>

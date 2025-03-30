@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="13434" count="1" /><!-- Vesper Tunic -->
+   <item id="13444" count="1" /><!-- Vesper Stockings -->
+   <item id="13139" count="1" /><!-- Vesper Circlet -->
+   <item id="13445" count="1" /><!-- Vesper Gloves -->
+   <item id="13446" count="1" /><!-- Vesper Shoes -->
+</list>

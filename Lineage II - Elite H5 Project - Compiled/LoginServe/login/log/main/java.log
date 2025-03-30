@@ -1,0 +1,22 @@
+[29.03.25 19:10:55] INFO: Loading LoginController...
+[29.03.25 19:10:55] INFO: Cached 10 KeyPairs for RSA communication
+[29.03.25 19:10:55] INFO: Stored 20 keys for Blowfish communication
+[29.03.25 19:10:55] INFO: GameServerTable: Loaded 127 server names
+[29.03.25 19:10:55] INFO: GameServerTable: Loaded 2 registered Game Servers
+[29.03.25 19:10:56] INFO: GameServerTable: Cached 10 RSA keys for Game Server communication.
+[29.03.25 19:10:56] INFO: Loaded 2 IP Bans.
+[29.03.25 19:10:56] INFO: Scheduled LS restart after 48 hours
+[29.03.25 19:10:56] INFO: Listening for GameServers on 127.0.0.1:9014
+[29.03.25 19:10:56] INFO: Telnet server is currently disabled.
+[29.03.25 19:10:56] INFO: L2LoginServer: is now listening on: *:2106
+[29.03.25 19:10:56] INFO: Looking for UPnP Gateway Devices...
+[29.03.25 19:10:56] INFO: Using UPnP gateway: Archer AX55 Pro
+[29.03.25 19:10:56] INFO: Using local address: 192.168.0.192 External address: 220.135.113.130
+[29.03.25 19:10:56] INFO: Mapping successfull on [192.168.0.192:2106]
+[29.03.25 19:11:10] INFO: Updated Gameserver [1] Bartz IP's:
+[29.03.25 19:11:10] INFO: 127.0.0.1/127.0.0.0/8
+[29.03.25 19:11:10] INFO: 192.168.0.192/192.168.0.0/24
+[29.03.25 19:11:10] INFO: 220.135.113.130/0.0.0.0/0
+[29.03.25 19:11:39] INFO: Auto created account 'sky008'.
+[29.03.25 22:36:01] INFO: GameServer [1] Bartz: Connection lost: Connection reset
+[29.03.25 22:36:01] INFO: Server [1] Bartz is now set as disconnected

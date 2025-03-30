@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+   <item id="2516" count="1" /> <!-- Saber*Saber -->
+   <item id="2540" count="1" /> <!-- Artisan's Sword*Artisan's Sword -->
+   <item id="2525" count="1" /> <!-- Bastard Sword*Bastard Sword -->
+   <item id="2546" count="1" /> <!-- Knight's Sword*Knight's Sword -->
+   <item id="2533" count="1" /> <!-- Spinebone Sword*Spinebone Sword -->
+   <item id="2537" count="1" /> <!-- Spinebone Sword*Elven Sword -->
+
+</list>

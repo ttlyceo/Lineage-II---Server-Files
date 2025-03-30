@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<instance enabled="false" />
+	<zone id="1" enable="true" type="INDIVIDUAL" canSeeDressme="false" name="Talking" transform="true" blockchat="true" partys="false" clan="false" minutes="2" minLevel="80" reviveTime="5" pvpCount="true" reuse="10" rewardByEmailAtFinish="true" dualboxcheck="true">
+		<set name="spot_1" value="-107449,242401,-3514" />
+		<set name="spot_2" value="-104237,246119,-3483" />
+		<set name="spot_3" value="-106041,237308,-3651" />
+		<set name="spot_4" value="-101621,239121,-3435" />
+		<buffs id="1323" /> <!-- ID,ID,ID -->
+		<reward_for_kill value="57,8000;3470,1" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<reward_for_death value="57,800" /> <!-- ID_ITEM,COUNT; ID_ITEM,COUN, ID_ITEM,COUNT -->
+		<prohibited_classes_id value = "" />
+		<prohibited_item_id value = "" />
+		<allowed_classes_id value = "" /> <!-- Just if the Zone type is CLASSES -->
+		<clan_give_reputation_point enabled="false" value="200" />
+		<npc_raid enabled="false">
+			<set name="id_raid" value="-1" />
+			<set name="second_delay_to_show_after_instance_start" value="70" />
+			<set name="spawn" value="-106041,237308,-3651" />
+		</npc_raid>
+		<player_drop> <!-- Work only with DROP_ZONE type -->
+			<drop item_id="57" porcent="2" minimum_amount_allowed_to_be_inside="50" required="true" />
+			<drop item_id="5575" porcent="2" minimum_amount_allowed_to_be_inside="50" required="false" />
+		</player_drop>
+	</zone>
+</list>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- Raid Boss Items -->
+
+<list maintainEnchantment="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"	xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+	<item>
+		<ingredient id="23030" count="30" />
+		<ingredient id="57" count="25000000" updateAdena="false" /> 
+		<production id="14953" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="30" />
+		<ingredient id="57" count="25000000" updateAdena="false" /> 
+		<production id="14957" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="30" />
+		<ingredient id="57" count="25000000" updateAdena="false" /> 
+		<production id="14961" count="1" />
+	</item>
+</list>

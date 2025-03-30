@@ -1,0 +1,10 @@
+<html>
+	<title>L2-SOW Community Annoucement</title>
+	<body>
+		%SERVER_LOGO%<br>
+		<font color="LEVEL">DATE:</font> %DATE%<br1>
+		<font color="LEVEL">POST IT BY:</font> %NAME%<br1>
+		<font color="LEVEL">TITLE:</font> %TITLE%<br1>
+		<font color="LEVEL">MESSAGE:</font> %MESSAGE%<br1>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="485" count="1" /><!-- Tattoo of Power -->
+   <item id="486" count="1" /><!-- Tattoo of Fire -->
+   <item id="487" count="1" /><!-- Tattoo of Resolve -->
+   <item id="488" count="1" /><!-- Tattoo of Flame -->
+   <item id="489" count="1" /><!-- Tattoo of Bravery -->
+   <item id="490" count="1" /><!-- Tattoo of Blood -->
+   <item id="491" count="1" /><!-- Tattoo of Absolute -->
+   <item id="492" count="1" /><!-- Tattoo of Soul -->
+   <item id="494" count="1" /><!-- Tattoo of Doom -->
+   <item id="495" count="1" /><!-- Tattoo of Pledge -->
+   <item id="496" count="1" /><!-- Tattoo of Divine -->
+   <item id="2410" count="1" /><!-- Nightmarish Tattoo -->
+   <item id="493" count="1" /><!-- Tattoo of Avadon -->
+</list>

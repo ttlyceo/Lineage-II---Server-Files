@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="">
+	<skill name="Song of Champion" id="364" normal_level="1" enchant_level="1" />
+	<skill name="Shield" id="1040" normal_level="3" enchant_level="3" />
+	<skill name="Holy Weapon" id="1043" normal_level="1" enchant_level="1" />
+	<skill name="Regeneration" id="1044" normal_level="3" enchant_level="3" />
+	<skill name="Magnus's Chant" id="1413" normal_level="1" enchant_level="1" />
+	<skill name="Magician's Movement" id="118" normal_level="1" enchant_level="1" />
+	<skill name="Cubic Mastery" id="143" normal_level="2" enchant_level="2" />
+	<skill name="Dual Weapon Mastery" id="144" normal_level="37" enchant_level="37" />
+	<skill name="Anti Magic" id="146" normal_level="45" enchant_level="45" />
+	<skill name="Spellcraft" id="163" normal_level="1" enchant_level="1" />
+	<skill name="Lucky" id="194" normal_level="1" enchant_level="1" />
+	<skill name="Mana Recovery" id="214" normal_level="1" enchant_level="1" />
+	<skill name="Fast Spell Casting" id="228" normal_level="3" enchant_level="3" />
+	<skill name="Fast Mana Recovery" id="229" normal_level="7" enchant_level="7" />
+	<skill name="Light Armor Mastery" id="236" normal_level="41" enchant_level="41" />
+	<skill name="Song of Earth" id="264" normal_level="1" enchant_level="1" />
+	<skill name="Song of Life" id="265" normal_level="1" enchant_level="1" />
+	<skill name="Song of Water" id="266" normal_level="1" enchant_level="1" />
+	<skill name="Song of Warding" id="267" normal_level="1" enchant_level="1" />
+	<skill name="Song of Wind" id="268" normal_level="1" enchant_level="1" />
+	<skill name="Song of Hunter" id="269" normal_level="1" enchant_level="1" />
+	<skill name="Song of Invocation" id="270" normal_level="1" enchant_level="1" />
+	<skill name="Dance of the Warrior" id="271" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Inspiration" id="272" normal_level="1" enchant_level="1" />
+	<skill name="Dance of the Mystic" id="273" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Fire" id="274" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Fury" id="275" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Concentration" id="276" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Light" id="277" normal_level="1" enchant_level="1" />
+	<skill name="Song of Vitality" id="304" normal_level="1" enchant_level="1" />
+	<skill name="Song of Vengeance" id="305" normal_level="1" enchant_level="1" />
+	<skill name="Song of Flame Guard" id="306" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Aqua Guard" id="307" normal_level="1" enchant_level="1" />
+	<skill name="Song of Storm Guard" id="308" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Earth Guard" id="309" normal_level="1" enchant_level="1" />
+	<skill name="Dance of the Vampire" id="310" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Protection" id="311" normal_level="1" enchant_level="1" />
+	<skill name="Wisdom" id="328" normal_level="1" enchant_level="1" />
+	<skill name="Song of Renewal" id="349" normal_level="1" enchant_level="1" />
+	<skill name="Song of Meditation" id="363" normal_level="1" enchant_level="1" />
+	<skill name="Song of Champion" id="364" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Siren" id="365" normal_level="1" enchant_level="1" />
+	<skill name="Summon Lore" id="435" normal_level="1" enchant_level="1" />
+	<skill name="Divine Lore" id="436" normal_level="1" enchant_level="1" />
+	<skill name="Song of Elemental" id="529" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Alignment" id="530" normal_level="1" enchant_level="1" />
+	<skill name="Flame Chant" id="1002" normal_level="3" enchant_level="3" />
+	<skill name="Pa'agrian Gift" id="1003" normal_level="1" enchant_level="1" />
+	<skill name="Blessings of Pa'agrio" id="1005" normal_level="1" enchant_level="1" />
+	<skill name="Chant of Fire" id="1006" normal_level="3" enchant_level="3" />
+	<skill name="Chant of Battle" id="1007" normal_level="3" enchant_level="3" />
+	<skill name="Chant of Shielding" id="1009" normal_level="3" enchant_level="3" />
+	<skill name="Soul Shield" id="1010" normal_level="3" enchant_level="3" />
+	<skill name="Invigor" id="1032" normal_level="3" enchant_level="330" />
+	<skill name="Resist Poison" id="1033" normal_level="3" enchant_level="315" />
+	<skill name="Mental Shield" id="1035" normal_level="4" enchant_level="4" />
+	<skill name="Magic Barrier" id="1036" normal_level="2" enchant_level="2" />
+	<skill name="Shield" id="1040" normal_level="3" enchant_level="3" />
+	<skill name="Holy Weapon" id="1043" normal_level="1" enchant_level="1" />
+	<skill name="Regeneration" id="1044" normal_level="3" enchant_level="3" />
+	<skill name="Bless the Body" id="1045" normal_level="6" enchant_level="6" />
+	<skill name="Bless the Soul" id="1048" normal_level="6" enchant_level="6" />
+	<skill name="Empower" id="1059" normal_level="3" enchant_level="3" />
+	<skill name="Berserker Spirit" id="1062" normal_level="2" enchant_level="2" />
+	<skill name="Focus" id="1077" normal_level="3" enchant_level="3" />
+	<skill name="Concentration" id="1078" normal_level="6" enchant_level="6" />
+	<skill name="Acumen" id="1085" normal_level="3" enchant_level="3" />
+	<skill name="Haste" id="1086" normal_level="2" enchant_level="2" />
+	<skill name="Agility" id="1087" normal_level="3" enchant_level="3" />
+	<skill name="Resist Aqua" id="1182" normal_level="3" enchant_level="330" />
+	<skill name="Resist Wind" id="1189" normal_level="3" enchant_level="330" />
+	<skill name="Resist Fire" id="1191" normal_level="3" enchant_level="330" />
+	<skill name="Resist Earth" id="1548" normal_level="3" enchant_level="330" />
+	<skill name="Resist Holy" id="1392" normal_level="3" enchant_level="130" />
+	<skill name="Resist Dark" id="1393" normal_level="3" enchant_level="130" />
+	<skill name="Wind Walk" id="1204" normal_level="2" enchant_level="2" />
+	<skill name="Self Heal" id="1216" normal_level="1" enchant_level="1" />
+	<skill name="Guidance" id="1240" normal_level="3" enchant_level="3" />
+	<skill name="Death Whisper" id="1242" normal_level="3" enchant_level="3" />
+	<skill name="Bless Shield" id="1243" normal_level="6" enchant_level="6" />
+	<skill name="Chant of Fury" id="1251" normal_level="2" enchant_level="2" />
+	<skill name="Chant of Evasion" id="1252" normal_level="3" enchant_level="3" />
+	<skill name="Chant of Rage" id="1253" normal_level="3" enchant_level="3" />
+	<skill name="Resist Shock" id="1259" normal_level="4" enchant_level="330" />
+	<skill name="Vampiric Rage" id="1268" normal_level="4" enchant_level="4" />
+	<skill name="Chant of Revenge" id="1284" normal_level="3" enchant_level="3" />
+	<skill name="Wild Magic" id="1303" normal_level="2" enchant_level="2" />
+	<skill name="Advanced Block" id="1304" normal_level="3" enchant_level="3" />
+	<skill name="Chant of Predator" id="1308" normal_level="3" enchant_level="3" />
+	<skill name="Chant of Eagle" id="1309" normal_level="3" enchant_level="3" />
+	<skill name="Chant of Vampire" id="1310" normal_level="4" enchant_level="4" />
+	<skill name="Mass Summon Storm Cubic" id="1328" normal_level="8" enchant_level="8" />
+	<skill name="Mass Summon Aqua Cubic" id="1329" normal_level="9" enchant_level="9" />
+	<skill name="Summon Feline Queen" id="1331" normal_level="10" enchant_level="10" />
+	<skill name="Summon Seraphim the Unicorn" id="1332" normal_level="10" enchant_level="10" />
+	<skill name="Elemental Protection" id="1352" normal_level="1" enchant_level="1" />
+	<skill name="Divine Protection" id="1353" normal_level="1" enchant_level="1" />
+	<skill name="Arcane Protection" id="1354" normal_level="1" enchant_level="1" />
+	<skill name="Prophecy of Water" id="1355" normal_level="1" enchant_level="315" />
+	<skill name="Prophecy of Fire" id="1356" normal_level="1" enchant_level="315" />
+	<skill name="Prophecy of Wind" id="1357" normal_level="1" enchant_level="315" />
+	<skill name="Chant of Spirit" id="1362" normal_level="1" enchant_level="1" />
+	<skill name="Chant of Victory" id="1363" normal_level="1" enchant_level="315" />
+	<skill name="Greater Might" id="1388" normal_level="3" enchant_level="3" />
+	<skill name="Greater Shield" id="1389" normal_level="3" enchant_level="3" />
+	<skill name="War Chant" id="1390" normal_level="3" enchant_level="3" />
+	<skill name="Earth Chant" id="1391" normal_level="3" enchant_level="3" />
+	<skill name="Erase" id="1395" normal_level="10" enchant_level="10" />
+	<skill name="Clarity" id="1397" normal_level="3" enchant_level="230" />
+	<skill name="Summon Friend" id="1403" normal_level="1" enchant_level="1" />
+	<skill name="Cleanse" id="1409" normal_level="1" enchant_level="1" />
+	<skill name="Salvation" id="1410" normal_level="1" enchant_level="1" />
+	<skill name="Magnus's Chant" id="1413" normal_level="1" enchant_level="1" />
+	<skill name="Gate Chant" id="1429" normal_level="1" enchant_level="1" />
+	<skill name="Invocation" id="1430" normal_level="5" enchant_level="5" />
+	<skill name="Mana Gain" id="1460" normal_level="1" enchant_level="1" />
+	<skill name="Chant of Protection" id="1461" normal_level="1" enchant_level="1" />
+	<skill name="Steal Mana" id="1526" normal_level="3" enchant_level="3" />
+	<skill name="Song of Wind Storm" id="764" normal_level="1" enchant_level="1" />
+	<skill name="Dance of Blade Storm" id="765" normal_level="1" enchant_level="1" />
+	<skill name="Magician's Will" id="945" normal_level="1" enchant_level="1" />
+	<skill name="Improved Combat" id="1499" normal_level="1" enchant_level="1" />
+	<skill name="Improved Condition" id="1501" normal_level="1" enchant_level="1" />
+	<skill name="Blessing of Eva" id="1506" normal_level="1" enchant_level="1" />
+	<skill name="Counter Critical" id="1542" normal_level="1" enchant_level="1" />
+	<skill name="The Wisdom of Pa'agrio" id="1004" normal_level="3" enchant_level="3" />
+	<skill name="The Glory of Pa'agrio" id="1008" normal_level="3" enchant_level="3" />
+	<skill name="The Vision of Pa'agrio" id="1249" normal_level="3" enchant_level="3" />
+	<skill name="Shield of Pa'agrio" id="1250" normal_level="3" enchant_level="3" />
+	<skill name="Condition of Pa'agrio" id="1538" normal_level="3" enchant_level="3" />
+	<skill name="Chant of Movement" id="1535" normal_level="3" enchant_level="3" />
+	<skill name="The Tact of Pa'agrio" id="1260" normal_level="3" enchant_level="3" />
+	<skill name="Rage of Pa'agrio" id="1261" normal_level="2" enchant_level="2" />
+	<skill name="Pa'agrian Haste" id="1282" normal_level="2" enchant_level="2" />
+	<skill name="Eye of Pa'agrio" id="1364" normal_level="1" enchant_level="1" />
+	<skill name="Soul of Pa'agrio" id="1365" normal_level="1" enchant_level="1" />
+	<skill name="Victory of Pa'agrio" id="1414" normal_level="1" enchant_level="1" />
+	<skill name="Pa'agrio's Emblem" id="1415" normal_level="1" enchant_level="1" />
+	<skill name="Pa'agrio's Fist" id="1416" normal_level="1" enchant_level="115" />
+	<skill name="Improved Movement" id="1504" normal_level="1" enchant_level="1" />
+	<skill name="Sharp Edge" id="825" normal_level="1" enchant_level="1" />
+	<skill name="Spike" id="826" normal_level="1" enchant_level="1" />
+	<skill name="Restring" id="827" normal_level="1" enchant_level="1" />
+	<skill name="Case Harden" id="828" normal_level="1" enchant_level="1" />
+	<skill name="Hard Tanning" id="829" normal_level="1" enchant_level="1" />
+	<skill name="Embroider" id="830" normal_level="1" enchant_level="1" />
+	<skill name="Protection from Darkness" id="1442" normal_level="1" enchant_level="1" />
+	<skill name="Dark Weapon" id="1443" normal_level="1" enchant_level="130" />
+	<skill name="Blazing Skin" id="1232" normal_level="3" enchant_level="330" />
+	<skill name="Combat Aura" id="982" normal_level="3" enchant_level="3" />
+	<skill name="Improved Magic" id="1500" normal_level="1" enchant_level="1" />
+	<skill name="Improved Critical Attack" id="1502" normal_level="1" enchant_level="1" />
+	<skill name="Improved Shield Defense" id="1503" normal_level="1" enchant_level="1" />
+	<skill name="Chant of Blood Awakening" id="1519" normal_level="1" enchant_level="1" />
+	<skill name="Blessing of Vitality" id="10005" normal_level="1" enchant_level="1" />
+	<skill name="Chant of Elements" id="1549" normal_level="1" enchant_level="1" />
+	<skill name="Chant of Berserker" id="1562" normal_level="2" enchant_level="2" />
+</list>

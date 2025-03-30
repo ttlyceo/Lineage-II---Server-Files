@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<color id="1" value="FF0000"/> <!-- red -->
+	<color id="2" value="00FF00"/> <!-- green -->
+	<color id="3" value="0000FF"/> <!-- blue -->
+	<color id="4" value="000000"/> <!-- black -->
+	<color id="5" value="FFFFFF"/> <!-- white -->
+</list>

@@ -1,0 +1,650 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<armor>
+		<set name="Immortal Cuirass" ids="42116" cost="23030,20"/>
+		<set name="Immortal Gaiter" ids="42117" cost="23030,20"/>
+		<set name="Immortal Gauntlet" ids="42118" cost="23030,20"/>
+		<set name="Immortal Boots" ids="42119" cost="23030,20"/>
+		<set name="Immortal Hauberk" ids="42121" cost="23030,20"/>
+		<set name="Immortal Leather Leggins" ids="42122" cost="23030,20"/>
+		<set name="Immortal Leather Gloves" ids="42123" cost="23030,20"/>
+		<set name="Immortal Leather Boots" ids="42124" cost="23030,20"/>
+		<set name="Immortal Tunic" ids="42126" cost="23030,20"/>
+		<set name="Immortal Hose" ids="42127" cost="23030,20"/>
+		<set name="Immortal Gloves" ids="42128" cost="23030,20"/>
+		<set name="Immortal Shoes" ids="42129" cost="23030,20"/>
+		<set name="Twilight Cuirass" ids="42131" cost="23030,20"/>
+		<set name="Twilight Gaiter" ids="42132" cost="23030,20"/>
+		<set name="Twilight Gauntlet" ids="42133" cost="23030,20"/>
+		<set name="Twilight Boots" ids="42134" cost="23030,20"/>
+		<set name="Twilight Hauberk" ids="42136" cost="23030,20"/>
+		<set name="Twilight Leather Leggins" ids="42137" cost="23030,20"/>
+		<set name="Twilight Leather Gloves" ids="42138" cost="23030,20"/>
+		<set name="Twilight Leather Boots" ids="42139" cost="23030,20"/>
+		<set name="Twilight Tunic" ids="42141" cost="23030,20"/>
+		<set name="Twilight Hose" ids="42142" cost="23030,20"/>
+		<set name="Twilight Gloves" ids="42143" cost="23030,20"/>
+		<set name="Twilight Shoes" ids="42144" cost="23030,20"/>
+		<set name="Seraph Cuirass" ids="42146" cost="23030,20"/>
+		<set name="Seraph Gaiter" ids="42147" cost="23030,20"/>
+		<set name="Seraph Gauntlet" ids="42148" cost="23030,20"/>
+		<set name="Seraph Boots" ids="42149" cost="23030,20"/>
+		<set name="Seraph Hauberk" ids="42151" cost="23030,20"/>
+		<set name="Seraph Leather Leggins" ids="42152" cost="23030,20"/>
+		<set name="Seraph Leather Gloves" ids="42153" cost="23030,20"/>
+		<set name="Seraph Leather Boots" ids="42154" cost="23030,20"/>
+		<set name="Seraph Tunic" ids="42156" cost="23030,20"/>
+		<set name="Seraph Hose" ids="42157" cost="23030,20"/>
+		<set name="Seraph Gloves" ids="42158" cost="23030,20"/>
+		<set name="Seraph Shoes" ids="42159" cost="23030,20"/>
+		<set name="Eternal Cuirass" ids="42161" cost="23030,20"/>
+		<set name="Eternal Gaiter" ids="42162" cost="23030,20"/>
+		<set name="Eternal Gauntlet" ids="42163" cost="23030,20"/>
+		<set name="Eternal Boots" ids="42164" cost="23030,20"/>
+		<set name="Eternal Hauberk" ids="42166" cost="23030,20"/>
+		<set name="Eternal Leather Leggins" ids="42167" cost="23030,20"/>
+		<set name="Eternal Leather Gloves" ids="42168" cost="23030,20"/>
+		<set name="Eternal Leather Boots" ids="42169" cost="23030,20"/>
+		<set name="Eternal Tunic" ids="42171" cost="23030,20"/>
+		<set name="Eternal Hose" ids="42172" cost="23030,20"/>
+		<set name="Eternal Gloves" ids="42173" cost="23030,20"/>
+		<set name="Eternal Shoes" ids="42174" cost="23030,20"/>
+
+		<!-- <set name="Dark Assassin Suit" ids="42187" cost="23030,100" justnoble="false" deco="42504" /> -->
+		<!-- <set name="White Assassin Suit" ids="42360" cost="23030,100" justnoble="false" deco="42503" /> -->
+		<set name="Anakim outfit" ids="42319" cost="23030,100" justnoble="false" forexclusiveclan="false" forexclusiveclandays="30" forexclusiveclanprice="23030,1000" forexclusivechar="false" forexclusivechardays="60" forexclusivecharprice="23023,50" />
+		<set name="Ninja Top" ids="42188" cost="23030,100" justnoble="false" />
+		<set name="Metal Suit Chest" ids="42189" cost="23030,25" />
+		<set name="Metal Suit Pants" ids="42190" cost="23030,25" />
+		<set name="Metal Suit Gloves" ids="42191" cost="23030,25" />
+		<set name="Metal Suit Shoes" ids="42192" cost="23030,25" />
+		<set name="School Uniform A" ids="42260" cost="23030,100" justnoble="false" />
+		<set name="School Uniform B" ids="42261" cost="23030,100" justnoble="false" />
+
+		<!-- <set name="Halloween" ids="42361" cost="23030,100" justnoble="false" /> -->
+		<set name="Pirates" ids="42362" cost="23030,100" justnoble="false" />
+		<set name="Archer" ids="42364" cost="23030,100" justnoble="false" />
+		<set name="King" ids="42365" cost="23030,100" justnoble="false" />
+		<set name="Cowboy" ids="42366" cost="23030,100" justnoble="false" />
+		<set name="Shaolin" ids="42367" cost="23030,100" justnoble="false" />
+		<set name="Samurai" ids="42368" cost="23030,100" justnoble="false" />
+		<set name="Dubai" ids="42369" cost="23030,100" justnoble="false" />
+		<set name="Guardian" ids="42370" cost="23030,100" justnoble="false" />
+		<set name="Legionary" ids="42371" cost="23030,100" justnoble="false" />
+		<set name="Silver Suit" ids="42372" cost="23030,100" justnoble="false" />
+		<set name="Lannister" ids="42373" cost="23030,100" justnoble="false" />
+		<set name="Panda" ids="42374" cost="23030,100" justnoble="false" />
+		<set name="Beleth" ids="42375" cost="23030,100" justnoble="false" deco="42403" />
+		<set name="King Suit" ids="42376" cost="23030,100" justnoble="false" />
+		<set name="Tauti Heavy" ids="42377" cost="23030,100" justnoble="false" />
+		<set name="Tauti Light" ids="42378" cost="23030,100" justnoble="false" />
+		<set name="Tauti Robe" ids="42379" cost="23030,100" justnoble="false" />
+
+		<set name="Navy Black" ids="70914" cost="23030,100" justnoble="false" />
+		<set name="Zariche Costome" ids="73117" cost="23030,100" justnoble="false" />	
+		<set name="Ahamanah Costume" ids="73119" cost="23030,100" justnoble="false" />
+		<set name="Lilith Costume" ids="73125" cost="23030,100" justnoble="false" />
+		<set name="Dark Suit" ids="131557" cost="23030,100" justnoble="false" />
+		<set name="Blue Pirate Suit" ids="33045" cost="23030,100" justnoble="false" />
+		<set name="Red Pirate Suit" ids="58007" cost="23030,100" justnoble="false" />
+		<set name="Modern Ninja" ids="44254" cost="23030,100" justnoble="false" />
+		<set name="Tiat Armor" ids="61018" cost="23030,100" justnoble="false" />
+		<set name="Kelbim Suit" ids="61019" cost="23030,100" justnoble="false" />
+		<set name="Dark RoboCop Suit" ids="70928" cost="23030,100" justnoble="false" />
+
+		<set name="Gold Cuirass" ids="33310" cost="23030,20"/>
+		<set name="Gold Gaiter" ids="33311" cost="23030,20"/>
+		<set name="Gold Gauntlet" ids="33312" cost="23030,20"/>
+		<set name="Gold Boots" ids="33313" cost="23030,20"/>
+		<set name="Gold Hauberk" ids="33315" cost="23030,20"/>
+		<set name="Gold Leather Leggins" ids="33316" cost="23030,20"/>
+		<set name="Gold Leather Gloves" ids="33317" cost="23030,20"/>
+		<set name="Gold Leather Boots" ids="33318" cost="23030,20"/>
+		<set name="Gold Tunic" ids="33320" cost="23030,20"/>
+		<set name="Gold Hose" ids="33321" cost="23030,20"/>
+		<set name="Gold Gloves" ids="33322" cost="23030,20"/>
+		<set name="Gold Shoes" ids="33323" cost="23030,20"/>			
+
+		<set name="Ixion Helmet" ids="42216" cost="23030,20"/>
+		<set name="Ixion Leather Helmet" ids="42217" cost="23030,20"/>
+		<set name="Ixion Circlet" ids="42218" cost="23030,20"/>
+		<set name="Ixion Breastplate" ids="42219" cost="23030,20"/>
+		<set name="Ixion Leather Breastplate" ids="42220" cost="23030,20"/>
+		<set name="Ixion Tunic" ids="42221" cost="23030,20"/>
+		<set name="Ixion Gaiter" ids="42222" cost="23030,20"/>
+		<set name="Ixion Leather Legging" ids="42223" cost="23030,20"/>
+		<set name="Ixion Stockings" ids="42224" cost="23030,20"/>
+		<set name="Ixion Gauntlet" ids="42225" cost="23030,20"/>
+		<set name="Ixion Leather Gloves" ids="42226" cost="23030,20"/>
+		<set name="Ixion Gloves" ids="42227" cost="23030,20"/>
+		<set name="Ixion Boots" ids="42228" cost="23030,20"/>
+		<set name="Ixion Leather Boots" ids="42229" cost="23030,20"/>
+		<set name="Ixion Shoes" ids="42230" cost="23030,20"/>
+
+
+		<set name="Apella Brigandine" ids="7864" cost="23030,40"/>
+		<set name="Apella Leather Gloves" ids="7865" cost="23030,20"/>
+		<set name="Apella Boots" ids="7866" cost="23030,20"/>
+		<set name="Apella Doublet" ids="7867" cost="23030,40"/>
+		<set name="Apella Silk Gloves" ids="7868" cost="23030,20"/>
+		<set name="Apella Sandals" ids="7869" cost="23030,20"/>
+		<set name="Apella Plater Armor" ids="7861" cost="23030,40"/>
+		<set name="Apella Gauntlet" ids="7862" cost="23030,20"/>
+		<set name="Apella Solleret" ids="7863" cost="23030,20"/>
+		<set name="Clan Oath Armor" ids="7851" cost="23030,40"/>
+		<set name="Clan Oath Gauntlets" ids="7852" cost="23030,20"/>
+		<set name="Clan Oath Sabaton" ids="7853" cost="23030,20"/>
+		<set name="Clan Oath Brigandine" ids="7854" cost="23030,40"/>
+		<set name="Clan Oath Leather Gloves" ids="7855" cost="23030,20"/>
+		<set name="Clan Oath Boots" ids="7856" cost="23030,20"/>
+		<set name="Clan Oath Aketon" ids="7857" cost="23030,40"/>
+		<set name="Clan Oath Boots" ids="7856" cost="23030,20"/>
+		<set name="Clan Oath Padded" ids="7858" cost="23030,20"/>
+		<set name="Clan Oath Padded" ids="7859" cost="23030,20"/>
+
+		<set name="Heaven Breastplate" ids="42233" cost="23030,20" />
+		<set name="Heaven Leather Breastplate" ids="42234" cost="23030,20" />
+		<set name="Heaven Tunic" ids="42235" cost="23030,20" />
+		<set name="Heaven Gaiter" ids="42236" cost="23030,20" />
+		<set name="Heaven Leather Legging" ids="42237" cost="23030,20" />
+		<set name="Heaven Stockings" ids="42238"  cost="23030,20" />
+		<set name="Heaven Gauntlet" ids="42239" cost="23030,20" />
+		<set name="Heaven Leather Gloves" ids="42240" cost="23030,20" />
+		<set name="Heaven Gloves" ids="42241" cost="23030,20" />
+		<set name="Heaven Boots" ids="42242" cost="23030,20" />
+		<set name="Heaven Leather Boots" ids="42243" cost="23030,20" />
+		<set name="Heaven Shoes" ids="42244" cost="23030,20" />
+	
+		<set name="Chaos Breastplate" ids="42248" cost="23030,20" />
+		<set name="Chaos Leather Breastplate" ids="42249" cost="23030,20" />
+		<set name="Chaos Tunic" ids="42250" cost="23030,20" />
+		<set name="Chaos Gaiter" ids="42251" cost="23030,20" />
+		<set name="Chaos Leather Leggins" ids="42252" cost="23030,20" />
+		<set name="Chaos Stockings" ids="42253" cost="23030,20" />
+		<set name="Chaos Gauntlet" ids="42254" cost="23030,20" />
+		<set name="Chaos Leather Gloves" ids="42255" cost="23030,20" />
+		<set name="Chaos Gloves" ids="42256" cost="23030,20" />
+		<set name="Chaos Boots" ids="42257" cost="23030,20" />
+		<set name="Chaos Leather Boots" ids="42258" cost="23030,20" />
+		<set name="Chaos Shoes" ids="42259" cost="23030,20" />
+
+
+		<set name="Cronos Reaver Breastplate" ids="42262" cost="23030,20" />
+		<set name="Cronos Reaver Gaiter" ids="42263" cost="23030,20" />
+		<set name="Cronos Reaver Gauntlet" ids="42264"  cost="23030,20" />
+		<set name="Cronos Reaver Boots" ids="42265" cost="23030,20" />
+		<set name="Cronos Reaver Leather Breastplate" ids="42266" cost="23030,20" />
+		<set name="Cronos Reaver Leather Leggins" ids="42267" cost="23030,20" />
+		<set name="Cronos Reaver Leather Gloves" ids="42268" cost="23030,20" />
+		<set name="Cronos Reaver Leather Boots" ids="42269" cost="23030,20" />
+		<set name="Cronos Reaver Tunic" ids="42270" cost="23030,20" />
+		<set name="Cronos Reaver Stockings" ids="42271" cost="23030,20" />
+		<set name="Cronos Reaver Gloves" ids="42272" cost="23030,20" />
+		<set name="Cronos Reaver Shoes" ids="42273" cost="23030,20" />
+		<set name="Cronos Reaver Cloak" ids="42274" cost="23030,20" />
+
+		<set ids="42275" name="Aurum Breastplate" cost="23030,20" forhero="false" />
+		<set ids="42276" name="Aurum Leather Breastplate" cost="23030,20" forhero="false" />
+		<set ids="42277" name="Aurum Tunic" cost="23030,20" forhero="false" />
+		<set ids="42278" name="Aurum Gaiter" cost="23030,20" forhero="false" />
+		<set ids="42279" name="Aurum Leather Leggins" cost="23030,20" forhero="false" />
+		<set ids="42280" name="Aurum Stockings" cost="23030,20" forhero="false" />
+		<set ids="42281" name="Aurum Gauntlet" cost="23030,20" forhero="false" />
+		<set ids="42282" name="Aurum Leather Gloves" cost="23030,20" forhero="false" />
+		<set ids="42283" name="Aurum Gloves" cost="23030,20" forhero="false" />
+		<set ids="42284" name="Aurum Boots" cost="23030,20" forhero="false" />
+		<set ids="42285" name="Aurum Leather Boots" cost="23030,20" forhero="false" />
+		<set ids="42286" name="Aurum Shoes" cost="23030,20" forhero="false" />
+
+
+		<set name="Death Core Breastplate" ids="42290" cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Gaiter" ids="42291" cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Gauntlet" ids="42292"  cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Boots" ids="42293" cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Leather Breastplate" ids="42294" cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Leather Legging" ids="42295" cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Leather Gloves" ids="42296" cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Leather Boots" ids="42297" cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Tunic" ids="42298" cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Stockings" ids="42299" cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Gloves" ids="42300" cost="23030,20" fortoppvp="false" />
+		<set name="Death Core Shoes" ids="42301" cost="23030,20" fortoppvp="false" />
+
+		<set name="Ferrum Breastplate" ids="42448" cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Gaiter" ids="42449" cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Gauntlet" ids="42450"  cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Boots" ids="42451" cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Leather Breastplate" ids="42452" cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Leather Legging" ids="42453" cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Leather Gloves" ids="42454" cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Leather Boots" ids="42455" cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Tunic" ids="42456" cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Stockings" ids="42457" cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Gloves" ids="42458" cost="23030,20" fortoppvp="false" />
+		<set name="Ferrum Shoes" ids="42459" cost="23030,20" fortoppvp="false" />
+
+		<set name="Odyssey Breastplate" ids="42472" cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Leather Breastplate" ids="42473" cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Tunic" ids="42474" cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Gaiter" ids="42475" cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Gauntlet" ids="42478"  cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Boots" ids="42481" cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Leather Legging" ids="42476" cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Leather Gloves" ids="42479" cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Leather Boots" ids="42482" cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Stockings" ids="42477" cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Gloves" ids="42480" cost="23030,20" fortoppvp="false" />
+		<set name="Odyssey Shoes" ids="42483" cost="23030,20" fortoppvp="false" />
+		<set ids="42488" name="Freya Suit" cost="23030,100" />
+		<set ids="42489" name="Royal Suit - Burdeaux" cost="23030,100" />
+		<set ids="42490" name="Robin Hood Suit" cost="23030,100" />
+		<set ids="42492" name="Chinese Suit - Turquoise" cost="23030,100" />
+		<set ids="42493" name="Chinese Suit - Purple" cost="23030,100" />
+		<set ids="42494" name="Chinese Suit - Pink" cost="23030,100" />
+		<set ids="42495" name="Chinese Suit - Red" cost="23030,100" />
+		<set ids="42496" name="Navy Suit" cost="23030,100" />
+		<set ids="42497" name="Santa Claus Suit" cost="23030,100" />
+		<set ids="42501" name="Assassin Suit White" cost="23030,100" deco="42503" />
+		<set ids="42502" name="Assassin Suit Black" cost="23030,100" deco="42504" />
+		<set ids="42585" name="Dark Knight Breastplate" cost="23030,40" />
+		<set ids="42586" name="Dark Knight Leather Breastplate" cost="23030,40" />
+		<set ids="42587" name="Dark Knight Tunic" cost="23030,40" />
+		<set ids="42588" name="Dark Knight Gauntlet" cost="23030,20" />
+		<set ids="42589" name="Dark Knight Leather Gloves" cost="23030,20" />
+		<set ids="42590" name="Dark Knight Gloves" cost="23030,20" />
+		<set ids="42591" name="Dark Knight Boots" cost="23030,20" />
+		<set ids="42592" name="Dark Knight Leather Boots" cost="23030,20" />
+		<set ids="42593" name="Dark Knight Shoes" cost="23030,20" />
+		<set ids="42656" name="Halloween" cost="23030,100" />
+		<set ids="42659" name="Musketeer Cat" cost="23030,100" />
+		<set ids="42660" name="White Wolf" cost="23030,100" deco="42661" />
+		<set ids="42662" name="Fat Cat" cost="23030,100" deco="42663" />
+		<set ids="42664" name="BatMan" cost="23030,100" deco="42665" />
+		<set ids="42666" name="RoboCop" cost="23030,100" deco="42667" />
+		<set ids="42668" name="Green Light" cost="23030,100" deco="42669" />
+		<set ids="42670" name="Valakas" cost="23030,100" deco="42671" />
+		<set ids="42724" name="Sacrifice Breastplate" cost="23030,40" deco="42733" />
+		<set ids="42725" name="Sacrifice Gloves" cost="23030,20" />
+		<set ids="42726" name="Sacrifice Boots" cost="23030,20" />
+		<set ids="42727" name="Sacrifice Lether Chest" cost="23030,40" deco="42733" />
+		<set ids="42728" name="Sacrifice Gloves" cost="23030,20" />
+		<set ids="42729" name="Sacrifice Boots" cost="23030,20" />
+		<set ids="42730" name="Sacrifice Tunic" cost="23030,40" deco="42733" />
+		<set ids="42731" name="Sacrifice Gloves" cost="23030,20" />
+		<set ids="42732" name="Sacrifice Boots" cost="23030,20" />
+		<set ids="42741" name="Olympus Breastplate" cost="23030,20" />
+		<set ids="42742" name="Olympus Leather Breastplate" cost="23030,20" />
+		<set ids="42743" name="Olympus Tunic" cost="23030,20" />
+		<set ids="42744" name="Olympus Gaiter" cost="23030,20" />
+		<set ids="42745" name="Olympus Leather Legging" cost="23030,20" />
+		<set ids="42746" name="Olympus Stockings" cost="23030,20" />
+		<set ids="42747" name="Olympus Gauntlet" cost="23030,20" />
+		<set ids="42748" name="Olympus Leather Gloves" cost="23030,20" />
+		<set ids="42749" name="Olympus Gloves" cost="23030,20" />
+		<set ids="42750" name="Olympus Boots" cost="23030,20" />
+		<set ids="42751" name="Olympus Leather Boots" cost="23030,20" />
+		<set ids="42752" name="Olympus Shoes" cost="23030,20" />
+		<set ids="42755" name="Poseidon Armor Breastplate" cost="23030,20" />
+		<set ids="42756" name="Poseidon Armor Leather Breastplate" cost="23030,20" deco="42733" />
+		<set ids="42757" name="Poseidon Armor Tunic" cost="23030,20" deco="42733" />
+		<set ids="42758" name="Poseidon Armor Gaiter" cost="23030,20" />
+		<set ids="42759" name="Poseidon Armor Leather Legging" cost="23030,20" />
+		<set ids="42760" name="Poseidon Armor Stockings" cost="23030,20" />
+		<set ids="42761" name="Poseidon Armor Gauntlet" cost="23030,20" />
+		<set ids="42762" name="Poseidon Armor Leather Gloves" cost="23030,20" />
+		<set ids="42763" name="Poseidon Armor Gloves" cost="23030,20" />
+		<set ids="42764" name="Poseidon Armor Boots" cost="23030,20" />
+		<set ids="42765" name="Poseidon Armor Leather Boots" cost="23030,20" />
+		<set ids="42766" name="Poseidon Armor Shoes" cost="23030,20" />
+		<set ids="42779" name="Faunus Breastplate" cost="23030,20" deco="42791" />
+		<set ids="42780" name="Faunus Leather Breastplate" cost="23030,20" deco="42791" />
+		<set ids="42781" name="Faunus Tunic" cost="23030,20" deco="42791" />
+		<set ids="42782" name="Faunus Gaiter" cost="23030,20" />
+		<set ids="42783" name="Faunus Leather Legging" cost="23030,20" />
+		<set ids="42784" name="Faunus Stockings" cost="23030,20" />
+		<set ids="42785" name="Faunus Gauntlet" cost="23030,20" />
+		<set ids="42786" name="Faunus Leather Gloves" cost="23030,20" />
+		<set ids="42787" name="Faunus Gloves" cost="23030,20" />
+		<set ids="42788" name="Faunus Boots" cost="23030,20" />
+		<set ids="42789" name="Faunus Leather Boots" cost="23030,20" />
+		<set ids="42790" name="Faunus Shoes" cost="23030,20" />
+		<set ids="42793" name="Black Vesper Breastplate" cost="23030,20" />
+		<set ids="42794" name="Black Vesper Gaiters" cost="23030,20" />
+		<set ids="42795" name="Black Vesper Gauntlet" cost="23030,20" />
+		<set ids="42796" name="Black Vesper Boots" cost="23030,20" />
+		<set ids="42797" name="Black Vesper Leather Breastplate" cost="23030,20" />
+		<set ids="42799" name="Black Vesper Leather Gloves" cost="23030,20" />
+		<set ids="42800" name="Black Vesper Leather Boots" cost="23030,20" />
+		<set ids="42801" name="Black Vesper Tunic" cost="23030,20" />
+		<set ids="42802" name="Black Vesper Stockings" cost="23030,20" />
+		<set ids="42803" name="Black Vesper Gloves" cost="23030,20" />
+		<set ids="42804" name="Black Vesper Shoes" cost="23030,20" />
+
+	</armor>
+
+	<shield>
+		<set name="Immortal Shield" ids="42176" cost="23030,50"/>
+		<set name="Twilight Shield" ids="42177" cost="23030,50"/>
+		<set name="Seraph Shield" ids="42178" cost="23030,50"/>
+		<set name="Phoenix Wing Shield" ids="42179" cost="23030,50"/>
+		<set name="Eternal Shield" ids="42180" cost="23030,50"/>
+		<set name="Sumontes Shield" ids="42181" cost="23030,50"/>
+		<set name="Immortal Sigil" ids="42182" cost="23030,50"/>
+		<set name="Twilight Sigil" ids="42183" cost="23030,50"/>
+		<set name="Seraph Sigil" ids="42184" cost="23030,50"/>
+		<set name="Eternal Sigil" ids="42185" cost="23030,50"/>
+		<set name="Wing Sigil" ids="42186" cost="23030,50"/>
+		<set name="Nephilim Lord Shield" ids="5799" cost="23030,50"/>
+		<set name="Heaven Shield" ids="42247" cost="23030,50" />
+		<set name="Virus Black Shield" ids="42302" cost="23030,50" />
+		<set name="Virus Black Sigil" ids="42303" cost="23030,50" />
+		<set name="Baionic Shield" ids="42320" cost="23030,50" />
+		<set name="Shield Anakazel" ids="42427" cost="23030,50"/>
+		<set name="Shield Bernstein A" ids="42428" cost="23030,50"/>
+		<set name="Shield Bernstein B" ids="42429" cost="23030,50"/>
+		<set name="Shield Freya" ids="42430" cost="23030,50"/>
+		<set name="Shield Helios" ids="42431" cost="23030,50"/>
+		<set name="Shield Hunchback" ids="42432" cost="23030,50"/>
+		<set name="Shield Ice Knight" ids="42433" cost="23030,50"/>
+		<set name="Shield Kelbim" ids="42435" cost="23030,50"/>
+		<set name="Shield Kunda" ids="42436" cost="23030,50"/>
+		<set name="Shield Mahum" ids="42437" cost="23030,50"/>
+		<set name="Shield Marshal" ids="42438" cost="23030,50"/>
+		<set name="Shield Mask" ids="42439" cost="23030,50"/>
+		<set name="Shield Pailaka" ids="42440" cost="23030,50"/>
+		<set name="Shield Scarab A" ids="42441" cost="23030,50"/>
+		<set name="Shield Scarab B" ids="42442" cost="23030,50"/>
+		<set name="Shield Scarab C" ids="42443" cost="23030,50"/>
+		<set name="Shield Scarab D" ids="42444" cost="23030,50"/>
+		<set name="Shield Lizardman" ids="42445" cost="23030,50"/>
+		<set name="Shield Tigar" ids="42446" cost="23030,50"/>
+		<set name="Shield Vampire" ids="42447" cost="23030,50"/>
+		<set ids="42706" name="Shield of Ichigo" cost="23030,50"/>
+		<set ids="42707" name="Shield of Zaraki" cost="23030,50"/>
+		<set ids="42708" name="Shield of Byakuya" cost="23030,50"/>
+		<set ids="42709" name="Shield of Yoruichi" cost="23030,50"/>
+		<set ids="42710" name="Shield of Halibel" cost="23030,50"/>
+		<set ids="42711" name="Shield of Grimmjow" cost="23030,50"/>
+		<set ids="42712" name="Shield of Alucard" cost="23030,50"/>
+		<set ids="42713" name="Shield of Black Alucard" cost="23030,50"/>
+		<set ids="42714" name="Shield of Helsing Eye" cost="23030,50"/>
+		<set ids="42715" name="Shield of Helsing Guns" cost="23030,50"/>
+		<set ids="42716" name="Shield of Helsing Madness" cost="23030,50"/>
+		<set ids="42717" name="Shield of Helsing Red Eye" cost="23030,50"/>
+		<set ids="42718" name="Shield of Naruto" cost="23030,50"/>
+		<set ids="42719" name="Shield of Hinata" cost="23030,50"/>
+		<set ids="42720" name="Shield of Sakura" cost="23030,50"/>
+		<set ids="42721" name="Shield of Saskue" cost="23030,50"/>
+		<set ids="42722" name="Shield of Gaara" cost="23030,50"/>
+		<set ids="42723" name="Shield of Kakashi" cost="23030,50"/>
+
+	</shield>
+
+	<weapon>
+		<set ids="40841" name="Baium Sword" cost="23030,100" />
+		<set ids="40842" name="Baium Great Sword" cost="23030,100" />
+		<set ids="40843" name="Baium Axe" cost="23030,100" />
+		<set ids="40848" name="Baium Mace" cost="23030,100" />
+		<set ids="40850" name="Baium Blunt" cost="23030,100" />
+		<set ids="40849" name="Baium Staff" cost="23030,100" />
+		<set ids="40840" name="Baium Stinger" cost="23030,100" />
+		<set ids="40844" name="Baium Claw" cost="23030,100" />
+		<set ids="40846" name="Baium Bow" cost="23030,100" />
+		<set ids="40845" name="Baium Spear" cost="23030,100" />
+		<set ids="40855" name="Baium Rapier" cost="23030,100" />
+		<set ids="40854" name="Baium Blade" cost="23030,100" />
+		<set ids="40853" name="Baium Shooter" cost="23030,100" />
+		<set ids="40851" name="Baium Dual Sword" cost="23030,100" />
+		<set ids="40852" name="Baium Dual Dagger" cost="23030,100" />
+		<set ids="40847" name="Baium Magic Sword" cost="23030,100" />
+
+		<set ids="71838" name="Blue Vesper Sword" cost="23030,100" />
+		<set ids="71842" name="Blue Vesper Great Sword" cost="23030,100" />
+		<set ids="71840" name="Blue Vesper Axe" cost="23030,100" />
+		<set ids="71845" name="Blue Vesper Mace" cost="23030,100" />
+		<set ids="71841" name="Blue Vesper Blunt" cost="23030,100" />
+		<set ids="71846" name="Blue Vesper Staff" cost="23030,100" />
+		<set ids="71839" name="Blue Vesper Stinger" cost="23030,100" />
+		<set ids="71843" name="Blue Vesper Claw" cost="23030,100" />
+		<set ids="71848" name="Blue Vesper Bow" cost="23030,100" />
+		<set ids="71844" name="Blue Vesper Spear" cost="23030,100" />
+		<set ids="71849" name="Blue Vesper Rapier" cost="23030,100" />
+		<set ids="71850" name="Blue Vesper Blade" cost="23030,100" />
+		<set ids="71851" name="Blue Vesper Shooter" cost="23030,100" />
+		<set ids="71853" name="Blue Vesper Dual Sword" cost="23030,100" />
+		<set ids="71852" name="Blue Vesper Dual Dagger" cost="23030,100" />
+		<set ids="71847" name="Blue Vesper Magic Sword" cost="23030,100" />
+
+		<set ids="40469" name="Samurai Sword" cost="23030,100" />
+		<set ids="40472" name="Samurai Great Sword" cost="23030,100" />
+		<set ids="40480" name="Samurai Axe" cost="23030,100" />
+		<set ids="40467" name="Samurai Blunt" cost="23030,100" />
+		<set ids="40466" name="Samurai Staff" cost="23030,100" />
+		<set ids="40483" name="Samurai Claw" cost="23030,100" />
+		<set ids="40482" name="Samurai Bow" cost="23030,100" />
+		<set ids="40474" name="Samurai Spear" cost="23030,100" />
+		<set ids="40468" name="Samurai Shooter" cost="23030,100" />
+		<set ids="40465" name="Samurai Dual Sword" cost="23030,100" />
+		<set ids="40471" name="Samurai Stinger" cost="23030,100" />
+		<set ids="40464" name="Samurai Dual Dagger" cost="23030,100" />
+
+		<set name="Narsil Blade" ids="42000" cost="23030,100"/>
+		<set name="Phasian Edge" ids="42001" cost="23030,100"/>
+		<set name="Herugrim Mace" ids="42002" cost="23030,100"/>
+		<set name="Nucleum Hammer" ids="42003" cost="23030,100"/>
+		<set name="Mechanic Saw" ids="42004" cost="23030,100"/>
+		<set name="Lion Jaw" ids="42005" cost="23030,100"/>
+		<set name="Goddes Callier" ids="42006" cost="23030,100"/>
+		<set name="Twister Cigonia" ids="42007" cost="23030,100"/>
+		<set name="Herencia Staff" ids="42008" cost="23030,100"/>
+		<set name="Terakan Sword" ids="42009" cost="23030,100"/>
+		<set name="Sylphen Bow" ids="42010" cost="23030,100"/>
+		<set name="Azerian Rapier" ids="42011" cost="23030,100"/>
+		<set name="Kuhn Blade" ids="42012" cost="23030,100"/>
+		<set name="Nexium Claw" ids="42013" cost="23030,100"/>
+		<set name="Phasian Dual Daggers" ids="42014" cost="23030,100"/>
+		<set name="Narsil Blade*Hellblade" ids="42015" cost="23030,100"/>
+
+		<set name="Hellblade" ids="21919" cost="23030,100"/>
+		<set name="Butcher Blades" ids="21935" cost="23030,100"/>
+		<set name="Claw of Destruction" ids="21939" cost="23030,100"/>
+		<set name="Blades of Delusion" ids="21955" cost="23030,100"/>
+		<set name="Blood Brother" ids="21959" cost="23030,100"/>
+		<set name="Mardil's Fan" ids="21973" cost="23030,100"/>
+
+
+		<set name="Antharas Shaper" ids="42197" cost="23030,100"/>
+		<set name="Antharas Cutter" ids="42198" cost="23030,100"/>
+		<set name="Antharas Slasher" ids="42199" cost="23030,100"/>
+		<set name="Antharas Avenger" ids="42200" cost="23030,100"/>
+		<set name="Antharas Fighter" ids="42201" cost="23030,100"/>
+		<set name="Antharas Stormer" ids="42202" cost="23030,100"/>
+		<set name="Antharas Thrower" ids="42203" cost="23030,100"/>
+		<set name="Antharas Buster" ids="42204" cost="23030,100"/>
+		<set name="Antharas Dual Sword" ids="42205" cost="23030,100"/>
+		<set name="Antharas Dual Blunt" ids="42206" cost="23030,100"/>
+		<set name="Antharas Rapier" ids="42207" cost="23030,100"/>
+		<set name="Antharas Ancient" ids="42208" cost="23030,100"/>
+
+		<set name="Lindvior Shaper" ids="42209" cost="23030,100"/>
+		<set name="Lindvior Cutter" ids="42210" cost="23030,100"/>
+		<set name="Lindvior Slasher" ids="42211" cost="23030,100"/>
+		<set name="Lindvior Thrower" ids="42212" cost="23030,100"/>
+		<set name="Lindvior Caster" ids="42213" cost="23030,100"/>
+		<set name="Lindvior Dual Daggers" ids="42215" cost="23030,100"/>
+
+		<set name ="Virus Black Blade" ids="42304" cost="23030,100" />
+		<set name ="Virus Black Jaw" ids="42305" cost="23030,100" />
+		<set name ="Virus Black Blunt" ids="42306" cost="23030,100" />
+		<set name ="Virus Black Staff" ids="42307" cost="23030,100" />
+		<set name ="Virus Black Hammer" ids="42308" cost="23030,100" />
+		<set name ="Virus Black Staff two Hand" ids="42309" cost="23030,100" />
+		<set name ="Virus Black Dagger" ids="42310" cost="23030,100" />
+		<set name ="Virus Black Claw" ids="42311" cost="23030,100" />
+		<set name ="Virus Black Bow" ids="42312" cost="23030,100" />
+		<set name ="Virus Black Pole" ids="42313" cost="23030,100" />
+		<set name ="Virus Black Rapier" ids="42314" cost="23030,100" />
+		<set name ="Virus Black Lava Saw" ids="42315" cost="23030,100" />
+		<set name ="Virus Black Crossbow" ids="42316" cost="23030,100" />
+		<set name ="Virus Black Dual Sword" ids="42317" cost="23030,100" />
+		<set name ="Virus Black Dualdagger" ids="42318" cost="23030,100" />
+
+		<set name ="Bionic Ancient Sword" ids="42321" cost="23030,100" />
+		<set name ="Bionic Rapier" ids="42322" cost="23030,100" />
+		<set name ="Bionic Bow" ids="42323" cost="23030,100" />
+		<set name ="Bionic Fist" ids="42324" cost="23030,100" />
+		<set name ="Bionic Sword" ids="42325" cost="23030,100" />
+		<set name ="Bionic Hammer" ids="42326" cost="23030,100" />
+		<set name ="Bionic Mace" ids="42327" cost="23030,100" />
+		<set name ="Bionic Dagger" ids="42328" cost="23030,100" />
+		<set name ="Bionic Spear" ids="42329" cost="23030,100" />
+		<set name ="Bionic Cleaver" ids="42330" cost="23030,100" />
+		<set name ="Bionic Crossbow" ids="42331" cost="23030,100" />
+		<set name ="Bionic Dual Sword" ids="42332" cost="23030,100" />
+
+		<set name ="Kain Dualsword " ids="42333" cost="23030,150" />
+
+		<set name ="Antharas Avenger II" ids="42334" cost="23030,150" />
+		<set name ="Antharas Buster II" ids="42335" cost="23030,150" />
+		<set name ="Antharas Cutter II" ids="42336" cost="23030,150" />
+		<set name ="Antharas Dual Blunt Weapon II" ids="42337" cost="23030,150" />
+		<set name ="Antharas Dualsword II" ids="42338" cost="23030,150" />
+		<set name ="Antharas Fighter II" ids="42339" cost="23030,150" />
+		<set name ="Antharas Shaper II" ids="42340" cost="23030,150" />
+		<set name ="Antharas Slasher II" ids="42341" cost="23030,150" />
+		<set name ="Antharas Stormer II" ids="42342" cost="23030,150" />
+		<set name ="Antharas Thrower II" ids="42343" cost="23030,150" />
+
+		<set name ="Valakas Buster II" ids="42344" cost="23030,150" />
+		<set name ="Valakas Caster II" ids="42345" cost="23030,150" />
+		<set name ="Valakas Cutter II" ids="42346" cost="23030,150" />
+		<set name ="Valakas Retributer II" ids="42347" cost="23030,150" />
+		<set name ="Valakas Shaper II" ids="42348" cost="23030,150" />
+		<set name ="Valakas Slasher II" ids="42349" cost="23030,150" />
+		<set name ="Valakas Thrower II" ids="42350" cost="23030,150" />
+
+		<set name ="Lindvior Caster II" ids="42351" cost="23030,150" />
+		<set name ="Lindvior Cutter II" ids="42352" cost="23030,150" />
+		<set name ="Lindvior Dual Dagger II" ids="42353" cost="23030,150" />
+		<set name ="Lindvior Shaper II" ids="42354" cost="23030,150" />
+		<set name ="Lindvior Shooter II" ids="42355" cost="23030,150" />
+		<set name ="Lindvior Slasher II" ids="42356" cost="23030,150" />
+		<set name ="Lindvior Thrower II" ids="42357" cost="23030,150" />
+		<set name ="Valakas Dual Sword II" ids="42358" cost="23030,150" />
+		<set ids="42544" name="Odyssey Sword" cost="23030,100" />
+		<set ids="42545" name="Odyssey Great Sword" cost="23030,100" />
+		<set ids="42546" name="Odyssey Axe" cost="23030,100" />
+		<set ids="42547" name="Odyssey Mace" cost="23030,100" />
+		<set ids="42548" name="Odyssey Blunt" cost="23030,100" />
+		<set ids="42549" name="Odyssey Staff" cost="23030,100" />
+		<set ids="42550" name="Odyssey Stinger" cost="23030,100" />
+		<set ids="42551" name="Odyssey Claw" cost="23030,100" />
+		<set ids="42552" name="Odyssey Bow" cost="23030,100" />
+		<set ids="42553" name="Odyssey Spear" cost="23030,100" />
+		<set ids="42554" name="Odyssey Rapier" cost="23030,100" />
+		<set ids="42555" name="Odyssey Blade" cost="23030,100" />
+		<set ids="42556" name="Odyssey Shooter" cost="23030,100" />
+		<set ids="42557" name="Odyssey Dual Sword" cost="23030,100" />
+		<set ids="42558" name="Odyssey Dual Dagger" cost="23030,100" />
+		<set ids="42559" name="Odyssey Magic Sword" cost="23030,100" />
+		<set ids="42560" name="Ferrum Sword" cost="23030,100" />
+		<set ids="42561" name="Ferrum Dagger" cost="23030,100" />
+		<set ids="42562" name="Ferrum Mace" cost="23030,100" />
+		<set ids="42563" name="Ferrum Hammer" cost="23030,100" />
+		<set ids="42564" name="Ferrum Blade" cost="23030,100" />
+		<set ids="42565" name="Ferrum Fists" cost="23030,100" />
+		<set ids="42566" name="Ferrum Spear" cost="23030,100" />
+		<set ids="42567" name="Ferrum Staff" cost="23030,100" />
+		<set ids="42568" name="Ferrum Stick" cost="23030,100" />
+		<set ids="42569" name="Ferrum Magic Sword" cost="23030,100" />
+		<set ids="42570" name="Ferrum Bow" cost="23030,100" />
+		<set ids="42571" name="Ferrum Rapier" cost="23030,100" />
+		<set ids="42572" name="Ferrum Ancient Blade" cost="23030,100" />
+		<set ids="42573" name="Ferrum Crossbow" cost="23030,100" />
+		<set ids="42574" name="Ferrum Dual Daggers" cost="23030,100" />
+		<set ids="42575" name="Ferrum Dual Sword" cost="23030,100" />
+		<set ids="42576" name="Ferrum Dual Mace" cost="23030,100" />
+		<set ids="42578" name="Lindvior Blade II" cost="23030,150" />
+		<set ids="42579" name="Valakas Blade II" cost="23030,150" />
+		<set ids="42580" name="Antharas Blade II" cost="23030,150" />
+		<set ids="42581" name="Valakas Rapier II" cost="23030,150" />
+		<set ids="42582" name="Lindvior Rapier II" cost="23030,150" />
+		<set ids="42583" name="Valakas Dual Dagger II" cost="23030,150" />
+		<set ids="42584" name="Antharas Dual Dagger II" cost="23030,150" />
+		<set ids="42654" name="Demonic DualSword Zariche II" cost="23030,150" />
+		<set ids="42698" name="Fafurion Avenger" cost="23030,100" />
+		<set ids="42699" name="Fafurion Cutter" cost="23030,100" />
+		<set ids="42700" name="Fafurion Fighter" cost="23030,100" />
+		<set ids="42701" name="Fafurion Singer" cost="23030,100" />
+		<set ids="42702" name="Fafurion Shaper" cost="23030,100" />
+		<set ids="42703" name="Fafurion Stormer" cost="23030,100" />
+		<set ids="42704" name="Fafurion Dual Sword" cost="23030,100" />
+		<set ids="42705" name="Fafurion Dual Daggers" cost="23030,100" />
+	</weapon>
+	<cloak>
+		<set name ="Cloak of Hero Red" ids="42380" cost="23030,50" />
+		<set name ="Beleth's Cloak" ids="42381" cost="23030,50" />
+		<set name ="Cloak of Duelist" ids="42382" cost="23030,50" />
+		<set name ="Baratheon Cloak" ids="42383" cost="23030,50" />
+		<set name ="Stark Cloak" ids="42384" cost="23030,50" />
+		<set name ="Lannister Cloak" ids="42385" cost="23030,50" />
+		<set name ="Targaryen Cloak" ids="42386" cost="23030,50" />
+		<set name ="Wizards Cloak" ids="42387" cost="23030,50" />
+		<set name ="Dogs Cloak" ids="42388" cost="23030,50" />
+		<set name ="Silver Wings" ids="42389" cost="23030,50" />
+		<set name ="Dragon Wings" ids="42390" cost="23030,50" />
+		<set name ="Cloak of Hero White" ids="42391" cost="23030,50" />
+		<set name ="Cloak of Hero Black" ids="42392" cost="23030,50" />
+		<set name ="Cloak of Ferran" ids="42484" cost="23030,50" />
+		<set ids="42509" name="Halloween Cloak" cost="23030,50" />
+		<set ids="42510" name="Saint Cloak" cost="23030,50" />
+		<set ids="42511" name="Pagan Cloak" cost="23030,50" />
+		<set ids="42512" name="Heroic Cloak" cost="23030,50" />
+		<set ids="42513" name="Dragon Fire Cloak" cost="23030,50" />
+		<set ids="42514" name="Aqua Cloak" cost="23030,50" />
+		<set ids="42515" name="Evil Cloak" cost="23030,50" />
+		<set ids="42518" name="Red Dragon Fire Cloak" cost="23030,50" />
+		<set ids="42519" name="Reptile Cloak" cost="23030,50" />
+		<set ids="42520" name="Silverstorm Cloak" cost="23030,50" />
+		<set ids="42521" name="Crystal Cloak" cost="23030,50" />
+		<set ids="42522" name="Cloak of Heroes - Blood Red" cost="23030,50" />
+		<set ids="42523" name="Cloak of Heroes - Grass Green" cost="23030,50" />
+		<set ids="42524" name="Cloak of Heroes - Water Blue" cost="23030,50" />
+		<set ids="42594" name="Knight's Cloak" cost="23030,50" />
+		<set ids="42595" name="Archer's Cloak" cost="23030,50" /> -->
+		<set ids="42596" name="Enchanter's Cloak" cost="23030,50" />
+		<set ids="42597" name="Healer's Cloak" cost="23030,50" />
+		<set ids="42599" name="Warrior's Cloak" cost="23030,50" />
+		<set ids="42600" name="Summoner's Cloak" cost="23030,50" />
+		<set ids="42601" name="Wizard's Cloak" cost="23030,50" />
+		<set ids="42602" name="Cloak of Aden" cost="23030,50" />
+		<set ids="42603" name="Cloak of Dion" cost="23030,50" />
+		<set ids="42604" name="Cloak of Giran" cost="23030,50" />
+		<set ids="42605" name="Cloak of Gludio" cost="23030,50" />
+		<set ids="42606" name="Cloak of Goddard" cost="23030,50" />
+		<set ids="42607" name="Cloak of Innadril" cost="23030,50" />
+		<set ids="42608" name="Cloak of Oren" cost="23030,50" />
+		<set ids="42609" name="Cloak of Rune" cost="23030,50" />
+		<set ids="42610" name="Cloak of Shuttgart" cost="23030,50" />
+		<set ids="42658" name="Odyssey  Cloak" cost="23030,50" />
+		<set ids="42768" name="Poseidon Armor Cloak" cost="23030,50" />
+		<set ids="42754" name="Olympiad Cloak" cost="23030,50" />
+		<set ids="42734" name="GreenLantern Cape" cost="23030,50" />
+		<set ids="42735" name="SuperMan Cape" cost="23030,50" />
+		<set ids="42736" name="BatMan Cape" cost="23030,50" />
+		<set ids="42792" name="Faenux Cloak" cost="23030,50" />
+
+		<set ids="131555" name="Dark Cloak" cost="23030,50" />
+		<set ids="90010" name="Gladiator's Cloak" cost="23030,50" />
+		<set ids="90565" name="Valakas Cloak" cost="23030,50" />
+		<set ids="90001" name="Duke's Cloak" cost="23030,50" />
+		<set ids="90003" name="Trickster Cloak" cost="23030,50" />
+		<set ids="90004" name="Support Cloak" cost="23030,50" />
+		<set ids="90005" name="Knight Cloak" cost="23030,50" />
+		<set ids="44014" name="Royal's Cloak" cost="23030,50" />
+		<set ids="73133" name="Akamanah Cloak" cost="23030,50" />
+		<set ids="73132" name="Zariche Cloak" cost="23030,50" />
+		<set ids="42690" name="Demon Cloak" cost="23030,50" />
+		<set ids="42693" name="Divine Knight Cloak" cost="23030,50" />
+	</cloak>
+</list>

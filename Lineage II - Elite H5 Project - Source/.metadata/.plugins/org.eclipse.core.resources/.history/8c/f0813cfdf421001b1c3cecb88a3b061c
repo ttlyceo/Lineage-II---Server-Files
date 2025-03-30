@@ -1,0 +1,3481 @@
+package ZeuS.ZeuS;
+
+import gr.sr.interf.SunriseEvents;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Vector;
+import java.util.logging.Logger;
+
+import L2Neptune.pvpZone;
+import l2r.Config;
+import l2r.gameserver.ThreadPoolManager;
+import l2r.gameserver.data.xml.impl.ClassListData;
+import l2r.gameserver.data.xml.impl.TransformData;
+import l2r.gameserver.enums.ZoneIdType;
+import l2r.gameserver.model.L2Object;
+import l2r.gameserver.model.L2World;
+import l2r.gameserver.model.Location;
+import l2r.gameserver.model.actor.FakePc;
+import l2r.gameserver.model.actor.L2Character;
+import l2r.gameserver.model.actor.L2Npc;
+import l2r.gameserver.model.actor.L2Summon;
+import l2r.gameserver.model.actor.instance.L2PcInstance;
+import l2r.gameserver.model.actor.instance.L2PetInstance;
+import l2r.gameserver.model.actor.instance.L2RaidBossInstance;
+import l2r.gameserver.model.actor.templates.L2NpcTemplate;
+import l2r.gameserver.model.base.ClassId;
+import l2r.gameserver.model.entity.Fort;
+import l2r.gameserver.model.entity.olympiad.Participant;
+import l2r.gameserver.model.items.instance.L2ItemInstance;
+import l2r.gameserver.model.skills.L2Skill;
+import l2r.gameserver.network.serverpackets.ExShowScreenMessage;
+import l2r.gameserver.network.serverpackets.NpcHtmlMessage;
+import l2r.gameserver.network.serverpackets.SystemMessage;
+import ZeuS.Comunidad.CBByPass;
+import ZeuS.Comunidad.Clan;
+import ZeuS.Comunidad.Engine;
+import ZeuS.Comunidad.cbManager;
+import ZeuS.Comunidad.Engine.enumBypass;
+import ZeuS.Comunidad.EngineForm.C_gmcommand;
+import ZeuS.Comunidad.EngineForm.C_oly_buff;
+import ZeuS.Comunidad.EngineForm.cbFormato;
+import ZeuS.Comunidad.EngineForm.v_AugmentSpecial;
+import ZeuS.Comunidad.EngineForm.v_Buffer_New;
+import ZeuS.Comunidad.EngineForm.v_Dressme;
+import ZeuS.Comunidad.EngineForm.v_ElementalSpecial;
+import ZeuS.Comunidad.EngineForm.v_EnchantSpecial;
+import ZeuS.Comunidad.EngineForm.v_RaidBossInfo;
+import ZeuS.Comunidad.EngineForm.v_Shop;
+import ZeuS.Comunidad.EngineForm.v_Teleport;
+import ZeuS.Comunidad.EngineForm.v_auction_house;
+import ZeuS.Comunidad.EngineForm.C_gmlist;
+import ZeuS.Comunidad.EngineForm.v_bid_house;
+import ZeuS.Comunidad.EngineForm.v_donation;
+import ZeuS.Comunidad.EngineForm.v_dropsearch;
+import ZeuS.Comunidad.EngineForm.v_pvppkLog;
+import ZeuS.Comunidad.EngineForm.v_MiscelaniusOption;
+import ZeuS.Config._cumulativeData;
+import ZeuS.Config._cumulativeSkill;
+import ZeuS.Config._dealy_reward_system;
+import ZeuS.Config._dualBox;
+import ZeuS.Config.general;
+import ZeuS.Config.premiumPersonalData;
+import ZeuS.Config.premiumsystem;
+import ZeuS.GM.fakenpc;
+import ZeuS.GM.olyTimer;
+import ZeuS.Instances.VoteInstance;
+import ZeuS.Instances.oly_monument;
+import ZeuS.Instances.pvpInstance;
+import ZeuS.Instances.pvpInstance._ZONES_TYPE;
+import ZeuS.dressme.dressme;
+import ZeuS.event.RaidBossEvent;
+import ZeuS.event.TownWarEvent;
+import ZeuS.interfase.EmailRegistration;
+import ZeuS.interfase.ManagerAIONpc;
+import ZeuS.interfase.accountRecovery;
+import ZeuS.interfase.antibotSystem;
+import ZeuS.interfase.borrowAccount;
+import ZeuS.interfase.borrowAccountSystem;
+import ZeuS.interfase.central;
+import ZeuS.interfase.changeCharAccount;
+import ZeuS.interfase.changePassword;
+import ZeuS.interfase.colorNameTitle;
+import ZeuS.interfase.cumulativeSubclass;
+import ZeuS.interfase.fortress;
+import ZeuS.interfase.instanceZone;
+import ZeuS.interfase.ipblock;
+import ZeuS.interfase.jailBail;
+import ZeuS.interfase.overenchant;
+import ZeuS.interfase.sellAccount;
+import ZeuS.interfase.sellBuff;
+import ZeuS.interfase.sellClan;
+import ZeuS.interfase.shop;
+import ZeuS.interfase.showMyStat;
+import ZeuS.interfase.teleport;
+import ZeuS.interfase.votereward;
+import ZeuS.interfase.wishList;
+import ZeuS.language.language;
+import ZeuS.procedimientos.Afk;
+import ZeuS.procedimientos.Dlg;
+import ZeuS.procedimientos.Dlg.IdDialog;
+import ZeuS.procedimientos.EmailSend;
+import ZeuS.procedimientos.ObserveMode;
+import ZeuS.procedimientos.autoPots;
+import ZeuS.procedimientos.handler;
+import ZeuS.procedimientos.itemLink;
+import ZeuS.procedimientos.jMail;
+import ZeuS.procedimientos.opera;
+import ZeuS.server.Anunc;
+import ZeuS.server.PvPPk;
+import ZeuS.server.comun;
+import ZeuS.server.olym;
+import ZeuS.tutorial.SecondaryPassword;
+import ZeuS.tutorial.levelup;
+import ZeuS.tutorial.profession;
+
+public class ZeuS {
+	private static final Logger _log = Logger.getLogger(ZeuS.class.getName());
+	private static ZeuS _instance;
+	private static Map<L2PcInstance, Integer> SkillEnchantTime = new HashMap<L2PcInstance, Integer>();
+	private static Map<Integer, Integer> DONATION_SEND_WAITING = new HashMap<Integer, Integer>();
+
+	public static int MP_ADD = 0;
+
+	private static Map<Integer, HashMap<Integer, Integer>> SHOW_PREMIUM_WINDOWS_SECOND = new HashMap<Integer, HashMap<Integer, Integer>>();
+
+	public static String getFromNameEmail(String idSubject) {
+		return EmailSend.getMessageById(idSubject);
+	}
+
+	public static void showInstanceZone(L2PcInstance player) {
+		instanceZone.getMain(player);
+	}
+
+	public static boolean canEnchantSkill(L2PcInstance player) {
+		if (general.ANTIFEED_ENCHANT_SKILL_REUSE == 0) {
+			return true;
+		}
+		if (SkillEnchantTime == null) {
+			SkillEnchantTime.put(player, opera.getUnixTimeNow());
+		} else {
+			if (SkillEnchantTime.size() > 0) {
+				if (!SkillEnchantTime.containsKey(player)) {
+					SkillEnchantTime.put(player, opera.getUnixTimeNow());
+					return true;
+				}
+				int secDif = opera.getUnixTimeNow() - SkillEnchantTime.get(player);
+				if (secDif >= general.ANTIFEED_ENCHANT_SKILL_REUSE) {
+					SkillEnchantTime.put(player, opera.getUnixTimeNow());
+				} else {
+					central.msgbox("You need to wait " + String.valueOf(general.ANTIFEED_ENCHANT_SKILL_REUSE - secDif)
+							+ " second's to enchanting again.", player);
+					return false;
+				}
+			} else {
+				SkillEnchantTime.put(player, opera.getUnixTimeNow());
+			}
+		}
+		return true;
+	}
+
+	public static boolean shiftDropShowCB(L2PcInstance player, L2Object target) {
+		if (!general.DROP_SEARCH_SHIFT_NPC_SHOW) {
+			return false;
+		}
+		if (!(target instanceof L2Npc)) {
+			return false;
+		}
+
+		L2Npc Monster = (L2Npc) target;
+
+		try {
+			v_dropsearch.showInfoNpxFromShift(player, Monster.getId());
+		} catch (Exception a) {
+			_log.warning("Drop Search Erro Shift->" + a.getMessage() + " Npc ID->" + Monster.getId());
+		}
+
+		return true;
+	}
+
+	public static boolean isHtml(L2PcInstance player, String Command) {
+		if (Command == null) {
+			return false;
+		}
+		if (Command.indexOf(" ") <= 0) {
+			return false;
+		}
+
+		String idShow = Command.split(" ")[1];
+
+		if (Command.startsWith("zeus_html")) {
+			idShow = idShow.replace("[LANG]", language.getInstance().getFolder(player));
+			NpcHtmlMessage html = comun.htmlMaker(player, idShow);
+			cbManager.separateAndSend(
+					html.getHtml().replace("%BYPASS_ENGINE%", general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC()), player);
+			return true;
+		}
+
+		return false;
+	}
+
+	public static boolean isMultisell(L2PcInstance player, String Command) {
+		if (Command == null) {
+			return false;
+		}
+		if (Command.indexOf(" ") <= 0) {
+			return false;
+		}
+		/*
+		 * bypass -h zeus_multisell 001 bypass -h zeus_exc_multisell 001 bypass -h
+		 * zeus_buy 001
+		 */
+		String idShow = Command.split(" ")[1];
+		try {
+			if (Command.startsWith("zeus_multisell")) {
+				v_Shop.showMultisell(player, Integer.valueOf(idShow));
+			} else if (Command.startsWith("zeus_exc_multisell")) {
+				v_Shop.showExcMultisell(player, Integer.valueOf(idShow));
+			} else if (Command.startsWith("zeus_buy")) {
+				v_Shop.showbuyList(player, Integer.valueOf(idShow));
+			}
+			return true;
+		} catch (Exception a) {
+			_log.warning("Error on ZeuS Show List->" + a.getMessage());
+		}
+		return false;
+	}
+
+	public static void sendWindowsFortress(Vector<Integer> ClanF, Fort FortressIns) {
+		fortress.sendWindowsFortress(ClanF, FortressIns);
+	}
+
+	public static void giveRewardFortress(L2PcInstance player) {
+		fortress.giveRewardFortress(player);
+	}
+
+	public static boolean isVoiceFromZeuS(L2PcInstance player, String Command) {
+		if (Command == null) {
+			return false;
+		}
+		if (Command.length() == 0) {
+			return false;
+		}
+		if (Command.indexOf(" ") <= 0) {
+			return false;
+		}
+		for (String c : handler.getCommand()) {
+			if (("." + c).equals(Command.split(" ")[1])) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static boolean can_add_pvp_amount_on_sieges_fortress(L2PcInstance player) {
+		if (player.isInSiege() || player.isInsideZone(ZoneIdType.FORT)) {
+			return general.PVP_COUNT_ALLOW_SIEGES_FORTRESS;
+		}
+		return true;
+	}
+
+	public static void showHtmlPvPZone(L2PcInstance player) {
+		pvpInstance.getHtmlWindow(player);
+	}
+
+	public static void showHtmlBetaNpc(L2PcInstance player) {
+		NpcHtmlMessage html = comun.htmlMaker(player,
+				"config/zeus/htm/" + language.getInstance().getFolder(player) + "/betanpc.html");
+		player.sendPacket(html);
+	}
+
+	public static boolean dlgAnswer(L2PcInstance player, int idMessage, int idAnswer) {
+		boolean Result = false;
+		try {
+			Result = Dlg.isFromZeuS(idMessage, idAnswer, player);
+		} catch (Exception a) {
+			_log.warning("Error---->" + a.getMessage());
+		}
+		return Result;
+	}
+
+	public static int getNpcIdExclusiveShop() {
+		return general.ZEUS_ID_NPC_EXCLUSIVE_SHOP;
+	}
+
+	public static int getNpcIdInstancePvP() {
+		return general.ZEUS_ID_NPC_INSTANCE_PVP;
+	}
+
+	public static int getNpcIdBeta() {
+		return general.ZEUS_ID_NPC_BETA;
+	}
+
+	public static boolean canVoteInstanceParty(L2PcInstance playerGiver, L2PcInstance playerReceptor) {
+		try {
+			if (VoteInstance.playerIsInside(playerGiver.getObjectId())
+					|| VoteInstance.playerIsInside(playerReceptor.getObjectId())) {
+				return VoteInstance.canParty();
+			}
+		} catch (Exception a) {
+
+		}
+
+		return true;
+	}
+
+	public static boolean canPvPInstanceParty(L2PcInstance playerGiver, L2PcInstance playerReceptor) {
+		try {
+			if (pvpInstance.isInsideZone(playerGiver) || pvpInstance.isInsideZone(playerReceptor)) {
+				boolean PG = pvpInstance.canParty(playerGiver);
+				boolean PR = pvpInstance.canParty(playerReceptor);
+				if (!PG || !PR) {
+					return false;
+				}
+			}
+		} catch (Exception a) {
+
+		}
+
+		return true;
+	}
+
+	public static boolean canSeeOthersDressme(L2PcInstance player) {
+		try {
+			if (pvpInstance._isEnabled()) {
+				if (pvpInstance.isInsideZone(player)) {
+					return pvpInstance.canSeeDressme(player);
+				}
+			}
+			return dressme.getInstance().getDressme(player.getObjectId()).canSeeOthersDressme();
+		} catch (Exception a) {
+			_log.warning("Dressme See Dressme from Other Players ->" + a.getMessage());
+			return false;
+		}
+	}
+
+	private static boolean canSendEmail(L2PcInstance player) {
+		if (DONATION_SEND_WAITING != null) {
+			if (DONATION_SEND_WAITING.size() > 0) {
+				if (DONATION_SEND_WAITING.containsKey(player.getObjectId())) {
+					int UnixTimeNow = opera.getUnixTimeNow();
+					int UnixTimeLastPeti = DONATION_SEND_WAITING.get(player.getObjectId());
+					int UnixTimeEnd = UnixTimeLastPeti + general.PAYPAL_SECONDS_WAITING_TIME;
+					if (UnixTimeEnd > UnixTimeNow) {
+						central.msgbox(
+								language.getInstance().getMsg(
+										player).DONATION_PAYPAL_YOU_NEED_TO_WAIT_X_SECOND_FOR_OTHER_EMAIL_PETITION
+												.replace("$seconds", String.valueOf(UnixTimeEnd - UnixTimeNow)),
+								player);
+						return false;
+					}
+				}
+			}
+		}
+
+		DONATION_SEND_WAITING.put(player.getObjectId(), opera.getUnixTimeNow());
+		return true;
+	}
+
+	@SuppressWarnings("unused")
+	public static boolean isCMDFromZeuS(L2PcInstance player, String Command) {
+
+		if (general.DEBUG_CONSOLA_ENTRADAS) {
+			_log.warning("isCMDFromZeuS->" + Command);
+		}
+		if (general.DEBUG_CONSOLA_ENTRADAS_TO_USER) {
+			player.sendMessage("isCMDFromZeuS->" + Command);
+		}
+
+		try {
+			if (Command.startsWith("zeus_multisell") || Command.startsWith("zeus_exc_multisell")
+					|| Command.startsWith("zeus_buy")) {
+				return isMultisell(player, Command);
+			}
+		} catch (Exception a) {
+
+		}
+
+		try {
+			if (Command != "") {
+				if (opera.isMaster(player)) {
+					if (Command.startsWith("admin_zeus_shop")) {
+						shop.ShopByPass(player, Command);
+						return true;
+					} else if (Command.startsWith("admin_zeus_tele")) {
+						String HTML = teleport.CentralHTML(player, true);
+						player.sendPacket(new NpcHtmlMessage(0, HTML));
+						return true;
+					}
+				}
+				String MenuSec = "Zeus";
+				if (Command.indexOf(";") > 0) {
+					if (zeusByPass(player, Command.substring(MenuSec.length() + 1, Command.length()))) {
+						return true;
+					}
+				} else {
+					if (zeusByPass(player, Command.substring(MenuSec.length() + 1, Command.length()))) {
+						return true;
+					}
+				}
+			}
+		} catch (Exception a) {
+
+		}
+
+		try {
+			boolean isZeuSCommand = false;
+			String Parametros = "";
+			if (Command.startsWith("ZeuS")) {
+				if (Command.indexOf(" ") < 0) {
+					return false;
+				}
+
+				int cont = 0;
+				String Secc = Command.split(" ")[1];
+				for (String part : Command.split(" ")) {
+					if (cont > 1) {
+						if (Parametros.length() > 0) {
+							Parametros += " ";
+						}
+						Parametros += part;
+					}
+					cont++;
+				}
+
+				switch (Secc) {
+				case "pvpInstance":
+					pvpZone.enterProcess(player, Parametros);
+					return true;
+				case "PayPalEmail":
+					if (opera.getUserMail(player.getAccountName()) == null) {
+						central.msgbox_Lado(
+								language.getInstance().getMsg(player).YOU_NEED_TO_LINK_YOUR_ACCOUNT_TO_EMAIL, player);
+						return true;
+					}
+					if (canSendEmail(player)) {
+						jMail.sendDonationPaypal(player);
+					}
+					return true;
+				case "ColorTitle":
+					String ColorSet_title = "";
+					String ColorPrice_title = "";
+					try {
+						ColorSet_title = Parametros.split(" ")[0];
+						try {
+							ColorPrice_title = Parametros.split(" ")[1];
+							try {
+								colorNameTitle.setColorTitle(player, ColorSet_title, ColorPrice_title);
+							} catch (Exception a) {
+								_log.warning("ZeuS: You had an error when the Engine Apply the Color on "
+										+ player.getName() + ": " + a.getMessage());
+							}
+						} catch (Exception b) {
+							_log.warning(
+									"ZeuS: You had an error getting the price for the color name: " + ColorSet_title);
+						}
+					} catch (Exception a) {
+						_log.warning("ZeuS: You had an error getting the Color Name.");
+					}
+
+					return true;
+				case "ColorName":
+					String ColorSet_name = "";
+					String ColorPrice_name = "";
+					try {
+						ColorSet_name = Parametros.split(" ")[0];
+						try {
+							ColorPrice_name = Parametros.split(" ")[1];
+							try {
+								colorNameTitle.setColorName(player, ColorSet_name, ColorPrice_name);
+							} catch (Exception a) {
+								_log.warning("ZeuS: You had an error when the Engine Apply the Color on "
+										+ player.getName() + ": " + a.getMessage());
+							}
+						} catch (Exception b) {
+							_log.warning(
+									"ZeuS: You had an error getting the price for the color name: " + ColorSet_name);
+						}
+					} catch (Exception a) {
+						_log.warning("ZeuS: You had an error getting the Color Name.");
+					}
+
+					return true;
+				case "nobleBeta":
+					if (player != null && Config.L2JMOD_BETA) {
+						if (!player.isNoble()) {
+							opera.setNoble(player);
+							central.msgbox(language.getInstance().getMsg(player).YOU_ARE_NOBLE_NOW, player);
+							player.sendMessage("Congratulation you are now a Nobless");
+
+						}
+					}
+					return true;
+				case "lv85Beta":
+					if (player != null  && Config.L2JMOD_BETA) {
+						opera.setLevel(player, 86);
+						player.sendMessage("Congratulation you reached lv 85");
+					}
+					return true;
+				case "heroBeta":
+					if (player != null  && Config.L2JMOD_BETA) {
+						player.setHero(!player.isHero());
+						player.broadcastUserInfo();
+						player.sendMessage("Congratulation you are now temeporary a hero");
+					}
+					return true;
+				case "closeTutorial":
+					cbFormato.cerrarTutorial(player);
+					return true;
+				case "closeAndShowCB":
+					CBByPass.byPass(player, general.getCOMMUNITY_BOARD_PART_EXEC());
+					cbFormato.cerrarTutorial(player);
+					return true;
+				case "makeBorrowPass":
+					borrowAccountSystem.getInstance().sendBorrowWindows_create(player);
+					return true;
+				case "CreateBorrowPass":
+					try {
+						String Pass_1 = Parametros.split(" ")[0];
+						String Pass_2 = Parametros.split(" ")[1];
+						borrowAccountSystem.getInstance().setBorrowPassword(player, Pass_1, Pass_2);
+					} catch (Exception a) {
+						borrowAccountSystem.getInstance().sendBorrowWindows_create(player);
+					}
+					return true;
+				case "see_others_dressme":
+					int C_VISIBLE = Integer.valueOf(Parametros.split(" ")[0]);
+					dressme.getInstance().getDressme(player.getObjectId())
+							.changeDressmeShow((C_VISIBLE == 0 ? false : true));
+					player.broadcastUserInfo(true);
+					player.broadcastUserInfo();
+					player.decayMe();
+					player.spawnMe();
+					CBByPass.byPass(player, general.getCOMMUNITY_BOARD_PART_EXEC());
+					return true;
+				case "dealy_login_quest":
+					if (player == null) {
+						return false;
+					}
+					_dealy_reward_system.playerRegister(player);
+					cbByPass(player, general.getCOMMUNITY_BOARD_PART_EXEC());
+					return true;
+				case "tele":
+					String Action = Parametros.split(" ")[0];
+					if (Action.equalsIgnoreCase("go")) {
+						String[] TeleLocation = Parametros.split(" ")[1].split(",");
+						Location TeleLoc = new Location(Integer.valueOf(TeleLocation[0]),
+								Integer.valueOf(TeleLocation[1]), Integer.valueOf(TeleLocation[2]));
+						v_Teleport.beginTeleport(player, TeleLoc);
+					} else if (Action.equalsIgnoreCase("html")) {
+						String URL = Parametros.split(" ")[1];
+						v_Teleport.showHtml(player, URL);
+					}
+					return true;
+				case "bugreport":
+					String Name = Parametros.split(" ")[0];
+					String Mensj = Parametros.replace(Name, "").trim();
+					EmailSend.sendBugReportAnswerToPlayer(player, Name, Mensj);
+					return true;
+				case "openCB":
+					Engine.openCBLink(player, Parametros.split(" ")[0]);
+					return true;
+				case "annouceShow":
+					int idBuscar = Integer.valueOf(Parametros.split(" ")[0]);
+					String QuestionToSend = "Are you sure to send this Annoucement link to all World?";
+					Dlg.sendDlg_linkAnnoucement(player, QuestionToSend, idBuscar);
+					return true;
+				case "specialOpt":
+					if (Parametros.length() > 0) {
+						if (Parametros.split(";").length > 1) {
+							if (Parametros.split(";")[1].equals(Engine.enumBypass.SelectElemental.name())) {
+								String Retorno = v_ElementalSpecial.bypass(player, Parametros);
+								cbManager.separateAndSend(Retorno, player);
+							} else if (Parametros.split(";")[1].equals(Engine.enumBypass.SelectEnchant.name())) {
+								String Retorno = v_EnchantSpecial.bypass(player, Parametros);
+								cbManager.separateAndSend(Retorno, player);
+							}
+						} else {
+							if (Parametros.split(" ").length >= 2) {
+								if (Parametros.split(" ")[0]
+										.equals(v_MiscelaniusOption.loadByPass.ChangeCharName.name())) {
+
+								}
+							}
+						}
+					}
+					return true;
+				case "wishlist":
+					wishList.showMenuWindows(player, Parametros);
+					return true;
+				case "buffstoreBuffSearch":
+					if (Parametros.split(" ")[0].equals("setIdBuff")) {
+						int idBuffForSearch = Integer.valueOf(Parametros.split(" ")[1]);
+						sellBuff.setBuffForSearchPaginePlayer(player, 0, false);
+						sellBuff.setBuffForSearch(player, idBuffForSearch);
+					} else if (Parametros.split(" ")[0].equals("changepag")) {
+						int idChangePage = Integer.valueOf(Parametros.split(" ")[1]);
+						sellBuff.setBuffForSearchPagine(player, idChangePage, true);
+					} else if (Parametros.split(" ")[0].equals("changepagPlayer")) {
+						int idChangePagPlayer = Integer.valueOf(Parametros.split(" ")[1]);
+						sellBuff.setBuffForSearchPaginePlayer(player, idChangePagPlayer, true);
+					} else if (Parametros.split(" ")[0].equals("gotoplayerAsk")) {
+						int idPlayer = -1;
+						try {
+							idPlayer = Integer.valueOf(Parametros.split(" ")[1]);
+						} catch (Exception a) {
+
+						}
+						if (idPlayer > 0) {
+							L2PcInstance pplt = opera.getPlayerbyID(idPlayer);
+							sellBuff.setBuffstoreToTeleport(player, pplt);
+							Dlg.sendDlg(player, "You want to teleport to " + pplt.getName() + "?",
+									IdDialog.ENFINE_BUFFSTORESEARCH_TELEPORT_PLAYER);
+						}
+						// %IDPLAYER
+					} else if (Parametros.split(" ")[0].equals("order")) {
+						sellBuff.setChangeOrder(player, Parametros.split(" ")[1].trim());
+					} else if (Parametros.split(" ")[0].equals("setitemSearch")) {
+						sellBuff.setItemFilter(player, Parametros.split(" ")[1].trim());
+					}
+					return true;
+				case "buffstoreSet":
+					if (Parametros.length() > 0) {
+						sellBuff.showMainWindows(player, false, Parametros);
+					}
+					return true;
+				case "raidbossSearch":
+					if (Parametros.length() == 0) {
+						v_RaidBossInfo.bypassVoice(player, "");
+					} else {
+						v_RaidBossInfo.bypassVoice(player, Parametros);
+					}
+					return true;
+				case "pvpLog":
+					if (Parametros != null) {
+						if (Parametros.length() > 0) {
+							v_pvppkLog.bypassVoice(player, Parametros);
+						}
+					}
+					return true;
+				case "zeusgmpanel":
+					if (!player.isGM()) {
+						return true;
+					}
+					C_gmcommand.voiceHandler(player, Parametros);
+					return true;
+				case "v_buffer":
+					v_Buffer_New.voiceByPass(player, Parametros);
+					return true;
+				case "changepass":
+					changePassword.bypass(player, Parametros);
+					return true;
+				case "donation":
+					v_donation.bypass_voice(player, Parametros);
+					return true;
+				case "donation_notif":
+					String Quantity = Parametros.split(" ")[0];
+					String Type = Parametros.split(" ")[1];
+					String Memo = "";
+					int Cont = 1;
+					for (String te : Parametros.split(" ")) {
+						if (Cont > 2) {
+							if (Memo.length() > 0) {
+								Memo += " ";
+							}
+							Memo += te;
+						}
+						Cont++;
+					}
+					v_donation.setDonationInformation(player, Quantity, Type, Memo);
+					return true;
+				case "olyscheme":
+					String EnviarVacio = general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+							+ Engine.enumBypass.OlyBuffer.name() + ";0;0;0;0;0;0";
+					String EnviarConTexto = general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+							+ Engine.enumBypass.OlyBuffer.name() + ";CREATE_SCHEME;%TEXTO%;0;0;0;0";
+					String EnviarHTML = "";
+					if (Parametros == "") {
+						EnviarHTML = EnviarVacio;
+					} else {
+						EnviarHTML = EnviarConTexto.replace("%TEXTO%", Parametros);
+					}
+					cbManager.separateAndSend(C_oly_buff.bypass(player, EnviarHTML), player);
+					
+					System.out.print("Zeus.java");
+					System.out.print(EnviarHTML);
+					
+					return true;
+				case "selectAugment":
+					// ZeuS selectAugment " + idAugment_Interno + " $MainSymbol";
+					String Symbol = Command.split(" ")[3];
+					int idMainSymbol = v_AugmentSpecial.getRandomSkill();
+					int idAugment = Integer.valueOf(Command.split(" ")[2]);
+					boolean symbolRequested = false;
+					if (Symbol.equalsIgnoreCase("STR")) {
+						idMainSymbol = 24699;
+						symbolRequested = true;
+					} else if (Symbol.equalsIgnoreCase("CON")) {
+						idMainSymbol = 24700;
+						symbolRequested = true;
+					} else if (Symbol.equalsIgnoreCase("INT")) {
+						idMainSymbol = 24701;
+						symbolRequested = true;
+					} else if (Symbol.equalsIgnoreCase("MEN")) {
+						idMainSymbol = 24702;
+						symbolRequested = true;
+					}
+					v_AugmentSpecial.MakeAugment(player, idMainSymbol, idAugment, symbolRequested);
+					return true;
+				case "beta":
+					String SecondComand = Command.split(" ")[2];
+					if (SecondComand.equals("lvl85")) {
+						opera.set85(player);
+					} else if (SecondComand.equals("class")) {
+						int classidval = Integer.valueOf(Command.split(" ")[3]);
+						try {
+							boolean valid = false;
+							for (ClassId classid : ClassId.values()) {
+								if (classidval == classid.getId()) {
+									valid = true;
+								}
+							}
+							if (valid && (player.getClassId().getId() != classidval)) {
+								TransformData.getInstance().transformPlayer(255, player);
+								player.setClassId(classidval);
+								if (!player.isSubClassActive()) {
+									player.setBaseClass(classidval);
+								}
+								String newclass = ClassListData.getInstance().getClass(player.getClassId())
+										.getClassName();
+								player.store();
+								player.sendMessage("The Beta Shop Change your class to " + newclass + ".");
+								player.untransform();
+
+								for (L2Skill skill : player.getAllSkills()) {
+									player.removeSkill(skill);
+								}
+								player.sendSkillList();
+								player.giveAvailableSkills(true, true);
+								player.sendSkillList();
+								player.broadcastUserInfo();
+							}
+						} catch (StringIndexOutOfBoundsException e) {
+
+						} catch (NumberFormatException e) {
+
+						}
+
+					} else if (SecondComand.equals("html")) {
+						String htmlGo = Command.split(" ")[3];
+						final NpcHtmlMessage html = comun.htmlMaker(player,
+								"config/zeus/html/betanpc-" + htmlGo + ".html");
+						central.sendHtml(player, html.getHtml());
+					}
+					return true;
+				case "oly_monu":
+					String Cm = Command.split(" ")[2];
+					int IdNpc = Integer.valueOf(Command.split(" ")[3]);
+					if (Cm.equals("create")) {
+						oly_monument.createAndUpdate(player, IdNpc);
+					} else if (Cm.equals("reset")) {
+						oly_monument.resetMonument(player, IdNpc);
+					} else if (Cm.equals("gotoinstan")) {
+						L2Object obj = player.getTarget();
+						if (obj == null) {
+							return true;
+						} else if (!(obj instanceof L2Npc)) {
+							return true;
+						}
+						L2Npc NpcOly = (L2Npc) player.getTarget();
+						if (!oly_monument.isFromTopMonument(NpcOly.getId())) {
+							return true;
+						} else if (!player.isInsideRadius(NpcOly.getLocation(), general.RADIO_PLAYER_NPC_MAXIMO, true,
+								true)) {
+							return true;
+						}
+						// oly_monument.goToOlympiadZone(player);
+						Dlg.sendDlg(player, language.getInstance().getMsg(player).OLY_INSTANCE_ENTER,
+								IdDialog.INSTANCE_OLYMPIAD_ZONE, 6);
+					}
+					return true;
+				case "ah_lin":
+					String ParamsSend = "";
+					boolean saveS = false;
+					for (String Part : Command.split(" ")) {
+						if (saveS) {
+							if (ParamsSend != "") {
+								ParamsSend += " ";
+							}
+							ParamsSend += Part;
+						} else {
+							if (Part.equalsIgnoreCase("ah_lin")) {
+								saveS = true;
+							}
+						}
+					}
+					v_auction_house._ByPass(player, ParamsSend);
+					return true;
+				case "ah_sort":
+					v_auction_house.setSortedData(player, Command.split(" ")[2], true);
+					String ByPassPublic = v_auction_house.getBypassCreate(player); // general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC()
+																					// + ";" +
+																					// Engine.enumBypass.AuctionHouse +
+																					// ";1;0;0;0;0;0";
+					String Retorno1 = v_auction_house.bypass(player, ByPassPublic);
+					cbManager.separateAndSend(Retorno1, player);
+					return true;
+				case "ah_sort_personal":
+					v_auction_house.setSortedData(player, Command.split(" ")[2], false);
+					String ByPassPrivate = general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+							+ Engine.enumBypass.AuctionHouse + ";0;0;0;0;0;0";
+					String Retorno2 = v_auction_house.bypass(player, ByPassPrivate);
+					cbManager.separateAndSend(Retorno2, player);
+					return true;
+
+				case "bh_lin":
+					String bidParamsSend = "";
+					boolean bidsaveS = false;
+					for (String PartB : Command.split(" ")) {
+						if (bidsaveS) {
+							if (bidParamsSend != "") {
+								bidParamsSend += " ";
+							}
+							bidParamsSend += PartB;
+						} else {
+							if (PartB.equalsIgnoreCase("bh_lin")) {
+								bidsaveS = true;
+							}
+						}
+					}
+					v_bid_house._ByPass(player, bidParamsSend);
+					return true;
+				case "bh_sort":
+					v_bid_house.setSortedData(player, Command.split(" ")[2]);
+					String bidByPassPublic = v_bid_house.getBypassCreate(player); // general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC()
+																					// + ";" +
+																					// Engine.enumBypass.AuctionHouse +
+																					// ";1;0;0;0;0;0";
+					String bidRetorno1 = v_bid_house.bypass(player, bidByPassPublic);
+					cbManager.separateAndSend(bidRetorno1, player);
+					return true;
+				case "bh_sort_personal":
+					v_bid_house.setSortedDataMyItems(player, Command.split(" ")[2]);
+					String BidByPassPrivate = general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+							+ Engine.enumBypass.BidHouse + ";0;0;0;0;0;0";
+					String BidRetorno2 = v_bid_house.bypass(player, BidByPassPrivate);
+					cbManager.separateAndSend(BidRetorno2, player);
+					return true;
+				case "bh_sort_all_bids_info":
+					v_bid_house.setSortedDataAllBidsData(player, Command.split(" ")[3], Command.split(" ")[2]);
+					String ByPassAllBids = general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+							+ Engine.enumBypass.BidHouse + ";2;0;0;0;0;0";
+					String DataToSend = v_bid_house.bypass(player, ByPassAllBids);
+					cbManager.separateAndSend(DataToSend, player);
+					return true;
+				case "bh_personal_bids_page":
+					String Section = Command.split(" ")[2];
+					int pageSelected = Integer.valueOf(Command.split(" ")[3]);
+					v_bid_house.setPageBiddingInfo(player, pageSelected, Section);
+					String personal_bids_page = general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+							+ Engine.enumBypass.BidHouse + ";2;0;0;0;0;0";
+					String personal_bids_page_return = v_bid_house.bypass(player, personal_bids_page);
+					cbManager.separateAndSend(personal_bids_page_return, player);
+					return true;
+				case "bh_see_bid_data":
+					String DataToSee = Command.split(" ")[2];
+					int IdObject = Integer.valueOf(Command.split(" ")[3]);
+					int IdVendedor = Integer.valueOf(Command.split(" ")[4]);
+					if (DataToSee.equals("Act_Bid") || DataToSee.equals("Pla_Bid")) {
+						v_bid_house.showActiveBiddingWindows(player, IdObject, IdVendedor);
+					}
+					return true;
+				case "bh_cancel_by_bid":
+					int idObject = Integer.valueOf(Command.split(" ")[2]);
+					v_bid_house.setCancelMyBid(player, true, idObject);
+					return true;
+				case "dropsearch":
+					v_dropsearch.setPlayerSortMonsterByItemDrop(player, Command.split(" ")[2],
+							Integer.valueOf(Command.split(" ")[3]));
+					return true;
+				case "dropsearch2":
+					v_dropsearch.setPlayerSortMonster(player, Command.split(" ")[2], Command.split(" ")[3]);
+					return true;
+				case "dropsearch_search":
+					if (Parametros != null) {
+						if (Parametros.length() > 0) {
+							if (Parametros.split(" ").length >= 1) {
+								if (Parametros.split(" ")[0].equals("Item")) {
+									String SendParams = Parametros.replace("Item ", "");
+									String ByPass = general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+											+ enumBypass.DropSearch.name() + ";buscarDrop;" + SendParams + ";0;0;0;0";
+									String retornoStr = v_dropsearch.bypass(player, ByPass);
+									v_dropsearch.setFromItem(player, SendParams);
+									cbManager.separateAndSend(retornoStr, player);
+								} else if (Parametros.split(" ")[0].equals("Npc")) {
+									String SendParams = Parametros.replace("Npc ", "");
+									v_dropsearch.setFromMob(player, SendParams);
+									v_dropsearch.showByAction(player, "SearchMonster", SendParams);
+								}
+							}
+						}
+					}
+					return true;
+				case "bail_me":
+					jailBail.checkit(player);
+					return true;
+				case "votezone":
+					VoteInstance.enterToZone(player);
+					return true;
+				case "changelanguage":
+					language.getInstance().setNewLanguage(player, Command.split(" ")[2]);
+					return true;
+				case "removescheme":
+					String PersonalSchemeName = Command.split(" ")[2];
+					Dlg.sendDlg(player,
+							language.getInstance().getMsg(player).BUFFERCHAR_ARE_YOU_SURE_ABOUT_REMOVE_SCHEME
+									.replace("$scheme", PersonalSchemeName),
+							IdDialog.ENGINE_REMOVE_SCHEME);
+					return true;
+				case "changenames":
+					if (Command.split(" ")[2].equals("CHANGE_CHAR_NAME")) {
+						v_donation.SetTemporalData(player, Command.split(" ")[3]);
+						Dlg.sendDlg(player,
+								language.getInstance().getMsg(player).DONATION_YOU_WANT_CHANGE_YOUR_NAME
+										.replace("$from", player.getName()).replace("$to", Command.split(" ")[3]),
+								IdDialog.MAKE_DONATION_CHANGE_CHAR_NAME);
+					} else {
+						v_donation.SetTemporalData(player, Command.split(" ")[3]);
+						if (player.getClan() != null) {
+							if (player.getClan().getLeaderId() == player.getObjectId()) {
+								Dlg.sendDlg(player,
+										language.getInstance().getMsg(player).DONATION_YOU_WANT_CHANGE_YOUR_CLAN_NAME
+												.replace("$to", Command.split(" ")[3]),
+										IdDialog.MAKE_DONATION_CHANGE_CLAN_NAME);
+							} else {
+								central.msgbox(
+										language.getInstance().getMsg(player).ONLY_CLAN_LEADER_CAN_MAKE_THIS_OPERATION,
+										player);
+							}
+						} else {
+							central.msgbox(
+									language.getInstance().getMsg(player).ONLY_CLAN_LEADER_CAN_MAKE_THIS_OPERATION,
+									player);
+						}
+					}
+					return true;
+				case "pvpinstanceask":
+					String _Ask = language.getInstance().getMsg(player).PVP_INSTANCE_ZONE_YOU_WANT_TO_ENTER
+							.replace("$type", Command.split(" ")[2].replaceAll("_", " "));
+					Dlg.sendDlg(player, _Ask, IdDialog.PVP_INSTANCE_ASK_FOR_ENTER, 10);
+					pvpInstance.setPlayerToEnter(player, Command.split(" ")[2]);
+					return true;
+				case "pvpinstance":
+					for (_ZONES_TYPE _type : _ZONES_TYPE.values()) {
+						if (_type.name().equals(Command.split(" ")[2])) {
+							pvpInstance.enterZone(player, _type);
+						}
+					}
+					return true;
+				case "surveys":
+					if (Command.split(" ")[2].equals("Windows")) {
+
+					} else if (Command.split(" ")[2].equals("removeAnswer")) {
+						int idAnswer = Integer.valueOf(Command.split(" ")[3]);
+						C_gmcommand.removeSurveyAnswer(player, idAnswer);
+						CBByPass.byPass(player, general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+								+ Engine.enumBypass.admCommand.name() + ";0;SURVEY;0;0;0;0;0");
+					} else if (Command.split(" ")[2].equals("sendSurvey")) {
+						C_gmcommand.showSurveyAnnoucement(player);
+						CBByPass.byPass(player, general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+								+ Engine.enumBypass.admCommand.name() + ";0;SURVEY;0;0;0;0;0");
+					} else if (Command.split(" ")[2].equals("AnswerQuestion")) {
+						// AnswerQuestion " + idGmSurvey + " " + String.valueOf(idSurvey);
+						String idGm = Command.split(" ")[3];
+						String idAnswer = Command.split(" ")[4];
+						C_gmcommand.setSurveyAnswerPlayer(player, idAnswer, Integer.valueOf(idGm));
+					} else if (Command.split(" ")[2].equals("CancelSurvey")) {
+						C_gmcommand.changeSurveyStatus(player);
+						CBByPass.byPass(player, general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+								+ Engine.enumBypass.admCommand.name() + ";0;SURVEY;0;0;0;0;0");
+					} else if (Command.split(" ")[2].equals("ActiveSurvey")) {
+						C_gmcommand.changeSurveyStatus(player);
+						CBByPass.byPass(player, general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+								+ Engine.enumBypass.admCommand.name() + ";0;SURVEY;0;0;0;0;0");
+					} else if (Command.split(" ")[2].equals("ConcludeSurvey")) {
+						C_gmcommand.ConcludeSurvey(player);
+						CBByPass.byPass(player, general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";"
+								+ Engine.enumBypass.admCommand.name() + ";0;SURVEY;0;0;0;0;0");
+					}
+					return true;
+				case "clan":
+					if (Command.split(" ")[2].equals("Create")) {
+						String NombreTemp = Command.split(" ")[3];
+						Clan.createClan(player, NombreTemp);
+					}
+					return true;
+				case "instancezone":
+					instanceZone.bypass(player, Command);
+					return true;// False
+				case "close_fortress":
+					fortress.closeWindows(player, Integer.valueOf(Command.split(" ")[2]));
+					central.sendHtml(player, "");
+					return true;
+				case "moveto":
+					String CoorL = Command.split(" ")[2];
+					int X = Integer.valueOf(CoorL.split(";")[0]);
+					int Y = Integer.valueOf(CoorL.split(";")[1]);
+					int Z = Integer.valueOf(CoorL.split(";")[2]);
+					player.teleToLocation(X, Y, Z, true);
+					fortress.sendHtmReady(player);
+					return true;
+				// bypass -h ZeuS sellAccount addItem %IDITEM% %AMOUNT%
+				case "sellAccount":
+					if (Command.split(" ")[2].equals("addItem")) {
+						String ItemName = Command.split(" ")[3];
+						int iD = sellAccount.getRequestItemID(ItemName);
+						long aMount = Long.valueOf(Command.split(" ")[4]);
+						sellAccount.setItem(player, iD, aMount);
+						sellAccount.showSellConfig(player);
+					} else if (Command.split(" ")[2].equals("addReceiver")) {
+						String NameRe = Command.split(" ")[3];
+						sellAccount.setReceiver(player, NameRe);
+						sellAccount.showSellConfig(player);
+					} else if (Command.split(" ")[2].equals("remove")) {
+						int idItem = Integer.valueOf(Command.split(" ")[3]);
+						sellAccount.setRemoveItem(player, idItem);
+						sellAccount.showSellConfig(player);
+					} else if (Command.split(" ")[2].equals("sendWindowsTarget")) {
+						sellAccount.sendWindowsToTarget(player);
+						sellAccount.showSellConfig(player);
+					} else if (Command.split(" ")[2].equals("checkAndBuy")) {
+						sellAccount.checkAndBuyit(player);
+					}
+					return true;
+				case "sellClan":
+					if (Command.split(" ")[2].equals("addItem")) {
+						String ItemName = Command.split(" ")[3];
+						int iD = sellClan.getRequestItemID(ItemName);
+						long aMount = Long.valueOf(Command.split(" ")[4]);
+						sellClan.setItem(player, iD, aMount);
+						sellClan.showSellConfig(player);
+					} else if (Command.split(" ")[2].equals("remove")) {
+						int idItem = Integer.valueOf(Command.split(" ")[3]);
+						sellClan.setRemoveItem(player, idItem);
+						sellClan.showSellConfig(player);
+					} else if (Command.split(" ")[2].equals("sendWindowsTarget")) {
+						sellClan.sendWindowsToTarget(player);
+						sellClan.showSellConfig(player);
+					} else if (Command.split(" ")[2].equals("checkAndBuy")) {
+						sellClan.checkAndBuyit(player);
+					}
+					return true;
+				case "accountreco":
+					// checkCode $txtCode
+					if (Command.split(" ")[2].equals("sendCode")) {
+						accountRecovery.sendCodeToRecovery(player);
+					} else if (Command.split(" ")[2].equals("checkCode")) {
+						String Codigo = Command.split(" ")[3];
+						accountRecovery.checkCodeToProccess(player, Codigo);
+					}
+					return true;
+				case "adminPanel":
+					if (player.isGM()) {
+						if (player.getAccessLevel().getLevel() == 8) {
+							String SecondBy = Command.split(" ")[2];
+							String Value2 = "";
+							try {
+								Value2 = Command.split(" ")[3];
+							} catch (Exception a) {
+								Value2 = "";
+							}
+							C_gmcommand.otherPanel(player, SecondBy, Value2);
+						}
+					}
+					return true;
+				case "buffstore":
+					// TODO BuffStore
+					if (Command.split(" ")[2].equals("S_Single")) {
+						sellBuff.showBuffWindows(player);
+					} else if (Command.split(" ")[2].equals("S_Scheme_Show")) {
+						sellBuff.showNewMacroWindows(player);
+					} else if (Command.split(" ")[2].equals("S_Scheme_Create")) {
+						if (Command.split(" ").length < 4 || Command.split(" ").length > 5) {
+							central.msgbox("You need to enter a Valid Name. Without Spaces", player);
+						} else {
+							sellBuff.createScheme(player, Command.split(" ")[3]);
+						}
+						sellBuff.ShowMainWIndows(player);
+					} else if (Command.split(" ")[2].equals("addBuff")) {
+						sellBuff.setSchemeTemporal(player, Command.split(" ")[3]);
+						sellBuff.showBuffWindows(player);
+					} else if (Command.split(" ")[2].equals("removeSch")) {
+						sellBuff.removeScheme(player, Command.split(" ")[3]);
+						sellBuff.ShowMainWIndows(player);
+					} else if (Command.split(" ")[2].equals("buffMe")) {
+						sellBuff.UseScheme(player, true, Command.split(" ")[3]);
+						sellBuff.ShowMainWIndows(player);
+					} else if (Command.split(" ")[2].equals("buffPet")) {
+						sellBuff.UseScheme(player, false, Command.split(" ")[3]);
+						sellBuff.ShowMainWIndows(player);
+					} else if (Command.split(" ")[2].equals("GiveBuff")) {
+						// %IDBUFF% %IDLEVEL% %PAGE%
+						String CommandSend = "GiveBuff " + Command.split(" ")[3] + " " + Command.split(" ")[4] + " "
+								+ Command.split(" ")[5];
+						sellBuff.showMainWindows(player, false, CommandSend);
+					} else if (Command.split(" ")[2].equals("setBuff")) {
+						sellBuff.setBuffToScheme(player, Integer.valueOf(Command.split(" ")[3]),
+								Integer.valueOf(Command.split(" ")[4]));
+					} else if (Command.split(" ")[2].equals("S_Scheme_Cancel")) {
+						sellBuff.ShowMainWIndows(player);
+					} else if (Command.split(" ")[2].equals("buffEdit")) {
+						sellBuff.showSellBufferMacroEditBuff(player, Command.split(" ")[3]);
+						// sellBuff.ShowMainWIndows(player);
+					} else if (Command.split(" ")[2].equals("removebuff")) {
+						String SchemeName = Command.split(" ")[3];
+						String idBuff = Command.split(" ")[4];
+						sellBuff.removeBuffFromScheme(player, SchemeName, Integer.valueOf(idBuff));
+					}
+					return true;
+				case "movechar":
+					if (Command.split(" ")[2].equals("checkaccount")) {
+						String TempAccount = Command.split(" ")[3];
+						changeCharAccount.checkAccount(player, TempAccount);
+					} else if (Command.split(" ")[2].equals("checkcode")) {
+						String tempCode = Command.split(" ")[3];
+						changeCharAccount.checkCodeToChange(player, tempCode);
+					}
+					return true;
+				}
+			}
+		} catch (Exception a) {
+
+		}
+		return false;
+	}
+
+	public static void setMerchant(L2PcInstance cha, boolean isSell) {
+		general.isSellMerchant.put(cha.getObjectId(), isSell);
+	}
+
+	public static boolean RBEventCanRevive(L2PcInstance cha) {
+		return RaidBossEvent.onDieRevive(cha);
+	}
+
+	public static void raidBossEventStart() {
+		RaidBossEvent.autoEvent();
+	}
+
+	public static void atacaAlRaid(L2Object npc, L2Object player) {
+		if (!(npc instanceof L2Npc)) {
+			return;
+		}
+		if (!(player instanceof L2PcInstance)) {
+			return;
+		}
+		RaidBossEvent.atacaAlRaid((L2PcInstance) player, (L2Npc) npc);
+	}
+
+	public static void _RaidBossEvent(L2Npc raid, L2PcInstance player) {
+		RaidBossEvent.isEventModRaid(raid, player);
+	}
+
+	public static boolean showGmList(L2PcInstance player) {
+
+		if (!opera.canUseCBFunction(player)) {
+			return true;
+		}
+
+		String Retorno = C_gmlist.bypass(player, "0;0;0;0");
+		if (Retorno.length() == 0) {
+			return true;
+		} else {
+			cbManager.separateAndSend(Retorno, player);
+		}
+		return false;
+	}
+
+	public static boolean cbByPass(L2PcInstance player, String command) {
+		return CBByPass.byPass(player, command);
+	}
+
+	public static boolean cbByPassWrite(L2PcInstance client, String url, String arg1, String arg2, String arg3,
+			String arg4, String arg5) {
+		return CBByPass.byPassWrite(client, url, arg1, arg2, arg3, arg4, arg5);
+	}
+
+	public static boolean _isTradeRefusal(L2PcInstance cha) {
+		if (!general.CHAR_PANEL) {
+			return false;
+		}
+		return general.getCharConfigTRADE(cha);
+	}
+
+	public static boolean _isBadBuffProtected(L2PcInstance cha) {
+		if (!general.CHAR_PANEL) {
+			return false;
+		}
+		return general.getCharConfigBADBUFF(cha);
+	}
+
+	public final static boolean isInSameAlly(L2PcInstance player, L2PcInstance target) {
+		return (((player.getAllyId() != 0) && (target != null) && (target.getAllyId() != 0))
+				&& (player.getAllyId() == target.getAllyId()));
+	}
+
+	public static boolean isInSameParty(L2PcInstance player, L2PcInstance target) {
+		return (((player.getParty() != null) && (target != null) && (target.getParty() != null))
+				&& (player.getParty() == target.getParty()));
+	}
+
+	public static boolean isInSameChannel(L2PcInstance player, L2PcInstance target) {
+		return (((player.getParty() != null) && (target != null) && (target.getParty() != null))
+				&& (player.getParty().getCommandChannel() != null) && (target.getParty().getCommandChannel() != null)
+				&& (player.getParty().getCommandChannel() == target.getParty().getCommandChannel()));
+	}
+
+	public static boolean isInSameClanWar(L2PcInstance player, L2PcInstance target) {
+		return (((player.getClan() != null) && (target != null) && (target.getClan() != null))
+				&& (player.getClan().isAtWarWith(target.getClan()) || target.getClan().isAtWarWith(player.getClan())));
+	}
+
+	public static boolean isInSameClan(L2PcInstance player, L2PcInstance target) {
+		return (((player.getClan() != null) && (target != null) && (target.getClan() != null))
+				&& (player.getClanId() == target.getClanId()));
+	}
+
+	public static boolean _canGetBuffFromHim(L2PcInstance player, L2PcInstance target) {
+		if (!isInSameParty(player, target) && !isInSameAlly(player, target) && !isInSameClan(player, target)
+				&& !isInSameChannel(player, target)) {
+			return false;
+		}
+		return true;
+	}
+
+	public static boolean _isHideStoreProtected(L2PcInstance cha) {
+		if (!general.CHAR_PANEL) {
+			return false;
+		}
+		return general.getCharConfigHIDESTORE(cha);
+	}
+
+	public static boolean isAFK(L2PcInstance player) {
+		return Afk.isAFK(player);
+	}
+
+	public static int getVoteInstanceID() {
+		return VoteInstance.getInstanceID();
+	}
+
+	public static int getVoteInstanceDropChance() {
+		return VoteInstance.getDropChance();
+	}
+
+	public static float getVoteInstanceDropRate() {
+		return VoteInstance.getDropRate();
+	}
+
+	public static void VoteInstanceRemovePlayer(L2PcInstance player) {
+		VoteInstance.removePlayerFromZone(player);
+	}
+
+	// TODO: aqui para hacer cosas con annoucement
+
+	public static String getAnnouncement(String Announcement, L2PcInstance playerSender) {
+		String LinkSend = "	Type=1 	ID=%IDLINK% 	Color=0 	Underline=0 	Title= ";
+		if (Announcement.indexOf("[VOTE]") >= 0) {
+			int idVoteShow = itemLink.getIdForVoteWindows();
+			Announcement = Announcement.replace("[VOTE]", LinkSend.replace("%IDLINK%", String.valueOf(idVoteShow)));
+		}
+		if (Announcement.indexOf("[RECALL]") >= 0) {
+			if (playerSender != null) {
+				int idRecall = itemLink.getIdForRecall(playerSender);
+				Announcement = Announcement.replace("[RECALL]", LinkSend.replace("%IDLINK%", String.valueOf(idRecall)));
+			}
+		}
+		if (Announcement.indexOf("[RBEVENT]") >= 0) {
+			int idLink = itemLink.getIdForRaidBossEvent();
+			Announcement = Announcement.replace("[RBEVENT]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[EVENT]") >= 0) {
+			int idLink = itemLink.getIdForEvent();
+			Announcement = Announcement.replace("[EVENT]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[SERVER_INFO]") >= 0) {
+			int idLink = itemLink.getIdForServerInfo();
+			Announcement = Announcement.replace("[SERVER_INFO]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[HOME_CB]") >= 0) {
+			int idLink = itemLink.getIdForHomeCB();
+			Announcement = Announcement.replace("[HOME_CB]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[COMMAND_INFO]") >= 0) {
+			int idLink = itemLink.getIdForCommandInfo();
+			Announcement = Announcement.replace("[COMMAND_INFO]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[DONATION]") >= 0) {
+			int idLink = itemLink.getIdForDonation();
+			Announcement = Announcement.replace("[DONATION]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[ACC_REGISTER]") >= 0) {
+			int idLink = itemLink.getIdForAccRegister();
+			Announcement = Announcement.replace("[ACC_REGISTER]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[CHANGE_PASSWORD]") >= 0) {
+			int idLink = itemLink.getIdForChangePassword();
+			Announcement = Announcement.replace("[CHANGE_PASSWORD]",
+					LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[CHANGE_EMAIL]") >= 0) {
+			int idLink = itemLink.getIdForEmailChange();
+			Announcement = Announcement.replace("[CHANGE_EMAIL]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[REMOVE_SECOND_PASS]") >= 0) {
+			int idLink = itemLink.getIdForRemoveSecondaryPass();
+			Announcement = Announcement.replace("[REMOVE_SECOND_PASS]",
+					LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+
+		if (Announcement.indexOf("[ACC_RECOVERY]") >= 0) {
+			int idLink = itemLink.getIdForAccRecovery();
+			Announcement = Announcement.replace("[ACC_RECOVERY]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[SELL_ACCOUNT]") >= 0) {
+			int idLink = itemLink.getIdForSellAccount();
+			Announcement = Announcement.replace("[SELL_ACCOUNT]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[SELL_CLAN]") >= 0) {
+			int idLink = itemLink.getIdForSellClan();
+			Announcement = Announcement.replace("[SELL_CLAN]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[DRESSME]") >= 0) {
+			int idLink = itemLink.getIdForDressme();
+			Announcement = Announcement.replace("[DRESSME]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[FIXME]") >= 0) {
+			int idLink = itemLink.getIdForFixMe();
+			Announcement = Announcement.replace("[FIXME]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[OLY_BUFFER]") >= 0) {
+			int idLink = itemLink.getIdForOlyBuffer();
+			Announcement = Announcement.replace("[OLY_BUFFER]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+
+		if (Announcement.indexOf("[MOVE_CHAR]") >= 0) {
+			int idLink = itemLink.getIdForMoveChar();
+			Announcement = Announcement.replace("[MOVE_CHAR]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[SURVEY=") >= 0) {
+			int inicio = Announcement.indexOf("[SURVEY=");
+			int termino = Announcement.indexOf("]");
+			String SurveyText = Announcement.substring(inicio, termino + 1);
+			String idSurvey = SurveyText.split("=")[1].replace("]", "");
+			Announcement = Announcement.replace(SurveyText, LinkSend.replace("%IDLINK%", idSurvey));
+		}
+		if (Announcement.indexOf("[LANGUAGE]") >= 0) {
+			int idLink = itemLink.getIdForLanguage();
+			Announcement = Announcement.replace("[LANGUAGE]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+
+		if (Announcement.indexOf("[ANNOUNCE_LINK=") >= 0) {
+			int inicio = Announcement.indexOf("[ANNOUNCE_LINK=");
+			int termino = Announcement.indexOf("]");
+			String InsideText = Announcement.substring(inicio, termino + 1);
+			String idAnnoucement = InsideText.split("=")[1].replace("]", "");
+			Announcement = Announcement.replace(InsideText, LinkSend.replace("%IDLINK%", idAnnoucement));
+		}
+
+		if (Announcement.indexOf("[PVPZONE_SINGLE]") >= 0) {
+			int idLink = itemLink.getIdForPVP_Zone_Single();
+			Announcement = Announcement.replace("[PVPZONE_SINGLE]",
+					LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[PVPZONE_PARTY]") >= 0) {
+			int idLink = itemLink.getIdForPVP_Zone_Party();
+			Announcement = Announcement.replace("[PVPZONE_PARTY]",
+					LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[PVPZONE_CLAN]") >= 0) {
+			int idLink = itemLink.getIdForPVP_Zone_Clan();
+			Announcement = Announcement.replace("[PVPZONE_CLAN]", LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[PVPZONE_FREEFORALL]") >= 0) {
+			int idLink = itemLink.getIdForPVP_Zone_FreeToAll();
+			Announcement = Announcement.replace("[PVPZONE_FREEFORALL]",
+					LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[PVPZONE_CLASSES]") >= 0) {
+			int idLink = itemLink.getIdForPVP_Zone_Classes();
+			Announcement = Announcement.replace("[PVPZONE_CLASSES]",
+					LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[PVPZONE_DROPZONE]") >= 0) {
+			int idLink = itemLink.getIdForPVP_Zone_DropZone();
+			Announcement = Announcement.replace("[PVPZONE_DROPZONE]",
+					LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[VOTEZONE_ENTER]") >= 0) {
+			int idLink = itemLink.getIdForVote_Zone_Enter();
+			Announcement = Announcement.replace("[VOTEZONE_ENTER]",
+					LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+		if (Announcement.indexOf("[VOTEZONE_TELE_NPC]") >= 0) {
+			int idLink = itemLink.getIdForVote_Zone_Tele_Npc();
+			Announcement = Announcement.replace("[VOTEZONE_TELE_NPC]",
+					LinkSend.replace("%IDLINK%", String.valueOf(idLink)));
+		}
+
+		return Announcement;
+	}
+
+	public static void isSummonWisp(L2PcInstance gmChar, L2PcInstance player) {
+		general.GmSummonWisp(gmChar, player);
+	}
+
+	public static float getDropRaid(L2PcInstance cha) {
+		float retornar = Config.RATE_DROP_ITEMS;
+		return retornar;
+	}
+
+	/**
+	 * ---------------------------------------- Premium Data
+	 * ----------------------------------------
+	 */
+
+	public static int getPremiumCPBonus(L2PcInstance player) {
+		int retorno = 0;
+		int AccBonus = 0;
+		int clanBonus = 0;
+		boolean isInOly = player.isInOlympiad();
+		boolean accOlyRestric = true;
+		boolean clanOlyRestric = true;
+		try {
+			if (isPremium(player)) {
+				if (opera.isPremium_Player(player)) {
+					premiumPersonalData pChar = general.getPremiumDataFromPlayerOrClan(player.getAccountName());
+					AccBonus = pChar.getPremiumData().CP_bonus();
+					accOlyRestric = pChar.getPremiumData().CP_bonus_restric_olys();
+				}
+				if (player.getClan() != null) {
+					if (opera.isPremium_Clan(player)) {
+						premiumPersonalData pClan = general.getPremiumDataFromPlayerOrClan(player.getClanId());
+						clanBonus = pClan.getPremiumData().CP_bonus();
+						clanOlyRestric = pClan.getPremiumData().CP_bonus_restric_olys();
+					}
+				}
+				retorno = (AccBonus > clanBonus ? AccBonus : clanBonus);
+			}
+		} catch (Exception a) {
+
+		}
+		if (isInOly && (accOlyRestric || clanOlyRestric)) {
+			return 0;
+		}
+		return retorno;
+	}
+
+	public static int getPremiumHPBonus(L2PcInstance player) {
+		int retorno = 0;
+		int AccBonus = 0;
+		int clanBonus = 0;
+		boolean isInOly = player.isInOlympiad();
+		boolean accOlyRestric = true;
+		boolean clanOlyRestric = true;
+		try {
+			if (isPremium(player)) {
+				if (opera.isPremium_Player(player)) {
+					premiumPersonalData pChar = general.getPremiumDataFromPlayerOrClan(player.getAccountName());
+					AccBonus = pChar.getPremiumData().HP_bonus();
+					accOlyRestric = pChar.getPremiumData().HP_bonus_restric_olys();
+				}
+				if (player.getClan() != null) {
+					if (opera.isPremium_Clan(player)) {
+						premiumPersonalData pClan = general.getPremiumDataFromPlayerOrClan(player.getClanId());
+						clanBonus = pClan.getPremiumData().HP_bonus();
+						clanOlyRestric = pClan.getPremiumData().HP_bonus_restric_olys();
+					}
+				}
+				retorno = (AccBonus > clanBonus ? AccBonus : clanBonus);
+			}
+		} catch (Exception a) {
+
+		}
+		if (isInOly && (accOlyRestric || clanOlyRestric)) {
+			return 0;
+		}
+		return retorno;
+	}
+
+	public static int getPremiumMPBonus(L2PcInstance player) {
+		int retorno = 0;
+		int AccBonus = 0;
+		int clanBonus = 0;
+		boolean isInOly = player.isInOlympiad();
+		boolean accOlyRestric = true;
+		boolean clanOlyRestric = true;
+		try {
+			if (isPremium(player)) {
+				if (opera.isPremium_Player(player)) {
+					premiumPersonalData pChar = general.getPremiumDataFromPlayerOrClan(player.getAccountName());
+					AccBonus = pChar.getPremiumData().MP_bonus();
+					accOlyRestric = pChar.getPremiumData().MP_bonus_restric_olys();
+				}
+				if (player.getClan() != null) {
+					if (opera.isPremium_Clan(player)) {
+						premiumPersonalData pClan = general.getPremiumDataFromPlayerOrClan(player.getClanId());
+						clanBonus = pClan.getPremiumData().MP_bonus();
+						clanOlyRestric = pClan.getPremiumData().MP_bonus_restric_olys();
+					}
+				}
+				retorno = (AccBonus > clanBonus ? AccBonus : clanBonus);
+			}
+		} catch (Exception a) {
+
+		}
+		if (isInOly && (accOlyRestric || clanOlyRestric)) {
+			return 0;
+		}
+		return retorno;
+	}
+
+	public static int getPremiumSoulCrystalChance(L2PcInstance player, int chance) {
+		int retorno = 0;
+		try {
+			if (isPremium(player)) {
+				if (opera.isPremium_Player(player)) {
+					premiumPersonalData PremiumCharInfo = general
+							.getPremiumDataFromPlayerOrClan(player.getAccountName());
+					if (PremiumCharInfo.isActive()) {
+						if (!PremiumCharInfo.getPremiumData().isTest()) {
+							retorno = PremiumCharInfo.getPremiumData().getSoulCrystal(chance);
+						} else {
+							central.msgbox("This Premium is for test, you just get the retail chance", player);
+						}
+					}
+				}
+				if (opera.isPremium_Clan(player)) {
+					premiumPersonalData PremiumCharInfo = general
+							.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId()));
+					if (PremiumCharInfo.isActive()) {
+						if (retorno < PremiumCharInfo.getPremiumData().getSoulCrystal(chance)) {
+							if (!PremiumCharInfo.getPremiumData().isTest()) {
+								retorno = PremiumCharInfo.getPremiumData().getSoulCrystal(chance);
+							} else {
+								central.msgbox("This Premium is for test, you just get the retail chance", player);
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception a) {
+
+		}
+		return retorno;
+	}
+
+	public static long getPremiumExp_Add(L2PcInstance player, long addToExp) {
+		long retorno = addToExp;
+		int _porcen = 0;
+		if (isPremium(player)) {
+			int porcenChar = 0;
+			int porcenClan = 0;
+			if (general.isPremium(player, true)) {
+				if (general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+						.useValueForNewRate()) {
+					porcenChar = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+							.getexp(false);
+				} else {
+					porcenChar = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+							.getexp(false);
+				}
+			} else if (general.isPremium(player, false)) {
+				if (general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClan().getId())).getPremiumData()
+						.useValueForNewRate()) {
+					porcenClan = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClan().getId()))
+							.getPremiumData().getexp(false);
+				} else {
+					porcenClan = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClan().getId()))
+							.getPremiumData().getexp(false);
+				}
+			} else {
+				return 0;
+			}
+			if (porcenChar > 0 || porcenClan > 0) {
+				_porcen = (porcenChar > porcenClan ? porcenChar : porcenClan);
+				if (_porcen > 0) {
+					double multi = (addToExp * (_porcen / 100.0)) + addToExp;
+					retorno = (long) multi;
+					if (general.PREMIUM_MESSAGE) {
+						// central.msgbox("*** Premium Exp (" + opera.getFormatNumbers(addToExp) + " to
+						// " + opera.getFormatNumbers(retorno) +" )***" , player);
+					}
+				}
+			}
+		}
+		return retorno;
+	}
+
+	public static int getPremiumSp_Add(L2PcInstance player, int addToSp) {
+		int retorno = addToSp;
+		int _porcen = 0;
+		if (isPremium(player)) {
+			int porcenChar = 0;
+			int porcenClan = 0;
+			if (general.isPremium(player, true)) {
+				if (general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+						.useValueForNewRate()) {
+					porcenChar = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+							.getsp(false);
+				} else {
+					porcenChar = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+							.getsp(false);
+				}
+			} else if (general.isPremium(player, false)) {
+				if (general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClan().getId())).getPremiumData()
+						.useValueForNewRate()) {
+					porcenClan = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClan().getId()))
+							.getPremiumData().getsp(false);
+				} else {
+					porcenClan = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClan().getId()))
+							.getPremiumData().getsp(false);
+				}
+			} else {
+				return 0;
+			}
+			if (porcenChar > 0 || porcenClan > 0) {
+				_porcen = (porcenChar > porcenClan ? porcenChar : porcenClan);
+				double multi = (addToSp * (_porcen / 100.0)) + addToSp;
+				retorno = (int) multi;
+				if (general.PREMIUM_MESSAGE) {
+					// central.msgbox("*** Premium Sp (" + opera.getFormatNumbers(addToSp) + " to "
+					// + opera.getFormatNumbers(retorno) +" )***" , player);
+				}
+			}
+		}
+		return retorno;
+	}
+
+	/*
+	 * public static int getPremiumEpauletteDropRate(L2PcInstance player){ return
+	 * getPremiumEpauletteDropRate(player, -20520); }
+	 */
+
+	public static int getPremiumEpauletteDropRate(L2PcInstance player) {
+		int _PremiumValue = 0;
+		if (isPremium(player)) {
+			int _valPlayer = 0;
+			int _valClan = 0;
+			if (opera.isPremium_Player(player)) {
+				_valPlayer = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+						.getEpaulette();
+			}
+			if (opera.isPremium_Clan(player)) {
+				_valClan = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId())).getPremiumData()
+						.getEpaulette();
+			}
+			_PremiumValue = _valPlayer > _valClan ? _valPlayer : _valClan;
+		}
+
+		return _PremiumValue;
+	}
+
+	public static long getPremiumEpauletteDropRate(L2PcInstance player, long valor) {
+		long _PremiumValue = 0;
+		if (isPremium(player)) {
+			int _valPlayer = 0;
+			int _valClan = 0;
+			if (opera.isPremium_Player(player)) {
+				if (!general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData().isTest()) {
+					_valPlayer = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+							.getEpaulette();
+				}
+			}
+			if (opera.isPremium_Clan(player)) {
+				if (!general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId())).getPremiumData()
+						.isTest()) {
+					_valClan = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId()))
+							.getPremiumData().getEpaulette();
+				}
+			}
+			if (_valPlayer > 0 || _valClan > 0) {
+				int _ValMulti = (_valPlayer > _valClan ? _valPlayer : _valClan);
+				long NewQuantity = (valor * _ValMulti) / 100;
+				_PremiumValue = NewQuantity;
+			}
+		}
+
+		return _PremiumValue;
+	}
+
+	public static int getPremiumCraftChance(L2PcInstance player) {
+		return getPremiumCraftChance(player, -20520);
+	}
+
+	public static int getPremiumCraftChance(L2PcInstance player, int valor) {
+		int _Clan = 0;
+		int _ClanFinal = 0;
+		int _Account = 0;
+		int _AccountFinal = 0;
+		if (isPremium(player)) {
+			if (opera.isPremium_Player(player)) {
+				if (!general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData().isTest()) {
+					_AccountFinal = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+							.getCraft(valor);
+					_Account = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+							.getCraft();
+				}
+			}
+			if (opera.isPremium_Clan(player)) {
+				if (!general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId())).getPremiumData()
+						.isTest()) {
+					_ClanFinal = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId()))
+							.getPremiumData().getCraft(valor);
+					_Clan = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId())).getPremiumData()
+							.getCraft();
+				}
+			}
+			if (valor == -20520) {
+				return (_Clan > _Account ? _Clan : _Account);
+			} else {
+				int ValueReturn = _ClanFinal > _AccountFinal ? _ClanFinal : _AccountFinal;
+				return ValueReturn > 100 ? 100 : ValueReturn;
+			}
+		}
+		return 0;
+	}
+
+	public static int getPremium_MW_CraftChance(L2PcInstance player) {
+		return getPremium_MW_CraftChance(player, -20520);
+	}
+
+	public static int getPremium_MW_CraftChance(L2PcInstance player, int valor) {
+		int _Clan = 0;
+		int _ClanFinal = 0;
+		int _Account = 0;
+		int _AccountFinal = 0;
+		if (isPremium(player)) {
+			if (opera.isPremium_Player(player)) {
+				if (!general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData().isTest()) {
+					_AccountFinal = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+							.get_mwCraft(valor);
+					_Account = general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+							.get_mwCraft();
+				}
+			}
+			if (opera.isPremium_Clan(player)) {
+				if (!general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId())).getPremiumData()
+						.isTest()) {
+					_ClanFinal = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId()))
+							.getPremiumData().get_mwCraft(valor);
+					_Clan = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId())).getPremiumData()
+							.get_mwCraft();
+				}
+			}
+			if (valor == -20520) {
+				return (_Clan > _Account ? _Clan : _Account);
+			} else {
+				int ValueReturn = _ClanFinal > _AccountFinal ? _ClanFinal : _AccountFinal;
+				return ValueReturn > 100 ? 100 : ValueReturn;
+			}
+		}
+		return 0;
+	}
+
+	public static String getPremiumName(L2PcInstance player) {
+		if (opera.isPremium_Player(player)) {
+			return general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData().getName();
+		}
+		if (opera.isPremium_Clan(player)) {
+			return general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId())).getPremiumData()
+					.getName();
+		}
+		return "";
+	}
+
+	public static boolean isPremium(L2PcInstance player) {
+		return isPremium(player, false, null);
+	}
+
+	public static boolean isForJustRate(L2PcInstance player) {
+		if (opera.isPremium_Player(player)) {
+			return general.getPremiumDataFromPlayerOrClan(player.getAccountName()).getPremiumData()
+					.useValueForNewRate();
+		} else if (opera.isPremium_Clan(player)) {
+			return general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId())).getPremiumData()
+					.useValueForNewRate();
+		}
+		return false;
+	}
+
+	public static boolean isPremium(L2PcInstance playerToCheck, boolean showWindowsInformation,
+			L2PcInstance playerRequest) {
+		int SegundosDesfase = 240;
+		boolean retorno = false;
+		if (!general.PREMIUM_CHAR && !general.PREMIUM_CLAN) {
+			return false;
+		}
+
+		if (general.isPremium(playerToCheck, true) || general.isPremium(playerToCheck, false)) {
+			retorno = true;
+			if (showWindowsInformation) {
+				int UnixShow = 0;
+				int UnixNow = opera.getUnixTimeNow();
+
+				try {
+					UnixShow = SHOW_PREMIUM_WINDOWS_SECOND.get(playerRequest.getObjectId())
+							.get(playerToCheck.getObjectId());
+				} catch (Exception a) {
+					if (SHOW_PREMIUM_WINDOWS_SECOND == null) {
+						SHOW_PREMIUM_WINDOWS_SECOND.put(playerRequest.getObjectId(), new HashMap<Integer, Integer>());
+					} else if (!SHOW_PREMIUM_WINDOWS_SECOND.containsKey(playerRequest.getObjectId())) {
+						SHOW_PREMIUM_WINDOWS_SECOND.put(playerRequest.getObjectId(), new HashMap<Integer, Integer>());
+					}
+				}
+				if (UnixShow > 0 && ((UnixNow - UnixShow) < SegundosDesfase)) {
+					return retorno;
+				}
+				String Buscar = (opera.isPremium_Clan(playerToCheck) ? String.valueOf(playerToCheck.getClanId())
+						: playerToCheck.getAccountName());
+				premiumPersonalData T1 = general.getPremiumDataFromPlayerOrClan(Buscar);
+				int idPremiumData = T1.getIdPremiumUse();
+				v_donation.getPremiumShowInfoWindows(playerRequest, idPremiumData, true, playerToCheck.getName(),
+						false);
+				SHOW_PREMIUM_WINDOWS_SECOND.get(playerRequest.getObjectId()).put(playerToCheck.getObjectId(), UnixNow);
+			}
+		}
+		return retorno;
+	}
+
+	public static boolean isPremiumItem_Chance(L2PcInstance cha, int idItem) {
+		boolean retorno = false;
+		if (isPremium(cha)) {
+			if (opera.isPremium_Player(cha)) {
+				if (general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+						.hasPremiumItemChance()) {
+					retorno = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+							.haveItemInChance(idItem);
+				}
+			}
+			if (opera.isPremium_Clan(cha)) {
+				boolean tempHave = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClanId()))
+						.getPremiumData().haveItemInChance(idItem);
+				retorno = (retorno == false) ? tempHave : retorno;
+			}
+		}
+		return retorno;
+	}
+
+	public static boolean isPremiumItem_Rate(L2PcInstance cha, int idItem) {
+		boolean retorno = false;
+		if (isPremium(cha)) {
+			if (opera.isPremium_Player(cha)) {
+				if (general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+						.hasPremiumItemRate()) {
+					retorno = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+							.haveItemInRate(idItem);
+				}
+			}
+			if (opera.isPremium_Clan(cha)) {
+				boolean tempHave = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClanId()))
+						.getPremiumData().haveItemInRate(idItem);
+				retorno = (retorno == false) ? tempHave : retorno;
+			}
+		}
+		return retorno;
+	}
+
+	public static double getPremiumWeight(L2Character cha, double _weight) {
+		double retorno = 0;
+		try {
+			if ((cha instanceof L2PcInstance)) {
+				L2PcInstance player = (L2PcInstance) cha;
+				if (isPremium(player)) {
+					String busqueda = "";
+					if (opera.isPremium_Player(player)) {
+						busqueda = player.getAccountName();
+						premiumPersonalData T1 = general.getPremiumDataFromPlayerOrClan(busqueda);
+						retorno = T1.getPremiumData().getWeight(true, _weight);
+					} else if (opera.isPremium_Clan(player)) {
+						busqueda = String.valueOf(player.getClanId());
+						premiumPersonalData T1 = general.getPremiumDataFromPlayerOrClan(busqueda);
+						double Temp = T1.getPremiumData().getWeight(true, _weight);
+						retorno = retorno > Temp ? retorno : Temp;
+					}
+				}
+			}
+		} catch (Exception a) {
+			_log.warning("Error on premium Weight->" + a.getMessage());
+		}
+		return retorno;
+	}
+
+	public static int getPremiumTimeBuff(L2Character cha, int IdSkill) {
+		int Min_add = 0;
+
+		if (!general.isBuffInZeuS(IdSkill)) {
+			return Min_add;
+		}
+
+		try {
+
+			if (!(cha instanceof L2PcInstance) && !(cha instanceof L2Summon)) {
+				return 0;
+			}
+
+			L2PcInstance player = null;
+			if (cha instanceof L2Summon) {
+				player = cha.getSummon().getOwner();
+			} else if (cha instanceof L2PcInstance) {
+				player = (L2PcInstance) cha;
+			}
+
+			if (player != null) {
+				if (isPremium(player)) {
+					premiumPersonalData Pr = null;
+					if (opera.isPremium_Player(player)) {
+						Pr = general.getPremiumDataFromPlayerOrClan(player.getAccountName());
+						if (Pr.isActive()) {
+							premiumsystem PremiunData = Pr.getPremiumData();
+							if (!PremiunData.isTest()) {
+								if (PremiunData.canUseBuffPremium() && PremiunData.getBuffDuration() > 0) {
+									Min_add = PremiunData.getBuffDuration() * 60;
+								}
+							} else {
+								central.msgbox("This Premium Account is for test. The buff time will be the same.",
+										player);
+							}
+						}
+					}
+
+					if (opera.isPremium_Clan(player)) {
+						Pr = general.getPremiumDataFromPlayerOrClan(String.valueOf(player.getClanId()));
+						if (Pr.isActive()) {
+							premiumsystem PremiunData = Pr.getPremiumData();
+							if (!PremiunData.isTest()) {
+								if (PremiunData.canUseBuffPremium() && PremiunData.getBuffDuration() > 0) {
+									if (PremiunData.getBuffDuration() > Min_add) {
+										int Min_add_Temp = PremiunData.getBuffDuration() * 60;
+										Min_add = Min_add_Temp > Min_add ? Min_add_Temp : Min_add;
+									}
+								}
+							} else {
+								central.msgbox("This Premium Account is for test. The buff time will be the same.",
+										player);
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception a) {
+
+		}
+		return Min_add;
+	}
+
+	public static double getItemPremiumDrop_Rate(L2PcInstance cha, int idItem) {
+		float retornar = 0;
+		if (isPremiumItem_Rate(cha, idItem)) {
+			int _Clan = 0;
+			int _Account = 0;
+			if (!isPremium(cha)) {
+				return 0;
+			} else {
+				if (opera.isPremium_Clan(cha)) {
+					if (general.getPremiumDataFromPlayerOrClan(cha.getClanId()).getPremiumData()
+							.haveItemInRate(idItem)) {
+						_Clan = general.getPremiumDataFromPlayerOrClan(cha.getClanId()).getPremiumData()
+								.getPremiumItemRate(idItem);
+					}
+				}
+				if (opera.isPremium_Player(cha)) {
+					if (general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+							.haveItemInRate(idItem)) {
+						_Account = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+								.getPremiumItemRate(idItem);
+					}
+				}
+				retornar = _Clan > _Account ? _Clan : _Account;
+			}
+		}
+		return retornar;
+	}
+
+	public static double getItemPremiumDrop_Chance(L2PcInstance cha, int idItem, float chanceINSERVER) {
+		float retornar = 0;
+		int _Clan = 0;
+		int _Account = 0;
+		if (isPremiumItem_Rate(cha, idItem)) {
+			if (!isPremium(cha)) {
+				return 0;
+			} else {
+				if (opera.isPremium_Clan(cha)) {
+					if (general.getPremiumDataFromPlayerOrClan(cha.getClanId()).getPremiumData()
+							.haveItemInChance(idItem)) {
+						_Clan = general.getPremiumDataFromPlayerOrClan(cha.getClanId()).getPremiumData()
+								.getPremiumItemChance(idItem);
+					}
+				}
+				if (opera.isPremium_Player(cha)) {
+					if (general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+							.haveItemInChance(idItem)) {
+						_Account = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+								.getPremiumItemChance(idItem);
+					}
+				}
+				retornar = _Clan > _Account ? _Clan : _Account;
+			}
+		}
+		return retornar;
+	}
+
+	/*
+	 * public static double getPremiumDropSpoil_Rate(L2PcInstance cha){ return
+	 * getPremiumDropSpoil_Rate(cha, false, 0); }
+	 * 
+	 * public static double getPremiumDropSpoil_Rate(L2PcInstance cha, boolean
+	 * getPorcenforFinalResult){ return getPremiumDropSpoil_Rate(cha,
+	 * getPorcenforFinalResult, 0); }
+	 */
+
+	public static double getPremiumDropSpoil_Rate(L2PcInstance cha) {
+		float retornar = 1;
+		float ClanValue = 0;
+		float PlayerValue = 0;
+		if (isPremium(cha)) {
+			if (opera.isPremium_Clan(cha)) {
+				ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId()))
+						.getPremiumData().getSpoil_rate();
+			}
+			if (opera.isPremium_Player(cha)) {
+				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+						.getSpoil_rate();
+			}
+			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+			if (general.PREMIUM_MESSAGE) {
+				// central.msgbox("*** Premium Spoil Drop Item Rate: " +
+				// String.valueOf(retornar).replace(".0", "") + " ***" , cha);
+			}
+		}
+		return retornar;
+	}
+
+	/*
+	 * public static double getPremiumDropSpoil_Chance(L2PcInstance cha){ return
+	 * getPremiumDropSpoil_Chance(cha, false, 0); }
+	 * 
+	 * public static double getPremiumDropSpoil_Chance(L2PcInstance cha, boolean
+	 * getPorcenforFinalResult){ return getPremiumDropSpoil_Chance(cha,
+	 * getPorcenforFinalResult, 0); }
+	 */
+
+	public static double getPremiumDropSpoil_Chance(L2PcInstance cha, float chanceINSERVER) {
+		float retornar = 1;
+		float ClanValue = 0;
+		float PlayerValue = 0;
+		if (isPremium(cha)) {
+			if (opera.isPremium_Clan(cha)) {
+				ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId()))
+						.getPremiumData().getSpoil_chance(chanceINSERVER);
+			}
+			if (opera.isPremium_Player(cha)) {
+				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+						.getSpoil_chance(chanceINSERVER);
+			}
+			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+			if (general.PREMIUM_MESSAGE) {
+				// central.msgbox("*** Premium Spoil Drop Item Chance: " +
+				// String.valueOf(retornar).replace(".0", "") + " ***" , cha);
+			}
+		}
+		return retornar;
+	}
+
+	public static float getPremiumDropAdena_Rate(L2PcInstance cha) {
+		float retornar = 1;
+		float ClanValue = 0;
+		float PlayerValue = 0;
+
+		if (isPremium(cha)) {
+			if (opera.isPremium_Clan(cha)) {
+				ClanValue = general.getPremiumDataFromPlayerOrClan(cha.getClan().getId()).getPremiumData()
+						.getadena_rate();
+			}
+			if (opera.isPremium_Player(cha)) {
+				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+						.getadena_rate();
+			}
+			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+		}
+		return retornar;
+	}
+
+	/*
+	 * public static double getPremiumDropAdena_Chance(L2PcInstance cha){ return
+	 * getPremiumDropAdena_Chance(cha, 0); }
+	 */
+
+	public static double getPremiumDropAdena_Chance(L2PcInstance cha, float chanceINSERVER) {
+		float retornar = 1;
+		float ClanValue = 0;
+		float PlayerValue = 0;
+		if (isPremium(cha)) {
+			if (opera.isPremium_Clan(cha)) {
+				ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId()))
+						.getPremiumData().getadena_chance(chanceINSERVER);
+			}
+			if (opera.isPremium_Player(cha)) {
+				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+						.getadena_chance(chanceINSERVER);
+			}
+			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+			if (general.PREMIUM_MESSAGE) {
+				// central.msgbox("*** Premium Adena Chance: " +
+				// String.valueOf(retornar).replace(".0", "") + " ***" , cha);
+			}
+		}
+		return retornar;
+	}
+
+	/*
+	 * public static double getPremiumDropItem_Rate(L2PcInstance cha, boolean
+	 * _porcent){ return getPremiumDropItem_Rate(cha, _porcent, 0); }
+	 * 
+	 * public static double getPremiumDropItem_Rate(L2PcInstance cha){ return
+	 * getPremiumDropItem_Rate(cha, false, 0); }
+	 */
+
+	public static double getPremiumDropItem_Rate(L2PcInstance cha) {
+		float retornar = 1;
+		float ClanValue = 0;
+		float PlayerValue = 0;
+		if (isPremium(cha)) {
+			if (opera.isPremium_Clan(cha)) {
+				ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId()))
+						.getPremiumData().getDrop_rate();
+			}
+			if (opera.isPremium_Player(cha)) {
+				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+						.getDrop_rate();
+			}
+			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+			if (general.PREMIUM_MESSAGE) {
+				// central.msgbox("*** Premium Drop Item Rate: " +
+				// String.valueOf(retornar).replace(".0", "") + " ***" , cha);
+			}
+		}
+		return retornar;
+	}
+
+	/*
+	 * public static double getPremiumDropItem_Chance(L2PcInstance cha){ return
+	 * getPremiumDropItem_Chance(cha, false, 0); }
+	 */
+
+	public static double getPremiumDropItem_Chance(L2PcInstance cha, float chanceINSERVER) {
+		double retornar = 1;
+		double ClanValue = 0;
+		double PlayerValue = 0;
+		if (isPremium(cha)) {
+			if (opera.isPremium_Clan(cha)) {
+				ClanValue = general.getPremiumDataFromPlayerOrClan(String.valueOf(cha.getClan().getId()))
+						.getPremiumData().getDrop_chance(chanceINSERVER);
+			}
+			if (opera.isPremium_Player(cha)) {
+				PlayerValue = general.getPremiumDataFromPlayerOrClan(cha.getAccountName()).getPremiumData()
+						.getDrop_chance(chanceINSERVER);
+			}
+			retornar = ClanValue > PlayerValue ? ClanValue : PlayerValue;
+			if (general.PREMIUM_MESSAGE) {
+				// central.msgbox("*** Premium Drop Item Chance: " +
+				// String.valueOf(retornar).replace(".0", "") + " ***" , cha);
+			}
+		}
+		return retornar;
+	}
+
+	/**
+	 * ---------------------------------------- Premium Data
+	 * ----------------------------------------
+	 */
+
+	public static boolean expBlock(L2PcInstance cha) {
+		if (!general.CHAR_PANEL) {
+			return false;
+		}
+		return !general.getCharConfigEXPSP(cha);
+	}
+
+	public static void RemovePlayerInZone(L2PcInstance player) {
+		v_Teleport.removePlayerInSide(player);
+	}
+
+	public static boolean canBSOE(L2PcInstance player, L2ItemInstance item) {
+		if (PvPPk.isBSOE(item)) {
+			return PvPPk._canScape(player, item);
+		}
+		return true;
+	}
+
+	public static boolean isActivePIN(L2PcInstance player) {
+		boolean isValidSP = SecondaryPassword.isValid(player);
+		return isValidSP;
+	}
+
+	public static boolean isBorrowActice(L2PcInstance player) {
+		if (player == null) {
+			return false;
+		}
+		if (!(player instanceof L2PcInstance)) {
+			return false;
+		}
+		return borrowAccount.getInstance().isBorrowActice(player.getAccountName());
+	}
+
+	private static void EnterW_KnowZeus(L2PcInstance Player) {
+
+		if (!general.onLine) {
+			return;
+		}
+
+		central.msgbox("Activate", Player);
+
+		if (!general.SHOW_ZEUS_ENTER_GAME) {
+			return;
+		}
+
+		String text = "\n";
+		if (general.CHAR_PANEL) {
+			text += ".charpanel -> Char Option's Windows\n";
+		}
+		if (general.STATUS_DRESSME) {
+			text += ".dressme -> dressme windows\n";
+		}
+
+		if (general.RATE_EXP_OFF) {
+			text += ".exp_on, .exp_off -> exp. option\n";
+		}
+
+		if (general.ANTIBOT_COMANDO_STATUS) {
+			text += ".checkbot -> Target Antibot system\n";
+		}
+		if (general.SHOW_MY_STAT) {
+			text += ".stat -> Show target Stat\n";
+		}
+
+		if (general.SHOW_FIXME_WINDOWS) {
+			text += ".fixme -> Show the Fix char Windows\n";
+		}
+
+		if (Player.isGM()) {
+			text += "//zeus_config -> Zeus Config Windows\n";
+			text += "//zeus -> Help / Ayuda (ADMIN)\n";
+			text += ".zeus -> Help / Ayuda (PLAYER)";
+		} else {
+			text += ".zeus -> Help / Ayuda";
+		}
+		Player.sendPacket(
+				new ExShowScreenMessage(1, -1, ExShowScreenMessage.TOP_RIGHT, 1, 1, 0, 0, true, 15000, false, text));
+		ThreadPoolManager.getInstance().scheduleGeneral(new headUpdate(Player), 1500);
+		Player.broadcastUserInfo();
+	}
+
+	public static class headUpdate implements Runnable {
+		L2PcInstance activeChar;
+
+		public headUpdate(L2PcInstance _Char) {
+			activeChar = _Char;
+		}
+
+		@Override
+		public void run() {
+			try {
+				activeChar.broadcastUserInfo();
+			} catch (Exception a) {
+
+			}
+
+		}
+	}
+
+	public static void EnterW(L2PcInstance player) {
+
+		if (!general._activated()) {
+			return;
+		}
+
+		if (!player.getClient().isDetached()) {
+			try {
+				setIPChar(player);
+			} catch (Exception a) {
+				_log.warning("ZeuS -> Error getting IP's : " + a.getMessage() + ": player Name:" + player.getName()
+						+ ", account: " + player.getAccountName());
+			}
+
+		} else {
+			// ipConec.cleanBD(player);
+		}
+
+		try {
+			opera.getImageLogo(player);
+		} catch (Exception a) {
+
+		}
+
+		try {
+			cumulativeSubclass.getInstance().createSkillBase(player);
+		} catch (Exception a) {
+
+		}
+
+		if (!sellBuff.IsInLoadProcess()) {
+			try {
+				if (sellBuff.isBuffSeller(player)) {
+					sellBuff.removeFromOffline(player);
+				}
+			} catch (Exception a) {
+				_log.warning("Error en la eliminacion->" + a.getMessage());
+			}
+
+		}
+
+		try {
+			sellBuff.checkAccountForBuffStore(player);
+		} catch (Exception a) {
+			_log.warning("Error checking Account for some Buffstore Chars");
+		}
+
+		try {
+			if (pvpInstance.isInsideZone(player)) {
+				pvpInstance.playerLeave(player);
+			}
+		} catch (Exception a) {
+
+		}
+
+		if (VoteInstance.playerIsInside(player.getObjectId())) {
+			VoteInstance.removePlayerFromZone(player);
+		}
+		try {
+			autoPots.addPlayer(player);
+		} catch (Exception a) {
+			_log.warning("Auto Pots Problem ->" + a.getMessage());
+		}
+
+		general.setNewTimeLife(player);
+
+		EmailRegistration.isRegisterUser(player);
+
+		opera.setUnBlockSaveInDB(player);
+
+		overenchant.check(player, false);
+
+		// EnterW_KnowZeus(player);
+
+		general.setCharVariables(player);
+
+		votereward.getInstance().inicializar();
+
+		general.setCharVariables(player);
+
+		language.getInstance().loadLanguage(player);
+
+		SecondaryPassword.showWindowsSecondaryPass(player, "", "");
+
+		v_Buffer_New.getSchemeFromPlayer(player);
+
+		borrowAccount.getInstance().getBorrowData(player);
+
+		if (ipblock.isBanIP(player)) {
+			central.msgbox("Your are Banned", player);
+			player.getClient().closeNow();
+			return;
+		}
+
+		try {
+			_dualBox.RegisterPlayer(player);
+		} catch (Exception a) {
+			_log.warning("ZeuS -> Error IP's registered: " + a.getMessage() + ": player Name:" + player.getName()
+					+ ", account: " + player.getAccountName());
+		}
+
+		try {
+			PvPPk.getColorPvP_PK(player);
+		} catch (Exception e) {
+			_log.warning("COLOR PVP -> Error getting color Information (PvP PK), Player: "
+					+ String.valueOf(player.getObjectId()));
+		}
+
+		try {
+			PvPPk.Ver_TopPVP_PK(player);
+		} catch (Exception e) {
+			_log.warning("TOP PVP PK ->Error getting Top Pvp PK, Player: " + String.valueOf(player.getObjectId()));
+		}
+
+		try {
+			if (general.getCharConfigHERO(player)) {
+				if (!player.isHero()) {
+					player.setHero(true);
+				}
+			}
+		} catch (Exception a) {
+
+		}
+
+		try {
+			PvPPk._AnunciarEntradaKarma(player);
+		} catch (Exception e) {
+			_log.warning("TOP PVP PK -> Error al cargar Anuncion de TOP PVP PK y/o Karma , Player: "
+					+ String.valueOf(player.getObjectId()));
+		}
+
+		try {
+			if (general.isBotCheckPlayer(player)) {
+				antibotSystem.checkboot(player);
+			}
+		} catch (Exception a) {
+
+		}
+
+		try {
+			general.addPlayerAntibot(player);
+		} catch (Exception a) {
+			_log.warning("Error add player " + player.getName() + " to antibot list");
+		}
+		try {
+			general.loadConnections(player);
+		} catch (Exception a) {
+			_log.warning("Error Loading Connections " + player.getName() + ".");
+		}
+
+		try {
+			int ColorName = colorNameTitle.getColors(player, true);
+			int ColorTitle = colorNameTitle.getColors(player, false);
+			/*
+			 * if(player.getKarma() <= 0) { if(player.getClient().isDetached()==false) {
+			 * if(ColorName>0) { player.getAppearance().setNameColor(ColorName); }
+			 * if(ColorTitle>0) { player.getAppearance().setTitleColor(ColorTitle); } } }
+			 */
+		} catch (Exception a) {
+
+		}
+
+		try {
+			if (opera.isPremium_Player(player)) {
+				premiumPersonalData Pr = general.getPremiumDataFromPlayerOrClan(player.getAccountName());
+				if (Pr.isActive()) {
+					premiumsystem PremiunData = Pr.getPremiumData();
+					if (PremiunData.isEnabled()) {
+						if (PremiunData.isHero()) {
+							player.setHero(true);
+						}
+					}
+				}
+			}
+		} catch (Exception a) {
+
+		}
+
+	}
+
+	public static void killMob(L2Character Killer) {
+
+		if (Killer == null) {
+			return;
+		}
+
+		if (!Killer.isPlayer()) {
+			return;
+		}
+
+		try {
+			if ((Killer instanceof L2PcInstance) || (Killer instanceof L2PetInstance)) {
+				L2PcInstance player = null;
+				player = Killer.getActingPlayer();
+
+				try {
+					VoteInstance.checkKillMob(player);
+				} catch (Exception a) {
+
+				}
+
+				if (player.getPvpFlag() > 0) {
+					return;
+				}
+				if (general.ANTIBOT_AUTO) {
+					general.addKillAntibot(player);
+					antibotSystem.checkSendAntibot(player);
+				}
+				antibotSystem.setLastKillTime(player);
+			}
+		} catch (Exception a) {
+
+		}
+	}
+
+	public static void Revive(L2PcInstance player) {
+		if (player instanceof L2PcInstance) {
+			try {
+				if (general.getCharConfigHERO(player)) {
+					if (!player.isHero()) {
+						player.setHero(true);
+					}
+				}
+			} catch (Exception a) {
+
+			}
+			try {
+				PvPPk.getColorPvP_PK(player);
+			} catch (Exception e) {
+				_log.warning("PVP/PK Color -> Error getting Color Information, Player: "
+						+ String.valueOf(player.getObjectId()));
+			}
+
+			try {
+				PvPPk.Ver_TopPVP_PK(player, false);
+			} catch (Exception e) {
+				_log.warning("TOP PVP PK -> Error getting PVP PK Top information, Player: "
+						+ String.valueOf(player.getObjectId()));
+			}
+		}
+	}
+
+	public static void checkBoot(L2PcInstance player) {
+		antibotSystem.checkboot(player);
+	}
+
+	public static void LoadZeuS() {
+		general.loadConfigs();
+		if (general._activated()) {
+			RaidBossEvent.IntervalEventStart();
+		}
+	}
+
+	public static boolean isNpcFromZeus(int IDNpc) {
+		return ManagerAIONpc.isNpcFromZeus(IDNpc);
+	}
+
+	public static boolean isNPCZeuS(int IDNpc) {
+		return ManagerAIONpc.isNpcZeuS(IDNpc);
+	}
+
+	public static int getIDNpcZeuS_General() {
+		return general.ID_NPC;
+	}
+
+	public static void showFirsWindows(L2PcInstance player, int idObjeto) {
+		ManagerAIONpc.showFirstHtml(player, idObjeto);
+	}
+
+	public static boolean canTradeFlag(L2PcInstance player, L2PcInstance partner) {
+		if (!general.TRADE_WHILE_FLAG) {
+			if (((player.getPvpFlag() > 0) || (partner.getPvpFlag() > 0)) && (!player.isGM() || !partner.isGM())) {
+				central.msgbox(language.getInstance().getMsg(player).YOU_CAN_NOT_TRADE_WHILE_FLAG, player);
+				central.msgbox(language.getInstance().getMsg(player).YOU_CAN_NOT_TRADE_WHILE_FLAG, partner);
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static boolean canTradePK(L2PcInstance player, L2PcInstance partner) {
+		if (general.TRADE_WHILE_PK) {
+			if (((player.getKarma() > 0) || (partner.getKarma() > 0)) && (!player.isGM() || !partner.isGM())) {
+				central.msgbox(language.getInstance().getMsg(player).YOU_CAN_NOT_TRADE_WHILE_PK, player);
+				central.msgbox(language.getInstance().getMsg(player).YOU_CAN_NOT_TRADE_WHILE_PK, partner);
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static boolean canChatAll(L2PcInstance player) {
+		String MensajeDeChat_LEVEL = language.getInstance().getMsg(player).CHAT_LEVEL;
+		String MensajeDeChat_PVP = language.getInstance().getMsg(player).CHAT_PVP;
+		String MensajeDeChat_LT = language.getInstance().getMsg(player).CHAT_LIFETIME;
+		if (general.CHAT_GENERAL_BLOCK && !player.isGM()) {
+			if (player.getLevel() < general.CHAT_GENERAL_NEED_LEVEL) {
+				central.msgbox(MensajeDeChat_LEVEL.replace("$level", String.valueOf(general.CHAT_GENERAL_NEED_LEVEL)),
+						player);
+				return false;
+			}
+
+			if (player.getPvpKills() < general.CHAT_GENERAL_NEED_PVP) {
+				central.msgbox(MensajeDeChat_PVP.replace("$pvp", String.valueOf(general.CHAT_GENERAL_NEED_PVP)),
+						player);
+				return false;
+			}
+
+			if (player.getOnlineTime() < general.CHAT_GENERAL_NEED_LIFETIME) {
+				central.msgbox(MensajeDeChat_LT.replace("$life", String.valueOf(general.CHAT_GENERAL_NEED_LIFETIME)),
+						player);
+				return false;
+			}
+
+		}
+		return true;
+	}
+
+	public static boolean canChatShout(L2PcInstance player) {
+		String MensajeDeChat_LEVEL = language.getInstance().getMsg(player).CHAT_LEVEL;
+		String MensajeDeChat_PVP = language.getInstance().getMsg(player).CHAT_PVP;
+		String MensajeDeChat_LT = language.getInstance().getMsg(player).CHAT_LIFETIME;
+		if (general.CHAT_SHOUT_BLOCK && !player.isGM()) {
+			if (player.getLevel() < general.CHAT_SHOUT_NEED_LEVEL) {
+				central.msgbox(MensajeDeChat_LEVEL.replace("$level", String.valueOf(general.CHAT_SHOUT_NEED_LEVEL)),
+						player);
+				return false;
+			}
+
+			if (player.getPvpKills() < general.CHAT_SHOUT_NEED_PVP) {
+				central.msgbox(MensajeDeChat_PVP.replace("$pvp", String.valueOf(general.CHAT_SHOUT_NEED_PVP)), player);
+				return false;
+			}
+
+			if (player.getOnlineTime() < general.CHAT_SHOUT_NEED_LIFETIME) {
+				central.msgbox(MensajeDeChat_LT.replace("$life", String.valueOf(general.CHAT_SHOUT_NEED_LIFETIME)),
+						player);
+				return false;
+			}
+
+		}
+		return true;
+	}
+
+	public static boolean canChatTrade(L2PcInstance player) {
+		String MensajeDeChat_LEVEL = language.getInstance().getMsg(player).CHAT_LEVEL;
+		String MensajeDeChat_PVP = language.getInstance().getMsg(player).CHAT_PVP;
+		String MensajeDeChat_LT = language.getInstance().getMsg(player).CHAT_LIFETIME;
+		if (general.CHAT_TRADE_BLOCK && !player.isGM()) {
+			if (player.getLevel() < general.CHAT_TRADE_NEED_LEVEL) {
+				central.msgbox(MensajeDeChat_LEVEL.replace("$level", String.valueOf(general.CHAT_TRADE_NEED_LEVEL)),
+						player);
+				return false;
+			}
+
+			if (player.getPvpKills() < general.CHAT_TRADE_NEED_PVP) {
+				central.msgbox(MensajeDeChat_PVP.replace("$pvp", String.valueOf(general.CHAT_TRADE_NEED_PVP)), player);
+				return false;
+			}
+
+			if (player.getOnlineTime() < general.CHAT_TRADE_NEED_LIFETIME) {
+				central.msgbox(MensajeDeChat_LT.replace("$life", String.valueOf(general.CHAT_TRADE_NEED_LIFETIME)),
+						player);
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static boolean canChatWisp(L2PcInstance player) {
+		String MensajeDeChat_LEVEL = language.getInstance().getMsg(player).CHAT_LEVEL;
+		String MensajeDeChat_PVP = language.getInstance().getMsg(player).CHAT_PVP;
+		String MensajeDeChat_LT = language.getInstance().getMsg(player).CHAT_LIFETIME;
+		if (general.CHAT_WISP_BLOCK && !player.isGM()) {
+			if (player.getLevel() < general.CHAT_WISP_NEED_LEVEL) {
+				central.msgbox(MensajeDeChat_LEVEL.replace("$level", String.valueOf(general.CHAT_WISP_NEED_LEVEL)),
+						player);
+				return false;
+			}
+
+			if (player.getPvpKills() < general.CHAT_WISP_NEED_PVP) {
+				central.msgbox(MensajeDeChat_PVP.replace("$pvp", String.valueOf(general.CHAT_WISP_NEED_PVP)), player);
+				return false;
+			}
+
+			if (player.getOnlineTime() < general.CHAT_WISP_NEED_LIFETIME) {
+				central.msgbox(MensajeDeChat_LT.replace("$life", String.valueOf(general.CHAT_WISP_NEED_LIFETIME)),
+						player);
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static boolean isLevelProtected(L2PcInstance player, L2PcInstance target) {
+		try {
+			overenchant.check(player, true);
+		} catch (Exception a) {
+
+		}
+
+		try {
+			if (player.isInDuel() && target.isInDuel()) {
+				if (player.getDuelId() == target.getDuelId()) {
+					return false;
+				}
+			}
+		} catch (Exception a) {
+
+		}
+
+		return PvPPk._protectionLvL_PVPPK(player, target);
+	}
+
+	public static void logPvP_PK(L2PcInstance Asesino, String Tipo, L2PcInstance Asesinado) {
+		if ((Asesino instanceof L2PcInstance) && (Asesinado instanceof L2PcInstance)) {
+			try {
+				PvPPk._logPvPPK(Asesino, Asesinado, Tipo);
+			} catch (Exception a) {
+				_log.warning("LogPVP-> Error al Ingresar el log PVP PK");
+			}
+
+			try {
+				if (Tipo.equalsIgnoreCase("pk")) {
+					setPvP_PK(Asesino, false);
+				} else {
+					setPvP_PK(Asesino, true);
+				}
+
+			} catch (Exception a) {
+
+			}
+
+			if (Tipo.equalsIgnoreCase("PK")) {
+				if ((Asesino.getKarma() > 0) && general.ANNOUNCE_KARMA_PLAYER_WHEN_KILL) {
+					opera.AnunciarTodos("[PK PLAYER]",
+							general.ANNOUNCE_KARMA_PLAYER_WHEN_KILL_MSN.replace("%CHAR_NAME%", Asesino.getName())
+									.replace("%KARMA%", String.valueOf(Asesino.getKarma())));
+				}
+			}
+
+			/** PVp Clan reputation reward */
+			if ((Asesino.getInstanceId() != pvpInstance.getInstanceID(_ZONES_TYPE.INDIVIDUAL))
+					&& (Asesino.getInstanceId() != pvpInstance.getInstanceID(_ZONES_TYPE.PARTY))
+					&& (Asesino.getInstanceId() != pvpInstance.getInstanceID(_ZONES_TYPE.CLAN))) {
+				checkKillersForClanReputation(Asesino, Asesinado);
+			}
+			/** PVp Clan reputation reward */
+			// pvpInstance.setKill(Asesino, Asesinado);
+		}
+	}
+
+	private static void checkKillersForClanReputation(L2PcInstance Asesino, L2PcInstance Asesinado) {
+		if (general.PVP_CLAN_REPUTATION_REWARD) {
+			if (Asesinado.getClan() != null && Asesino.getClan() != null) {
+				if (Asesino.getClan().isAtWar() && Asesinado.getClan().isAtWar()) {
+					if (Asesino.getClan().isAtWarWith(Asesinado.getClan())) {
+						if (Asesinado.getClan().getReputationScore() >= general.PVP_CLAN_REPUTATION_AMOUNT) {
+							SystemMessage sm = SystemMessage.sendString(Asesino.getName()
+									+ " has kill a clan war member and you clan get "
+									+ String.valueOf(general.PVP_CLAN_REPUTATION_AMOUNT) + " Clan reputation Points.");
+							Asesino.getClan().setReputationScore(
+									Asesino.getClan().getReputationScore() + general.PVP_CLAN_REPUTATION_AMOUNT, true);
+							Asesino.getClan().broadcastToOnlineMembers(sm);
+							Asesino.getClan().updateClanInDB();
+							Asesino.getClan().broadcastClanStatus();
+
+							sm = SystemMessage.sendString(Asesinado.getName()
+									+ " has kill it by a clan war member and you Clan Reputation has Decreased by "
+									+ String.valueOf(general.PVP_CLAN_REPUTATION_AMOUNT) + " Points.");
+							Asesinado.getClan().setReputationScore(
+									Asesinado.getClan().getReputationScore() - general.PVP_CLAN_REPUTATION_AMOUNT,
+									true);
+							Asesinado.getClan().broadcastToOnlineMembers(sm);
+							Asesinado.getClan().updateClanInDB();
+							Asesinado.getClan().broadcastClanStatus();
+						}
+					}
+				}
+			}
+		}
+	}
+
+	public static void townWarReward(L2PcInstance Killer, L2PcInstance Death) {
+		if (Killer.isInTownWarEvent()) {
+			if ((!isDualBox_pc(Killer, Death) && general.EVENT_TOWN_WAR_DUAL_BOX_CHECK)
+					|| !general.EVENT_TOWN_WAR_DUAL_BOX_CHECK) {
+				TownWarEvent.getInstance().setKills(Killer);
+				if (general.EVENT_TOWN_WAR_REWARD_GENERAL.length() > 0) {
+					opera.giveReward(Killer, general.EVENT_TOWN_WAR_REWARD_GENERAL);
+				}
+				if (!general.EVENT_TOWN_WAR_GIVE_PVP_REWARD) {
+				}
+			}
+			checkKillersForClanReputation(Killer, Death);
+			if (general.EVENT_TOWN_WAR_GIVE_PVP_REWARD) {
+				if (general.PVP_REWARD) {
+					if (general.PVP_REWARD_ITEMS.length() > 0) {
+						opera.giveReward(Killer, general.PVP_REWARD_ITEMS);
+						if (general.PVP_PARTY_REWARD_ITEMS == null) {
+							return;
+						} else if (general.PVP_PARTY_REWARD_ITEMS.length() == 0) {
+							return;
+						}
+						if (general.PVP_PARTY_REWARD) {
+							if (Killer.isInParty()) {
+								for (L2PcInstance playerParty : Killer.getParty().getMembers()) {
+									if (playerParty != Killer) {
+										if ((!isDualBox_pc(playerParty, Killer) && general.PVP_REWARD_CHECK_DUALBOX)
+												|| !general.PVP_REWARD_CHECK_DUALBOX) {
+											if (playerParty.isInsideRadius(Killer.getLocation(),
+													general.PVP_REWARD_RANGE, true, true)) {
+												opera.giveReward(playerParty, general.PVP_PARTY_REWARD_ITEMS);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	public static boolean isTownWarEventOn() {
+		return TownWarEvent.getInstance().isOn();
+	}
+
+	private static void setPVP_PK_Reward(L2PcInstance player) {
+		boolean isOkDualBox = false;
+
+		if (!(player instanceof L2PcInstance)) {
+			return;
+		}
+
+		L2Object chaTarget = player.getTarget();
+
+		if (!(chaTarget instanceof L2PcInstance)) {
+			return;
+		}
+
+		L2PcInstance playerTarget = (L2PcInstance) chaTarget;
+
+		if (general.PVP_REWARD_CHECK_DUALBOX) {
+			if (isDualBox_pc(player, playerTarget)) {
+				isOkDualBox = true;
+			}
+		}
+
+		boolean checkPVPPKReward = true;
+
+		if (checkPVPPKReward) {
+			if (!isOkDualBox || !player.isOnEvent() || !player.isOlympiadStart()) {
+				if (general.PVP_REWARD) {
+					if (general.PVP_REWARD_ITEMS.length() > 0) {
+						opera.giveReward(player, general.PVP_REWARD_ITEMS);
+						if (general.PVP_PARTY_REWARD_ITEMS == null) {
+							return;
+						} else if (general.PVP_PARTY_REWARD_ITEMS.length() == 0) {
+							return;
+						}
+						if (general.PVP_PARTY_REWARD) {
+							if (player.isInParty()) {
+								for (L2PcInstance playerParty : player.getParty().getMembers()) {
+									if (playerParty != player) {
+										if ((!isDualBox_pc(playerParty, player) && general.PVP_REWARD_CHECK_DUALBOX)
+												|| !general.PVP_REWARD_CHECK_DUALBOX) {
+											if (playerParty.isInsideRadius(player.getLocation(),
+													general.PVP_REWARD_RANGE, true, true)) {
+												opera.giveReward(playerParty, general.PVP_PARTY_REWARD_ITEMS);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@SuppressWarnings("unused")
+	public static void setPvP_PK(L2PcInstance player, boolean isPvP) {
+
+		if (!(player instanceof L2PcInstance)) {
+			return;
+		}
+
+		L2Object chaTarget = player.getTarget();
+
+		if (!(chaTarget instanceof L2PcInstance)) {
+			return;
+		}
+
+		L2PcInstance playerTarget = (L2PcInstance) chaTarget;
+
+		try {
+			if (SunriseEvents.isInEvent(player)) {
+				return;
+			}
+		} catch (Exception a) {
+
+		}
+
+		setPVP_PK_Reward(player);
+
+		try {
+			PvPPk.getColorPvP_PK(player);
+		} catch (Exception a) {
+			_log.warning("COLOR PVP-> Error en Implementar Color PVP PK en Tiempo real al player"
+					+ String.valueOf(player.getObjectId()));
+		}
+		try {
+			Anunc._AnunciarCiclosPvP_PK(player, isPvP);
+		} catch (Exception a) {
+			_log.warning("Anunciar Ciclos PVP PK-> Error en Implementar los Mensajes PVP PK en Tiempo real al player "
+					+ String.valueOf(player.getName()) + ", ->" + a.getMessage());
+		}
+	}
+
+	public static String getBaseName(L2Character player) {
+		try {
+			return central.getClassName((L2PcInstance) player);
+		} catch (Exception a) {
+			_log.warning("Error en Capturar Clase");
+			return "unknown";
+		}
+	}
+
+	public static String getBaseName(L2PcInstance player) {
+		return central.getClassName(player, player.getBaseClass());
+	}
+
+	public static void Anun_Clase_Oponente(L2PcInstance player1, L2PcInstance player2) {
+		try {
+			olym._Anun_oponent(player1, player2);
+		} catch (Exception a) {
+			_log.warning("ANNOUCEMENT OPONENTE-> Error al Anunciar al Oponente en Olys");
+		}
+	}
+
+	public static void Announce_Oly_Winner(Participant Winner, Participant Looser) {
+		String WinName = Winner.getName();
+		String LooserName = Looser.getName();
+		String ClanWin = Winner.getClanName();
+		String ClanLooser = Looser.getClanName();
+		for (L2PcInstance ppl : opera.getAllPlayerOnWorld()) {
+			if (ppl.getClient().isDetached()) {
+				continue;
+			}
+			if (general.getCharConfigReadOlyWinner(ppl)) {
+				if (ppl.getName() != WinName && ppl.getName() != LooserName) {
+					central.msgbox_Lado(
+							WinName + "(" + ClanWin + ") beat " + LooserName + "(" + ClanLooser + ") in the Olympics",
+							ppl, "Olympiad");
+				}
+			}
+		}
+	}
+
+	public static void Anun_Raid(L2RaidBossInstance raidboss) {
+		Anunc.AnunciarRaidBoss(raidboss);
+	}
+
+	public static void Anun_Raid(L2RaidBossInstance raidboss, long respawnTime) {
+		Anunc.AnunciarRaidBoss(raidboss, respawnTime);
+	}
+
+	public static void talkNpc(L2PcInstance player, String Parametro) {
+		ManagerAIONpc.talkNpc(player, Parametro);
+	}
+
+	public static boolean AnunciarEnchant(int Enchant) {
+		return Anunc._AnunciarEnchant(Enchant);
+	}
+
+	public static void showMyStat(L2PcInstance target, L2PcInstance player) {
+		showMyStat.showMyStats(target, player);
+	}
+
+	protected static String getIP_Internet(L2PcInstance Player) {
+		return Player.getClient().getConnection().getInetAddress().getHostAddress();
+	}
+
+	public static String getIp_Wan(L2PcInstance player) {
+		return getIP_Internet(player);
+	}
+
+	protected static void setIPChar(L2PcInstance Player) {
+		int[][] trace1 = Player.getClient().getTrace();
+		String ips = "";
+		int idSeccion = 0;
+		for (int primero[] : trace1) {
+			for (int Segundo : primero) {
+				if (ips.length() > 0) {
+					ips += ".";
+				}
+				ips += String.valueOf(Segundo);
+			}
+			general.RegistrarPlayerIPs(Player, ips, idSeccion);
+			ips = "";
+			idSeccion++;
+		}
+	}
+
+	protected static String getIPpc(L2PcInstance Player) {
+		return getIPpc(Player, 0);
+	}
+
+	protected static String getIPpc(L2PcInstance Player, int IPGet) {
+		return general.getIPPlayer(Player, IPGet);
+	}
+
+	public static String getIp_pc(L2PcInstance player) {
+		/*
+		 * 0=pcIp // lasip 1=hop1 2=hop2 3=hop3 4=hop4 5=ipPc from BD
+		 */
+		String Return = "";
+		try {
+			Return = getIPpc(player, 0);
+		} catch (Exception a) {
+			Return = "";
+		}
+		return Return;
+	}
+
+	public static boolean isOlyBanned(L2PcInstance Player) {
+		boolean retorno = false;
+
+		if (!general.OLY_ALLOW) {
+			central.msgbox("The Olympiad game are disable by Admin", Player);
+			return true;
+		}
+
+		if (Player.getName().startsWith("[BUFF]")) {
+			central.msgbox("The AIO BUFF can not register into olys", Player);
+			return true;
+		}
+
+		if (general.getCharConfigBANOLY(Player)) {
+			central.msgbox(language.getInstance().getMsg(Player).YOU_ARE_OLY_BANNED, Player);
+			return true;
+		}
+
+		return retorno;
+	}
+
+	public static void pvpInstanceFinishPlayer(int idInstanceZone, L2PcInstance player) {
+		if (pvpInstance.isInstancePVP(player, idInstanceZone, false)
+				|| pvpInstance.isInstancePVP(player, idInstanceZone, true)) {
+			pvpInstance.playerLeave(player);
+		}
+	}
+
+	public static void pvpInstanceFinish(int idInstanceZone) {
+		if (pvpInstance.isInstancePVP(null, idInstanceZone, false)) {
+			pvpInstance.finishZone(idInstanceZone);
+		}
+	}
+
+	public static boolean setKillInstance(L2PcInstance Killer, L2PcInstance Death) {
+
+		if (!pvpInstance.isInstancePVP(Killer, Killer.getInstanceId(), false)) {
+
+		}
+
+		_ZONES_TYPE tempType = pvpInstance.getZoneType(Killer.getInstanceId());
+
+		if (tempType == null) {
+			return false;
+		}
+		int idInstance = pvpInstance.getInstanceID(tempType);
+		if (idInstance < 0) {
+			return false;
+		}
+		if (Killer.getInstanceId() == Death.getInstanceId()) {
+			return pvpInstance.setKill(Killer, Death);
+		}
+		return false;
+	}
+
+	public static boolean isInPvPInstance(L2PcInstance player, boolean revive) {
+		if (pvpInstance.isInstancePVP(player, player.getInstanceId(), false)) {
+			if (revive) {
+				pvpInstance.onDieRevive(player, true);
+			}
+			return true;
+		}
+		return false;
+	}
+
+	public static boolean isInPvPInstanceSoloParty(L2PcInstance player) {
+		if (pvpInstance.isInstancePVP(player, player.getInstanceId(), false)) {
+			return pvpInstance.isInSoloParty(player.getInstanceId(), false);
+		}
+		return false;
+	}
+
+	public static boolean isInPvPInstanceSoloClan(L2PcInstance player) {
+		if (pvpInstance.isInstancePVP(player, player.getInstanceId(), false)) {
+			return pvpInstance.isInSoloClan(player.getInstanceId(), false);
+		}
+		return false;
+	}
+
+	public static void changeTemplateOly(L2PcInstance player) {
+		changeTemplateOly(player, true);
+		general.resetBuffRemoved(player);
+	}
+
+	public static void changeTemplateOly(L2PcInstance player, boolean Activar) {
+		try {
+			cbFormato.cerrarCB(player);
+		} catch (Exception a) {
+
+		}
+
+		if (general.OLY_ANTIFEED_CHANGE_TEMPLATE && Activar) {
+			player.startAntifeedProtection(true, true, true, true);
+		} else {
+			player.startAntifeedProtection(false, true, false, false);
+		}
+	}
+
+	public static boolean changeTituloOly() {
+		return general.OLY_ANTIFEED_SHOW_IN_TITLE_CLASS;
+	}
+
+	public static boolean changeNameOly() {
+		return general.OLY_ANTIFEED_SHOW_IN_NAME_CLASS;
+	}
+
+	public static boolean Annou_opponent(int segundos) {
+		if (!general.ANNOUCE_CLASS_OPONENT_OLY) {
+			return false;
+		}
+		return Anunc._anunciarOponente(segundos);
+	}
+
+	public static boolean showNameNpcOly() {
+		return general.OLY_ANTIFEED_SHOW_NAME_NPC;
+	}
+
+	public static boolean isDualBox_pc(L2PcInstance Player1, Object Player2) {
+
+		if (Player2 instanceof L2PcInstance) {
+			return isDualBox_pc(Player1, (L2PcInstance) Player2);
+		}
+		return false;
+	}
+
+	public static boolean OlyChangeName_npc() {
+		return general.OLY_ANTIFEED_SHOW_NAME_NPC;
+	}
+
+	public boolean OlyChangeName_char(L2PcInstance player) {
+		if (player.isInOlympiadMode()) {
+			return general.OLY_ANTIFEED_CHANGE_TEMPLATE;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean OlyChangeName_char(L2Character cha) {
+		return OlyChangeName_char((L2PcInstance) cha);
+	}
+
+	public boolean OlyUserClassNameInCharName() {
+		return general.OLY_ANTIFEED_SHOW_IN_NAME_CLASS;
+	}
+
+	public static boolean OlyChangeName_char() {
+
+		if (general.OLY_ANTIFEED_CHANGE_TEMPLATE) {
+			return true;
+		}
+
+		return false;
+	}
+
+	public static boolean OlyShowOpponent() {
+		return general.ANNOUCE_CLASS_OPONENT_OLY;
+	}
+
+	public static boolean isDualBox_pc_Oly(L2PcInstance player1, L2PcInstance player2) {
+		if (!general.OLY_DUAL_BOX_CONTROL) {
+			return false;
+		}
+		return isDualBox_pc(player1, player2);
+	}
+
+	public static void showBuffWindows(L2PcInstance player, L2PcInstance playerComprador) {
+		sellBuff.SetSelectedCharBuffer(playerComprador.getObjectId(), player);
+		sellBuff.showSellBuffer_main(playerComprador, player);
+	}
+
+	public static boolean isSellingBuf(L2PcInstance player) {
+		return sellBuff.isBuffSeller(player);
+	}
+
+	public static boolean isDualBox_pc(L2PcInstance Player1, L2PcInstance Player2) {
+		String ip_pc1 = "";
+		String ip_pc2 = "";
+		String ip_inter_1 = getIP_Internet(Player1);
+		String ip_inter_2 = getIP_Internet(Player2);
+
+		if (ip_inter_1.equals(ip_inter_2)) {
+			ip_pc1 = getIPpc(Player1);
+			ip_pc2 = getIPpc(Player2);
+
+			if (ip_pc1.equals(ip_pc2)) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
+	}
+
+	public static final ZeuS getInstance() {
+		return _instance;
+	}
+
+	public ZeuS getInstance2() {
+		return _instance;
+	}
+
+	public static void jailOut(L2PcInstance player) {
+		general.removeBotPlayer(player);
+	}
+
+	public static void Anun_Clase_Oponente(String[] playerNames) {
+		for (int i = 0; i <= playerNames.length; i++) {
+			try {
+				L2PcInstance player1 = L2World.getInstance().getPlayer(playerNames[i++]);
+				L2PcInstance player2 = L2World.getInstance().getPlayer(playerNames[i]);
+				Anun_Clase_Oponente(player1, player2);
+			} catch (Exception a) {
+
+			}
+		}
+	}
+
+	public static void stopSellBuffStore(int idPlayer) {
+		L2PcInstance ptemp = opera.getPlayerbyID(idPlayer);
+		if (ptemp != null) {
+			try {
+				stopSellBuffStore(ptemp);
+			} catch (Exception a) {
+				_log.warning("Error on remove BuffStore, player name: " + ptemp.getName());
+			}
+		}
+	}
+
+	public static void stopSellBuffStore(L2PcInstance player) {
+		sellBuff.setStopSellBuff(player);
+	}
+
+	public static void restoreBuffStore() {
+		sellBuff.restoreOffline();
+	}
+
+	public static int getNameColorBeforeBuffStore(L2PcInstance player) {
+		return sellBuff.getNameColorBefore(player);
+	}
+
+	public static int getTitleColorBeforeBuffStore(L2PcInstance player) {
+		return sellBuff.getTitleColorBefore(player);
+	}
+
+	public static String getTitleBeforeBuffStore(L2PcInstance player) {
+		return sellBuff.getTitleBefore(player);
+	}
+
+	public static boolean saveCharDataOnBD(L2PcInstance player) {
+		return general.canSaveInBD(player);
+	}
+
+	public static boolean isInObserveMode(L2PcInstance player) {
+		return ObserveMode.isInObserveMode(player);
+	}
+
+	public static void setObserveMode(L2PcInstance player, boolean p1) {
+		ObserveMode.setObserveMode(player, p1);
+	}
+
+	public static boolean idLinkFromZeuS(L2PcInstance charRequestInfo, int idLink) {
+		if (general.DEBUG_CONSOLA_ENTRADAS) {
+			_log.warning("Char Request Info:" + charRequestInfo.getName() + ", idLink:" + String.valueOf(idLink));
+		}
+		return itemLink.isLinkFromZeuS(charRequestInfo, idLink);
+	}
+
+	public static boolean showOlyBuff_CB(L2PcInstance player) {
+
+		if (!general.OLY_CAN_USE_SCHEME_BUFFER) {
+			return false;
+		}
+
+		if (!general.getCharConfigOlyScheme(player)) {
+			return false;
+		}
+
+		int buffCount = player.getOlympiadBuffCount();
+		if (buffCount <= 0 && player.isInOlympiadMode()) {
+			central.msgbox("You dont have more buff to use.", player);
+			cbFormato.cerrarCB(player);
+			return true;
+		}
+
+		String Enviar = C_oly_buff.bypass(player, general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC()+";" + Engine.enumBypass.OlyBuffer.name() + ";0;0;0;0;0;0");
+		cbManager.separateAndSend(Enviar, player);
+		return true;
+	}
+
+	public static void showLevelUpSpotWindows(L2PcInstance player) {
+		if (!general.LEVEL_UP_SPOT) {
+			return;
+		}
+		try {
+			levelup.getLevelUpSpotWindows(player);
+		} catch (Exception a) {
+			_log.warning("Error on show Level Up Windows Spot ->" + a.getMessage());
+		}
+	}
+
+	public static boolean isAdvensedClassMaster(L2PcInstance player) {
+		if (profession.isAdvancedClassMaster(player)) {
+			profession.showProfesionWindows(player);
+			return true;
+		}
+		return false;
+	}
+
+	public static void setNewAuctionFromServer(L2PcInstance player, int idItem, long Quantity, long Price,
+			boolean isSell, int enchant) {
+		v_auction_house.setNewSellBuyFromServer(player, idItem, Quantity, Price, isSell, enchant);
+	}
+
+	public static void setCancelAuctionFromServer(L2PcInstance player) {
+		v_auction_house.setCancelAuctionFromServer(player);
+	}
+
+	public static void oly_monuments_load() {
+		oly_monument.loadNewInformation();
+	}
+
+	/** Tutorial Windows Bypass */
+	public static boolean zeusByPass(L2PcInstance player, String Command) {
+		if (Command == null) {
+			return false;
+		}
+
+		if (general.DEBUG_CONSOLA_ENTRADAS) {
+			_log.warning("ZeuS Tutorial ByPass->" + Command);
+		}
+		if (general.DEBUG_CONSOLA_ENTRADAS_TO_USER) {
+			central.msgbox("ZeuS Tutorial ByPass->" + Command, player);
+		}
+
+		if (Command.equals("closeAndShowCB")) {
+			CBByPass.byPass(player, general.getCOMMUNITY_BOARD_PART_EXEC());
+			cbFormato.cerrarTutorial(player);
+		} else if (Command.startsWith("close") && !Command.endsWith("AndCheck")) {
+			cbFormato.cerrarTutorial(player);
+		} else if (Command.startsWith("closeAndCheck")) {
+			cbFormato.cerrarTutorial(player);
+			if (profession.isAdvancedClassMaster(player)) {
+				profession.showProfesionWindows(player);
+			}
+		} else if (Command.startsWith("zeusC")) {
+			String Cmd = Command.substring(6);
+			CBByPass.byPass(player, Cmd);
+		} else if (Command.startsWith("zeusS")) {
+
+		} else if (Command.startsWith("zeusLS")) {
+			levelup.bypass(player, Command);
+		} else if (Command.startsWith("zeusPF")) {
+			profession.bypass(player, Command);
+		} else if (Command.equals("zeusDRCL")) {
+			v_Dressme.makeQuestionAboutExclusiveClan(player);
+		} else if (Command.equals("zeusDRCH")) {
+			v_Dressme.makeQuestionAboutExclusiveChar(player);
+		} else if (Command.startsWith("zeusBC")) {
+			String ByPassSend = "zeusBootAsk " + Command.split(";")[2] + " " + Command.split(";")[3] + " "
+					+ Command.split(";")[4];
+			antibotSystem.bypass(player, ByPassSend);
+		} else {
+			return false;
+		}
+		return true;
+	}
+
+	private static Map<Integer, olyTimer> OLY_TIMER = new HashMap<Integer, olyTimer>();
+	private static Map<Integer, Integer> INSTANCE_PLAYER = new HashMap<Integer, Integer>();
+
+	public static void setIdInstance(L2PcInstance player, int idInstance) {
+		if (player == null) {
+			return;
+		}
+		INSTANCE_PLAYER.put(player.getObjectId(), idInstance);
+	}
+
+	public static void setOlyTimer(L2PcInstance player, int idPlayerOly) {
+		if (!general.ZEUS_OLY_COUNTER) {
+			return;
+		}
+		try {
+			OLY_TIMER.remove(player.getObjectId());
+		} catch (Exception a) {
+
+		}
+		olyTimer Temp = new olyTimer(player, idPlayerOly);
+		OLY_TIMER.put(player.getObjectId(), Temp);
+	}
+
+	public static void setOlyDmg(L2PcInstance player1, L2PcInstance player2, int idPlayer, int Damage) {
+		OLY_TIMER.get(player1.getObjectId()).addDmg(Damage, idPlayer);
+		OLY_TIMER.get(player2.getObjectId()).addDmg(Damage, idPlayer);
+	}
+
+	private static void CerrarCB(L2PcInstance player) {
+		cbFormato.cerrarCB(player);
+		cbFormato.cerrarTutorial(player);
+	}
+
+	public static void setOlyTimer(L2PcInstance player1, L2PcInstance player2) {
+		CerrarCB(player1);
+		CerrarCB(player2);
+		if (!general.ZEUS_OLY_COUNTER) {
+			return;
+		}
+		try {
+			OLY_TIMER.remove(player1.getObjectId());
+		} catch (Exception a) {
+
+		}
+		try {
+			OLY_TIMER.remove(player2.getObjectId());
+		} catch (Exception a) {
+
+		}
+		olyTimer Temp = new olyTimer(player1, 1);
+		olyTimer Temp2 = new olyTimer(player2, 2);
+		OLY_TIMER.put(player1.getObjectId(), Temp);
+		OLY_TIMER.put(player2.getObjectId(), Temp2);
+	}
+
+	public static void stopOlyTimer(L2PcInstance player) {
+		try {
+			OLY_TIMER.get(player.getObjectId()).stopClock(true);
+		} catch (Exception a) {
+
+		}
+	}
+
+	public static void loadFakeNpc() {
+		fakenpc.getInstance().loadData();
+	}
+
+	private static boolean isloadFakeNpc = false;
+
+	public static FakePc fakeNpcZeuS(int IdNpc) {
+		if (!isloadFakeNpc) {
+			loadFakeNpc();
+			isloadFakeNpc = true;
+		}
+		return fakenpc.getInstance().getFakeData(IdNpc);
+	}
+
+	public static L2NpcTemplate getTemplate(int IdNpc) {
+		return fakenpc.getInstance().getTemplate(IdNpc);
+	}
+
+	public static boolean isProgram(L2PcInstance player) {
+		return _dualBox.isSecondProgram(player);
+	}
+
+	/****/
+	public static final String getAIOPrefix() {
+		return general.AIO_PREFIX;
+	}
+
+	public cumulativeSubclass getcumulativeSubclass() {
+		return cumulativeSubclass.getInstance();
+	}
+
+	public static boolean subClassCumulativeIsEnabled() {
+		return _cumulativeData.isEnabled();
+	}
+
+	public static int getColorName(L2PcInstance player) {
+		return colorNameTitle.getColors(player, true);
+	}
+
+	public static int getColorTitle(L2PcInstance player) {
+		return colorNameTitle.getColors(player, false);
+	}
+}

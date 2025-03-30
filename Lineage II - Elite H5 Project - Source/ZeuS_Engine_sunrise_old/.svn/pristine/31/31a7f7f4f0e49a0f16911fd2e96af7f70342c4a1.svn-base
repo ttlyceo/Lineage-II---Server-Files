@@ -1,0 +1,501 @@
+Index: config/config/zeus/htm/eng/Language.ini
+===================================================================
+--- config/config/zeus/htm/eng/Language.ini	(revision 19)
++++ config/config/zeus/htm/eng/Language.ini	(working copy)
+@@ -403,6 +403,8 @@
+ DONATION_ASK_CLAN_SKILL = You gonna skill clan for the clan Level $clanlevel for $Amount $DonationItemName
+ DONATION_ASK_ENCHANT_YOU_WANT_TO_ENCHANT_THE_ITEM_$item_TO_$enchant_$cost = You want enchant $item to $enchant? it will cost $cost
+ DONATION_ASK_ENCHANT_YOU_WANT_TO_ELEMENTAL_THE_ITEM_$item_TO_$enchant_$elemental_$cost = You want enchant $item to $enchant $elemental? it will cost $cost
++DONATION_PAYPAL_YOU_NEED_TO_WAIT_X_SECOND_FOR_OTHER_EMAIL_PETITION = You need to wait $seconds for another Email link Peticion
++DONATION_PAYPAL_SENDING_LINK_TO_YOUR_EMAIL = We are sending the Donation Link to your Email $email
+ 
+ #-------------------------------------------------------------
+ #WISH LIST
+@@ -784,6 +786,12 @@
+ BORROW_SYSTEM_CAN_NOT_BE_USE_BY_GM_AND_ADMINS = This command can not be use by the Server staff
+ BORROW_SYSTEM_ADM_$name_HAS_SET_BORROWED_PASSWORD = The adm $name has set a borrowed password.
+ 
++#
++#EXP SP
++#
++EXP_ON = Experience ON
++EXP_OFF = Experience OFF
++
+ 
+ 
+ PRE_DONATION_TEXT = Thanks for support us before that we open. Now you Donation Reward are Ready. Thank you very much
+\ No newline at end of file
+Index: config/config/zeus/mail/eng/sendPaypal.html
+===================================================================
+--- config/config/zeus/mail/eng/sendPaypal.html	(revision 0)
++++ config/config/zeus/mail/eng/sendPaypal.html	(revision 0)
+@@ -0,0 +1,10 @@
++<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
++<html xmlns="http://www.w3.org/1999/xhtml">
++<head>
++<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
++<title>L2Teffia H5 Server</title>
++
++%LINKWEB%
++
++</body>
++</html>
+\ No newline at end of file
+Index: config/config/zeus/zeus_donation.properties
+===================================================================
+--- config/config/zeus/zeus_donation.properties	(revision 19)
++++ config/config/zeus/zeus_donation.properties	(working copy)
+@@ -88,7 +88,8 @@
+ #Item,Count;Item,Count
+ DONATION_EXTRA_GIFT_ITEMS =
+ 
+- 
++#[ITEM_ID, ITEM_ID]
++DONATION_BLACK_LIST = 
+ 
+ #-----------------------------------------------------------
+ #some Access
+Index: config/config/zeus/zeus_paypal.properties
+===================================================================
+--- config/config/zeus/zeus_paypal.properties	(revision 0)
++++ config/config/zeus/zeus_paypal.properties	(revision 0)
+@@ -0,0 +1,10 @@
++PAYPAL_LINK_WEB = http://xxx.xxx.xxx.xxx/donationLink.php
++PAYPAL_LINK_EMAIL = https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=xxxxxxxxxxxxx@xxxxx.com&lc=US&item_name=%ID_WEB_DONATION%&no_note=0&cn=&currency_code=EUR&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted
++PAYPAL_SECONDS_WAITING_TIME = 600
++
++#DEFAULT: WEB
++#You can use
++#	WEB
++#	EMAIL
++PAYPAL_LINK_USE = EMAIL
++ 
+\ No newline at end of file
+Index: src/ZeuS/Comunidad/EngineForm/v_donation.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_donation.java	(revision 28)
++++ src/ZeuS/Comunidad/EngineForm/v_donation.java	(working copy)
+@@ -78,31 +78,10 @@
+ 				
+ 	};
+ 
+-	private static final char[] CONSTS_HEX = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f' };
+-    private static String toMD5(String stringAEncriptar)
+-    {
+-        try
+-        {
+-           MessageDigest msgd = MessageDigest.getInstance("MD5");
+-           byte[] bytes = msgd.digest(stringAEncriptar.getBytes());
+-           StringBuilder strbCadenaMD5 = new StringBuilder(2 * bytes.length);
+-           for (int i = 0; i < bytes.length; i++)
+-           {
+-               int bajo = (int)(bytes[i] & 0x0f);
+-               int alto = (int)((bytes[i] & 0xf0) >> 4);
+-               strbCadenaMD5.append(CONSTS_HEX[alto]);
+-               strbCadenaMD5.append(CONSTS_HEX[bajo]);
+-           }
+-           return strbCadenaMD5.toString();
+-        } catch (NoSuchAlgorithmException e) {
+-           return null;
+-        }
+-    }	
+-	
+ 	public static void setDonationInformation(L2PcInstance player, String Quantity, String Type, String Observ){
+ 		String Query = "INSERT INTO zeus_dona_espera(id, dona_monto, dona_char, dona_medio, dona_email, dona_obser) VALUES(?,?,?,?,?,?)";
+ 		String IdForMd5 = String.valueOf(opera.getUnixTimeL2JServer()) + String.valueOf(player.getObjectId());
+-		String Encript = toMD5(IdForMd5);
++		String Encript = opera.toMD5(IdForMd5);
+ 		Connection con = null;
+ 		PreparedStatement ins = null;
+ 		boolean sendEmail = false;
+@@ -655,7 +634,15 @@
+ 				
+ 				if(It.isEnchantable()==0){
+ 					continue;
+-				}				
++				}
++				
++				if(general.DONATION_BLACK_LIST != null) {
++					if(general.DONATION_BLACK_LIST.size() > 0) {
++						if(general.DONATION_BLACK_LIST.contains( It.getItem().getId() ) ) {
++							continue;
++						}
++					}
++				}
+ 				
+ 				String I_Ima = player.getInventory().getPaperdollItem(Info).getItem().getIcon();
+ 				String I_Name = central.getNombreITEMbyID(player.getInventory().getPaperdollItem(Info).getItem().getId());
+Index: src/ZeuS/Config/general.java
+===================================================================
+--- src/ZeuS/Config/general.java	(revision 29)
++++ src/ZeuS/Config/general.java	(working copy)
+@@ -6,6 +6,7 @@
+ import java.sql.PreparedStatement;
+ import java.sql.ResultSet;
+ import java.sql.SQLException;
++import java.util.ArrayList;
+ import java.util.Arrays;
+ import java.util.Collections;
+ import java.util.Comparator;
+@@ -298,6 +299,7 @@
+ 
+ 	public static final Logger _log = Logger.getLogger(general.class.getName());
+ 	private static final String ZEUS_CONFIG = "./config/zeus/zeus.properties";
++	private static final String ZEUS_PAYPAL_CONFIG = "./config/zeus/zeus_paypal.properties";
+ 	private static final String ZEUS_CONFIG_NPC_COMMUNITY = "./config/zeus/zeus_community_npc.properties";
+ 	private static final String ZEUS_DONATION_CONFIG = "./config/zeus/zeus_donation.properties";
+ 	@SuppressWarnings("unused")
+@@ -534,6 +536,11 @@
+ 	public static String GET_NAME_VAR_SERVER_ID;	
+ 	public static String WEB_HOP_ZONE_SERVER;
+ 	public static String WEB_TOP_ZONE_SERVER;
++	
++	public static String PAYPAL_LINK_WEB;
++	public static String PAYPAL_LINK_EMAIL;
++	public static int PAYPAL_SECONDS_WAITING_TIME;
++	public static String PAYPAL_LINK_USE = "WEB";
+ 
+ 
+ 	public static Map<L2PcInstance, List<L2Effect>> BUFF_REMOVED = new HashMap<L2PcInstance, List<L2Effect>>();
+@@ -1028,6 +1035,7 @@
+ 		public static Map<Integer, Integer> DONATION_ENCHANT_ITEM_WEAPON = new HashMap<Integer, Integer>();
+ 		public static Map<Integer, Integer> DONATION_ELEMENTAL_ITEM_ARMOR = new HashMap<Integer, Integer>();
+ 		public static Map<Integer, Integer> DONATION_ELEMENTAL_ITEM_WEAPON = new HashMap<Integer, Integer>();
++		public static List<Integer>DONATION_BLACK_LIST = new ArrayList<Integer>();
+ 
+ 		public static boolean DONATION_EXTRA_GIFT;
+ 		public static Map<Integer, Integer>DONATION_EXTRA_GIFT_ITEMS = new HashMap<Integer, Integer>(); 
+@@ -3523,6 +3531,12 @@
+ 			}
+ 		}
+ 		
++		try {
++			loadPaypal();
++		}catch(Exception a) {
++			
++		}
++		
+ 		try{
+ 			loadNpcCommunity();
+ 		}catch(Exception a){
+@@ -4622,6 +4636,22 @@
+ 		}
+ 	}
+ 	
++	protected static boolean loadPaypal() {
++		try{
++			Properties propZ = new Properties();
++			propZ.load(new FileInputStream(new File(ZEUS_PAYPAL_CONFIG)));
++			PAYPAL_LINK_WEB = String.valueOf(propZ.getProperty("PAYPAL_LINK_WEB"));
++			PAYPAL_LINK_EMAIL = String.valueOf(propZ.getProperty("PAYPAL_LINK_EMAIL"));
++			PAYPAL_LINK_USE = String.valueOf(propZ.getProperty("PAYPAL_LINK_USE"));
++			PAYPAL_SECONDS_WAITING_TIME = Integer.valueOf(propZ.getProperty("PAYPAL_SECONDS_WAITING_TIME"));
++			return true;
++		}catch(Exception a){
++			_log.warning(":::::::: ERROR LOADING PAYPAL INFORMATION ::::::::::");
++			_log.warning(a.getMessage());
++			return false;
++		}		
++	}
++	
+ 	protected static boolean loadNpcCommunity(){
+ 		try{
+ 			NPC_ID_TO_COMMUNITY.clear();
+@@ -4805,6 +4835,29 @@
+ 			}catch(Exception a){
+ 				_log.warning("Error Donation Load -> Elemental Item Armor" + a.getMessage());
+ 			}
++			try {
++				String itemBlackList = propZ.getProperty("DONATION_BLACK_LIST", "");
++				if(itemBlackList != "") {
++					DONATION_BLACK_LIST.clear();
++					if(itemBlackList.indexOf(",") > 0) {
++						for(String p : itemBlackList.split(",")) {
++							try {
++								DONATION_BLACK_LIST.add(Integer.valueOf(p));
++							}catch(Exception a) {
++								_log.warning("ZeuS. Donation Enchant Blacklist error: This is not a Number: " + p);
++							}
++						}
++					}else {
++						try {
++							DONATION_BLACK_LIST.add( Integer.valueOf(itemBlackList) );
++						}catch(Exception a) {
++							_log.warning("ZeuS. Donation Enchat Blacklist error: All Parameters need to be Numeric: " + itemBlackList);
++						}
++					}
++				}
++			}catch(Exception a) {
++				
++			}
+ 			
+ 			
+ 			/*String itemCharPremium = String.valueOf(propZ.getProperty("PREMIUM_ITEM_DROP_CHAR"));
+Index: src/ZeuS/ZeuS/ZeuS.java
+===================================================================
+--- src/ZeuS/ZeuS/ZeuS.java	(revision 29)
++++ src/ZeuS/ZeuS/ZeuS.java	(working copy)
+@@ -103,6 +103,7 @@
+ import ZeuS.procedimientos.autoPots;
+ import ZeuS.procedimientos.handler;
+ import ZeuS.procedimientos.itemLink;
++import ZeuS.procedimientos.jMail;
+ import ZeuS.procedimientos.opera;
+ import ZeuS.server.Anunc;
+ import ZeuS.server.PvPPk;
+@@ -116,6 +117,7 @@
+ 	private static final Logger _log = Logger.getLogger(ZeuS.class.getName());
+ 	private static ZeuS _instance;
+ 	private static Map<L2PcInstance, Integer> SkillEnchantTime = new HashMap<L2PcInstance, Integer>();
++	private static Map<Integer, Integer> DONATION_SEND_WAITING= new HashMap<Integer, Integer>();
+ 	
+ 	public static int MP_ADD = 0;
+ 	
+@@ -328,6 +330,25 @@
+ 		}
+ 	}
+ 	
++	private static boolean canSendEmail(L2PcInstance player) {
++		if(DONATION_SEND_WAITING != null) {
++			if(DONATION_SEND_WAITING.size()>0) {
++				if(DONATION_SEND_WAITING.containsKey(player.getObjectId())) {
++					int UnixTimeNow = opera.getUnixTimeNow();
++					int UnixTimeLastPeti = DONATION_SEND_WAITING.get(player.getObjectId());
++					int UnixTimeEnd = UnixTimeLastPeti + general.PAYPAL_SECONDS_WAITING_TIME;
++					if(UnixTimeEnd > UnixTimeNow) {
++						central.msgbox(language.getInstance().getMsg(player).DONATION_PAYPAL_YOU_NEED_TO_WAIT_X_SECOND_FOR_OTHER_EMAIL_PETITION.replace("$seconds", String.valueOf(UnixTimeEnd - UnixTimeNow) ) , player);
++						return false;
++					}
++				}
++			}
++		}
++		
++		DONATION_SEND_WAITING.put(player.getObjectId(), opera.getUnixTimeNow());
++		return true;
++	}
++	
+ 	@SuppressWarnings("unused")
+ 	public static boolean isCMDFromZeuS(L2PcInstance player, String Command){
+ 		
+@@ -394,6 +415,15 @@
+ 				}					
+ 				
+ 				switch (Secc) {
++				case "PayPalEmail":
++					if(opera.getUserMail(player.getAccountName()) == null) {
++						central.msgbox_Lado(language.getInstance().getMsg(player).YOU_NEED_TO_LINK_YOUR_ACCOUNT_TO_EMAIL, player);
++						return true;
++					}
++					if(canSendEmail(player)) {
++						jMail.sendDonationPaypal(player);
++					}
++					return true;
+ 				case "ColorTitle":
+ 					String ColorSet_title = "";
+ 					String ColorPrice_title = "";
+Index: src/ZeuS/language/Lang.java
+===================================================================
+--- src/ZeuS/language/Lang.java	(revision 19)
++++ src/ZeuS/language/Lang.java	(working copy)
+@@ -391,6 +391,8 @@
+ 	public String	DONATION_ASK_CLAN_SKILL = "";	
+ 	public String	DONATION_ASK_ENCHANT_YOU_WANT_TO_ENCHANT_THE_ITEM_$item_TO_$enchant_$cost = "";
+ 	public String	DONATION_ASK_ENCHANT_YOU_WANT_TO_ELEMENTAL_THE_ITEM_$item_TO_$enchant_$elemental_$cost = "";
++	public String	DONATION_PAYPAL_YOU_NEED_TO_WAIT_X_SECOND_FOR_OTHER_EMAIL_PETITION = "";
++	public String	DONATION_PAYPAL_SENDING_LINK_TO_YOUR_EMAIL = "";
+ 	
+ 	//CHALLENGE
+ 	public String	CHALLENGE_WIN 	 = "";
+@@ -726,6 +728,8 @@
+ 	public String	BORROW_SYSTEM_THE_TARGET_$name_CANT_MAKE_TRADE = "";
+ 	public String	BORROW_SYSTEM_CAN_NOT_BE_USE_BY_GM_AND_ADMINS = "";
+ 	public String	BORROW_SYSTEM_ADM_$name_HAS_SET_BORROWED_PASSWORD = "";
++	public String	EXPERIENCE_ON = "";
++	public String	EXPERIENCE_OFF = "";
+ 	
+ 	public String	PRE_DONATION_TEXT = "";
+ 	
+@@ -1022,6 +1026,8 @@
+ 			DONATION_ASK_CLAN_SKILL = String.valueOf(propZ.getProperty("DONATION_ASK_CLAN_SKILL"));
+ 			DONATION_ASK_ENCHANT_YOU_WANT_TO_ENCHANT_THE_ITEM_$item_TO_$enchant_$cost = String.valueOf(propZ.getProperty("DONATION_ASK_ENCHANT_YOU_WANT_TO_ENCHANT_THE_ITEM_$item_TO_$enchant_$cost"));
+ 			DONATION_ASK_ENCHANT_YOU_WANT_TO_ELEMENTAL_THE_ITEM_$item_TO_$enchant_$elemental_$cost = String.valueOf(propZ.getProperty("DONATION_ASK_ENCHANT_YOU_WANT_TO_ELEMENTAL_THE_ITEM_$item_TO_$enchant_$elemental_$cost"));
++			DONATION_PAYPAL_YOU_NEED_TO_WAIT_X_SECOND_FOR_OTHER_EMAIL_PETITION = String.valueOf(propZ.getProperty("DONATION_PAYPAL_YOU_NEED_TO_WAIT_X_SECOND_FOR_OTHER_EMAIL_PETITION"));
++			DONATION_PAYPAL_SENDING_LINK_TO_YOUR_EMAIL = String.valueOf(propZ.getProperty("DONATION_PAYPAL_SENDING_LINK_TO_YOUR_EMAIL"));
+ 			//CHALLENGE
+ 			CHALLENGE_WIN = String.valueOf(propZ.getProperty("CHALLENGE_WIN"));
+ 			CHALLENGE_LOOSE = String.valueOf(propZ.getProperty("CHALLENGE"));
+@@ -1408,6 +1414,9 @@
+ 			BORROW_SYSTEM_CAN_NOT_BE_USE_BY_GM_AND_ADMINS = String.valueOf(propZ.getProperty("BORROW_SYSTEM_CAN_NOT_BE_USE_BY_GM_AND_ADMINS"));
+ 			BORROW_SYSTEM_ADM_$name_HAS_SET_BORROWED_PASSWORD = String.valueOf(propZ.getProperty("BORROW_SYSTEM_ADM_$name_HAS_SET_BORROWED_PASSWORD"));
+ 			
++			EXPERIENCE_ON = String.valueOf(propZ.getProperty("EXP_ON"));
++			EXPERIENCE_OFF = String.valueOf(propZ.getProperty("EXP_OFF"));
++			
+ 			PRE_DONATION_TEXT = String.valueOf(propZ.getProperty("PRE_DONATION_TEXT"));
+ 			
+ 			load_commands();
+Index: src/ZeuS/procedimientos/handler.java
+===================================================================
+--- src/ZeuS/procedimientos/handler.java	(revision 19)
++++ src/ZeuS/procedimientos/handler.java	(working copy)
+@@ -5,6 +5,7 @@
+ import l2r.gameserver.handler.IVoicedCommandHandler;
+ import l2r.gameserver.handler.VoicedCommandHandler;
+ import l2r.gameserver.model.L2Object;
++import l2r.gameserver.model.Location;
+ import l2r.gameserver.model.actor.instance.L2PcInstance;
+ import l2r.gameserver.network.serverpackets.NpcHtmlMessage;
+ import ZeuS.Comunidad.CBByPass;
+@@ -103,13 +104,11 @@
+ 		"changelang",
+ 		"votezone",
+ 		"close",
+-		"test",
+ 		"autocp",
+ 		"automp",
+ 		"autohp",
+ 		"mywishlist",
+-		"borrow_account",
+-		"test"
++		"borrow_account"
+ 		};	
+ 
+ 
+@@ -380,14 +379,14 @@
+ 					return true;
+ 				}
+ 				general.getInstance().setConfigExpSp(activeChar,true);
+-				central.msgbox_Lado("Experiencia activada", activeChar);
++				central.msgbox_Lado(language.getInstance().getMsg(activeChar).EXPERIENCE_ON, activeChar);
+ 			}else if(command.equalsIgnoreCase("expoff") || command.equalsIgnoreCase("exp_off")){
+ 				if(!general.RATE_EXP_OFF){
+ 					central.msgbox_Lado("Command disabled by Admin", activeChar);
+ 					return true;
+ 				}
+ 				general.getInstance().setConfigExpSp(activeChar,false);
+-				central.msgbox_Lado("Experiencia desactivada", activeChar);
++				central.msgbox_Lado(language.getInstance().getMsg(activeChar).EXPERIENCE_OFF, activeChar);
+ 			}else if(command.equals("stat")){
+ 				L2Object target = activeChar.getTarget();
+ 				if(target instanceof L2PcInstance ){
+Index: src/ZeuS/procedimientos/jMail.java
+===================================================================
+--- src/ZeuS/procedimientos/jMail.java	(revision 29)
++++ src/ZeuS/procedimientos/jMail.java	(working copy)
+@@ -25,6 +25,8 @@
+ import org.w3c.dom.Document;
+ import org.w3c.dom.Node;
+ 
++import ZeuS.Config.general;
++import ZeuS.interfase.central;
+ import ZeuS.language.language;
+ import ZeuS.server.comun;
+ import l2r.L2DatabaseFactory;
+@@ -142,6 +144,54 @@
+ 		return LanguageFolder;
+ 	}
+ 	
++	public static boolean sendDonationPaypal(L2PcInstance player) {
++		String IdForMd5 = String.valueOf(opera.getUnixTimeL2JServer()) + String.valueOf(player.getObjectId());
++		String Encript = opera.toMD5(IdForMd5);
++		String Encript2 = opera.toMD5(IdForMd5 + player.getName());
++		String InsertQry = "INSERT INTO zeus_paypal(idweb, gameEmail, gameAccount, createTime, createTimeLimit) VALUES (?,?,?,?,?)";
++		String LinkToSend = general.PAYPAL_LINK_USE.equalsIgnoreCase("WEB") ? general.PAYPAL_LINK_WEB + "?IDW=" + Encript + "&INM=DONATION&INB=" + Encript2 : general.PAYPAL_LINK_EMAIL.replace("%ID_WEB_DONATION%", Encript);
++		int TimeBegin = opera.getUnixTimeNow();
++		int TimeEnds = TimeBegin + general.PAYPAL_SECONDS_WAITING_TIME;
++		Connection con = null;
++		PreparedStatement ins = null;
++		boolean sendEmail = true;
++		try{
++			con = L2DatabaseFactory.getInstance().getConnection();
++			ins = con.prepareStatement(InsertQry);
++			ins.setString(1, Encript);
++			ins.setString(2, opera.getUserMail(player.getAccountName()));
++			ins.setString(3, player.getAccountName());
++			ins.setInt(4, TimeBegin);
++			ins.setInt(5, TimeEnds);
++			try{
++				ins.executeUpdate();
++				sendEmail = true;
++			}catch(SQLException e){
++				_log.warning("Error on Saving Donation Information from ->" + player.getName() + ": " + e.getMessage());
++				sendEmail = false;
++			}
++		}catch(SQLException a){
++			_log.warning("Error on Saving Donation Information (2) from ->" + player.getName() + ": " + a.getMessage());
++			sendEmail = false;
++		}
++		if(!sendEmail) {
++			central.msgbox("Cant send the PayPal Link. Please Communicate With the Admin", player);
++			return false;
++		}
++		
++	    final NpcHtmlMessage html = comun.htmlMaker(null, "config/zeus/mail/"+ language.getInstance().getFolder(player) +"/sendPaypal.html");
++    	html.replace("%LINKWEB%", LinkToSend);
++    	try{
++    		central.msgbox_Lado(language.getInstance().getMsg(player).DONATION_PAYPAL_SENDING_LINK_TO_YOUR_EMAIL.replace("$email", opera.getUserMail(player.getAccountName())), player, "Donation");
++    		sendFromMail(opera.getUserMail(player.getAccountName()) , html.getHtml(), SUBJECT_NOTIFICATION_DONA);
++    	}catch(Exception a){
++    		central.msgbox_Lado("We had an error sending Donation Link. Please Contact to your Server Admin.", player, "Donation");
++    		_log.warning("Error sending email for Donation Reward to Player Account->" + player.getAccountName() + " ( " + player.getName() + " )");
++    	}		
++		
++		return true;
++	}
++	
+ 	public static boolean sendDonationReady(String Email, int Amount, String Account){
+ 		boolean retorno = true;
+ 		String Folder = getFolderAccount(Account);
+Index: src/ZeuS/procedimientos/opera.java
+===================================================================
+--- src/ZeuS/procedimientos/opera.java	(revision 20)
++++ src/ZeuS/procedimientos/opera.java	(working copy)
+@@ -2,6 +2,8 @@
+ 
+ import gr.sr.interf.SunriseEvents;
+ 
++import java.security.MessageDigest;
++import java.security.NoSuchAlgorithmException;
+ import java.sql.CallableStatement;
+ import java.sql.Connection;
+ import java.sql.PreparedStatement;
+@@ -78,6 +80,26 @@
+ 		return getAllItemByName(nameSearch,false);
+ 	}
+ 	
++	private static final char[] CONSTS_HEX = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f' };
++    public static String toMD5(String stringAEncriptar)
++    {
++        try
++        {
++           MessageDigest msgd = MessageDigest.getInstance("MD5");
++           byte[] bytes = msgd.digest(stringAEncriptar.getBytes());
++           StringBuilder strbCadenaMD5 = new StringBuilder(2 * bytes.length);
++           for (int i = 0; i < bytes.length; i++)
++           {
++               int bajo = (int)(bytes[i] & 0x0f);
++               int alto = (int)((bytes[i] & 0xf0) >> 4);
++               strbCadenaMD5.append(CONSTS_HEX[alto]);
++               strbCadenaMD5.append(CONSTS_HEX[bajo]);
++           }
++           return strbCadenaMD5.toString();
++        } catch (NoSuchAlgorithmException e) {
++           return null;
++        }
++    }		
+ 	
+ 	public static String cleanHtml(String Text){
+ 		String _return = "";
+Index: src/ZeuS/tutorial/profession.java
+===================================================================
+--- src/ZeuS/tutorial/profession.java	(revision 19)
++++ src/ZeuS/tutorial/profession.java	(working copy)
+@@ -67,6 +67,8 @@
+ 				WEAPON_GIVEN.put(player.getObjectId(), 1);
+ 				ARMOR_GIVEN.put(player.getObjectId(), 1);
+ 				getWindowsWeaponQuestion(player);
++			}else {
++				cbFormato.cerrarTutorial(player);
+ 			}
+ 		}else if(Parametro.endsWith("Weapon")){
+ 			getWindowsWeaponSelection(player);

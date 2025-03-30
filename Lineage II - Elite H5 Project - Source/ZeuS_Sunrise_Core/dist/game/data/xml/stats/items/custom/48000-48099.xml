@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="48001" type="Armor" name="Bracelet of Duty Lv. 1">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48021-1" />
+		<for>
+			<add stat="maxCp" val="50" />
+			<add stat="maxHp" val="50" />
+			<add stat="maxMp" val="50" />
+		</for>
+	</item>
+	<item id="48002" type="Armor" name="Bracelet of Duty Lv. 2">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48022-1" />
+		<for>
+			<add stat="maxCp" val="100" />
+			<add stat="maxHp" val="100" />
+			<add stat="maxMp" val="100" />
+		</for>
+	</item>
+	<item id="48003" type="Armor" name="Bracelet of Duty Lv. 3">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48023-1" />
+		<for>
+			<add stat="maxCp" val="200" />
+			<add stat="maxHp" val="200" />
+			<add stat="maxMp" val="200" />
+		</for>
+	</item>
+	<item id="48004" type="Armor" name="Bracelet of Duty Lv. 4">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48024-1" />
+		<for>
+			<add stat="maxCp" val="300" />
+			<add stat="maxHp" val="300" />
+			<add stat="maxMp" val="300" />
+		</for>
+	</item>
+	<item id="48005" type="Armor" name="Bracelet of Duty Lv. 5">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48025-1" />
+		<for>
+			<add stat="maxCp" val="400" />
+			<add stat="maxHp" val="400" />
+			<add stat="maxMp" val="400" />
+		</for>
+	</item>
+	<item id="48006" type="Armor" name="Bracelet of Duty Lv. 6">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48026-1" />
+		<for>
+			<add stat="maxCp" val="500" />
+			<add stat="maxHp" val="500" />
+			<add stat="maxMp" val="500" />
+		</for>
+	</item>
+	<item id="48007" type="Armor" name="Bracelet of Justice Lv. 1">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48027-1" />
+		<for>
+			<add stat="maxHp" val="100" />
+		</for>
+	</item>
+	<item id="48008" type="Armor" name="Bracelet of Justice Lv. 2">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48028-1" />
+		<for>
+			<add stat="maxHp" val="200" />
+		</for>
+	</item>
+	<item id="48009" type="Armor" name="Bracelet of Justice Lv. 3">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48029-1" />
+		<for>
+			<add stat="maxHp" val="300" />
+		</for>
+	</item>
+	<item id="48010" type="Armor" name="Bracelet of Justice Lv. 4">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48030-1" />
+		<for>
+			<add stat="maxHp" val="400" />
+		</for>
+	</item>
+	<item id="48011" type="Armor" name="Bracelet of Justice Lv. 5">
+		<set name="icon" val="icon.etc_rbracelet_s_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="price" val="3556000" />
+		<set name="item_skill" val="48031-1" />
+		<for>
+			<add stat="maxHp" val="500" />
+		</for>
+	</item>
+</list>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="13463" count="1" /><!-- Vesper Avenger -->
+   <item id="13464" count="1" /><!-- Vesper Retributer -->
+   <item id="13465" count="1" /><!-- Vesper Caster -->
+   <item id="13466" count="1" /><!-- Vesper Singer -->
+</list>

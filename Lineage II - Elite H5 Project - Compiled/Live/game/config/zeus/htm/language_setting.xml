@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zeus_premium.xsd">
+	<language name="English" folder="eng" abbreviation="eng" />
+</list>

@@ -1,0 +1,41 @@
+[10.11.20 17:16:10] INFO: Loading LoginController...
+[10.11.20 17:16:11] INFO: Cached 10 KeyPairs for RSA communication
+[10.11.20 17:16:11] INFO: Stored 20 keys for Blowfish communication
+[10.11.20 17:16:12] INFO: GameServerTable: Loaded 127 server names
+[10.11.20 17:16:12] INFO: GameServerTable: Loaded 2 registered Game Servers
+[10.11.20 17:16:12] INFO: GameServerTable: Cached 10 RSA keys for Game Server communication.
+[10.11.20 17:16:12] INFO: Loaded 2 IP Bans.
+[10.11.20 17:16:12] INFO: Scheduled LS restart after 48 hours
+[10.11.20 17:16:12] INFO: Listening for GameServers on 127.0.0.1:9014
+[10.11.20 17:16:12] INFO: Telnet server is currently disabled.
+[10.11.20 17:16:12] INFO: L2LoginServer: is now listening on: *:2106
+[10.11.20 17:16:12] INFO: Looking for UPnP Gateway Devices...
+[10.11.20 17:16:21] INFO: No UPnP gateways found
+[10.11.20 17:16:48] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:16:53] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:16:58] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:03] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:08] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:13] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:18] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:23] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:28] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:33] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:38] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:43] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:48] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:53] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:17:58] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:03] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:08] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:13] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:18] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:23] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:28] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:33] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:38] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:43] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:48] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:53] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:18:58] INFO: GameServer (127.0.0.1): Connection lost: socket closed
+[10.11.20 17:19:03] INFO: GameServer (127.0.0.1): Connection lost: socket closed

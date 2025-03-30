@@ -1,0 +1,35 @@
+IP: 173.0.81.1
+mc_gross=3.00
+protection_eligibility=Eligible
+payer_id=XG2U8RWY3WPFJ
+payment_date=21:41:40 Aug 10, 2020 PDT
+payment_status=Completed
+charset=windows-1252
+first_name=Luís Fernando
+mc_fee=0.51
+notify_version=3.9
+custom=
+payer_status=unverified
+business=l2neptune.donations@gmail.com
+quantity=1
+verify_sign=ANUMYag4WD03fwl5oE8YZLKbrzqGAjoXn5oxKphioLG2Us-dx2ZhMq-c
+payer_email=luis.mendes@ufv.br
+txn_id=445955690K077593P
+payment_type=instant
+last_name=Mendes Silva
+receiver_email=l2neptune.donations@gmail.com
+payment_fee=
+shipping_discount=0.00
+receiver_id=9M9AU66KKC2DU
+insurance_amount=0.00
+txn_type=web_accept
+item_name=e6a4ad7508a78ac20759ed692e1fd9dd
+discount=0.00
+mc_currency=EUR
+item_number=
+residence_country=BR
+shipping_method=Default
+transaction_subject=
+payment_gross=
+ipn_track_id=dc9a60511f284
+

@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<!-- Red Soul Crystal 14 -->
+		<production count="1" id="9570" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="150" id="23030" />
+		<!-- Red Soul Crystal 15 -->
+		<production count="1" id="10480" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="200" id="23030" />
+		<!-- Red Soul Crystal 16 -->
+		<production count="1" id="13071" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<ingredient count="1" id="13071" />
+		<!-- Red Soul Crystal 17 -->
+		<production count="1" id="15541" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="150" id="23030" />
+		<ingredient count="1" id="15541" />
+		<!-- Red Soul Crystal 18 -->
+		<production count="1" id="15826" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<!-- Green Soul Crystal 14 -->
+		<production count="1" id="9572" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="150" id="23030" />
+		<!-- Green Soul Crystal 15 -->
+		<production count="1" id="10482" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="200" id="23030" />
+		<!-- Green Soul Crystal 16 -->
+		<production count="1" id="13073" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<ingredient count="1" id="13073" />
+		<!-- Green Soul Crystal 17 -->
+		<production count="1" id="15543" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="150" id="23030" />
+		<ingredient count="1" id="15543" />
+		<!-- Green Soul Crystal 18 -->
+		<production count="1" id="15828" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<!-- Blue Soul Crystal 14 -->
+		<production count="1" id="9571" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="150" id="23030" />
+		<!-- Blue Soul Crystal 15 -->
+		<production count="1" id="10481" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="200" id="23030" />
+		<!-- Blue Soul Crystal 16 -->
+		<production count="1" id="13072" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<ingredient count="1" id="13072" />
+		<!-- Blue Soul Crystal 17 -->
+		<production count="1" id="15542" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="150" id="23030" />
+		<ingredient count="1" id="15542" />
+		<!-- Blue Soul Crystal 18 -->
+		<production count="1" id="15827" />
+	</item>
+
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="50" id="23030" />
+		<!-- Dualsword Craft Stamp -->
+		<production count="1" id="5126" />
+	</item>
+
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="50" id="23030" />
+		<!-- Formal Wear -->
+		<production count="1" id="6408" />
+	</item>
+
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="1" id="23030" />
+		<!-- Fire Stone -->
+		<production count="1" id="9546" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="1" id="23030" />
+		<!-- Water Stone -->
+		<production count="1" id="9547" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="1" id="23030" />
+		<!-- Earth Stone -->
+		<production count="1" id="9548" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="1" id="23030" />
+		<!-- Wind Stone -->
+		<production count="1" id="9549" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="1" id="23030" />
+		<!-- Dark Stone -->
+		<production count="1" id="9550" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="1" id="23030" />
+		<!-- Holy Stone -->
+		<production count="1" id="9551" />
+	</item>
+
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="23030" />
+		<!-- Fire Crystal -->
+		<production count="1" id="9552" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="23030" />
+		<!-- Water Crystal -->
+		<production count="1" id="9553" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="23030" />
+		<!-- Earth Crystal -->
+		<production count="1" id="9554" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="23030" />
+		<!-- Wind Crystal -->
+		<production count="1" id="9555" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="23030" />
+		<!-- Dark Crystal -->
+		<production count="1" id="9556" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="3" id="23030" />
+		<!-- Holy Crystal -->
+		<production count="1" id="9557" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<!-- Talisman - ALL STAT -->
+		<production count="1" id="17061" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<!-- Talisman - STR -->
+		<production count="1" id="17051" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<!-- Talisman - DEX -->
+		<production count="1" id="17052" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<!-- Talisman - CON -->
+		<production count="1" id="17053" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<!-- Talisman - WIT -->
+		<production count="1" id="17054" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<!-- Talisman - INT -->
+		<production count="1" id="17055" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="23030" />
+		<!-- Talisman - MEN -->
+		<production count="1" id="17056" />
+	</item>
+	
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="25" id="23030" />
+		<!-- Dynastic Essence -->
+		<production count="1" id="9451" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="50" id="23030" />
+		<!-- Dynastic Essence II -->
+		<production count="1" id="10413" />
+	</item>
+
+
+	
+
+	
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="50" id="23030" />
+		<!-- Noble Enhancement Stone -->
+		<production count="1000" id="14052" />
+	</item>
+
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="50" id="23030" />
+		<!-- Striped Mithril Shirt - HP -->
+		<production count="1" id="10512" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="50" id="23030" />
+		<!-- Striped Mithril Shirt - MP -->
+		<production count="1" id="10513" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="50" id="23030" />
+		<!-- Striped Mithril Shirt - CP -->
+		<production count="1" id="10514" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="25" id="23030" />
+		<!-- Giant's COdex  -->
+		<production count="40" id="6622" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="10" id="23030" />
+		<!-- Giant's COdex - Discipline -->
+		<production count="5" id="9626" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="10" id="23030" />
+		<!-- Giant's COdex - Oblivion -->
+		<production count="5" id="9625" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Heaven's Cloak -->
+		<production count="1" id="42246" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Olympus Cloak -->
+		<production count="1" id="42754" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Poseidon Cloak -->
+		<production count="1" id="42768" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Hero Black Cloak -->
+		<production count="1" id="42392" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Hero White Cloak -->
+		<production count="1" id="42391" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Red Hero Cloak -->
+		<production count="1" id="42380" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Duelist Cloak -->
+		<production count="1" id="42382" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Beleth Cloak -->
+		<production count="1" id="42381" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Dogs Cloak -->
+		<production count="1" id="42388" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Targaryan Cloak -->
+		<production count="1" id="42386" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Baratheon Cloak -->
+		<production count="1" id="42383" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Stark Cloak -->
+		<production count="1" id="42384" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Lannister Cloak -->
+		<production count="1" id="42385" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Wizards Cloak -->
+		<production count="1" id="42387" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Dragon Cloak -->
+		<production count="1" id="42390" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="250" id="23030" />
+		<!-- Angel Cloak -->
+		<production count="1" id="42389" />
+	</item>
+
+
+	<item>
+		<ingredient id="23030" count="350" />
+		<production id="14953" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="350" />
+		<production id="14957" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="350" />
+		<production id="14961" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="350" />
+		<production id="61726" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="23030" count="200" /> 
+		<production id="21706" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="23030" count="25" /> 
+		<production id="21707" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="23030" count="50" /> 
+		<production id="10210" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="23030" count="50" /> 
+		<production id="17071" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="23030" count="25" /> 
+		<production id="17074" count="1" />
+	</item>
+
+
+	<item>
+		<ingredient id="23030" count="15" /> 
+		<production id="14678" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="25" /> 
+		<production id="14679" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="50" /> 
+		<production id="14680" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="100" /> 
+		<production id="14681" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="150" /> 
+		<production id="21579" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="3" /> 
+		<production id="16177" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="3" /> 
+		<production id="16161" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="5" /> 
+		<production id="16162" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="10" /> 
+		<production id="16163" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="100" /> 
+		<production id="40720" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="100" /> 
+		<production id="40721" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="100" /> 
+		<production id="40718" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="100" /> 
+		<production id="40719" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="200" /> 
+		<production id="53022" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="200" /> 
+		<production id="53023" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="200" /> 
+		<production id="53024" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="200" /> 
+		<production id="53025" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="200" /> 
+		<production id="53026" count="1" />
+	</item>
+	<item>
+		<ingredient id="23030" count="200" /> 
+		<production id="53027" count="1" />
+	</item>
+
+</list>

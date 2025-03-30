@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="13433" count="1" /><!-- Vesper Leather Breastplate -->
+   <item id="13441" count="1" /><!-- Vesper Leather Leggings -->
+   <item id="13138" count="1" /><!-- Vesper Leather Helmet -->
+   <item id="13442" count="1" /><!-- Vesper Leather Gloves -->
+   <item id="13443" count="1" /><!-- Vesper Leather Boots -->
+</list>

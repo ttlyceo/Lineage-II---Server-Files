@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Possible name's see final of file-->
+<!--
+name = Closest Town
+Handles the options to where to spawn when dead
+each member can have multiple locations
+but requires the 3 member to exist! (SpawnLocations, BufferLocations and GKLocations)
+DEFAULT is used when a "closest city" is not created here!
+
+if the bot dies, he will see if the nearest city is inside this list.
+If so, it will take the routes from it.
+	Sequentialy, he will first spawn in one of the random SpawnLocations
+	Then he will "simulate" rebuff going to a BufferLocations location
+	and next he will go to the GK location GKLocations
+	Keep in mind that this can bug if no direct view between locations
+	
+-->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/phantomHandleDeath.xsd">
+    <Death name="DEFAULT">
+        <SpawnLocations>
+            <location x="82698" y="148638" z="-3473" />
+            <location x="82698" y="148638" z="-3473" />
+            <location x="82698" y="148638" z="-3473" />
+        </SpawnLocations>
+        <BufferLocations>
+            <location x="83018" y="148412" z="-3465" />
+            <location x="83018" y="148412" z="-3465" />
+            <location x="83018" y="148412" z="-3465" />
+        </BufferLocations>
+        <GKLocations>
+            <location x="83381" y="147942" z="-3400" />
+            <location x="83381" y="147942" z="-3400" />
+            <location x="83381" y="147942" z="-3400" />
+        </GKLocations>
+    </Death>
+
+    <Death name="Giran Castle Town">
+        <SpawnLocations>
+            <location x="82698" y="148638" z="-3473" />
+            <location x="82698" y="148638" z="-3473" />
+            <location x="82698" y="148638" z="-3473" />
+        </SpawnLocations>
+        <BufferLocations>
+            <location x="83018" y="148412" z="-3465" />
+            <location x="83018" y="148412" z="-3465" />
+            <location x="83018" y="148412" z="-3465" />
+        </BufferLocations>
+        <GKLocations>
+            <location x="83381" y="147942" z="-3400" />
+            <location x="83381" y="147942" z="-3400" />
+            <location x="83381" y="147942" z="-3400" />
+        </GKLocations>
+    </Death>
+
+
+</list>
+
+<!--
+GM Consultation Service
+Floran Town
+Dion Castle Town
+Southern Wasteland
+Rune Town
+Dwarven Town
+Fantasy Island
+Orc Town
+Fantasy Island
+Fantasy Island
+Dimensional Rift
+GM Consultation Service
+Gludin Castle Town
+Oren Castle Town
+Fantasy Island
+Dwarven Town
+Giran Castle Town
+GM Consultation Service
+Heine Town
+Union Base Of Kserth
+Giran Habor
+Aden Castle Town
+Rim Kamaroka
+Seed of Infinity
+Talking Island Town
+Elven Town
+Seed of Annihilation
+Hunters Village
+Seed of Annihilation
+Seed of Destruction
+Gludin Castle Town
+Border of Nightmare
+Orc Town
+Aerial Cleft
+Kamaloka
+Coliseum
+The Royal Family's Catacomb
+Soul Island
+Gludin Castle Town
+Darkelven Town
+Ironcastle Inner Oasis
+Talking Island Town
+Rune Town
+Neutral Zone
+Elven Town
+Soul Island
+Gludio Castle Town
+Floran Town
+Floran Town
+Talking Island Town
+Darkelven Town
+Primeval Island
+Town of Schuttgart
+Goddard Town
+Nia Kamaloka
+
+-->

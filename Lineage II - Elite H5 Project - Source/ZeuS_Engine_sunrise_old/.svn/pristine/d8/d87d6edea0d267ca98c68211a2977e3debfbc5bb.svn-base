@@ -1,0 +1,18 @@
+Index: java/l2r/gameserver/network/serverpackets/AbstractHtmlPacket.java
+===================================================================
+--- java/l2r/gameserver/network/serverpackets/AbstractHtmlPacket.java	(revision 4)
++++ java/l2r/gameserver/network/serverpackets/AbstractHtmlPacket.java	(working copy)
+@@ -73,10 +73,10 @@
+ 	
+ 	public final void setHtml(String html)
+ 	{
+-		if (html.length() > 17200)
++		if (html.length() > 30990)
+ 		{
+-			_log.warn("Html is too long! this will crash the client!");
+-			_html = html.substring(0, 17199);
++			_log.warn("Html is too long ("+ html.length() +")! this will crash the client!");
++			_html = html.substring(0, 30989);
+ 		}
+ 		
+ 		if (!html.contains("<html"))

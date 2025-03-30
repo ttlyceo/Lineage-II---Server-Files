@@ -1,0 +1,100 @@
+#-----------------------------------------------------------
+#You can Setup the Donation Option.
+#-----------------------------------------------------------
+
+#You need to set the Item ID from the Donation coin that u will use
+ID_DONATION_COIN = 3470
+
+DONATION_EXPLAIN_ABOUT_IT = 1 Euro: 10 Donation Coin - 1 USD: 8 Donation Coin
+
+#Setting Donation Types
+DONATION_TYPE_LIST = PAYPAL;WESTERN_UNION;OTHERS
+
+#Donation cost for this Options
+DONATION_CHARACTER_RENAME = 20
+DONATION_CLAN_RENAME = 20
+DONATION_255_RECOMMENDS = 20
+DONATION_NOBLE = 15
+DONATION_SEX_CHANGE = 2
+DONATION_AIO_NORMAL = 0
+DONATION_AIO_30 = 20
+DONATION_MIN_LVL_REQUEST = 85
+
+
+#Setting from the Character Level Option
+#LEVEL,QUANTITY;LEVEL;QUANTITY
+#DEFAULT 40,10;72,20;85;40
+DONATION_CHARACTER_LEVEL = 40,10;72,20;85,40
+
+#Setting from the Character Fame Score
+#FAME,QUANTITY;FAME,QUANTITY
+#DEFAULT 2000,2;5000,6
+DONATION_FAME_POINT = 2000,2;5000,6
+
+#Setting from the Clan Reputation Score
+#REPUTATION,QUANTITY;REPUTATION,QUANTITY
+#DEFAULT 10000,10;20000,20;30000;40
+DONATION_CLAN_REPUTATION = 10000,10;20000,20;30000,40
+
+#Setting from the Clan Level
+#CLAN_LVL,QUANTITY;CLAN_LVL,QUANTITY
+#DEFAULT 7,10;8,20;9;40
+DONATION_CLAN_LEVEL = 7,10;8,20;9,40;10,60;11,120
+
+#Setting from the Clan Skill Level
+#CLAN_LVL,QUANTITY;CLAN_LVL,QUANTITY
+#DEFAULT 7,10;8,20;9;40
+DONATION_CLAN_SKILL = 7,10;8,20;9,40
+
+#Setting from the PK Removed Option from the Character
+#PK TO REMO,QUANTITY
+#DEFAULT 1,1;10,5
+DONATION_PK_POINT = 1,1;10,5
+
+#Setting from the Enchant Item and Elemental Item System
+#ENCHANT,QUANTITY
+#10,10;15,20
+DONATION_ENCHANT_ITEM_ARMOR = 10,10;15,20
+DONATION_ENCHANT_ITEM_WEAPON = 10,10;15,20;18,30
+#ELEMENTAL_ENCHANT,QUANTITY
+#30,5;60,10
+DONATION_ELEMENTAL_ITEM_ARMOR = 30,5;60,10
+DONATION_ELEMENTAL_ITEM_WEAPON = 150,8;300,15
+
+
+#----------------------- Premium Setting -----------------------
+PREMIUM_CHAR = true
+PREMIUM_CLAN = true
+
+#----------------------- Donation Extra Reward -----------------------
+#Is this Option is True, every x Hours the System will send a New Donation reward to all the Characters who make a Donation
+DONATION_EXTRA_GIFT = false
+
+DONATION_EXTRA_GIFT_FROM_DONATION_COIN = 12
+
+#You can use this two Options
+#MINUTES
+#HOURS
+DONATION_EXTRA_GIFT_REPEAT_TYPE = HOURS
+
+DONATION_EXTRA_GIFT_REPEAT_EVERY_X = 12
+
+#If this Option is True, the System will send x times the Reward to the Character
+DONATION_EXTRA_GIFT_REPEAT = true
+DONATION_EXTRA_GIFT_TIMES = 4
+
+#You need to put the Item and the Amount to Give.
+#Just 5 Item's allow
+#Item,Count;Item,Count
+DONATION_EXTRA_GIFT_ITEMS =
+
+#[ITEM_ID, ITEM_ID]
+DONATION_BLACK_LIST = 
+
+#-----------------------------------------------------------
+#some Access
+#-----------------------------------------------------------
+BUFFER_PLAYER_ACCESS_EVERYWHERE_JUST_FOR_PREMIUM = False
+
+SHOP_PLAYER_ACCESS_EVERYWHERE_JUST_FOR_PREMIUM = False
+

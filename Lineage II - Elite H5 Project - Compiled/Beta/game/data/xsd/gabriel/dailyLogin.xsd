@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DailyLogin" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+                            <xs:element name="Day" minOccurs="28" maxOccurs="28">
+                                <xs:complexType>
+                                    <xs:attribute name="day" type="xs:string"></xs:attribute>
+                                    <xs:attribute name="itemid" type="xs:int"></xs:attribute>
+                                    <xs:attribute name="count" type="xs:int"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+						</xs:sequence>
+						<xs:attribute name="MonthNumber" type="xs:int"></xs:attribute>
+						<xs:attribute name="MonthName" type="xs:string"></xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

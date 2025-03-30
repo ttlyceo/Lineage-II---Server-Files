@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PM" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="searchMethod" type="xs:string"></xs:attribute>
+						<xs:attribute name="searchText" type="xs:string"></xs:attribute>
+						<xs:attribute name="answers" type="xs:string"></xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

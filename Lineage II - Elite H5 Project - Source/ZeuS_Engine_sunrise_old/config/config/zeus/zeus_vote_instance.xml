@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+
+	<instance enabled="false" />
+
+	<goal votes="50-100,100-150,150-200,200-250,250-300, 1780-1900,2320-3500,3501-4389,4390-4500,5600-5800,5801-5980,5981-6900,6901-8000" />
+
+	<zone id="1" name="Talking" partys="false" rewardByEmailAtFinish="true" dualboxcheck="true" random_minute_to_start_when_goal_is_reach="3" duration_minutes="2" killMobReward="true" chanceDrop_porcent="10" rateDropMulti="50" pvpinstance="false" >
+		<set name="spot_1" value="-107449,242401,-3514" idMob="22860" count="5" rangeX="550" rangeY="550" />
+		<set name="spot_2" value="-104237,246119,-3483" idMob="22827" count="10" rangeX="550" rangeY="550" />
+		<set name="spot_3" value="-106041,237308,-3651" idMob="22861" count="15" rangeX="550" rangeY="550" />
+		<respawn name="spot_1" value="-101621,239121,-3435" />
+		<respawn name="spot_2" value="-100239,237832,-3574" />
+		<respawn name="spot_3" value="-104884,242075,-3667" />
+		<respawn name="spot_4" value="-113228,244563,-3432" />
+		<cost id="57" mount="10000" /><!-- Use 0 if u dont have any item to request -->
+		<prohibited_classes_id value = "" />
+		<reward id="57" count="15000" /> <!-- Reward by kill -->
+		<npc idnpc="37009" nameLocation="Giran" location="84975,152860,-3533" clue="In Giran Town" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+		<npc idnpc="37009" nameLocation="Aden" location="147309,29367,-2269" clue="In Aden Town" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+		<npc idnpc="37009" nameLocation="Hunter Village" location="118222,75050,-2598" clue="In Hunter Village Town" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+		<npc idnpc="37009" nameLocation="Goddard" location="146268,-53578,-2733" clue="In Goddard" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+		<npc idnpc="37009" nameLocation="Schuttgart" location="87797,-139694,-1542" clue="In Schuttgart" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+		<npc idnpc="37009" nameLocation="Rune" location="44485,-46969,-798" clue="In Rune" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+	</zone>
+
+	<zone id="2" name="Giran Harbor" partys="false" rewardByEmailAtFinish="true" dualboxcheck="true" random_minute_to_start_when_goal_is_reach="3" duration_minutes="2" killMobReward="true" chanceDrop_porcent="10" rateDropMulti="0.8" pvpinstance="false">
+		<set name="spot_1" value="43336,188691,-3487" idMob="22860" count="5" rangeX="400" rangeY="400" />
+		<set name="spot_2" value="46709,186733,-3486" idMob="22827" count="10" rangeX="550" rangeY="550" />
+		<set name="spot_3" value="48854,185087,-3486" idMob="22861" count="15" rangeX="550" rangeY="550" />
+		<set name="spot_4" value="46234,183694,-3555" idMob="22857" count="15" rangeX="550" rangeY="550" />
+		<set name="spot_5" value="42274,186268,-3393" idMob="22351" count="8" rangeX="400" rangeY="400" />
+		<respawn name="spot_1" value="45418,191412,-3630" />
+		<respawn name="spot_2" value="44541,191886,-3627" />
+		<respawn name="spot_3" value="48159,190548,-3627" />
+		<respawn name="spot_4" value="49264,189986,-3627" />
+		<respawn name="spot_5" value="51362,188040,-3627" />
+		<respawn name="spot_6" value="52237,187049,-3627" />
+		<cost id="57" mount="10000" /><!-- Use 0 if u dont have any item to request -->
+		<prohibited_classes_id value = "" />
+		<reward id="57" count="15000" /> <!-- Reward by kill -->
+		<npc idnpc="37009" nameLocation="Giran" location="86361,153158,-3496" clue="In Giran Town" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+		<npc idnpc="37009" nameLocation="Aden" location="145984,29065,-2255" clue="In Aden Town" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+		<npc idnpc="37009" nameLocation="Hunter Village" location="117877,77188,-2589" clue="In Hunter Village Town" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+		<npc idnpc="37009" nameLocation="Goddard" location="148158,-52496,-2737" clue="In Goddard" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+		<npc idnpc="37009" nameLocation="Schuttgart" location="85140,-142076,-1545" clue="In Schuttgart" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+		<npc idnpc="37009" nameLocation="Rune" location="43022,-49007,-798" clue="In Rune" enterByQuestionMark="false" teleportToNpcByQuestionMark="true"  />
+	</zone>
+</list>

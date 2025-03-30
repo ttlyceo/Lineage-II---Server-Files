@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+
+
+<list maintainEnchantment="false"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+
+
+	<item>
+		<!-- Vesper Helmet -->
+		<ingredient count="1" id="6660" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="6660" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="250" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="22174" />
+	</item>
+
+	<item>
+		<!-- Vesper Helmet -->
+		<ingredient count="1" id="21712" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="21712" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="250" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="22175" />
+	</item>
+
+	<item>
+		<!-- Vesper Helmet -->
+		<ingredient count="1" id="6658" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="1" id="6658" />
+		<!-- Noble Enhancement Stone -->
+		<ingredient count="250" id="23030" />
+		<!-- Vesper Noble Helmet -->
+		<production count="1" id="22173" />
+	</item>
+
+
+</list>

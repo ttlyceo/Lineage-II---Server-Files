@@ -1,0 +1,416 @@
+Index: src/ZeuS/interfase/colorNameTitle.java
+===================================================================
+--- src/ZeuS/interfase/colorNameTitle.java	(revision 0)
++++ src/ZeuS/interfase/colorNameTitle.java	(revision 0)
+@@ -0,0 +1,162 @@
++package ZeuS.interfase;
++
++import java.sql.Connection;
++import java.sql.PreparedStatement;
++import java.sql.ResultSet;
++import java.util.HashMap;
++import java.util.Map;
++import java.util.logging.Logger;
++
++import ZeuS.Config.general;
++import ZeuS.language.language;
++import ZeuS.procedimientos.opera;
++import ZeuS.server.comun;
++import l2r.L2DatabaseFactory;
++import l2r.gameserver.model.actor.instance.L2PcInstance;
++import l2r.gameserver.network.serverpackets.NpcHtmlMessage;
++
++public class colorNameTitle {
++	private static final Logger _log = Logger.getLogger(colorNameTitle.class.getName());
++	private static Map<Integer, _color_name_title> PLAYER_COLOR = new HashMap<Integer, _color_name_title>();
++	
++	public static String showNameTitleColor(L2PcInstance player, boolean showNameColor) {
++		NpcHtmlMessage html = null;
++		if(showNameColor) {
++			html = comun.htmlMaker(player, "./config/zeus/htm/" + language.getInstance().getFolder(player) +"/communityboard/engine-color-name.htm");
++		}else {
++			html = comun.htmlMaker(player, "./config/zeus/htm/" + language.getInstance().getFolder(player) +"/communityboard/engine-color-title.htm");
++		}
++		html.replace("%BYPASS%", general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC());
++		return html.getHtml();
++	}
++	
++	public static void getAllData() {
++		String Consulta = "SELECT idChar, color_name, color_title FROM zeus_color_name_title";
++		try(Connection con = L2DatabaseFactory.getInstance().getConnection();
++				PreparedStatement statement = con.prepareStatement(Consulta)){
++				ResultSet Resul = statement.executeQuery();
++				while(Resul.next()){
++					_color_name_title _tempCon = new _color_name_title(Resul.getInt("color_name"), Resul.getInt("color_title"));
++					if(PLAYER_COLOR == null) {
++						PLAYER_COLOR.put(Resul.getInt("idChar"), _tempCon);
++					}else if(PLAYER_COLOR.size() == 0) {
++						PLAYER_COLOR.put(Resul.getInt("idChar"), _tempCon);
++					}else if(!PLAYER_COLOR.containsKey( Resul.getInt("idChar") )) {
++						PLAYER_COLOR.put(Resul.getInt("idChar"), _tempCon);
++					}else {
++						PLAYER_COLOR.get(Resul.getInt("idChar")).setNameColor(Resul.getInt("color_name"));
++						PLAYER_COLOR.get(Resul.getInt("idChar")).setTitleColor(Resul.getInt("color_title"));
++					}
++				}
++		}catch(Exception a){
++			
++		}	
++		
++	}
++	
++	public static int getColors(L2PcInstance player, boolean isName) {
++		if(PLAYER_COLOR==null) {
++			if(PLAYER_COLOR.size() == 0 || !PLAYER_COLOR.containsKey(player.getObjectId())) {
++				_color_name_title temp_color = new _color_name_title(-1,-1);
++				PLAYER_COLOR.put(player.getObjectId(), temp_color);
++				return -1;
++			}
++		}		
++		if(PLAYER_COLOR.containsKey(player.getObjectId())) {
++			_color_name_title _ColorTemp = PLAYER_COLOR.get(player.getObjectId());
++			return (isName ? _ColorTemp.getNameColor() : _ColorTemp.getTitleColor());
++		}else {
++			PLAYER_COLOR.put(player.getObjectId(), new _color_name_title(-1, -1));
++		}
++		return -1;
++	}
++	
++	public static boolean setColorName(L2PcInstance player, String color, String price) {
++		return setColor(player, color, price, true);
++	}
++	public static boolean setColorTitle(L2PcInstance player, String color, String price) {
++		return setColor(player, color, price, false);
++	}
++	
++	private static boolean setColor(L2PcInstance player, String color, String price, boolean isName) {
++		if(!opera.haveItem(player, price)) {
++			return false;
++		}
++		
++		if(player.isInCombat()) {
++			central.msgbox(language.getInstance().getMsg(player).CANT_USE_IN_COMBAT_MODE , player);
++			return false;
++		}else if(player.isCombatFlagEquipped()) {
++			central.msgbox(language.getInstance().getMsg(player).CAN_NOT_USE_THIS_SERVICE_WHILE_YOU_FLAG , player);
++			return false;
++		}else if(player.getKarma() > 0) {
++			central.msgbox(language.getInstance().getMsg(player).CAN_NOT_USE_THIS_SERVICE_WHILE_YOU_PK, player);
++			return false;
++		}
++		
++		opera.removeItem(price, player);
++		
++		if(isName) {
++			player.getAppearance().setNameColor(Integer.decode("0x" + color ));
++			PLAYER_COLOR.get(player.getObjectId()).setNameColor(Integer.decode("0x" + color ));
++		}else {
++			player.getAppearance().setTitleColor(Integer.decode("0x" + color ));
++			PLAYER_COLOR.get(player.getObjectId()).setTitleColor(Integer.decode("0x" + color ));
++		}
++		
++		player.broadcastUserInfo();
++		player.broadcastInfo();
++		player.store(true);
++		saveInDB(player);
++		
++		return true;
++	}
++	
++	private static void saveInDB(L2PcInstance player) {
++		
++		_color_name_title PlayerColor = PLAYER_COLOR.get(player.getObjectId());
++		
++		String UpdateScript = "INSERT INTO zeus_color_name_title(idChar, color_name, color_title) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE color_name = ?, color_title = ?";
++		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
++				PreparedStatement ps = con.prepareStatement(UpdateScript))
++			{
++				ps.setInt(1, player.getObjectId());
++				ps.setInt(2, PlayerColor.getNameColor());
++				ps.setInt(3, PlayerColor.getTitleColor());
++				ps.setInt(4, PlayerColor.getNameColor());
++				ps.setInt(5, PlayerColor.getTitleColor());
++				ps.execute();
++			}
++		catch(Exception a) {
++			_log.warning("ZeuS: Error recording the Colors on Database" + a.getMessage());
++		}
++		
++	}
++	
++}
++
++class _color_name_title{
++	private int NAME_COLOR = -1;
++	private int TITTLE_COLOR = -1;
++	public _color_name_title(int _name, int _title) {
++		this.NAME_COLOR = _name;
++		this.TITTLE_COLOR = _title;
++	}
++	
++	public int getNameColor() {
++		return this.NAME_COLOR; 
++	}
++	
++	public int getTitleColor() {
++		return this.TITTLE_COLOR;
++	}
++	
++	public void setNameColor(int Color) {
++		this.NAME_COLOR = Color;
++	}
++	
++	public void setTitleColor(int Color) {
++		this.TITTLE_COLOR = Color;
++	}
++	
++}
+Index: src/ZeuS/interfase/charPanel.java
+===================================================================
+--- src/ZeuS/interfase/charPanel.java	(revision 28)
++++ src/ZeuS/interfase/charPanel.java	(working copy)
+@@ -154,8 +154,6 @@
+ 		}
+ 		_HTML.replace("%ALL_CONECTION_DATA%", AllData);
+ 
+-		_log.warning("_HTML.getHtml()");
+-		
+ 		central.sendHtml(player, _HTML.getHtml());
+ 	}
+ 
+Index: src/ZeuS/Config/general.java
+===================================================================
+--- src/ZeuS/Config/general.java	(revision 25)
++++ src/ZeuS/Config/general.java	(working copy)
+@@ -67,6 +67,7 @@
+ import ZeuS.interfase.aioChar;
+ import ZeuS.interfase.antibotSystem;
+ import ZeuS.interfase.central;
++import ZeuS.interfase.colorNameTitle;
+ import ZeuS.interfase.cumulativeSubclass;
+ import ZeuS.interfase.custom_drop_system;
+ import ZeuS.interfase.potionSystem;
+@@ -5796,6 +5797,7 @@
+ 			_dealy_reward_system.loadDealy();
+ 			v_Dressme.getAllItemPlayer();
+ 			_cumulativeData.load();
++			colorNameTitle.getAllData();
+ 		}
+ 		_getAllChar();
+ 		_getAllTopPlayers();
+Index: src/ZeuS/Comunidad/Engine.java
+===================================================================
+--- src/ZeuS/Comunidad/Engine.java	(revision 27)
++++ src/ZeuS/Comunidad/Engine.java	(working copy)
+@@ -58,6 +58,7 @@
+ import ZeuS.ZeuS.ZeuS;
+ import ZeuS.event.RaidBossEvent;
+ import ZeuS.interfase.central;
++import ZeuS.interfase.colorNameTitle;
+ import ZeuS.interfase.htmls;
+ import ZeuS.language.language;
+ import ZeuS.procedimientos.opera;
+@@ -142,7 +143,8 @@
+ 		commandinfo,
+ 		OlyBuffer,
+ 		donation,
+-		admCommand
++		admCommand,
++		colornametitle
+ 	}
+ 
+ 	public static void _Load(){
+@@ -172,7 +174,8 @@
+ 		_btnImaLink.add(String.valueOf(general._BTN_SHOW_AUCTIONHOUSE_CBE)+":icon.etc_ssq_i00:Auctions House:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() +";" + Engine.enumBypass.AuctionHouse.name() + ";1;0;0;0;0;0:" + general.BTN_SHOW_EXPLICA_AUCTIONSHOUSE_CB);
+ 		_btnImaLink.add(String.valueOf(general._BTN_SHOW_BIDHOUSE_CBE)+":icon.skill0818:Bid House:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() +";" + Engine.enumBypass.BidHouse.name() + ";1;0;0;0;0;0:" + general.BTN_SHOW_EXPLICA_BIDSHOUSE_CB);
+ 		_btnImaLink.add(String.valueOf(general._BTN_SHOW_CASTLE_MANAGER_CBE)+":icon.etc_bloodpledge_point_i00:Castle Manager:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";" + Engine.enumBypass.castleManager.name() + ";0;0;0;0;0;0:" + general.BTN_SHOW_EXPLICA_CASTLE_MANAGER_CB);
+-		_btnImaLink.add(String.valueOf(general._BTN_SHOW_DRESSME)+":icon.skill0395:Dressme:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";" + Engine.enumBypass.Dressme.name() + ";0;0;0;0;0;0:Change your Armor / Weapon Textures for other");		
++		_btnImaLink.add(String.valueOf(general._BTN_SHOW_DRESSME)+":icon.skill0395:Dressme:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";" + Engine.enumBypass.Dressme.name() + ";0;0;0;0;0;0:Change your Armor / Weapon Textures for other");
++		_btnImaLink.add(String.valueOf(true)+":icon.skill1381:Color Name Title:" + general.getCOMMUNITY_BOARD_ENGINE_PART_EXEC() + ";" + Engine.enumBypass.colornametitle.name() + ";0;0;0;0;0;0:Change Your Name / Title Color");
+ 		
+ 
+ 		/***/
+@@ -646,6 +649,8 @@
+ 				C_gmlist.bypass(player, params);
+ 			}else if(Event.equals(Engine.enumBypass.Dressme.name())){
+ 				Retorno = v_Dressme.bypass(player, params);
++			}else if(Event.equals(Engine.enumBypass.colornametitle.name())) {
++				Retorno = colorNameTitle.showNameTitleColor(player, true);
+ 			}
+ 		}
+ 		return Retorno;
+Index: src/ZeuS/Comunidad/Comunidad.java
+===================================================================
+--- src/ZeuS/Comunidad/Comunidad.java	(revision 27)
++++ src/ZeuS/Comunidad/Comunidad.java	(working copy)
+@@ -82,7 +82,8 @@
+ 			Engine.enumBypass.castleManager.name(),
+ 			Engine.enumBypass.gmlist.name(),
+ 			Engine.enumBypass.OlyBuffer.name(),
+-			Engine.enumBypass.commandinfo.name()
++			Engine.enumBypass.commandinfo.name(),
++			Engine.enumBypass.colornametitle.name()
+ 	};
+ 	
+ 	public static int getSizeMainOption(){
+Index: src/ZeuS/ZeuS/ZeuS.java
+===================================================================
+--- src/ZeuS/ZeuS/ZeuS.java	(revision 28)
++++ src/ZeuS/ZeuS/ZeuS.java	(working copy)
+@@ -79,6 +79,7 @@
+ import ZeuS.interfase.central;
+ import ZeuS.interfase.changeCharAccount;
+ import ZeuS.interfase.changePassword;
++import ZeuS.interfase.colorNameTitle;
+ import ZeuS.interfase.cumulativeSubclass;
+ import ZeuS.interfase.fortress;
+ import ZeuS.interfase.instanceZone;
+@@ -393,6 +394,46 @@
+ 				}					
+ 				
+ 				switch (Secc) {
++				case "ColorTitle":
++					String ColorSet_title = "";
++					String ColorPrice_title = "";
++					try {
++						ColorSet_title = Parametros.split(" ")[0];
++						try {
++							ColorPrice_title = Parametros.split(" ")[1];
++							try {
++								colorNameTitle.setColorTitle(player, ColorSet_title, ColorPrice_title);
++							}catch(Exception a) {
++								_log.warning("ZeuS: You had an error when the Engine Apply the Color on " + player.getName() + ": " + a.getMessage());
++							}							
++						}catch(Exception b) {
++							_log.warning("ZeuS: You had an error getting the price for the color name: " + ColorSet_title);
++						}
++					}catch(Exception a) {
++						_log.warning("ZeuS: You had an error getting the Color Name.");
++					}
++					
++					return true;
++				case "ColorName":
++					String ColorSet_name = "";
++					String ColorPrice_name = "";
++					try {
++						ColorSet_name = Parametros.split(" ")[0];
++						try {
++							ColorPrice_name = Parametros.split(" ")[1];
++							try {
++								colorNameTitle.setColorName(player, ColorSet_name, ColorPrice_name);
++							}catch(Exception a) {
++								_log.warning("ZeuS: You had an error when the Engine Apply the Color on " + player.getName() + ": " + a.getMessage());
++							}							
++						}catch(Exception b) {
++							_log.warning("ZeuS: You had an error getting the price for the color name: " + ColorSet_name);
++						}
++					}catch(Exception a) {
++						_log.warning("ZeuS: You had an error getting the Color Name.");
++					}
++					
++					return true;
+ 				case "nobleBeta":
+ 					if(player != null) {
+ 						if(!player.isNoble()) {
+@@ -2194,6 +2235,23 @@
+ 			_log.warning("Error Loading Connections "+ player.getName()+".");
+ 		}
+ 
++		try {
++			int ColorName = colorNameTitle.getColors(player, true);
++			int ColorTitle = colorNameTitle.getColors(player, false);
++			/*if(player.getKarma() <= 0) {
++				if(player.getClient().isDetached()==false) {
++					if(ColorName>0) {
++						player.getAppearance().setNameColor(ColorName);
++					}
++					if(ColorTitle>0) {
++						player.getAppearance().setTitleColor(ColorTitle);
++					}
++				}
++			}*/
++		}catch(Exception a) {
++			
++		}
++		
+ 		try{
+ 			if(opera.isPremium_Player(player)){
+ 				premiumPersonalData Pr = general.getPremiumDataFromPlayerOrClan(player.getAccountName());
+@@ -3198,5 +3256,12 @@
+ 		public static boolean subClassCumulativeIsEnabled() {
+ 			return _cumulativeData.isEnabled();
+ 		}
++		
++		public static int getColorName(L2PcInstance player) {
++			return colorNameTitle.getColors(player, true);
++		}
++		public static int getColorTitle(L2PcInstance player) {
++			return colorNameTitle.getColors(player, false);
++		}
+ }
+ 
+Index: src/ZeuS/procedimientos/jMail.java
+===================================================================
+--- src/ZeuS/procedimientos/jMail.java	(revision 19)
++++ src/ZeuS/procedimientos/jMail.java	(working copy)
+@@ -175,7 +175,7 @@
+ 		
+ 		String LinkForAdmin = WEB_FOR_VALIDATED + "?"+ WEB_GET_NAME_TYPE +"=ACTIVE_DONATION&" + WEB_GET_NAME_FOR_KEY + "=" + WEB_LINK_KEY + "&" + WEB_GET_NAME_FOR_ID_DONATION + "=" + idDona + "&ZEUS_ID_SERVER=" + String.valueOf(idServer);
+ 		
+-		final NpcHtmlMessage html = comun.htmlMaker(player, "config/zeus/mail/"+ language.getInstance().getFolder(player) +"/sendDonationInfo.html");
++		NpcHtmlMessage html = comun.htmlMaker(player, "config/zeus/mail/"+ language.getInstance().getFolder(player) +"/sendDonationInfo.html");
+     	html.replace("%ADMIN_LINK%", "");
+     	html.replace("%COMMENT%", Comment);
+     	html.replace("%MOUNT%", Amount);
+@@ -189,6 +189,8 @@
+     		retorno = false;
+     	}
+ 
++    	html = comun.htmlMaker(player, "config/zeus/mail/"+ language.getInstance().getFolder(player) +"/sendDonationInfo.html");
++    	
+     	html.replace("%ADMIN_LINK%", LinkForAdmin);
+     	html.replace("%COMMENT%", Comment);
+     	html.replace("%MOUNT%", Amount);
+ 
+ Index: src/ZeuS/ZeuS/BD.java
+===================================================================
+--- src/ZeuS/ZeuS/BD.java	(revision 19)
++++ src/ZeuS/ZeuS/BD.java	(working copy)
+@@ -19,6 +19,13 @@
+ 	 * Create table data
+ 	 */
+ 	
++	private static String SQL_zeus_color_name_title = "CREATE TABLE `zeus_color_name_title`  ("+
++			  "`idChar` int(11) NOT NULL,"+
++			  "`color_name` int(11) NULL DEFAULT 0,"+
++			  "`color_title` int(11) NULL DEFAULT 0,"+
++			  "PRIMARY KEY (`idChar`) USING BTREE"+
++			") ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;";
++	
+ 	private static String SQL_zeus_Borrow_System = "CREATE TABLE `zeus_borrow_account` (" + 
+ 			"  `account` varchar(100) NOT NULL," + 
+ 			"  `borrowPass` varchar(255) NOT NULL," + 
+@@ -1918,6 +1925,14 @@
+ 		}
+ 	}
+ 	
++	private void checkColorNameTitle(){
++		String Consulta = "select * from zeus_color_name_title limit 1";
++		if(!sqlScript(Consulta)) {
++			_log.warning(MISSING_$table$.replace("$table$", "zeus_color_name_title"));
++			createTable(SQL_zeus_color_name_title);
++		}
++	}
++	
+ 	private void checkDressmeItemPlayers() {
+ 		String Consulta = "select * from zeus_dressme_items_char limit 1";
+ 		if(!sqlScript(Consulta)) {
+@@ -2323,6 +2338,7 @@
+ 		checkDressmeItemPlayers();
+ 		checkCumulativeSubclasses();
+ 		checkBorrowSystem();
++		checkColorNameTitle();
+ 		checkOldPassword();
+ 		checkAntibot();
+ 		checkAugmentData();
+ 

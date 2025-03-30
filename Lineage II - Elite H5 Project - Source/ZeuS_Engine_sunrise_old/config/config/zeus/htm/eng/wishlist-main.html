@@ -1,0 +1,29 @@
+<html>
+	<title>L2 SOW - My Wish List</title>
+	<body>
+        <table border=0 cellpadding=0 cellspacing=0 width=286 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+		%SERVER_LOGO%<br>
+		<font color="81F7D8">Wellcome<br1>Enter the Item Name<br1>
+		<multiedit var="txtItem" width=210 height=24>
+		<button value="Find" action="bypass ZeuS wishlist found $txtItem" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_Back" fore="L2UI_CT1.OlympiadWnd_DF_Back">
+		<table>
+			/*GRID_FORMAT_1=
+			<tr>
+				<td><img src="%ITEM_ICON%" width=32 height=32></td>
+				<td>%ITEM_NAME%</td>
+				<td><button value="add" action="%ADD_TO_WISHLIST_BYPASS%" width=40 height=24 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+			</tr>
+			*/
+		</table><br><br>
+		<table>
+			/*GRID_FORMAT_2=
+			<tr>
+				<td><img src="%ITEM_ICON%" width=32 height=32></td>
+				<td>%ITEM_NAME%</td>
+				<td><button value="del" action="%REMOVE_TO_WISHLIST_BYPASS%" width=40 height=24 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+			</tr>
+			*/
+		</table><br>
+        </td></tr></table><br>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="15592" count="1" /><!-- Vorpal Breastplate -->
+   <item id="15595" count="1" /><!-- Vorpal Gaiter -->
+   <item id="15589" count="1" /><!-- Vorpal Helmet -->
+   <item id="15598" count="1" /><!-- Vorpal Gauntlet -->
+   <item id="15601" count="1" /><!-- Vorpal Boots -->
+   <item id="15604" count="1" /><!-- Vorpal Shield -->
+</list>

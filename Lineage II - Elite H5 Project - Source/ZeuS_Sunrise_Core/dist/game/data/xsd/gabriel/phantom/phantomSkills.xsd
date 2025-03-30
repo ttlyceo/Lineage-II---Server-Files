@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="skills" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+                            <xs:element name="offensiveSpells" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="skill" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="id" type="xs:int"></xs:attribute>
+                                                <xs:attribute name="condition" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="conditionValue" type="xs:int"></xs:attribute>
+                                                <xs:attribute name="priority" type="xs:int"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+							</xs:element>
+                            <xs:element name="supportSpells" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="skill" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="id" type="xs:int"></xs:attribute>
+                                                <xs:attribute name="condition" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="conditionValue" type="xs:int"></xs:attribute>
+                                                <xs:attribute name="priority" type="xs:int"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+							</xs:element>
+                            <xs:element name="heallingSpells" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="skill" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="id" type="xs:int"></xs:attribute>
+                                                <xs:attribute name="targetType" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="condition" type="xs:string"></xs:attribute>
+                                                <xs:attribute name="conditionValue" type="xs:int"></xs:attribute>
+                                                <xs:attribute name="priority" type="xs:int"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="classId" type="xs:string"></xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

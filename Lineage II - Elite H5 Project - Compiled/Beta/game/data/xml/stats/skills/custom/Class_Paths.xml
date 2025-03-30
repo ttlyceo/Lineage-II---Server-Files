@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+<!--
+Offensive
+-->
+<!--
+#                               [X]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9421" levels="3" name="Middle Off">
+        <table name="#stat"> 200 400 600 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add stat="pAtk" val="#stat"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [x]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9424" levels="3" name="Left Off">
+        <table name="#stat"> 10 20 35 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add stat="pAtkSpd" val="#stat"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [X]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9427" levels="3" name="Left Left Off">
+        <table name="#stat"> 1 2 5 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add stat="runSpd" val="#stat"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [X]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9503" levels="3" name="Bottom Row 1 Off">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add stat="STR" val="1" />
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [x]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9504" levels="3" name="Bottom Row 2 Off">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [x]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9430" levels="3" name="Left Right Off">
+        <table name="#stat"> 1 2 4 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val="#stat" stat="rEvas"/>
+        </for>
+    </skill>
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [x]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9505" levels="3" name="Bottom Row 3 Off">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [x]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9506" levels="3" name="Bottom Row 4 Off">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [x]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9433" levels="3" name="Right Off">
+        <table name="#stat"> 100 250 400 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val="#stat" stat="pAtk"/>
+        </for>
+    </skill>
+
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [x]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9436" levels="3" name="Right Left Off">
+        <table name="#stat"> 1 2 4 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val="#stat" stat="accCombat"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [x]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9507" levels="3" name="Bottom Row 5 Off">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [x]   [ ]      [ ]
+  -->  
+    <skill id="9508" levels="3" name="Bottom Row 6 Off">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [x]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9439" levels="3" name="Right Right Off">
+        <table name="#stat"> 0.98 0.96 0.94 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="pReuse"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [x]      [ ]
+  -->  
+    <skill id="9509" levels="3" name="Bottom Row 7 Off">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [x]
+  -->  
+    <skill id="9510" levels="3" name="Bottom Row 8 Off">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!-- MAGE -->
+
+<!--
+#                               [X]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9442" levels="3" name="Middle Mage">
+        <table name="#stat"> 400 800 1200 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add stat="mAtk" val="#stat"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [x]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9445" levels="3" name="Left Mage">
+        <table name="#stat"> 10 30 50 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add stat="mAtkSpd" val="#stat"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [X]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9448" levels="3" name="Left Left Mage">
+        <table name="#stat"> 0.98 0.96 0.94 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="mReuse"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [X]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9511" levels="3" name="Bottom Row 1 Mage">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [x]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9512" levels="3" name="Bottom Row 2 Mage">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [x]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9451" levels="3" name="Left Right Mage">
+        <table name="#stat"> 1 2 5 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val='#stat' stat='runSpd'/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [x]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9513" levels="3" name="Bottom Row 3 Mage">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [x]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9514" levels="3" name="Bottom Row 4 Mage">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [x]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9454" levels="3" name="Right Mage">
+        <table name="#stat"> 10 20 30 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val="#stat" stat='mCritRate'/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [x]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9457" levels="3" name="Right Left Mage">
+        <table name="#stat"> 0.98 0.96 0.94 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="mReuse"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [x]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9515" levels="3" name="Bottom Row 5 Mage">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [x]   [ ]      [ ]
+  -->  
+    <skill id="9516" levels="3" name="Bottom Row 6 Mage">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [x]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9460" levels="3" name="Right Right Mage">
+        <table name="#stat"> 10 20 30 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val='#stat' stat='mAtkRange'/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [x]      [ ]
+  -->  
+    <skill id="9517" levels="3" name="Bottom Row 7 Mage">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [x]
+  -->  
+    <skill id="9518" levels="3" name="Bottom Row 8 Mage">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--  DEF  -->
+<!--
+#                               [X]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9463" levels="3" name="Middle Def">
+        <table name="#stat"> 40 80 120 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val="#stat" stat="pDef"/>
+            <add val="#stat" stat="mDef"/>
+        </for>
+    </skill>
+
+
+<!--
+#                               [ ]
+#              [x]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9466" levels="3" name="Left Def">
+        <table name="#stat"> 300 600 1000 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val='#stat' stat='maxHp'/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [X]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9469" levels="3" name="Left Left Def">
+        <table name="#stat"> 1.05 1.1 1.2 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="aggressionProf"/>
+        </for>
+    </skill>
+
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [X]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9519" levels="3" name="Bottom Row 1 Def">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [x]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9520" levels="3" name="Bottom Row 2 Def">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [x]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9472" levels="3" name="Left Right Def">
+        <table name="#stat"> 300 600 1000 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val='#stat' stat='sDef'/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [x]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9521" levels="3" name="Bottom Row 3 Def">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [x]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9522" levels="3" name="Bottom Row 4 Def">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [x]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9475" levels="3" name="Right Def">
+        <table name="#stat"> 400 1000 2000 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val="#stat" stat="maxCp"/>
+        </for>
+    </skill>
+
+
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [x]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9478" levels="3" name="Right Left Def">
+        <table name="#stat"> 1.03 1.06 1.1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="rShld"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [x]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9523" levels="3" name="Bottom Row 5 Def">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [x]   [ ]      [ ]
+  -->  
+    <skill id="9524" levels="3" name="Bottom Row 6 Def">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [x]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9481" levels="3" name="Right Right Def">
+        <table name="#stat"> 0.98 0.96 0.92 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="pReuse"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [x]      [ ]
+  -->  
+    <skill id="9525" levels="3" name="Bottom Row 7 Def">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [x]
+  -->  
+    <skill id="9526" levels="3" name="Bottom Row 8 Def">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--SUPP-->
+<!--
+#                               [X]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9484" levels="3" name="Middle Sup">
+        <table name="#stat"> 0.98 0.96 0.92 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="healEffect"/>
+        </for>
+    </skill>
+
+
+<!--
+#                               [ ]
+#              [x]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9487" levels="3" name="Left Sup">
+        <table name="#stat"> 500 1000 1800 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val="#stat" stat="maxMp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [X]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9490" levels="3" name="Left Left Sup">
+        <table name="#stat"> 10 25 60 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <add val="#stat" stat="mAtkSpd"/>
+        </for>
+    </skill>
+    
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [X]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9527" levels="3" name="Bottom Row 1 Sup">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [x]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9528" levels="3" name="Bottom Row 2 Sup">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+    
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [x]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9493" levels="3" name="Left Right Sup">
+        <table name="#stat"> 0.99 0.97 0.94 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="defCritDamage"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [x]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9529" levels="3" name="Bottom Row 3 Sup">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [x]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9530" levels="3" name="Bottom Row 4 Sup">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+    
+<!--
+#                               [ ]
+#              [ ]                              [x]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9496" levels="3" name="Right Sup">
+        <table name="#stat"> 0.98 0.96 0.94 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="mpConsume"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [x]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9499" levels="3" name="Right Left Sup">
+        <table name="#stat"> 0.99 0.98 0.96 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="mReuse"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [x]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9531" levels="3" name="Bottom Row 5 Sup">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [x]   [ ]      [ ]
+  -->  
+    <skill id="9532" levels="3" name="Bottom Row 6 Sup">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+  
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [x]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [ ]
+  -->  
+    <skill id="9502" levels="3" name="Right Right Sup">
+        <table name="#stat"> 1.02 1.05 1.1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="pvpPhysDef">
+                <player behind="true" />
+            </mul>
+            <mul val="#stat" stat="pvpMagicalDef">
+                <player behind="true" />
+            </mul>
+        </for>
+    </skill>
+ 
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [x]      [ ]
+  -->  
+    <skill id="9533" levels="3" name="Bottom Row 7 Sup">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+<!--
+#                               [ ]
+#              [ ]                              [ ]
+#       [ ]            [ ]              [ ]            [ ]
+#   [ ]     [ ]   [ ]      [ ]      [ ]     [ ]   [ ]      [x]
+  -->  
+    <skill id="9534" levels="3" name="Bottom Row 8 Sup">
+        <table name="#stat"> 1 1 1 </table>
+        <set name="targetType" val="SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="A2"/>
+        <for>
+            <mul val="#stat" stat="maxHp"/>
+        </for>
+    </skill>
+
+</list>

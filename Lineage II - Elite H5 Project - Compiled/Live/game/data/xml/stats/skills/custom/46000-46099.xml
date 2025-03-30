@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skills.xsd">
+	<skill id="46000" levels="1" name="Improved Ring of Core">
+		<!-- Confirmed CT2.5 -->
+		<!-- Boss Jewel Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<sub stat="poisonVuln" val="20" />
+			<add stat="poisonProf" val="20" />
+			<add stat="accCombat" val="1" />
+		</for>
+	</skill>
+	<skill id="46001" levels="1" name="Talisman - STR INT">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<add stat="STR" val="1" />
+			<add stat="INT" val="1" />
+		</for>
+	</skill>
+	<skill id="46009" levels="1" name="Improved Earring of Orfen">
+		<!-- Confirmed CT2.5 -->
+		<!-- Boss Jewel Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<sub stat="bleedVuln" val="20" />
+			<add stat="bleedProf" val="20" />
+			<mul stat="healEffect" val="1.06" />
+		</for>
+	</skill>
+	<skill id="46003" levels="1" name="Talisman - CON MEN">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<add stat="CON" val="1" />
+			<add stat="MEN" val="1" />
+		</for>
+	</skill>
+	<skill id="46007" levels="1" name="Improved Earring of Antharas">
+		<!-- Confirmed CT2.5 -->
+		<!-- Boss Jewel Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<add stat="earthRes" val="30" />
+			<sub stat="bleedVuln" val="50" />
+			<add stat="bleedProf" val="50" />
+			<sub stat="stunVuln" val="40" />
+			<add stat="stunProf" val="40" />
+			<sub stat="derangementVuln" val="35" />
+			<add stat="derangementProf" val="35" />
+			<mul stat="healEffect" val="1.5" />
+			<mul stat="magicalMpConsumeRate" val="0.95" />
+			<mul stat="physicalMpConsumeRate" val="0.95" />
+			<add stat="absorbDam" val="7" /> <!-- absorb 4% HP from damage inflicted on enemies -->
+		</for>
+	</skill>
+	<skill id="46005" levels="1" name="Improved Frintezza's Necklace">
+		<!-- Confirmed CT2.5 -->
+		<!-- Boss Jewel Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<add stat="darkRes" val="30" />
+			<sub stat="poisonVuln" val="35" />
+			<sub stat="bleedVuln" val="35" />
+			<sub stat="paralyzeVuln" val="25" />
+			<sub stat="stunVuln" val="25" />
+			<sub stat="sleepVuln" val="25" />
+			<add stat="poisonProf" val="35" />
+			<add stat="bleedProf" val="35" />
+			<add stat="paralyzeProf" val="25" />
+			<add stat="stunProf" val="25" />
+			<add stat="sleepProf" val="25" />
+			<mul stat="mReuse" val="1.05" />
+			<mul stat="pReuse" val="1.05" />
+			<add stat="reflectDam" val="4" />
+		</for>
+	</skill>
+</list>

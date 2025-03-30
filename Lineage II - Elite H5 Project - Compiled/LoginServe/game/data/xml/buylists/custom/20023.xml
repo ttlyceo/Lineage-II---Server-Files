@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+   <item id="243" count="1" /> <!-- Hell Knife -->
+   <item id="4786" count="1" /> <!-- Hell Knife -->
+   <item id="4787" count="1" /> <!-- Hell Knife -->
+   <item id="4788" count="1" /> <!-- Hell Knife -->
+   <item id="229" count="1" /> <!-- Kris -->
+   <item id="4777" count="1" /> <!-- Kris -->
+   <item id="4778" count="1" /> <!-- Kris -->
+   <item id="4779" count="1" /> <!-- Kris -->
+   <item id="234" count="1" /> <!-- Demon's Dagger -->
+   <item id="4780" count="1" /> <!-- Demon's Dagger -->
+   <item id="4781" count="1" /> <!-- Demon's Dagger -->
+   <item id="4782" count="1" /> <!-- Demon's Dagger -->
+
+</list>

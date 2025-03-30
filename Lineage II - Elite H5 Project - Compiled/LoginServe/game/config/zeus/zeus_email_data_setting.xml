@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<email id="1" enabled="true">
+		<set name="isTTL" value="true" />
+		<set name="smtp_host" value="smtp.gmail.com" />
+		<set name="smtp_auth" value="true" />
+		<set name="smtp_port" value="465" />
+		<set name="smtp_user" value="l2.neptune.h5@gmail.com" />
+		<set name="smtp_maildress" value="l2.neptune.h5@gmail.com" />
+		<set name="smtp_pass" value="iyxitrdz" />
+		<set name="smtp_socket_port" value="465" />
+		<set name="smtp_socket_class" value="javax.net.ssl.SSLSocketFactory" />
+	</email>
+</list>

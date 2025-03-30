@@ -1,0 +1,217 @@
+package ZeuS.Comunidad.EngineForm;
+
+import java.util.logging.Logger;
+
+import ZeuS.Config._GeneralDropInfo;
+import ZeuS.Config._InfoGeneralDrop;
+import ZeuS.language.language;
+import ZeuS.server.comun;
+import l2r.Config;
+import l2r.gameserver.instancemanager.GrandBossManager;
+import l2r.gameserver.model.actor.instance.L2PcInstance;
+import l2r.gameserver.network.serverpackets.NpcHtmlMessage;
+
+public class C_GrandRaidBoss {
+	
+
+	@SuppressWarnings("unused")
+	private static final Logger _log = Logger.getLogger(C_GrandRaidBoss.class.getName());
+
+	private static String getStatus(L2PcInstance player, int idBoss)
+	{
+		int status = GrandBossManager.getInstance().getBossStatus(idBoss);
+		switch (status){
+			case 0:
+				return " <font color=A9F5BC>("+language.getInstance().getMsg(player).OPTION_ALIVE+")</font>";
+			case 1:
+				return " <font color=F5F6CE>("+language.getInstance().getMsg(player).OPTION_WAITING+")</font>";
+			case 2:	
+				return " <font color=D0A9F5>("+language.getInstance().getMsg(player).OPTION_IN_FIGHT+")</font>";
+			case 3:
+				return " <font color=F79F81>("+language.getInstance().getMsg(player).OPTION_DEAD+")</font>";
+		}
+		return "Unknow";
+	}	
+	
+	private static String getDatoRamdonRespawn(int Minutos){
+//		if(Minutos < 60){
+//			return String.valueOf(Minutos) + " Hours";
+//		}else{
+//			return String.valueOf( Minutos / 60 ) + " Hours";
+//		}
+		return Minutos + "hour" + (Minutos>1? "s" : "");
+	}
+	
+	private static String getDatoRespawn(int hour){
+		if(hour<48){
+			return String.valueOf(hour)+ " Hrs";
+		}else{
+			return String.valueOf( (hour / 24) ) + " Days";
+		}
+	}
+	private static String get_RamdonTime(String nombre){
+		switch(nombre.toUpperCase()){
+			case "VALAKAS":
+				return getDatoRamdonRespawn(Config.VALAKAS_SPAWN_RANDOM);
+			case "QUEEN ANT":
+				return getDatoRamdonRespawn(Config.QUEEN_ANT_SPAWN_RANDOM);
+			case "CORE":
+				return getDatoRamdonRespawn(Config.CORE_SPAWN_RANDOM);
+			case "ORFEN":
+				return getDatoRamdonRespawn(Config.ORFEN_SPAWN_RANDOM);
+			case "BAIUM":
+				return getDatoRamdonRespawn(Config.BAIUM_SPAWN_RANDOM);
+			case "ANTHARAS":
+				return getDatoRamdonRespawn(Config.ANTHARAS_SPAWN_RANDOM);
+		}
+		return "";
+	}
+	
+	
+	private static String get_RespawnTime(String nombre){
+		switch(nombre.toUpperCase()){
+			case "VALAKAS":
+				return getDatoRespawn(Config.VALAKAS_SPAWN_INTERVAL);
+			case "QUEEN ANT":
+				return getDatoRespawn(Config.QUEEN_ANT_SPAWN_INTERVAL);
+			case "CORE":
+				return getDatoRespawn(Config.CORE_SPAWN_INTERVAL);
+			case "ORFEN":
+				return getDatoRespawn(Config.ORFEN_SPAWN_INTERVAL);
+			case "BAIUM":
+				return getDatoRespawn(Config.BAIUM_SPAWN_INTERVAL);
+			case "ANTHARAS":
+				return getDatoRespawn(Config.ANTHARAS_SPAWN_INTERVAL);
+		}
+		return "";
+	}
+	
+	private static _InfoGeneralDrop getChanceJewel(int npc, int idJewel){
+		_InfoGeneralDrop _Return = _GeneralDropInfo.getDropInfoById(npc, idJewel);
+		return _Return;
+	}
+	
+	private static String mainHtml(L2PcInstance player, String Params){
+		NpcHtmlMessage html = comun.htmlMaker(player, "./config/zeus/htm/" + language.getInstance().getFolder(player) + "/communityboard/grand-raid-boss.htm");
+
+		_InfoGeneralDrop Data = getChanceJewel(29028, 6657);
+		html.replace("%VALAKAS_RESPAWN_TIME%", get_RespawnTime("VALAKAS"));
+		html.replace("%VALAKAS_RESPAWN_DELAY%", get_RamdonTime("VALAKAS"));
+		html.replace("%VALAKAS_JEWEL_CHANCE%", Data.getChanceSTR() );
+		html.replace("%VALAKAS_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%VALAKAS_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));
+		
+		Data = getChanceJewel(29068,6656);
+		html.replace("%ANTHARAS_RESPAWN_TIME%", get_RespawnTime("ANTHARAS"));
+		html.replace("%ANTHARAS_RESPAWN_DELAY%", get_RamdonTime("ANTHARAS"));
+		html.replace("%ANTHARAS_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%ANTHARAS_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%ANTHARAS_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));		
+		
+		Data = getChanceJewel(29001,6660);
+		html.replace("%QUEEN_ANT_RESPAWN_TIME%", get_RespawnTime("QUEEN ANT"));
+		html.replace("%QUEEN_ANT_RESPAWN_DELAY%", get_RamdonTime("QUEEN ANT"));
+		html.replace("%QUEEN_ANT_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%QUEEN_ANT_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%QUEEN_ANT_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));			
+		
+		Data = getChanceJewel(29020,6658);
+		html.replace("%BAIUM_RESPAWN_TIME%", get_RespawnTime("BAIUM"));
+		html.replace("%BAIUM_RESPAWN_DELAY%", get_RamdonTime("BAIUM"));
+		html.replace("%BAIUM_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%BAIUM_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%BAIUM_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));
+		
+		Data = getChanceJewel(29014,6661);
+		html.replace("%ORFEN_RESPAWN_TIME%", get_RespawnTime("ORFEN"));
+		html.replace("%ORFEN_RESPAWN_DELAY%", get_RamdonTime("ORFEN"));
+		html.replace("%ORFEN_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%ORFEN_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%ORFEN_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));		
+		
+		Data = getChanceJewel(29006,6662);		
+		html.replace("%CORE_RESPAWN_TIME%", get_RespawnTime("CORE"));
+		html.replace("%CORE_RESPAWN_DELAY%", get_RamdonTime("CORE"));
+		html.replace("%CORE_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%CORE_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%CORE_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));
+		
+		Data = getChanceJewel(29176, 6659);
+		html.replace("%ZAKEN_DAY_MIN_PLAYER%", String.valueOf(Config.ZAKEN_MIN_MEMBERS_DAYTIME_60));
+		html.replace("%ZAKEN_DAY_MAX_PLAYER%", String.valueOf(Config.ZAKEN_MAX_MEMBERS_DAYTIME_60));
+		html.replace("%ZAKEN_DAY_MIN_LEVEL%", String.valueOf(Config.ZAKEN_MIN_LEVEL_DAYTIME_60));
+		html.replace("%ZAKEN_DAY_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%ZAKEN_DAY_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%ZAKEN_DAY_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));
+		
+		Data = getChanceJewel(29022, 6659);
+		html.replace("%ZAKEN_NIGHT_MIN_PLAYER%", String.valueOf(Config.ZAKEN_MINMEMBERS_NIGHTTIME));
+		html.replace("%ZAKEN_NIGHT_MAX_PLAYER%", String.valueOf(Config.ZAKEN_MAXMEMBERS_NIGHTTIME));
+		html.replace("%ZAKEN_NIGHT_MIN_LEVEL%", String.valueOf(Config.ZAKEN_MIN_LEVEL_DAYTIME_60));
+		html.replace("%ZAKEN_NIGHT_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%ZAKEN_NIGHT_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%ZAKEN_NIGHT_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));
+		
+		Data = getChanceJewel(29181, 21712);
+		html.replace("%ZAKEN_83_MIN_PLAYER%", String.valueOf(Config.ZAKEN_MIN_MEMBERS_DAYTIME_83));
+		html.replace("%ZAKEN_83_MAX_PLAYER%", String.valueOf(Config.ZAKEN_MAX_MEMBERS_DAYTIME_83));
+		html.replace("%ZAKEN_83_MIN_LEVEL%", String.valueOf(Config.ZAKEN_MIN_LEVEL_DAYTIME_83));
+		html.replace("%ZAKEN_83_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%ZAKEN_83_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%ZAKEN_83_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));
+		
+		Data = getChanceJewel(29179, 16025);
+		html.replace("%FREYA_EASY_MIN_PLAYER%", String.valueOf(Config.MIN_PLAYERS_TO_EASY));
+		html.replace("%FREYA_EASY_MAX_PLAYER%", String.valueOf(Config.MAX_PLAYERS_TO_EASY));
+		html.replace("%FREYA_EASY_MIN_LEVEL%",  String.valueOf(Config.MIN_PLAYER_LEVEL_TO_EASY));
+		html.replace("%FREYA_EASY_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%FREYA_EASY_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%FREYA_EASY_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));		
+		
+		Data = getChanceJewel(29180, 16026);
+		html.replace("%FREYA_HARD_MIN_PLAYER%", String.valueOf(Config.MIN_PLAYERS_TO_HARD));
+		html.replace("%FREYA_HARD_MAX_PLAYER%", String.valueOf(Config.MAX_PLAYERS_TO_HARD));
+		html.replace("%FREYA_HARD_MIN_LEVEL%",  String.valueOf(Config.MIN_PLAYER_LEVEL_TO_HARD));
+		html.replace("%FREYA_HARD_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%FREYA_HARD_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%FREYA_HARD_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));		
+		
+		Data = getChanceJewel(29047, 8191);//16026
+		html.replace("%FRINTEZZA_MIN_PLAYER%", String.valueOf(Config.MIN_PLAYER_TO_FE));
+		html.replace("%FRINTEZZA_MAX_PLAYER%", String.valueOf(Config.MAX_PLAYER_TO_FE));
+		html.replace("%FRINTEZZA_MIN_LEVEL%",  String.valueOf(Config.MIN_LEVEL_TO_FE));
+		html.replace("%FRINTEZZA_JEWEL_CHANCE%", Data.getChanceSTR());
+		html.replace("%FRINTEZZA_JEWEL_DROP_MIN%", String.valueOf(Data.getMin()));
+		html.replace("%FRINTEZZA_JEWEL_DROP_MAX%", String.valueOf(Data.getMax()));
+		
+		html.replace("%VALAKAS_STATUS_INFO%", getStatus(player,29028));
+		html.replace("%ANTHARAS_STATUS_INFO%", getStatus(player,29068));
+		html.replace("%QUEEN_ANT_STATUS_INFO%", getStatus(player,29001));
+		html.replace("%BAIUM_STATUS_INFO%", getStatus(player,29020));
+		html.replace("%ORFEN_STATUS_INFO%", getStatus(player,29014));
+		html.replace("%CORE_STATUS_INFO%", getStatus(player,29006));
+		
+		return html.getHtml();
+	}
+	
+	@SuppressWarnings("unused")
+	public static String bypass(L2PcInstance player, String params){
+		String[] Eventos = params.split(";");
+		String parm1 = Eventos[2];
+		String parm2 = Eventos[3];
+		String parm3 = Eventos[4];
+		String parm4 = Eventos[5];
+		String parm5 = Eventos[6];
+		String parm6 = Eventos[7];
+		if(parm1.equals("0")){
+			return mainHtml(player,params);
+		}
+		return "";
+	}
+
+	public static String delegar(L2PcInstance player, String linkComunidad) {
+		return mainHtml(player, linkComunidad);
+	}	
+	
+	
+}

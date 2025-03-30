@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+   <item id="47" count="1" /> <!-- Helmet -->
+   <item id="58" count="1" /> <!-- Mithril Breastplate -->
+   <item id="59" count="1" /> <!-- Mithril Gaiters -->
+   <item id="61" count="1" /> <!-- Mithril Plate Gloves -->
+   <item id="628" count="1" /> <!-- Hoplon -->
+   <item id="2411" count="1" /> <!-- Brigandine Helmet -->
+   <item id="352" count="1" /> <!-- Brigandine Tunic -->
+   <item id="2378" count="1" /> <!-- Brigandine Gaiters -->
+   <item id="2449" count="1" /> <!-- Brigandine Gauntlets -->
+   <item id="2425" count="1" /> <!-- Brigandine Boots -->
+   <item id="2493" count="1" /> <!-- Brigandine Shield -->
+   <item id="394" count="1" /> <!-- Reinforced Leather Shirt -->
+   <item id="416" count="1" /> <!-- Reinforced Leather Gaiters -->
+   <item id="2446" count="1" /> <!-- Reinforced Leather Gloves -->
+   <item id="2422" count="1" /> <!-- Reinforced Leather Boots -->
+   <item id="395" count="1" /> <!-- Manticore Skin Shirt -->
+   <item id="417" count="1" /> <!-- Manticore Skin Gaiters -->
+   <item id="2448" count="1" /> <!-- Manticore Skin Gloves -->
+   <item id="2424" count="1" /> <!-- Manticore Skin Boots -->
+   <item id="436" count="1" /> <!-- Tunic of Knowledge -->
+   <item id="469" count="1" /> <!-- Stockings of Knowledge -->
+   <item id="2447" count="1" /> <!-- Gloves of Knowledge -->
+   <item id="2423" count="1" /> <!-- Boots of Knowledge -->
+   <item id="437" count="1" /> <!-- Mithril Tunic -->
+   <item id="470" count="1" /> <!-- Mithril Stockings -->
+   <item id="2450" count="1" /> <!-- Mithril Gloves -->
+   <item id="2426" count="1" /> <!-- Elven Mithril Boots -->
+
+</list>

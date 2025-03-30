@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="6371" count="1" /><!-- Demon Splinter -->
+   <item id="6602" count="1" /><!-- Demon Splinter -->
+   <item id="6603" count="1" /><!-- Demon Splinter -->
+   <item id="6604" count="1" /><!-- Demon Splinter -->
+</list>

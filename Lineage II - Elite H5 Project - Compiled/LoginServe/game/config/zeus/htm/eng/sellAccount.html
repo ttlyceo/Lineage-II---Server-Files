@@ -1,0 +1,41 @@
+<html>
+	<title>L2 Neptune - Account Seller System</title>
+	<body>
+		%SERVER_LOGO%<br>
+        <table border=0 cellpadding=0 cellspacing=0 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+		<center><font color="81F7D8">Wellcome, you can sell your account easy with<br1>this System. You just Need to Put the Item<br1>requested, Price & the name of you the receiver<br1>payment char</font></center>
+		<center><br1><table width=210>
+			<tr>
+				<td width=80 align="RIGHT">Select Item</td>
+				<td width=130 align="LEFT"><combobox width=130 var="cmbItem" list="%LIST%"></td>
+		
+			</tr>
+		</table><br1>
+		<table  width=210>
+			<tr>
+				<td width=80 align="RIGHT">Amount</td>
+				<td width=130 align="LEFT"><edit type="number" var="txtAmount" width=130></td>
+			</tr>
+		</table></center>
+		<table>
+			<tr>
+				<td width=280 align="CENTER">
+					<button value="Add Item to List" action="%LINK_ADD_ITEM%" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc">
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td width=280 align="CENTER">
+					Receiver<br1>
+					<font color="LEVEL" name="hs12">%RECEIVER_NAME%</font><br1>
+					<edit var="txtReceiver" width=130>
+					<button value="Add Receiver" action="%LINK_ADD_RECEIVER%" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_Fight1None" fore="L2UI_CT1.OlympiadWnd_DF_Fight1None">
+				</td>
+			</tr>
+		</table><br>
+		<center>%TABLE_ITEM%</center>
+		<center><button value="Send Sell info to Target" action="%LINK_SENDER%" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_Back" fore="L2UI_CT1.OlympiadWnd_DF_Back"></center>
+        </td></tr></table>
+	</body>
+</html>

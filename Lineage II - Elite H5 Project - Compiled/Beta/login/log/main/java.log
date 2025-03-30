@@ -1,0 +1,21 @@
+[26.07.20 22:05:49] INFO: Loading LoginController...
+[26.07.20 22:05:50] INFO: Cached 10 KeyPairs for RSA communication
+[26.07.20 22:05:50] INFO: Stored 20 keys for Blowfish communication
+[26.07.20 22:05:50] INFO: GameServerTable: Loaded 127 server names
+[26.07.20 22:05:51] INFO: GameServerTable: Loaded 1 registered Game Servers
+[26.07.20 22:05:51] INFO: GameServerTable: Cached 10 RSA keys for Game Server communication.
+[26.07.20 22:05:51] INFO: Loaded 2 IP Bans.
+[26.07.20 22:05:51] INFO: Scheduled LS restart after 48 hours
+[26.07.20 22:05:51] INFO: Listening for GameServers on 127.0.0.1:9014
+[26.07.20 22:05:51] INFO: Telnet server is currently disabled.
+[26.07.20 22:05:51] INFO: L2LoginServer: is now listening on: *:2106
+[26.07.20 22:05:51] INFO: Looking for UPnP Gateway Devices...
+[26.07.20 22:06:00] INFO: No UPnP gateways found
+[26.07.20 22:06:28] INFO: Auto created account 'dfgdfgdfgsd'.
+[26.07.20 22:06:35] INFO: Updated Gameserver [1] Bartz IP's:
+[26.07.20 22:06:35] INFO: 127.0.0.1/127.0.0.0/8
+[26.07.20 22:06:35] INFO: 54.38.110.61/54.38.110.0/24
+[26.07.20 22:06:35] INFO: 54.38.110.61/0.0.0.0/0
+[26.07.20 22:06:49] INFO: Auto created account 'dfgdfgdgdbcvb'.
+[26.07.20 23:13:32] INFO: Auto created account 'tsutsos1'.
+[26.07.20 23:27:10] INFO: Auto created account 'nabbyheal'.

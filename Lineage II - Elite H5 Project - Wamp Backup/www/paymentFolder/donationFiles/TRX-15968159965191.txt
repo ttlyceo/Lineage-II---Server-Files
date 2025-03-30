@@ -1,0 +1,35 @@
+IP: 173.0.81.1
+mc_gross=1.00
+protection_eligibility=Eligible
+payer_id=95M7EVGUABQX8
+payment_date=08:59:48 Aug 07, 2020 PDT
+payment_status=Completed
+charset=windows-1252
+first_name=Andrea
+mc_fee=0.38
+notify_version=3.9
+custom=
+payer_status=verified
+business=l2neptune.donations@gmail.com
+quantity=1
+verify_sign=AMVz4qpK5ca9fnhEB05E4ioCX5FbA64dea25huAfOLtE3CvilpgDE6SP
+payer_email=x.geryk@gmail.com
+txn_id=3YX86147X6753490K
+payment_type=instant
+last_name=Ceperkova
+receiver_email=l2neptune.donations@gmail.com
+payment_fee=
+shipping_discount=0.00
+receiver_id=9M9AU66KKC2DU
+insurance_amount=0.00
+txn_type=web_accept
+item_name=f84f4e83b56f2a3a7392b7ba761da80d
+discount=0.00
+mc_currency=EUR
+item_number=
+residence_country=SK
+shipping_method=Default
+transaction_subject=
+payment_gross=
+ipn_track_id=f9ac9a683cdae
+

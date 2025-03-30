@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="5" id="6673" />
+		<!-- Fire Stone -->
+		<production count="1" id="9546" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="5" id="6673" />
+		<!-- Water Stone -->
+		<production count="1" id="9547" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="5" id="6673" />
+		<!-- Earth Stone -->
+		<production count="1" id="9548" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="5" id="6673" />
+		<!-- Wind Stone -->
+		<production count="1" id="9549" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="5" id="6673" />
+		<!-- Dark Stone -->
+		<production count="1" id="9550" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="5" id="6673" />
+		<!-- Holy Stone -->
+		<production count="1" id="9551" />
+	</item>
+
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="10" id="6673" />
+		<!-- Fire Crystal -->
+		<production count="1" id="9552" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="10" id="6673" />
+		<!-- Water Crystal -->
+		<production count="1" id="9553" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="10" id="6673" />
+		<!-- Earth Crystal -->
+		<production count="1" id="9554" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="10" id="6673" />
+		<!-- Wind Crystal -->
+		<production count="1" id="9555" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="10" id="6673" />
+		<!-- Dark Crystal -->
+		<production count="1" id="9556" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="10" id="6673" />
+		<!-- Holy Crystal -->
+		<production count="1" id="9557" />
+	</item>
+	
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="50" id="6673" />
+		<!-- Dynastic Essence -->
+		<production count="1" id="9451" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="6673" />
+		<!-- Dynastic Essence II -->
+		<production count="1" id="10413" />
+	</item>
+
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="6673" />
+		<!-- Striped Mithril Shirt - HP -->
+		<production count="1" id="10512" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="6673" />
+		<!-- Striped Mithril Shirt - MP -->
+		<production count="1" id="10513" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="6673" />
+		<!-- Striped Mithril Shirt - CP -->
+		<production count="1" id="10514" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="100" id="6673" />
+		<!-- My Teleport Book -->
+		<production count="1" id="13015" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="50" id="6673" />
+		<!-- My Teleport Flag -->
+		<production count="1" id="20033" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="25" id="6673" />
+		<!-- My Teleport Scroll -->
+		<production count="1" id="13016" />
+	</item>	
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Heaven's Cloak -->
+		<production count="1" id="42246" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Olympus Cloak -->
+		<production count="1" id="42754" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Poseidon Cloak -->
+		<production count="1" id="42768" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Hero Black Cloak -->
+		<production count="1" id="42392" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Hero White Cloak -->
+		<production count="1" id="42391" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Red Hero Cloak -->
+		<production count="1" id="42380" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Duelist Cloak -->
+		<production count="1" id="42382" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Beleth Cloak -->
+		<production count="1" id="42381" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Dogs Cloak -->
+		<production count="1" id="42388" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Targaryan Cloak -->
+		<production count="1" id="42386" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Baratheon Cloak -->
+		<production count="1" id="42383" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Stark Cloak -->
+		<production count="1" id="42384" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Lannister Cloak -->
+		<production count="1" id="42385" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Wizards Cloak -->
+		<production count="1" id="42387" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Dragon Cloak -->
+		<production count="1" id="42390" />
+	</item>
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient count="500" id="6673" />
+		<!-- Angel Cloak -->
+		<production count="1" id="42389" />
+	</item>
+
+	<item>
+		<ingredient id="6673" count="700" />
+		<production id="14953" count="1" />
+	</item>
+	<item>
+		<ingredient id="6673" count="700" />
+		<production id="14957" count="1" />
+	</item>
+	<item>
+		<ingredient id="6673" count="700" />
+		<production id="14961" count="1" />
+	</item>
+	<item>
+		<ingredient id="6673" count="700" />
+		<production id="61726" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="6673" count="400" />
+		<production id="21706" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="6673" count="50" />
+		<production id="21707" count="1" />
+	</item>
+
+	<item>
+		<ingredient id="6673" count="100" />
+		<production id="10210" count="1" />
+	</item>
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient id="6673" count="100" />
+		<!-- Dualsword Craft Stamp -->
+		<production count="1" id="5126" />
+	</item>
+
+
+	<item>
+		<!-- Vote Voucher -->
+		<ingredient id="6673" count="100" />
+		<!-- Formal Wear -->
+		<production count="1" id="6408" />
+	</item>
+
+
+	<item>
+		<ingredient id="6673" count="30" />
+		<production id="14678" count="1" />
+	</item>
+	<item>
+		<ingredient id="6673" count="50" />
+		<production id="14679" count="1" />
+	</item>
+	<item>
+		<ingredient id="6673" count="100" />
+		<production id="14680" count="1" />
+	</item>
+	<item>
+		<ingredient id="6673" count="200" />
+		<production id="14681" count="1" />
+	</item>
+	<item>
+		<ingredient id="6673" count="300" />
+		<production id="21579" count="1" />
+	</item>
+
+</list>

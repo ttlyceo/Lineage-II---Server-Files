@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="" >
+	<email id="1" enabled="false">
+		<set name="isTTL" value="false" />
+		<set name="smtp_host" value="smtp.gmail.com" />
+		<set name="smtp_auth" value="true" />
+		<set name="smtp_port" value="465" />
+		<set name="smtp_user" value="" />
+		<set name="smtp_maildress" value="" />
+		<set name="smtp_pass" value="" />
+		<set name="smtp_socket_port" value="465" />
+		<set name="smtp_socket_class" value="javax.net.ssl.SSLSocketFactory" />
+	</email>
+	<email id="2" enabled="false"> <!-- HOTMAIL -->
+		<set name="isTLS" value="true" />
+		<set name="smtp_host" value="smtp-mail.outlook.com" />
+		<set name="smtp_auth" value="true" />
+		<set name="smtp_port" value="587" />
+		<set name="smtp_user" value="" />
+		<set name="smtp_maildress" value="" />
+		<set name="smtp_pass" value="" />
+		<set name="smtp_socket_port" value="587" />
+		<set name="smtp_socket_class" value="javax.net.ssl.SSLSocketFactory" />
+	</email>
+	<email id="3" enabled="false">
+		<set name="isTTL" value="false" />
+		<set name="smtp_host" value="smtp.gmail.com" />
+		<set name="smtp_auth" value="true" />
+		<set name="smtp_port" value="465" />
+		<set name="smtp_user" value="" />
+		<set name="smtp_maildress" value="" />
+		<set name="smtp_pass" value="" />
+		<set name="smtp_socket_port" value="465" />
+		<set name="smtp_socket_class" value="javax.net.ssl.SSLSocketFactory" />
+	</email>
+</list>

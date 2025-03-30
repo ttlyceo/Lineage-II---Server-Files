@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+possible classIds:
+See final of file!
+Certifications (only class 76+)
+-->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/certifications.xsd">
+    <Certification classId="duelist">
+
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+
+        <skill id="804" level="1"/>
+        <skill id="655" level="1"/>
+        <skill id="651" level="1"/>
+
+
+    </Certification>
+
+    <Certification classId="dreadnought">
+    
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="phoenixKnight">
+       
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+
+    </Certification>
+
+    <Certification classId="hellKnight">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="sagittarius">
+     
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="adventurer">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="archmage">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="soultaker">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="arcanaLord">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="cardinal">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="hierophant">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="evaTemplar">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="swordMuse">
+       
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="windRider">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="moonlightSentinel">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="mysticMuse">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="elementalMaster">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="evaSaint">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="shillienTemplar">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="spectralDancer">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="ghostHunter">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="ghostSentinel">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="stormScreamer">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="spectralMaster">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="shillienSaint">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="titan">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="grandKhavatari">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="dominator">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="doomcryer">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="fortuneSeeker">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="maestro">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="doombringer">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+    <Certification classId="maleSoulhound">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="femaleSoulhound">
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="633" level="2"/><!--    M.Attack    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="655" level="1"/>
+        <skill id="801" level="1"/>
+        <skill id="804" level="1"/>
+    </Certification>
+
+    <Certification classId="trickster">
+        
+        <skill id="631" level="2"/><!--    Attack    -->
+        <skill id="632" level="2"/><!--    Def    -->
+        <skill id="634" level="2"/><!--    M.Def    -->
+        <skill id="651" level="1"/>
+        <skill id="652" level="1"/>
+        <skill id="655" level="1"/>
+
+    </Certification>
+
+</list>
+
+        <!--
+        fighter
+        warrior
+        gladiator
+        warlord
+        knight
+        paladin
+        darkAvenger
+        rogue
+        treasureHunter
+        hawkeye
+        mage
+        wizard
+        sorceror
+        necromancer
+        warlock
+        cleric
+        bishop
+        prophet
+        elvenFighter
+        elvenKnight
+        templeKnight
+        swordSinger
+        elvenScout
+        plainsWalker
+        silverRanger
+        elvenMage
+        elvenWizard
+        spellsinger
+        elementalSummonr
+        oracle
+        elder
+        darkFighter
+        palusKnight
+        shillienKnight
+        bladedancer
+        assassin
+        abyssWalker
+        phantomRanger
+        darkMage
+        darkWizard
+        spellhowler
+        phantomSummoner
+        shillienOracle
+        shillenElder
+        orcFighter
+        orcRaider
+        destroyer
+        orcMonk
+        tyrant
+        orcMage
+        orcShaman
+        overlord
+        warcryer
+        dwarvenFighter
+        scavenger
+        bountyHunter
+        artisan
+        warsmith
+        duelist
+        dreadnought
+        phoenixKnight
+        hellKnight
+        sagittarius
+        adventurer
+        archmage
+        soultaker
+        arcanaLord
+        cardinal
+        hierophant
+        evaTemplar
+        swordMuse
+        windRider
+        moonlightSentinel
+        mysticMuse
+        elementalMaster
+        evaSaint
+        shillienTemplar
+        spectralDancer
+        ghostHunter
+        ghostSentinel
+        stormScreamer
+        spectralMaster
+        shillienSaint
+        titan
+        grandKhavatari
+        dominator
+        doomcryer
+        fortuneSeeker
+        maestro
+        maleSoldier
+        femaleSoldier
+        trooper
+        warder
+        berserker
+        maleSoulbreaker
+        femaleSoulbreaker
+        arbalester
+        doombringer
+        maleSoulhound
+        femaleSoulhound
+        trickster
+        inspector
+        judicator
+        
+        -->

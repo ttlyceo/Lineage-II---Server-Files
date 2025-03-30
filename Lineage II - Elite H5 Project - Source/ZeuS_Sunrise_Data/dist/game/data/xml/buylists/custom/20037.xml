@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="6367" count="1" /><!-- Angel Slayer -->
+   <item id="6590" count="1" /><!-- Angel Slayer -->
+   <item id="6591" count="1" /><!-- Angel Slayer -->
+   <item id="6592" count="1" /><!-- Angel Slayer -->
+</list>

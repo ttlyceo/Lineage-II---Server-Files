@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="9438" count="1" /><!-- Dynasty Circlet -->
+   <item id="9434" count="1" /><!-- Dynasty Tunic -->
+   <item id="9433" count="1" /><!-- Dynasty Tunic -->
+   <item id="9436" count="1" /><!-- Dynasty Tunic -->
+   <item id="9435" count="1" /><!-- Dynasty Tunic -->
+   <item id="9437" count="1" /><!-- Dynasty Stockings -->
+   <item id="9439" count="1" /><!-- Dynasty Gloves -->
+   <item id="9440" count="1" /><!-- Dynasty Shoes -->
+   <item id="12812" count="1" /><!-- Dynasty Sigil -->
+</list>

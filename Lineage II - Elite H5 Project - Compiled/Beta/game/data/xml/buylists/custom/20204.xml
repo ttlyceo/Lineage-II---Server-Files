@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+   <item id="2500" count="1" /> <!-- Dark Legion's Edge -->
+   <item id="81" count="1" /> <!-- Dragon Slayer -->
+   <item id="151" count="1" /> <!-- Sword of Miracles -->
+   <item id="150" count="1" /> <!-- Elemental Sword -->
+   <item id="80" count="1" /> <!-- Tallum Blade -->
+   <item id="305" count="1" /> <!-- Tallum Glaive -->
+   <item id="98" count="1" /> <!-- Halberd -->
+   <item id="270" count="1" /> <!-- Dragon Grinder -->
+   <item id="269" count="1" /> <!-- Blood Tornado -->
+   <item id="236" count="1" /> <!-- Soul Separator -->
+   <item id="235" count="1" /> <!-- Bloody Orchid -->
+   <item id="289" count="1" /> <!-- Soul Bow -->
+   <item id="288" count="1" /> <!-- Carnage Bow -->
+   <item id="213" count="1" /> <!-- Branch of the Mother Tree -->
+   <item id="164" count="1" /> <!-- Elysian -->
+   <item id="2504" count="1" /> <!-- Meteor Shower -->
+   <item id="8678" count="1" /> <!-- Sirra's Blade -->
+   <item id="8679" count="1" /> <!-- Sword of Ipos -->
+   <item id="8680" count="1" /> <!-- Barakiel's Axe -->
+   <item id="8681" count="1" /> <!-- Behemoth's Tuning Fork -->
+   <item id="8682" count="1" /> <!-- Naga Storm -->
+   <item id="8683" count="1" /> <!-- Tiphon's Spear -->
+   <item id="8684" count="1" /> <!-- Shyeed's Bow -->
+   <item id="8685" count="1" /> <!-- Sobekk's Hurricane -->
+   <item id="8686" count="1" /> <!-- Themis' Tongue -->
+   <item id="8687" count="1" /> <!-- Cabrio's Hand -->
+   <item id="8688" count="1" /> <!-- Daimon Crystal -->
+   <item id="7902" count="1" /> <!-- Doom Crusher -->
+   <item id="7899" count="1" /> <!-- Destroyer Hammer -->
+   <item id="7894" count="1" /> <!-- Spiritual Eye -->
+   <item id="7895" count="1" /> <!-- Flaming Dragon Skull -->
+   <item id="5596" count="1" /> <!-- Dasparion's Staff -->
+   <item id="5597" count="1" /> <!-- Dasparion's Staff -->
+   <item id="5598" count="1" /> <!-- Dasparion's Staff -->
+   <item id="5599" count="1" /> <!-- Meteor Shower -->
+   <item id="5600" count="1" /> <!-- Meteor Shower -->
+   <item id="5601" count="1" /> <!-- Meteor Shower -->
+   <item id="5602" count="1" /> <!-- Elysian -->
+   <item id="5603" count="1" /> <!-- Elysian -->
+   <item id="5604" count="1" /> <!-- Elysian -->
+   <item id="5605" count="1" /> <!-- Branch of the Mother Tree -->
+   <item id="5606" count="1" /> <!-- Branch of the Mother Tree -->
+   <item id="5607" count="1" /> <!-- Branch of the Mother Tree -->
+   <item id="5608" count="1" /> <!-- Carnage Bow -->
+   <item id="5609" count="1" /> <!-- Carnage Bow -->
+   <item id="5610" count="1" /> <!-- Carnage Bow -->
+   <item id="5611" count="1" /> <!-- Soul Bow -->
+   <item id="5612" count="1" /> <!-- Soul Bow -->
+   <item id="5613" count="1" /> <!-- Soul Bow -->
+   <item id="5614" count="1" /> <!-- Bloody Orchid -->
+   <item id="5615" count="1" /> <!-- Bloody Orchid -->
+   <item id="5616" count="1" /> <!-- Bloody Orchid -->
+   <item id="5617" count="1" /> <!-- Soul Separator -->
+   <item id="5618" count="1" /> <!-- Soul Separator -->
+   <item id="5619" count="1" /> <!-- Soul Separator -->
+   <item id="5620" count="1" /> <!-- Blood Tornado -->
+   <item id="5621" count="1" /> <!-- Blood Tornado -->
+   <item id="5622" count="1" /> <!-- Blood Tornado -->
+   <item id="5623" count="1" /> <!-- Dragon Grinder -->
+   <item id="5624" count="1" /> <!-- Dragon Grinder -->
+   <item id="5625" count="1" /> <!-- Dragon Grinder -->
+   <item id="5626" count="1" /> <!-- Halberd -->
+   <item id="5627" count="1" /> <!-- Halberd -->
+   <item id="5628" count="1" /> <!-- Halberd -->
+   <item id="5632" count="1" /> <!-- Tallum Glaive -->
+   <item id="5633" count="1" /> <!-- Tallum Glaive -->
+   <item id="5634" count="1" /> <!-- Tallum Glaive -->
+   <item id="5635" count="1" /> <!-- Tallum Blade -->
+   <item id="5636" count="1" /> <!-- Tallum Blade -->
+   <item id="5637" count="1" /> <!-- Tallum Blade -->
+   <item id="5638" count="1" /> <!-- Elemental Sword -->
+   <item id="5639" count="1" /> <!-- Elemental Sword -->
+   <item id="5640" count="1" /> <!-- Elemental Sword -->
+   <item id="5641" count="1" /> <!-- Sword of Miracles -->
+   <item id="5642" count="1" /> <!-- Sword of Miracles -->
+   <item id="5643" count="1" /> <!-- Sword of Miracles -->
+   <item id="5644" count="1" /> <!-- Dragon Slayer -->
+   <item id="5645" count="1" /> <!-- Dragon Slayer -->
+   <item id="5646" count="1" /> <!-- Dragon Slayer -->
+   <item id="5647" count="1" /> <!-- Dark Legion's Edge -->
+   <item id="5648" count="1" /> <!-- Dark Legion's Edge -->
+   <item id="5649" count="1" /> <!-- Dark Legion's Edge -->
+   <item id="8788" count="1" /> <!-- Sirra's Blade -->
+   <item id="8789" count="1" /> <!-- Sirra's Blade -->
+   <item id="8790" count="1" /> <!-- Sirra's Blade -->
+   <item id="8791" count="1" /> <!-- Sword of Ipos -->
+   <item id="8792" count="1" /> <!-- Sword of Ipos -->
+   <item id="8793" count="1" /> <!-- Sword of Ipos -->
+   <item id="8794" count="1" /> <!-- Barakiel's Axe -->
+   <item id="8795" count="1" /> <!-- Barakiel's Axe -->
+   <item id="8796" count="1" /> <!-- Barakiel's Axe -->
+   <item id="8797" count="1" /> <!-- Behemoth's Tuning Fork -->
+   <item id="8798" count="1" /> <!-- Behemoth's Tuning Fork -->
+   <item id="8799" count="1" /> <!-- Behemoth's Tuning Fork -->
+   <item id="8800" count="1" /> <!-- Naga Storm -->
+   <item id="8801" count="1" /> <!-- Naga Storm -->
+   <item id="8802" count="1" /> <!-- Naga Storm -->
+   <item id="8803" count="1" /> <!-- Tiphon's Spear -->
+   <item id="8804" count="1" /> <!-- Tiphon's Spear -->
+   <item id="8805" count="1" /> <!-- Tiphon's Spear -->
+   <item id="8806" count="1" /> <!-- Shyeed's Bow -->
+   <item id="8807" count="1" /> <!-- Shyeed's Bow -->
+   <item id="8808" count="1" /> <!-- Shyeed's Bow -->
+   <item id="8809" count="1" /> <!-- Sobekk's Hurricane -->
+   <item id="8810" count="1" /> <!-- Sobekk's Hurricane -->
+   <item id="8811" count="1" /> <!-- Sobekk's Hurricane -->
+   <item id="8812" count="1" /> <!-- Themis' Tongue -->
+   <item id="8813" count="1" /> <!-- Themis' Tongue -->
+   <item id="8814" count="1" /> <!-- Themis' Tongue -->
+   <item id="8815" count="1" /> <!-- Cabrio's Hand -->
+   <item id="8816" count="1" /> <!-- Cabrio's Hand -->
+   <item id="8817" count="1" /> <!-- Cabrio's Hand -->
+   <item id="8818" count="1" /> <!-- Daimon Crystal -->
+   <item id="8819" count="1" /> <!-- Daimon Crystal -->
+   <item id="8820" count="1" /> <!-- Daimon Crystal -->
+   <item id="8126" count="1" /> <!-- Destroyer Hammer -->
+   <item id="8127" count="1" /> <!-- Destroyer Hammer -->
+   <item id="8128" count="1" /> <!-- Destroyer Hammer -->
+   <item id="8135" count="1" /> <!-- Doom Crusher -->
+   <item id="8136" count="1" /> <!-- Doom Crusher -->
+   <item id="8137" count="1" /> <!-- Doom Crusher -->
+   <item id="8147" count="1" /> <!-- Spiritual Eye -->
+   <item id="8148" count="1" /> <!-- Spiritual Eye -->
+   <item id="8149" count="1" /> <!-- Spiritual Eye -->
+   <item id="8150" count="1" /> <!-- Flaming Dragon Skull -->
+   <item id="8151" count="1" /> <!-- Flaming Dragon Skull -->
+   <item id="8152" count="1" /> <!-- Flaming Dragon Skull -->
+   <item id="5704" count="1" /> <!-- Keshanberk*Keshanberk -->
+   <item id="5705" count="1" /> <!-- Keshanberk*Damascus -->
+   <item id="5706" count="1" /> <!-- Damascus*Damascus -->
+
+</list>

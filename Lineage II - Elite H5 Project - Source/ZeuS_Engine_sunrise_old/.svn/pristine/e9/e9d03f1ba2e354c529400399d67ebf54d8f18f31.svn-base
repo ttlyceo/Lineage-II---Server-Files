@@ -1,0 +1,24 @@
+Index: java/l2r/gameserver/network/clientpackets/UseItem.java
+===================================================================
+--- java/l2r/gameserver/network/clientpackets/UseItem.java	(revision 29)
++++ java/l2r/gameserver/network/clientpackets/UseItem.java	(working copy)
+@@ -3,6 +3,9 @@
+ import java.util.Calendar;
+ import java.util.concurrent.TimeUnit;
+ 
++import ZeuS.ZeuS.ZeuS;
++import ZeuS.interfase.potionSystem;
++import ZeuS.procedimientos.autoPots;
+ import l2r.Config;
+ import l2r.gameserver.ThreadPoolManager;
+ import l2r.gameserver.ai.NextAction;
+@@ -373,6 +376,9 @@
+ 		final int minutes = (int) (remainingTime % 3600000L) / 60000;
+ 		final int seconds = (int) ((remainingTime / 1000) % 60);
+ 		final SystemMessage sm;
++		if(autoPots.isAutoMp(activeChar, item, null) || autoPots.isAutoCp(activeChar, item, null) || autoPots.isAutoHp(activeChar, item, null) ) {
++			return;
++		}
+ 		if (hours > 0)
+ 		{
+ 			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);

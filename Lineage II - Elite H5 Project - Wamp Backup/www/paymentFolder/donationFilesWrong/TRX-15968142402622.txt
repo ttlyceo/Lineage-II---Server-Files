@@ -1,0 +1,36 @@
+IP: 173.0.81.1
+mc_gross=2.00
+protection_eligibility=Eligible
+payer_id=XM4J4M5DPJQU6
+payment_date=08:30:34 Aug 07, 2020 PDT
+payment_status=Completed
+charset=windows-1252
+first_name=Vicente
+mc_fee=0.46
+notify_version=3.9
+custom=
+payer_status=verified
+business=l2neptune.donations@gmail.com
+quantity=1
+verify_sign=AXZmFGxKdTseXD.jAxVQ4hT3Bw8HAjdDhwGBI4ENCGniDbmVkfeikYke
+payer_email=adm.jabberwock@gmail.com
+txn_id=7A9692774V1363055
+payment_type=instant
+last_name=Soto salinas
+receiver_email=l2neptune.donations@gmail.com
+payment_fee=
+shipping_discount=0.00
+receiver_id=9M9AU66KKC2DU
+insurance_amount=0.00
+txn_type=web_accept
+item_name=1b79db825dda06018cb582044118624e
+discount=0.00
+mc_currency=EUR
+item_number=
+residence_country=CL
+shipping_method=Default
+transaction_subject=
+payment_gross=
+ipn_track_id=e255e46199bec
+
+NO DONATION INFO WITH THE ID: SELECT id, createTime, gameEmail, gameAccount FROM zeus_paypal WHERE zeus_paypal.idweb = '1b79db825dda06018cb582044118624e' AND isOK = 'N' Qn: 

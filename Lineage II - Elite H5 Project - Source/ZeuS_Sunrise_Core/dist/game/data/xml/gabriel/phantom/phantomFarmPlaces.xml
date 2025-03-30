@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- This is the "auto farm" feature (still in tests) 
+In theory, if you spawn a character inside the Area Center location, he will "try" to farm inside that area from the Min till Max Level
+if he reaches max level, he will try to go to another farm zone if it exists here
+
+as example below.
+-->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/phantomFarmPlaces.xsd">
+    <PhantomFarmArea name="Cedric's_Training_Hall" range="400" minLevel="1" maxLevel="7" >
+        <areaCenter x="-71402" y="258315" z="-3112" />
+        <playerTeleport>
+            <locationTeleportPlayer x="-71402" y="258315" z="-3112" />
+            <locationTeleportPlayer x="-71402" y="258315" z="-3112" />
+            <locationTeleportPlayer x="-71402" y="258315" z="-3112" />
+        </playerTeleport>
+    </PhantomFarmArea>
+	
+	<PhantomFarmArea name="Cedric's_Training_Hall" range="400" minLevel="8" maxLevel="15" >
+        <areaCenter x="-71402" y="258315" z="-3112" />
+        <playerTeleport>
+            <locationTeleportPlayer x="-71402" y="258315" z="-3112" />
+            <locationTeleportPlayer x="-71402" y="258315" z="-3112" />
+            <locationTeleportPlayer x="-71402" y="258315" z="-3112" />
+        </playerTeleport>
+    </PhantomFarmArea>
+</list>

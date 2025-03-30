@@ -1,0 +1,11 @@
+	<!-- ZeuS -->
+	<admin command="admin_zeus_shop" accessLevel="7" confirmDlg="false"/>
+	<admin command="admin_zeus_tele" accessLevel="7" confirmDlg="false"/>
+	<admin command="admin_zeus_op" accessLevel="7" confirmDlg="false"/>
+	<admin command="admin_zeus_ipblock" accessLevel="7" confirmDlg="false"/>
+	<admin command="admin_zeus_banip" accessLevel="7" confirmDlg="false"/>
+	<admin command="admin_zeus_config" accessLevel="6" confirmDlg="false"/>
+	<admin command="admin_zeus_recallAll" accessLevel="6" confirmDlg="false"/>
+	<admin command="admin_zeus_recallAllforce" accessLevel="6" confirmDlg="false"/>	
+	<admin command="admin_zeus_buff_voice" accessLevel="6" confirmDlg="false"/>	
+	<admin command="admin_zeus_dona" accessLevel="6" confirmDlg="false"/>

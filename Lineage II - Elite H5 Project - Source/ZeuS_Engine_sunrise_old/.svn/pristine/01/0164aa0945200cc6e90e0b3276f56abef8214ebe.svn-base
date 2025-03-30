@@ -1,0 +1,16 @@
+<html>
+	<title>L2 Sword - Account Seller System</title>
+	<body><center>
+		%SERVER_LOGO%<br1>
+        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+		<font color="LEVEL" name="hs12">Wellcome, </font><font color="FE9A2E" name="hs12">%SELLER%</font> <font color="LEVEL" name="hs12"><br1>want to sell you his account.</font><br1>
+		<font color="LEVEL" name="hs12">The Account Price is This</font><br1>
+		<center>%TABLE_ITEM%</center><br1>
+		<font color="LEVEL" name="hs12">The Player who Receive the Pay is</font><br1>
+		<center><font color="F7BE81" name="hs12" >%RECEIVER%</font></center><br1>
+		<font color="LEVEL" name="hs12"> Char on the Account that you<br1>gonna Buy</font><br>
+		<font color="F7BE81">%CHAR_LIST%</font><br>
+		<center><button value="Accept" action="%LINK_ACCEPT%" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_Back" fore="L2UI_CT1.OlympiadWnd_DF_Back"></center>
+        </td></tr></table>
+	</center></body>
+</html>

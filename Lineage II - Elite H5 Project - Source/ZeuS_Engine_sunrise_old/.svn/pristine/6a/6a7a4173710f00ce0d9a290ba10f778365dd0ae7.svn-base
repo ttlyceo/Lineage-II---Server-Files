@@ -1,0 +1,11 @@
+<html>
+	<title>L2 Sword - Survey</title>
+	<body>
+		%SERVER_LOGO%<br>
+        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+		<center><font color="81F7D8">We need your Opinion on this Survey</font></center><br1>
+		<center><font name="hs12" color="LEVEL">%QUESTION%</font></center><br>
+		<center>%ANSWER_BOX%</center>
+        </td></tr></table>
+	</body>
+</html>

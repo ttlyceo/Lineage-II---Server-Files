@@ -1,0 +1,54 @@
+Index: src/ZeuS/interfase/shop.java
+===================================================================
+--- src/ZeuS/interfase/shop.java	(revision 19)
++++ src/ZeuS/interfase/shop.java	(working copy)
+@@ -414,7 +414,7 @@
+ 	protected static void showMultisell(int multisell, L2PcInstance player, boolean normal){
+ 		try
+ 		{
+-			//player.setIsUsingAioMultisell(true);
++			player.setIsUsingAioMultisell(true);
+ 			if(normal)
+ 				MultisellData.getInstance().separateAndSend(multisell, player, null, false);
+ 			else
+Index: src/ZeuS/ZeuS/ZeuS.java
+===================================================================
+--- src/ZeuS/ZeuS/ZeuS.java	(revision 20)
++++ src/ZeuS/ZeuS/ZeuS.java	(working copy)
+@@ -338,6 +338,14 @@
+ 		}
+ 		
+ 		try {
++			if(Command.startsWith("zeus_multisell") || Command.startsWith("zeus_exc_multisell") || Command.startsWith("zeus_buy")){
++				return isMultisell(player,Command);
++			}			
++		}catch(Exception a) {
++			
++		}
++		
++		try {
+ 			if(Command != "") {
+ 				if(opera.isMaster(player)){
+ 					if(Command.startsWith("admin_zeus_shop")) {
+@@ -977,8 +985,6 @@
+ 							}
+ 							return true;							
+ 				}
+-			}else if(Command.startsWith("zeus_multisell") || Command.startsWith("zeus_exc_multisell") || Command.startsWith("zeus_buy")){
+-					return isMultisell(player,Command);
+ 			}
+ 		}catch(Exception a){
+Index: src/ZeuS/interfase/shop.java
+===================================================================
+--- src/ZeuS/interfase/shop.java	(revision 21)
++++ src/ZeuS/interfase/shop.java	(working copy)
+@@ -329,7 +329,7 @@
+ 	
+ 	
+ 	protected static void showBuylist(L2PcInstance player, int idBuylist){
+-			//player.setIsUsingAioMultisell(true);
++			player.setIsUsingAioMultisell(true);
+ 			final L2BuyList buyList = BuyListData.getInstance().getBuyList(idBuylist);
+ 			if (buyList == null)
+ 			{ 		
+ 			

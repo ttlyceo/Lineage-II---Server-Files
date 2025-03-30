@@ -1,0 +1,1284 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/phantomSkills.xsd">
+
+<!--
+offensive Spells = Attack
+Support Spells are selfSupportSpells (skills that will be used on your self depending of HP usage or not present (selfbuffs))
+Healling spells are for healling classes to use on party members (party not implemented)
+
+conditions possibilities:
+    NONE = Default one, will try to cast (if nothing is present, will use this)
+	LESSHPPERCENT = (DEFAULT FOR heallingSpells) will cast skill if % of hp is reached (LESSHPPERCENT = 30 => will cast skill if HP is less than 30%)
+	MISSINGCP = Missing CP value (MISSINGCP=1000 => will use skill if is missing 1000 CP from phantom)
+
+targetType possibilities: (This will only be used on healling spells)
+	CLAN
+	CLAN_MEMBER
+	COMMAND_CHANNEL
+	NONE
+	ONE
+	OWNER_PET
+	PARTY
+	PARTY_CLAN
+	PARTY_MEMBER
+	PARTY_NOTME
+	PARTY_OTHER
+	PARTY_TARGET
+	PET
+	SELF (Default if none is found)
+	SERVITOR
+	SUMMON
+	TARGET_PARTY
+-->
+
+    <skills classId="fighter">
+        <offensiveSpells>
+            <skill id="3" priority="1" />
+            <skill id="16" priority="2" />
+            <skill id="56" priority="3" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="warrior">
+        <offensiveSpells>
+            <skill id="9" priority="1" />
+            <skill id="255" priority="2" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="gladiator">
+        <offensiveSpells>
+            <skill id="994" priority="1" />
+            <skill id="8" priority="2" />
+            <skill id="6" priority="3" />
+            <skill id="5" priority="4" />
+            <skill id="261" priority="5" />
+            <skill id="1" priority="6" />
+            <skill id="7" priority="7" />
+            <skill id="9" priority="8" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="warlord">
+        <offensiveSpells>
+            <skill id="994" priority="1" />
+            <skill id="920" priority="2" />
+            <skill id="36" priority="3" />
+            <skill id="48" priority="4" />
+            <skill id="320" priority="5" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+
+    </skills>
+
+    <skills classId="knight">
+        <offensiveSpells>
+            <skill id="92" priority="1" />
+            <skill id="28" priority="2" />
+            <skill id="3" priority="3" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="paladin">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="984" priority="2" />
+            <skill id="92" priority="3" />
+            <skill id="400" priority="4" />
+            <skill id="403" priority="5" />
+            <skill id="404" priority="6" />
+            <skill id="409" priority="7" />
+            <skill id="821" priority="8" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="darkAvenger">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="984" priority="2" />
+            <skill id="92" priority="3" />
+            <skill id="401" priority="4" />
+            <skill id="403" priority="5" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="rogue">
+        <offensiveSpells>
+            <skill id="101" priority="1" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="treasureHunter">
+        <offensiveSpells>
+            <skill id="51" priority="1" />
+            <skill id="96" priority="2" />
+            <skill id="11" priority="3" />
+            <skill id="263" priority="4" />
+            <skill id="12" priority="5" />
+            <skill id="16" priority="6" />
+            <skill id="409" priority="7" />
+            <skill id="821" priority="8" />
+            <skill id="30" priority="9" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="hawkeye">
+        <offensiveSpells>
+            <skill id="101" priority="1" />
+            <skill id="19" priority="2" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="mage">
+        <offensiveSpells>
+            <skill id="1177" priority="1" />
+            <skill id="1184" priority="2" />
+            <skill id="1147" priority="3" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="wizard">
+        <offensiveSpells>
+            <skill id="1083" priority="1" />
+            <skill id="1220" priority="2" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="sorceror">
+        <offensiveSpells>
+            <skill id="1083" priority="1" />
+            <skill id="1230" priority="2" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="necromancer">
+        <offensiveSpells>
+            <skill id="1263" priority="1" />
+            <skill id="1148" priority="2" />
+            <skill id="1234" priority="3" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="warlock">
+    <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="cleric">
+        <offensiveSpells>
+            <skill id="1177" priority="1" />
+            <skill id="1031" priority="2" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1015" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="1" />
+            <skill id="1027" targetType="TARGET_PARTY" condition="LESSHPPERCENT" conditionValue="80" priority="2" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="bishop">
+        <offensiveSpells>
+            <skill id="1177" priority="1" />
+            <skill id="1539" priority="2" />
+            <skill id="1031" priority="3" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1531" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="1" />
+            <skill id="1018" targetType="ONE" condition="LESSHPPERCENT" conditionValue="50" priority="2" />
+            <skill id="1217" targetType="ONE" condition="LESSHPPERCENT" conditionValue="90" priority="3" />
+            <skill id="1401" targetType="ONE" condition="LESSHPPERCENT" conditionValue="90" priority="4" />
+            <skill id="1258" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="5" />
+            <skill id="1219" targetType="TARGET_PARTY" condition="LESSHPPERCENT" conditionValue="80" priority="6" />
+            <skill id="1402" targetType="TARGET_PARTY" condition="LESSHPPERCENT" conditionValue="80" priority="7" />
+            <skill id="1311" targetType="TARGET_PARTY" condition="LESSHPPERCENT" conditionValue="50" priority="8" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="prophet">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="elvenFighter">
+        <offensiveSpells>
+            <skill id="3" priority="1" />
+            <skill id="16" priority="2" />
+            <skill id="56" priority="3" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="elvenKnight">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="3" priority="2" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="templeKnight">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="3" priority="2" />
+            <skill id="400" priority="3" />
+            <skill id="402" priority="4" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="swordSinger">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="3" priority="2" />
+            <skill id="986" priority="3" />
+            <skill id="402" priority="4" />
+            <skill id="98" priority="5" />
+            <skill id="102" priority="6" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="elvenScout">
+        <offensiveSpells>
+            <skill id="101" priority="1" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="plainsWalker">
+        <offensiveSpells>
+            <skill id="51" priority="1" />
+            <skill id="263" priority="2" />
+            <skill id="321" priority="3" />
+            <skill id="821" priority="4" />
+            <skill id="30" priority="5" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="silverRanger">
+        <offensiveSpells>
+            <skill id="101" priority="1" />
+            <skill id="19" priority="2" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="elvenMage">
+        <offensiveSpells>
+            <skill id="1177" priority="1" />
+            <skill id="1184" priority="2" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="elvenWizard">
+        <offensiveSpells>
+            <skill id="1264" priority="1" />
+            <skill id="1175" priority="2" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="spellsinger">
+        <offensiveSpells>
+            <skill id="1071" priority="1" />
+            <skill id="1235" priority="2" />
+            <skill id="1265" priority="3" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="elementalSummoner">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="oracle">
+        <offensiveSpells>
+            <skill id="1177" priority="1" />
+            <skill id="1031" priority="2" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1015" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="1" />
+            <skill id="1027" targetType="TARGET_PARTY" condition="LESSHPPERCENT" conditionValue="80" priority="2" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="elder">
+        <offensiveSpells>
+            <skill id="1177" priority="1" />
+            <skill id="1031" priority="2" />
+            <skill id="1206" priority="3" />
+            <skill id="1394" priority="4" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1217" targetType="ONE" condition="LESSHPPERCENT" conditionValue="90" priority="1" />
+            <skill id="1401" targetType="ONE" condition="LESSHPPERCENT" conditionValue="90" priority="2" />
+            <skill id="1219" targetType="TARGET_PARTY" condition="LESSHPPERCENT" conditionValue="80" priority="3" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="darkFighter">
+        <offensiveSpells>
+            <skill id="3" priority="1" />
+            <skill id="16" priority="2" />
+            <skill id="56" priority="3" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="palusKnight">
+        <offensiveSpells>
+            <skill id="223" priority="1" />
+            <skill id="28" priority="2" />
+            <skill id="3" priority="3" />
+            <skill id="115" priority="4" />
+            <skill id="105" priority="5" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="shillienKnight">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="3" priority="2" />
+            <skill id="984" priority="3" />
+            <skill id="223" priority="4" />
+            <skill id="401" priority="5" />
+            <skill id="122" priority="6" />
+            <skill id="402" priority="7" />
+            <skill id="115" priority="8" />
+            <skill id="105" priority="9" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="bladedancer">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="3" priority="2" />
+            <skill id="986" priority="3" />
+            <skill id="223" priority="4" />
+            <skill id="408" priority="5" />
+            <skill id="84" priority="6" />
+            <skill id="105" priority="7" />
+            <skill id="402" priority="8" />
+            <skill id="115" priority="9" />
+            <skill id="122" priority="10" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="assassin">
+        <offensiveSpells>
+            <skill id="101" priority="1" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="abyssWalker">
+        <offensiveSpells>
+            <skill id="115" priority="1" />
+            <skill id="122" priority="2" />
+            <skill id="106" priority="3" />
+            <skill id="105" priority="4" />
+            <skill id="96" priority="5" />
+            <skill id="51" priority="6" />
+            <skill id="821" priority="7" />
+            <skill id="30" priority="8" />
+            <skill id="263" priority="9" />
+            <skill id="321" priority="10" />
+            <skill id="223" priority="11" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="phantomRanger">
+        <offensiveSpells>
+            <skill id="101" priority="1" />
+            <skill id="19" priority="2" />
+            <skill id="314" priority="3" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="darkMage">
+        <offensiveSpells>
+            <skill id="1177" priority="1" />
+            <skill id="1184" priority="2" />
+            <skill id="1147" priority="3" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="darkWizard">
+        <offensiveSpells>
+            <skill id="1178" priority="1" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="spellhowler">
+        <offensiveSpells>
+            <skill id="1074" priority="1" />
+            <skill id="1239" priority="2" />
+            <skill id="1234" priority="3" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="phantomSummoner">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="shillienOracle">
+        <offensiveSpells>
+            <skill id="1177" priority="1" />
+            <skill id="1031" priority="2" />
+            <skill id="1026" priority="3" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1015" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="1" />
+            <skill id="1027" targetType="TARGET_PARTY" condition="LESSHPPERCENT" conditionValue="80" priority="2" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="shillenElder">
+        <offensiveSpells>
+            <skill id="1177" priority="1" />
+            <skill id="1539" priority="2" />
+            <skill id="1031" priority="3" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1531" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="1" />
+            <skill id="1018" targetType="ONE" condition="LESSHPPERCENT" conditionValue="50" priority="2" />
+            <skill id="1217" targetType="ONE" condition="LESSHPPERCENT" conditionValue="90" priority="3" />
+            <skill id="1219" targetType="TARGET_PARTY" condition="LESSHPPERCENT" conditionValue="80" priority="4" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="orcFighter">
+        <offensiveSpells>
+            <skill id="29" priority="1" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="orcRaider">
+        <offensiveSpells>
+            <skill id="3" priority="1" />
+            <skill id="255" priority="2" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="destroyer">
+        <offensiveSpells>
+            <skill id="994" priority="1" />
+            <skill id="315" priority="2" />
+            <skill id="190" priority="3" />
+            <skill id="255" priority="4" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="orcMonk">
+        <offensiveSpells>
+            <skill id="50" priority="1" />
+            <skill id="54" priority="2" />
+            <skill id="29" priority="3" />
+            <skill id="284" priority="4" />
+            <skill id="120" priority="5" />
+            <skill id="95" priority="6" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="tyrant">
+        <offensiveSpells>
+            <skill id="50" priority="1" />
+            <skill id="54" priority="2" />
+            <skill id="17" priority="3" />
+            <skill id="280" priority="4" />
+            <skill id="284" priority="5" />
+            <skill id="35" priority="6" />
+            <skill id="81" priority="7" />
+            <skill id="120" priority="8" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="orcMage">
+        <offensiveSpells>
+            <skill id="1090" priority="1" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="orcShaman">
+        <offensiveSpells>
+            <skill id="1090" priority="1" />
+            <skill id="1101" priority="2" />
+            <skill id="1100" priority="3" />
+            <skill id="1208" priority="4" />
+            <skill id="1095" priority="5" />
+            <skill id="1096" priority="6" />
+            <skill id="1097" priority="7" />
+            <skill id="1099" priority="8" />
+            <skill id="1105" priority="9" />
+            <skill id="1107" priority="10" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="overlord">
+        <offensiveSpells>
+            <skill id="1245" priority="1" />
+            <skill id="1097" priority="2" />
+            <skill id="1096" priority="3" />
+            <skill id="1208" priority="4" />
+            <skill id="1099" priority="5" />
+            <skill id="1104" priority="6" />
+            <skill id="1105" priority="7" />
+            <skill id="1246" priority="8" />
+            <skill id="1247" priority="9" />
+            <skill id="1248" priority="10" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1305" targetType="ONE" condition="MISSINGCP" conditionValue="500" priority="1" />
+            <skill id="1306" targetType="ONE" condition="MISSINGCP" conditionValue="500" priority="2" />
+            <skill id="1256" targetType="TARGET_PARTY" condition="LESSHPPERCENT" conditionValue="80" priority="3" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="warcryer">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="dwarvenFighter">
+        <!--   No Skills     -->
+    </skills>
+
+    <skills classId="scavenger">
+        <offensiveSpells>
+            <skill id="100" priority="1" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="bountyHunter">
+        <offensiveSpells>
+            <skill id="998" priority="1" />
+            <skill id="263" priority="2" />
+            <skill id="30" priority="3" />
+            <skill id="260" priority="4" />
+            <skill id="997" priority="5" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="artisan">
+        <offensiveSpells>
+            <skill id="100" priority="1" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="warsmith">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="duelist">
+        <offensiveSpells>
+            <skill id="995" priority="1" />
+            <skill id="994" priority="2" />
+            <skill id="775" priority="3" />
+            <skill id="345" priority="4" />
+            <skill id="8" priority="5" />
+            <skill id="1" priority="6" />
+            <skill id="261" priority="7" />
+            <skill id="5" priority="8" />
+            <skill id="6" priority="9" />
+            <skill id="7" priority="10" />
+            <skill id="9" priority="11" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="dreadnought">
+        <offensiveSpells>
+            <skill id="994" priority="1" />
+            <skill id="995" priority="2" />
+            <skill id="116" priority="3" />
+            <skill id="361" priority="4" />
+            <skill id="452" priority="5" />
+            <skill id="286" priority="6" />
+            <skill id="920" priority="7" />
+            <skill id="921" priority="8" />
+            <skill id="48" priority="9" />
+            <skill id="347" priority="10" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="phoenixKnight">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="984" priority="2" />
+            <skill id="985" priority="3" />
+            <skill id="92" priority="4" />
+            <skill id="400" priority="5" />
+            <skill id="353" priority="6" />
+            <skill id="403" priority="7" />
+            <skill id="404" priority="8" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="hellKnight">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="984" priority="2" />
+            <skill id="985" priority="3" />
+            <skill id="401" priority="4" />
+            <skill id="403" priority="5" />
+            <skill id="342" priority="6" />
+            <skill id="92" priority="7" />
+            <skill id="353" priority="8" />
+            <skill id="762" priority="9" />
+            <skill id="763" priority="10" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="sagittarius">
+        <offensiveSpells>
+            <skill id="101" priority="1" />
+            <skill id="19" priority="2" />
+            <skill id="771" priority="3" />
+            <skill id="987" priority="4" />
+            <skill id="924" priority="5" />
+            <skill id="990" priority="6" />
+            <skill id="343" priority="7" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="adventurer">
+        <offensiveSpells>
+            <skill id="51" priority="1" />
+            <skill id="531" priority="2" />
+            <skill id="96" priority="3" />
+            <skill id="11" priority="4" />
+            <skill id="12" priority="5" />
+            <skill id="409" priority="6" />
+            <skill id="344" priority="7" />
+            <skill id="928" priority="8" />
+            <skill id="358" priority="9" />
+            <skill id="991" priority="10" />
+            <skill id="821" priority="11" />
+            <skill id="30" priority="12" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="archmage">
+        <offensiveSpells>
+            <skill id="1083" priority="1" />
+            <skill id="1169" priority="2" />
+            <skill id="1288" priority="3" />
+            <skill id="1289" priority="4" />
+            <skill id="1292" priority="5" />
+            <skill id="1296" priority="6" />
+            <skill id="1554" priority="7" />
+            <skill id="1555" priority="8" />
+            <skill id="1056" priority="9" />
+            <skill id="1339" priority="10" />
+            <skill id="1451" priority="11" />
+            <skill id="1451" priority="12" />
+            <skill id="1230" priority="13" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="soultaker">
+        <offensiveSpells>
+            <skill id="1263" priority="1" />
+            <skill id="1148" priority="2" />
+            <skill id="1234" priority="3" />
+            <skill id="1064" priority="4" />
+            <skill id="1336" priority="5" />
+            <skill id="1337" priority="6" />
+            <skill id="1344" priority="7" />
+            <skill id="1345" priority="8" />
+            <skill id="1169" priority="9" />
+            <skill id="1170" priority="10" />
+            <skill id="1269" priority="11" />
+            <skill id="1465" priority="12" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="arcanaLord">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="cardinal">
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1218" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="1" />
+            <skill id="1217" targetType="ONE" condition="LESSHPPERCENT" conditionValue="80" priority="2" />
+            <skill id="1401" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="3" />
+            <skill id="1402" targetType="ONE" condition="LESSHPPERCENT" conditionValue="80" priority="4" />
+            <skill id="1258" targetType="ONE" condition="LESSHPPERCENT" conditionValue="50" priority="5" />
+            <skill id="1219" targetType="PARTY_MEMBER" condition="LESSHPPERCENT" conditionValue="50" priority="6" />
+            <skill id="1335" targetType="PARTY_MEMBER" condition="LESSHPPERCENT" conditionValue="40" priority="7" />
+            <skill id="1311" targetType="PARTY_MEMBER" condition="LESSHPPERCENT" conditionValue="40" priority="8" />
+            <skill id="1553" targetType="PARTY_MEMBER" condition="LESSHPPERCENT" conditionValue="40" priority="9" />
+            <skill id="1409" targetType="PARTY_MEMBER" condition="LESSHPPERCENT" conditionValue="40" priority="10" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="hierophant">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="evaTemplar">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="984" priority="2" />
+            <skill id="985" priority="3" />
+            <skill id="400" priority="4" />
+            <skill id="402" priority="5" />
+            <skill id="352" priority="6" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+
+    </skills>
+
+    <skills classId="swordMuse">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="3" priority="2" />
+            <skill id="986" priority="3" />
+            <skill id="402" priority="4" />
+            <skill id="98" priority="5" />
+            <skill id="102" priority="6" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="windRider">
+        <offensiveSpells>
+            <skill id="351" priority="1" />
+            <skill id="991" priority="2" />
+            <skill id="51" priority="3" />
+            <skill id="96" priority="4" />
+            <skill id="321" priority="5" />
+            <skill id="263" priority="6" />
+            <skill id="344" priority="7" />
+            <skill id="821" priority="8" />
+            <skill id="30" priority="9" />
+            <skill id="922" priority="10" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="moonlightSentinel">
+        <offensiveSpells>
+            <skill id="101" priority="1" />
+            <skill id="369" priority="2" />
+            <skill id="19" priority="3" />
+            <skill id="772" priority="4" />
+            <skill id="343" priority="5" />
+            <skill id="987" priority="6" />
+            <skill id="990" priority="7" />
+            <skill id="354" priority="8" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="mysticMuse">
+        <offensiveSpells>
+            <skill id="1071" priority="1" />
+            <skill id="1235" priority="2" />
+            <skill id="1288" priority="3" />
+            <skill id="1290" priority="4" />
+            <skill id="1293" priority="5" />
+            <skill id="1554" priority="6" />
+            <skill id="1555" priority="7" />
+            <skill id="1056" priority="8" />
+            <skill id="1340" priority="9" />
+            <skill id="1453" priority="10" />
+            <skill id="1342" priority="11" />
+            <skill id="1455" priority="12" />
+            <skill id="1468" priority="13" />
+            <skill id="1265" priority="14" />
+            <skill id="1454" priority="15" />
+            <skill id="1236" priority="16" />
+            <skill id="1237" priority="17" />
+            <skill id="1169" priority="18" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="elementalMaster">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="evaSaint">
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1553" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="1" />
+            <skill id="1401" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="2" />
+            <skill id="1217" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="3" />
+            <skill id="1219" targetType="PARTY_MEMBER" condition="LESSHPPERCENT" conditionValue="50" priority="4" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="shillienTemplar">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="984" priority="2" />
+            <skill id="985" priority="3" />
+            <skill id="223" priority="4" />
+            <skill id="401" priority="5" />
+            <skill id="279" priority="6" />
+            <skill id="352" priority="7" />
+            <skill id="105" priority="8" />
+            <skill id="115" priority="9" />
+            <skill id="122" priority="10" />
+            <skill id="402" priority="11" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="spectralDancer">
+        <offensiveSpells>
+            <skill id="28" priority="1" />
+            <skill id="3" priority="2" />
+            <skill id="986" priority="3" />
+            <skill id="223" priority="4" />
+            <skill id="408" priority="5" />
+            <skill id="84" priority="6" />
+            <skill id="105" priority="7" />
+            <skill id="402" priority="8" />
+            <skill id="115" priority="9" />
+            <skill id="122" priority="10" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="ghostHunter">
+        <offensiveSpells>
+            <skill id="513" priority="1" />
+            <skill id="51" priority="2" />
+            <skill id="96" priority="3" />
+            <skill id="223" priority="4" />
+            <skill id="106" priority="5" />
+            <skill id="122" priority="6" />
+            <skill id="115" priority="7" />
+            <skill id="991" priority="8" />
+            <skill id="821" priority="9" />
+            <skill id="358" priority="10" />
+            <skill id="30" priority="11" />
+            <skill id="321" priority="12" />
+            <skill id="263" priority="13" />
+            <skill id="344" priority="14" />
+            <skill id="928" priority="15" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="ghostSentinel">
+        <offensiveSpells>
+            <skill id="101" priority="1" />
+            <skill id="19" priority="2" />
+            <skill id="773" priority="3" />
+            <skill id="115" priority="4" />
+            <skill id="122" priority="5" />
+            <skill id="314" priority="6" />
+            <skill id="343" priority="7" />
+            <skill id="369" priority="8" />
+            <skill id="924" priority="9" />
+            <skill id="990" priority="10" />
+            <skill id="987" priority="11" />
+            <skill id="354" priority="12" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="stormScreamer">
+        <offensiveSpells>
+            <skill id="1047" priority="1" />
+            <skill id="1148" priority="2" />
+            <skill id="1239" priority="3" />
+            <skill id="1234" condition="LESSHPPERCENT" conditionValue="95" priority="4" />
+            <skill id="1064" priority="5" />
+            <skill id="1169" priority="6" />
+            <skill id="1288" priority="7" />
+            <skill id="1291" priority="8" />
+            <skill id="1294" priority="9" />
+            <skill id="1554" priority="10" />
+            <skill id="1555" priority="11" />
+            <skill id="1343" priority="12" />
+            <skill id="1341" priority="13" />
+            <skill id="1456" priority="14" />
+            <skill id="1456" priority="15" />
+            <skill id="1458" priority="16" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="spectralMaster">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="shillienSaint">
+        <offensiveSpells>
+            <skill id="1539" priority="1" />
+            <skill id="1358" priority="2" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1553" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="1" />
+            <skill id="1401" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="2" />
+            <skill id="1217" targetType="ONE" condition="LESSHPPERCENT" conditionValue="70" priority="3" />
+            <skill id="1219" targetType="PARTY_MEMBER" condition="LESSHPPERCENT" conditionValue="50" priority="4" />
+            <skill id="1551" targetType="PARTY_MEMBER" condition="LESSHPPERCENT" conditionValue="90" priority="5" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="titan">
+        <offensiveSpells>
+            <skill id="995" priority="1" />
+            <skill id="994" priority="2" />
+            <skill id="362" priority="3" />
+            <skill id="777" priority="4" />
+            <skill id="190" priority="5" />
+            <skill id="255" priority="6" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="grandKhavatari">
+        <offensiveSpells>
+            <skill id="994" priority="1" />
+            <skill id="995" priority="2" />
+            <skill id="50" priority="3" />
+            <skill id="346" priority="4" />
+            <skill id="776" priority="5" />
+            <skill id="281" priority="6" />
+            <skill id="17" priority="7" />
+            <skill id="280" priority="8" />
+            <skill id="284" priority="9" />
+            <skill id="54" priority="10" />
+            <skill id="81" priority="11" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="dominator">
+        <offensiveSpells>
+            <skill id="1245" priority="1" />
+            <skill id="1097" priority="2" />
+            <skill id="1096" priority="3" />
+            <skill id="1208" priority="4" />
+            <skill id="1099" priority="5" />
+            <skill id="1104" priority="6" />
+            <skill id="1105" priority="7" />
+            <skill id="1246" priority="8" />
+            <skill id="1247" priority="9" />
+            <skill id="1248" priority="10" />
+            <skill id="1366" priority="11" />
+            <skill id="1509" priority="12" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+        <heallingSpells>
+            <skill id="1305" targetType="ONE" condition="MISSINGCP" conditionValue="500" priority="1" />
+            <skill id="1306" targetType="ONE" condition="MISSINGCP" conditionValue="500" priority="2" />
+            <skill id="1553" targetType="ONE" condition="LESSHPPERCENT" conditionValue="90" priority="3" />
+            <skill id="1256" targetType="TARGET_PARTY" condition="LESSHPPERCENT" conditionValue="80" priority="4" />
+        </heallingSpells>
+    </skills>
+
+    <skills classId="doomcryer">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="fortuneSeeker">
+        <offensiveSpells>
+            <skill id="998" priority="1" />
+            <skill id="263" priority="2" />
+            <skill id="30" priority="3" />
+            <skill id="260" priority="4" />
+            <skill id="997" priority="5" />
+            <skill id="1560" priority="6" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+
+    </skills>
+
+    <skills classId="maestro">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="maleSoldier">
+        <offensiveSpells>
+            <skill id="468" priority="1" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="femaleSoldier">
+        <offensiveSpells>
+            <skill id="468" priority="1" />
+        </offensiveSpells>
+    </skills>
+
+    <skills classId="trooper">
+        <offensiveSpells>
+            <skill id="484" priority="1" />
+            <skill id="468" priority="2" />
+            <skill id="476" priority="3" />
+            <skill id="478" priority="4" />
+            <skill id="1435" priority="5" />
+            <skill id="485" priority="6" />
+            <skill id="1445" priority="7" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="warder">
+        <offensiveSpells>
+            <skill id="1435" priority="1" />
+            <skill id="479" priority="2" />
+            <skill id="480" priority="3" />
+            <skill id="481" priority="4" />
+            <skill id="627" priority="5" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="berserker">
+        <offensiveSpells>
+            <skill id="502" priority="1" />
+            <skill id="1435" priority="2" />
+            <skill id="1445" priority="3" />
+            <skill id="501" priority="4" />
+            <skill id="484" priority="5" />
+            <skill id="493" priority="6" />
+            <skill id="494" priority="7" />
+            <skill id="495" priority="8" />
+            <skill id="496" priority="9" />
+            <skill id="497" priority="10" />
+            <skill id="625" priority="11" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="maleSoulbreaker">
+        <offensiveSpells>
+            <skill id="484" priority="1" />
+            <skill id="625" priority="2" />
+            <skill id="502" priority="3" />
+            <skill id="504" priority="4" />
+            <skill id="505" priority="5" />
+            <skill id="1435" priority="6" />
+            <skill id="1436" priority="7" />
+            <skill id="1438" priority="8" />
+            <skill id="1439" priority="9" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="femaleSoulbreaker">
+        <offensiveSpells>
+            <skill id="484" priority="1" />
+            <skill id="625" priority="2" />
+            <skill id="502" priority="3" />
+            <skill id="504" priority="4" />
+            <skill id="505" priority="5" />
+            <skill id="1435" priority="6" />
+            <skill id="1436" priority="7" />
+            <skill id="1438" priority="8" />
+            <skill id="1439" priority="9" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="arbalester">
+        <offensiveSpells>
+            <skill id="522" priority="1" />
+            <skill id="1435" priority="2" />
+            <skill id="523" priority="3" />
+            <skill id="509" priority="4" />
+            <skill id="508" priority="5" />
+            <skill id="510" priority="6" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="doombringer">
+        <offensiveSpells>
+            <skill id="501" priority="1" />
+            <skill id="1435" priority="2" />
+            <skill id="793" priority="3" />
+            <skill id="484" priority="4" />
+            <skill id="493" priority="5" />
+            <skill id="494" priority="6" />
+            <skill id="495" priority="7" />
+            <skill id="493" priority="8" />
+            <skill id="494" priority="9" />
+            <skill id="495" priority="10" />
+            <skill id="496" priority="11" />
+            <skill id="497" priority="12" />
+            <skill id="498" priority="13" />
+            <skill id="526" priority="14" />
+            <skill id="794" priority="15" />
+            <skill id="485" priority="16" />
+            <skill id="485" priority="17" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="maleSoulhound">
+        <offensiveSpells>
+            <skill id="1435" priority="1" />
+            <skill id="1439" priority="2" />
+            <skill id="1544" priority="3" />
+            <skill id="502" priority="4" />
+            <skill id="1555" priority="5" />
+            <skill id="1436" priority="6" />
+            <skill id="1438" priority="7" />
+            <skill id="1440" priority="8" />
+            <skill id="1469" priority="9" />
+            <skill id="1510" priority="10" />
+            <skill id="1512" priority="11" />
+            <skill id="1513" priority="12" />
+            <skill id="1516" priority="13" />
+            <skill id="1437" priority="14" />
+            <skill id="1446" priority="15" />
+            <skill id="1447" priority="16" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="femaleSoulhound">
+        <offensiveSpells>
+            <skill id="1435" priority="1" />
+            <skill id="1439" priority="2" />
+            <skill id="1544" priority="3" />
+            <skill id="502" priority="4" />
+            <skill id="1555" priority="5" />
+            <skill id="1436" priority="6" />
+            <skill id="1438" priority="7" />
+            <skill id="1440" priority="8" />
+            <skill id="1469" priority="9" />
+            <skill id="1510" priority="10" />
+            <skill id="1512" priority="11" />
+            <skill id="1513" priority="12" />
+            <skill id="1516" priority="13" />
+            <skill id="1437" priority="14" />
+            <skill id="1446" priority="15" />
+            <skill id="1447" priority="16" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="trickster">
+        <offensiveSpells>
+            <skill id="522" priority="1" />
+            <skill id="523" priority="2" />
+            <skill id="1435" priority="3" />
+            <skill id="990" priority="4" />
+            <skill id="510" priority="5" />
+            <skill id="508" priority="6" />
+            <skill id="628" priority="7" />
+        </offensiveSpells>
+        <supportSpells>
+        </supportSpells>
+    </skills>
+
+    <skills classId="inspector">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+    <skills classId="judicator">
+        <!--   Not Done Yet !     -->
+    </skills>
+
+</list>

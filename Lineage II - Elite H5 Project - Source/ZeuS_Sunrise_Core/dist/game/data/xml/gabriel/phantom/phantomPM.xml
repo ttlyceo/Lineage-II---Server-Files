@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--How to use
+    It is self explanatory
+    searchMethod possibilities: EQUALS, STARTS_WITH, CONTAINS, DEFAULT
+    always put DEFAULT as last and only use ONE. This will be used when none of the above is found
+
+    It will see if it is EQUAL, or look for a text that STARTS_WITH, or CONTAINS (This will look if contains all of the possible words given) the "searchText".
+    It will occur in this order EQUALS->STARTS_WITH->CONTAINS
+    and if none is found, the chosen answer bill be used from DEFAULT.
+
+    Answers are random
+
+    searchText and answers are splitted by ";" in case of multiple
+
+-->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/phantomPM.xsd">
+    <PM searchMethod="EQUALS" searchText="hi" answers="hello;hi;hi there;hello there" />
+    <PM searchMethod="EQUALS" searchText="hey" answers="hey hey;hey;hey there" />
+    <PM searchMethod="EQUALS" searchText="hello" answers="hello;hi;hi there;hello there" />
+    <PM searchMethod="EQUALS" searchText="here?" answers="yes;busy;i look for something" />
+    <PM searchMethod="EQUALS" searchText="whats up?" answers="good;busy;i look for something" />
+    <PM searchMethod="EQUALS" searchText="what?" answers="something :P;something for me" />
+    <PM searchMethod="EQUALS" searchText="why?" answers="because;i don't know;what?" />
+    <PM searchMethod="EQUALS" searchText="really" answers="really;yes;of course" />
+    <PM searchMethod="EQUALS" searchText="thanks" answers=":);:D;:*" />
+    <PM searchMethod="EQUALS" searchText="thank you" answers=":);:D;:*" />
+    <PM searchMethod="EQUALS" searchText="?" answers="?;what?*" />
+    <PM searchMethod="STARTS_WITH" searchText="how are you" answers="fine;good;busy" />
+    <PM searchMethod="STARTS_WITH" searchText="do you know" answers="nope;no sorry;nope, i don't" />
+    <PM searchMethod="STARTS_WITH" searchText="where can i" answers="i don't know;no clue;ask someone else :P" />
+    <PM searchMethod="STARTS_WITH" searchText="can i ask you" answers="yes;what?;tell me" />
+    <PM searchMethod="CONTAINS" searchText="server;ha;problem" answers="it's good;i don't know;i don't think so..." />
+    <PM searchMethod="CONTAINS" searchText="server;ha;bug" answers="it's good;i don't know;i don't think so..." />
+    <PM searchMethod="CONTAINS" searchText="is th;server;good" answers="it's good :D;i like it :P;yes it is :)" />
+    <PM searchMethod="CONTAINS" searchText="where;you;go;?" answers="i look for something;checking stuff;looking for curius people :P" />
+    <PM searchMethod="CONTAINS" searchText="are;you;kidding" answers="^^;:D;:P" />
+    <PM searchMethod="DEFAULT" searchText="" answers="busy bro;?;sorry, I'm busy;tell me;yeah?;??" />
+</list>

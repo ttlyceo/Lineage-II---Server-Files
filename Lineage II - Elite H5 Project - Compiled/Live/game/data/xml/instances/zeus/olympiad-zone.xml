@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="OlympiadZone" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/instance.xsd">
+	<spawnPoints startPosType="FIXED">
+		<Location x="-149351" y="253966" z="-191" />
+	</spawnPoints>
+	<spawnlist>
+		<group name="general"> <!-- Todos los Npc de los Heroes -->
+			<spawn npcId="60083" x="-149167" y="254624" z="-185" respawn="0" heading="46070" />
+			<spawn npcId="60084" x="-149556" y="254626" z="-185" respawn="0" heading="49151" />
+			<spawn npcId="60085" x="-149789" y="254928" z="-185" respawn="0" heading="43694" />
+			<spawn npcId="60086" x="-149900" y="255035" z="-185" respawn="0" heading="40543" />
+			<spawn npcId="60087" x="-150190" y="255111" z="-185" respawn="0" heading="30094" />
+			<spawn npcId="60088" x="-150195" y="255507" z="-185" respawn="0" heading="35670" />
+			<spawn npcId="60089" x="-149910" y="255601" z="-185" respawn="0" heading="25521" />
+			<spawn npcId="60090" x="-149803" y="255699" z="-185" respawn="0" heading="24102" />
+			<spawn npcId="60091" x="-149554" y="255996" z="-182" respawn="0" heading="19497" />
+			<spawn npcId="60092" x="-149162" y="255985" z="-182" respawn="0" heading="15583" />
+			<spawn npcId="60093" x="-148936" y="255692" z="-185" respawn="0" heading="8992" />
+			<spawn npcId="60094" x="-148832" y="255583" z="-185" respawn="0" heading="4635" />
+			<spawn npcId="60095" x="-148525" y="255511" z="-185" respawn="0" heading="3968" />
+			<spawn npcId="60096" x="-148531" y="255113" z="-185" respawn="0" heading="63714" />
+			<spawn npcId="60097" x="-148828" y="255042" z="-185" respawn="0" heading="59524" />
+			<spawn npcId="60098" x="-148942" y="254930" z="-185" respawn="0" heading="55393" />
+			<spawn npcId="60099" x="-149176" y="255041" z="-85" respawn="0" heading="15862" />
+			<spawn npcId="60100" x="-148984" y="255053" z="-85" respawn="0" heading="18564" />
+			<spawn npcId="60101" x="-148907" y="255148" z="-85" respawn="0" heading="21592" />
+			<spawn npcId="60102" x="-148914" y="255477" z="-85" respawn="0" heading="38182" />
+			<spawn npcId="60103" x="-149011" y="255578" z="-85" respawn="0" heading="41786" />
+			<spawn npcId="60104" x="-149187" y="255604" z="-85" respawn="0" heading="41851" />
+			<spawn npcId="60105" x="-149532" y="255607" z="-85" respawn="0" heading="55961" />
+			<spawn npcId="60106" x="-149736" y="255587" z="-85" respawn="0" heading="52507" />
+			<spawn npcId="60107" x="-149807" y="255474" z="-85" respawn="0" heading="57343" />
+			<spawn npcId="60108" x="-149797" y="255144" z="-85" respawn="0" heading="3453" />
+			<spawn npcId="60109" x="-149713" y="255044" z="-85" respawn="0" heading="10186" />
+			<spawn npcId="60110" x="-149526" y="255019" z="-85" respawn="0" heading="5289" />
+			<spawn npcId="60111" x="-149089" y="255718" z="-185" respawn="0" heading="7324" />
+			<spawn npcId="60112" x="-149099" y="254906" z="-182" respawn="0" heading="56731" />
+			<spawn npcId="60113" x="-149634" y="254914" z="-182" respawn="0" heading="42440" />
+			<spawn npcId="60114" x="-149622" y="255713" z="-185" respawn="0" heading="25730" />
+			<spawn npcId="60115" x="-149498" y="255170" z="-85" respawn="0" heading="5414" />
+			<spawn npcId="60116" x="-149211" y="255466" z="-85" respawn="0" heading="40116" />
+		</group>
+		<group name="general"> <!-- Solos los Top -->
+			<spawn npcId="60079" x="-149483" y="253717" z="-185" respawn="0" heading="17681" />
+			<spawn npcId="60080" x="-149232" y="253717" z="-185" respawn="0" heading="15920" />
+			<spawn npcId="60081" x="-149197" y="256527" z="-69" respawn="0" heading="48655" />
+			<spawn npcId="60082" x="-149521" y="256527" z="-69" respawn="0" heading="49151" />
+		</group>
+		<group name="general"> <!-- Olympiad NPC -->
+			<spawn npcId="31690" x="-149359" y="255309" z="-85" respawn="0" heading="49968" /> <!-- MONUMENT -->
+			<spawn npcId="31688" x="-149966" y="254661" z="-187" respawn="0" heading="49710" /> <!-- Npc Grand Olympiad Manager -->
+			<spawn npcId="31688" x="-148763" y="254654" z="-187" respawn="0" heading="32767" /> <!-- Npc Grand Olympiad Manager -->
+			<spawn npcId="31688" x="-148748" y="255963" z="-187" respawn="0" heading="60027" /> <!-- Npc Grand Olympiad Manager -->
+			<spawn npcId="31688" x="-149960" y="255970" z="-187" respawn="0" heading="8191" /> <!-- Npc Grand Olympiad Manager -->
+		</group>
+	</spawnlist>
+</instance>

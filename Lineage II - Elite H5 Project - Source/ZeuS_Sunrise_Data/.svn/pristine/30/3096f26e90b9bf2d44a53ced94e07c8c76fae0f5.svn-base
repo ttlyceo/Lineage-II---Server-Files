@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+     </npcs>
+   <item id="9429" count="1" /><!-- Dynasty Leather Helmet -->
+   <item id="9427" count="1" /><!-- Dynasty Leather Armor -->
+   <item id="9426" count="1" /><!-- Dynasty Leather Armor -->
+   <item id="10126" count="1" /><!-- Dynasty Leather Armor -->
+   <item id="9428" count="1" /><!-- Dynasty Leather Leggings -->
+   <item id="9430" count="1" /><!-- Dynasty Leather Gloves -->
+   <item id="9431" count="1" /><!-- Dynasty Leather Boots -->
+   <item id="10127" count="1" /><!-- Dynasty Leather Armor -->
+</list>

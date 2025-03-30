@@ -1,0 +1,201 @@
+Index: java/l2r/gameserver/model/actor/instance/L2PcInstance.java
+===================================================================
+--- java/l2r/gameserver/model/actor/instance/L2PcInstance.java	(revision 23)
++++ java/l2r/gameserver/model/actor/instance/L2PcInstance.java	(working copy)
+@@ -14537,6 +14537,8 @@
+ 	 */
+ 	public float getRate(Rates rateType, int itemId, boolean isRaid)
+ 	{
++		boolean IsPremium = ZeuS.isPremium(this) ? true : false;
++		boolean IsPremiumItemRate = ZeuS.isPremiumItem_Rate(this, itemId);
+ 		switch (rateType)
+ 		{
+ 			case PREMIUM_BONUS_EXP:
+@@ -14544,42 +14546,25 @@
+ 			case PREMIUM_BONUS_SP:
+ 				return isPremium() ? PremiumServiceConfigs.PREMIUM_RATE_SP : 1;
+ 			case SPOIL:
+-				if (ZeuS.isPremium(this))
+-				{
+-					float Retornar = (float) ZeuS.getPremiumDropSpoil_Rate(this, true);
+-					return Retornar;
++				if(IsPremium) {
++					if(itemId == Inventory.ADENA_ID) {
++						return ZeuS.getPremiumDropAdena_Rate(this);
++					}else if(IsPremiumItemRate) {
++						return (float) ZeuS.getItemPremiumDrop_Rate(this, itemId);
++					}else {
++						return (float) ZeuS.getPremiumDropSpoil_Rate(this);
++					}
+ 				}
+ 				return Config.RATE_DROP_ITEMS_ID.containsKey(itemId) ? Config.RATE_DROP_ITEMS_ID.get(itemId) : Config.RATE_DROP_SPOIL;
+ 			case DROP_ITEM:
+-				if (ZeuS.isPremium(this))
+-				{
+-					float _returnValue;
+-					if (itemId == Inventory.ADENA_ID)
+-					{
+-						_returnValue = ZeuS.getPremiumDropAdena_Rate(this);
+-						return _returnValue;
+-					}
+-					if (ZeuS.isPremiumItem_Rate(this, itemId))
+-					{
+-						_returnValue = (float) ZeuS.getItemPremiumDrop_Rate(this, itemId, false, Config.RATE_DROP_ITEMS); //ZeuS.getRateDropItemPremium_Rate(this, itemId);
+-				
+-						return _returnValue;
+-					}
+-					else if (isRaid)
+-					{
+-						if (Config.RATE_DROP_ITEMS_ID.containsKey(itemId))
+-						{
+-							return Config.RATE_DROP_ITEMS_ID.get(itemId);
+-						}
+-						
++				if(IsPremium) {
++					if(itemId == Inventory.ADENA_ID) {
++						return ZeuS.getPremiumDropAdena_Rate(this);
++					}else if(IsPremiumItemRate) {
++						return (float) ZeuS.getItemPremiumDrop_Rate(this, itemId);
++					}else if(isRaid) {
+ 						return ZeuS.getDropRaid(this);
+ 					}
+-					else
+-					{
+-						_returnValue = (float) ZeuS.getPremiumDropItem_Rate(this, true);
+-						return _returnValue;
+-					}
+-					
+ 				}
+ 				if (Config.RATE_DROP_ITEMS_ID.containsKey(itemId)) // check for overridden rate in general list first
+ 				{
+Index: java/l2r/gameserver/model/actor/L2Attackable.java
+===================================================================
+--- java/l2r/gameserver/model/actor/L2Attackable.java	(revision 4)
++++ java/l2r/gameserver/model/actor/L2Attackable.java	(working copy)
+@@ -996,14 +996,8 @@
+ 			dropChance+=_tmp;
+ 		}		
+ 
+-		boolean isPremiumChar = ZeuS.isPremium(lastAttacker);
+-		if(isPremiumChar){
+-			if(ZeuS.isPremiumItem_Chance(lastAttacker, drop.getId())){
+-				dropChance += ZeuS.getItemPremiumDrop_Chance(lastAttacker, drop.getId(), true, (float) dropChance);
+-			}else{
+-				dropChance += ZeuS.getPremiumDropItem_Chance(lastAttacker);
+-			}
+-		}		
++		boolean IsPremium = ZeuS.isPremium(lastAttacker);
++		boolean IsPremiumItemChance = IsPremium ? ZeuS.isPremiumItem_Chance(lastAttacker, drop.getId()) : false;
+ 		
+ 		int deepBlueDrop = 1;
+ 		
+@@ -1077,6 +1071,19 @@
+ 		}
+ 		// Check if the Item must be dropped
+ 		int random = Rnd.get(L2DropData.MAX_CHANCE);
++		
++		if(IsPremium) {
++			if(IsPremiumItemChance) {
++				dropChance = ZeuS.getItemPremiumDrop_Chance(lastAttacker, drop.getId(), (float) dropChance);
++			}else {
++				if(isSweep){
++					dropChance = ZeuS.getPremiumDropSpoil_Chance(lastAttacker, (float) dropChance);
++				}else {
++					dropChance = ZeuS.getPremiumDropItem_Chance(lastAttacker, (float) dropChance);
++				}
++			}
++		}
++		
+ 		while (random < dropChance)
+ 		{
+ 			// Get the item quantity dropped
+@@ -1108,16 +1115,6 @@
+ 			itemCount+=_tmp;
+ 		}
+ 		
+-		if(isPremiumChar){
+-			int tempCount = 0;					
+-			if(ZeuS.isPremiumItem_Rate(lastAttacker, drop.getId())){
+-				tempCount= (int) ZeuS.getItemPremiumDrop_Rate(lastAttacker, drop.getId(), true, (float)itemCount); //Chance(lastAttacker, drop.getId(), true, (float) originalDropChance);
+-			}else{
+-				tempCount = (int) ZeuS.getPremiumDropItem_Rate(lastAttacker);
+-			}
+-			itemCount += tempCount;
+-		}		
+-		
+ 		if (itemCount > 0)
+ 		{
+ 			return new ItemHolder(drop.getId(), itemCount);
+@@ -1188,6 +1185,8 @@
+ 		if (Rnd.get(L2DropData.MAX_CHANCE) < categoryDropChance)
+ 		{
+ 			L2DropData drop = categoryDrops.dropOne(isRaid() && !isRaidMinion());
++			boolean IsPremium = ZeuS.isPremium(lastAttacker);
++			boolean IsPremiumItemChance = IsPremium ? ZeuS.isPremiumItem_Chance(lastAttacker, drop.getId()) : false;			
+ 			
+ 			if (drop == null)
+ 			{
+@@ -1208,15 +1207,6 @@
+ 			double originalDropChance = drop.getChance();
+ 			float dropRateVoteInstance = 0;
+ 			
+-			boolean isPremiumChar = ZeuS.isPremium(lastAttacker);
+-			if(isPremiumChar){
+-				if(ZeuS.isPremiumItem_Chance(lastAttacker, drop.getId())){
+-					originalDropChance += ZeuS.getItemPremiumDrop_Chance(lastAttacker, drop.getId(), true, (float) originalDropChance);
+-				}else{
+-					originalDropChance += ZeuS.getPremiumDropItem_Chance(lastAttacker);
+-				}
+-			}
+-			
+ 			long tmp = custom_drop_system.getChanceToAddPorcent(drop.getId(), getId(), getLevel());
+ 			if(tmp>0){
+ 				double _tmp = (originalDropChance * tmp) / 100;
+@@ -1283,6 +1273,18 @@
+ 				dropChance = dropChance % L2DropData.MAX_CHANCE;
+ 			}
+ 			
++			if(IsPremium) {
++				if(IsPremiumItemChance) {
++					dropChance = ZeuS.getItemPremiumDrop_Chance(lastAttacker, drop.getId(), (float) dropChance);
++				}else {
++					if(isSweepActive()){
++						dropChance = ZeuS.getPremiumDropSpoil_Chance(lastAttacker, (float) dropChance);
++					}else {
++						dropChance = ZeuS.getPremiumDropItem_Chance(lastAttacker, (float) dropChance);
++					}
++				}
++			}
++			
+ 			// Check if the Item must be dropped
+ 			int random = Rnd.get(L2DropData.MAX_CHANCE);
+ 			while (random < dropChance)
+@@ -1340,16 +1342,6 @@
+ 				}
+ 				
+ 				
+-				if(isPremiumChar){
+-					int tempCount = 0;					
+-					if(ZeuS.isPremiumItem_Rate(lastAttacker, drop.getId())){
+-						tempCount= (int) ZeuS.getItemPremiumDrop_Rate(lastAttacker, drop.getId(), true, (float)itemCount); //Chance(lastAttacker, drop.getId(), true, (float) originalDropChance);
+-					}else{
+-						tempCount = (int) ZeuS.getPremiumDropItem_Rate(lastAttacker);
+-					}
+-					itemCount += tempCount;
+-				}
+-				
+ 				int _tmpCount = (int) custom_drop_system.getRateToAddPorcent(drop.getId(), getId(), getLevel());
+ 				if(tmp>0){
+ 					double _tmp = (itemCount * _tmpCount) / 100;
+Index: java/l2r/gameserver/model/L2Spawn.java
+===================================================================
+--- java/l2r/gameserver/model/L2Spawn.java	(revision 4)
++++ java/l2r/gameserver/model/L2Spawn.java	(working copy)
+@@ -564,6 +564,7 @@
+ 		}
+ 		catch (Exception e)
+ 		{
++			_log.warn("AQUI " + this._location.getX() + " - " + this._location.getY() + " - " + this._location.getZ() + " - " + this._location.getHeading() );
+ 			_log.warn("NPC " + _template.getId() + " class not found", e);
+ 		}
+ 		return mob;

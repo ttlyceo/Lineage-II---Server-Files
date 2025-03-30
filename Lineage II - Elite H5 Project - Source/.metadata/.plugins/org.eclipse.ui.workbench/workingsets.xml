@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1596343390700_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1596343390718_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.mylyn.tasks.ui.workingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1596420433688_3" label="ZeuS" name="ZeuS">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ZeuS_Engine_sunrise_old" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.mylyn.tasks.ui.workingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1596420482257_4" label="Core" name="Core">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ZeuS_Sunrise_Core" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1596343403618_2" label="Window Working Set" name="Aggregate for window 1596343403617"/>
+</workingSetManager>

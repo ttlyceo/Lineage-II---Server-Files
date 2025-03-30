@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="returnToSpawn"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="returnToSpawn"/>
+			<item value="extra_"/>
+			<item value="isCmd"/>
+			<item value="isCd"/>
+			<item value="isCommand"/>
+			<item value="System.out"/>
+			<item value="v"/>
+			<item value="_COMMUNITY_BOARD_ENGINE_PART_EXEC"/>
+			<item value="bypass("/>
+			<item value="bypass"/>
+			<item value="commandinfo"/>
+			<item value="OlyBuffer"/>
+			<item value="isHtml"/>
+			<item value="isVoiceFromZeuS"/>
+			<item value="ZeuS"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1879"/>
+		<item key="DIALOG_Y_ORIGIN" value="317"/>
+		<item key="DIALOG_WIDTH" value="284"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

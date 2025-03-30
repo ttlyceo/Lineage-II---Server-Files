@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/gabriel/phantom/ReturnSagaFarmSpots.xsd">
+
+    <!--  Only Works if ReturnToSpawnLocation = false (PhantomPlayer.ini) 
+	
+	This will happen after player has "spoken" to the GK
+	It will take one random location from here and will return to the "Farm"
+	You can have multiple, it will take one random.
+	-->
+    <ReturnSagaFarmSpots name="Primavel Isle">
+        <initialTeleportLocation x="10668" y="-23368" z="-3656"/> <!--   Location Where will TP after "buffing" and speaking to the GK     -->
+        <walkLocations>
+            <location x="10060" y="-22641" z="-3688" /> <!--     First Location it will try to walk after teleporting       -->
+            <location x="8811" y="-21046" z="-3464" /> <!--     Second Location it will try to walk after teleporting      -->
+            <location x="7956" y="-20355" z="-3496" /> <!--     Third Location it will try to walk after teleporting       -->
+            <location x="6959" y="-19562" z="-3656" />
+            <!--     There is no limit on locations to Walk. But Phantom will stop if he gets in combat and has a target.    -->
+        </walkLocations>
+    </ReturnSagaFarmSpots>
+	
+    <ReturnSagaFarmSpots name="Primavel Isle">
+        <initialTeleportLocation x="10668" y="-23368" z="-3656"/> <!--   Location Where will TP after "buffing" and speaking to the GK     -->
+        <walkLocations>
+            <location x="10060" y="-22641" z="-3688" /> <!--     First Location it will try to walk after teleporting       -->
+            <location x="8811" y="-21046" z="-3464" /> <!--     Second Location it will try to walk after teleporting      -->
+            <location x="7956" y="-20355" z="-3496" /> <!--     Third Location it will try to walk after teleporting       -->
+            <location x="6959" y="-19562" z="-3656" />
+            <!--     There is no limit on locations to Walk. But Phantom will stop if he gets in combat and has a target.    -->
+        </walkLocations>
+    </ReturnSagaFarmSpots>
+	
+    <ReturnSagaFarmSpots name="Primavel Isle">
+        <initialTeleportLocation x="10668" y="-23368" z="-3656"/> <!--   Location Where will TP after "buffing" and speaking to the GK     -->
+        <walkLocations>
+            <location x="10060" y="-22641" z="-3688" /> <!--     First Location it will try to walk after teleporting       -->
+            <location x="8811" y="-21046" z="-3464" /> <!--     Second Location it will try to walk after teleporting      -->
+            <location x="7956" y="-20355" z="-3496" /> <!--     Third Location it will try to walk after teleporting       -->
+            <location x="6959" y="-19562" z="-3656" />
+            <!--     There is no limit on locations to Walk. But Phantom will stop if he gets in combat and has a target.    -->
+        </walkLocations>
+    </ReturnSagaFarmSpots>
+	
+    <ReturnSagaFarmSpots name="Primavel Isle">
+        <initialTeleportLocation x="10668" y="-23368" z="-3656"/> <!--   Location Where will TP after "buffing" and speaking to the GK     -->
+        <walkLocations>
+            <location x="10060" y="-22641" z="-3688" /> <!--     First Location it will try to walk after teleporting       -->
+            <location x="8811" y="-21046" z="-3464" /> <!--     Second Location it will try to walk after teleporting      -->
+            <location x="7956" y="-20355" z="-3496" /> <!--     Third Location it will try to walk after teleporting       -->
+            <location x="6959" y="-19562" z="-3656" />
+            <!--     There is no limit on locations to Walk. But Phantom will stop if he gets in combat and has a target.    -->
+        </walkLocations>
+    </ReturnSagaFarmSpots>
+</list>

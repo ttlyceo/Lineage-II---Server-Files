@@ -1,0 +1,151 @@
+<html>
+	<title>Community Board</title>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+		<img src="L2UI.SquareGray" width="756" height="2">
+		<table width=730 border=0 cellpadding=0>
+			<tr>
+				<td width=720 fixwidth=720>
+					<img src="L2UI.SquareGray" width=744 height=2>
+					<table width=760 bgcolor="1F1F1F" height=48>
+						<tr>
+							<td width=32>
+								<table width=32>
+									<tr>
+										<td width=32>
+											<img src="icon.skill4416_mercenary" width=32 height=32>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width=644>
+								<table width=604 border=0>
+									<tr>
+										<td>
+											<table cellpadding=0 cellspacing=0 border=0>
+												<tr>
+													<td>
+														<font name="hs12" color="FF9900">PvP / PK Log</font>
+													</td>
+													<td>
+														<button action="bypass %BYPASS%" width=32 height=32 back="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" fore="L2UI_CT1.MiniMap_DF_MinusBtn_Blue" value=" " >
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<font color="F8F9B7">You can see everybody fight log here.</font>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width=64 align="RIGHT"></td>
+						</tr>
+					</table>
+					<img src="L2UI.SquareGray" width="756" height=2>
+				</td>
+			</tr>
+		</table><br>
+
+		<center>
+			<table width=350 border=0>
+				<tr>
+					<td width=32>
+						<img src="icon.skill0817" width=32 height=32>
+					</td>
+					<td width=310>
+						<table width=310>
+							<tr>
+								<td>
+									<font name="hs12" color="FA8258">Player Log Fights Search</font>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<font>Enter the player name to check their log fights</font>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+		        					<td>
+									<edit var="txtName" width=150>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<button value="Search" action="%BYPASS_SEARCH%" width=55 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</center>
+
+		<center>
+			<img src="L2UI.SquareGray" width="744" height=2><br>
+			<table width=200 cellspacing=-1 cellpadding=-1>
+				<tr>
+					<td><button value="" action="" width=32 height=16 back="L2UI_CH3.HorizontalSliderBarCenter" fore="L2UI_CH3.HorizontalSliderBarCenter"></td>
+					<td><button value="Winner" action="" width=250 height=16 back="L2UI_CH3.HorizontalSliderBarCenter" fore="L2UI_CH3.HorizontalSliderBarCenter"></td>
+					<td><button value="" action="" width=4 height=16 back="L2UI_CH3.HorizontalSliderBarRigh" fore="L2UI_CH3.HorizontalSliderBarRigh"></td>
+			           	<td><button value="Type" action="" width=60 height=16 back="L2UI_CH3.HorizontalSliderBarCenter" fore="L2UI_CH3.HorizontalSliderBarCenter"></td>
+					<td><button value="" action="" width=4 height=16 back="L2UI_CH3.HorizontalSliderBarRigh" fore="L2UI_CH3.HorizontalSliderBarRigh"></td>
+					<td><button value="" action="" width=32 height=16 back="L2UI_CH3.HorizontalSliderBarCenter" fore="L2UI_CH3.HorizontalSliderBarCenter"></td>
+					<td><button value="Looser" action="" width=250 height=16 back="L2UI_CH3.HorizontalSliderBarCenter" fore="L2UI_CH3.HorizontalSliderBarCenter"></td>
+					<td><button value="" action="" width=4 height=16 back="L2UI_CH3.HorizontalSliderBarRigh" fore="L2UI_CH3.HorizontalSliderBarRigh"></td>
+					<td><button value="Count" action="" width=60 height=16 back="L2UI_CH3.HorizontalSliderBarCenter" fore="L2UI_CH3.HorizontalSliderBarCenter"></td>
+				</tr>
+			</table>
+
+			/*GRID_FORMAT_1=
+				<table width=670 cellspacing=0 cellpadding=0 border=0 bgcolor=%BGCOLOR%  height=38>
+					<tr>
+						<td fixwidth=32>
+							%WINNER_ICON%<br>
+						</td>
+						<td fixwidth=265 align=CENTER>
+							%WINNER_NAME%
+						</td>
+						<td fixwidth=58 align=CENTER>
+							%TYPE%
+						</td>
+						<td fixwidth=32>
+							%LOOSER_ICON%<br>
+						</td>
+						<td fixwidth=265 align=CENTER>
+							%LOOSER_NAME%
+						</td>
+          					<td fixwidth=60 align=CENTER>
+							%TIMES%
+						</td>
+					</tr>
+				</table>
+			*/
+			<img src="L2UI.SquareGray" width=744 height=2><br>
+			<table fixwidth=767 cellspacing=-4 cellpadding=-1 height=38 bgcolor=0E180B>
+				<tr>
+					<td fixwidth=767 align=CENTER><br>
+						<table with=96>
+							<tr>
+								<td width=32>
+									<button  action="%BYPASS_PREV%" width=32 height=16 back="L2UI_CT1.Button_DF_Left" fore="L2UI_CT1.Button_DF_Left" value=" ">
+								</td>
+								<td width=32 align=CENTER>
+									<font name="hs12">%PAGE%</font>
+								</td>
+								<td width=32>
+									<button  action="%BYPASS_NEXT%" width=32 height=16 back="L2UI_CT1.Button_DF_Right" fore="L2UI_CT1.Button_DF_Right" value=" ">
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table><br>
+		</center><br>
+	</td></tr></table></body>
+</html>

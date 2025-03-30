@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+   <item id="291" count="1" /> <!-- Trident -->
+   <item id="295" count="1" /> <!-- Dwarven Trident -->
+   <item id="292" count="1" /> <!-- Pike -->
+   <item id="296" count="1" /> <!-- Dwarven Pike -->
+   <item id="293" count="1" /> <!-- War Hammer -->
+   <item id="294" count="1" /> <!-- War Pick -->
+   <item id="93" count="1" /> <!-- Winged Spear -->
+   <item id="297" count="1" /> <!-- Glaive -->
+
+</list>

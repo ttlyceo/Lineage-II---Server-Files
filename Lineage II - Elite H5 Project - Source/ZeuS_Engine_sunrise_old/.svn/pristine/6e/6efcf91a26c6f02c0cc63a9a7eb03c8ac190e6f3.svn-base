@@ -1,0 +1,40 @@
+<html>
+	<title>L2 SOW</title>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 background="%L2SOW_LOGO%"><tr><td valign="top" align="center"><br>
+/*GRID_FORMAT_1=char_level_icon,icon.etc_exp_point_i00;char_level_box_title,Character Level:;char_level_windows_title,Character Level*/
+/*GRID_FORMAT_2=char_fame_icon,icon.skill1409;char_fame_box_title,Character Fame:;char_fame_windows_title,Character Fame*/
+/*GRID_FORMAT_3=char_pk_icon,icon.etc_quest_pkcount_reward_i00;char_pk_box_title,Reduce PK:;char_fame_windows_title,Reduce PK*/
+/*GRID_FORMAT_4=clan_level_icon_level_1,icon.skill0376;clan_level_icon_level_2,icon.skill0379;clan_level_icon_level_3,icon.skill0372;clan_level_icon_level_4,icon.skill0389;clan_level_icon_level_5,icon.skill0391;clan_level_icon_level_6,icon.skill0374;clan_level_icon_level_7,icon.skill0390;clan_level_icon_level_8,icon.skill0378;clan_level_icon_level_9,icon.skill0388;clan_level_icon_level_10,icon.skill0375;clan_level_icon_level_11,icon.skill0373;clan_level_box_title,Clan Level:;clan_level_windows_title,Clan Level*/
+/*GRID_FORMAT_5=clan_skill_icon_1,icon.skill0376;clan_skill_icon_2,icon.skill0379;clan_skill_icon_3,icon.skill0372;clan_skill_icon_4,icon.skill0389;clan_skill_icon_5,icon.skill0391;clan_skill_icon_6,icon.skill0374;clan_skill_icon_7,icon.skill0390;clan_skill_icon_8,icon.skill0378;clan_skill_icon_9,icon.skill0388;clan_skill_icon_10,icon.skill0375;clan_skill_icon_11,icon.skill0373;clan_skill_box_title,Clan Skill:;clan_skill_windows_title,Clan Skills*/
+/*GRID_FORMAT_6=char_reputation_icon,icon.etc_bloodpledge_point_i00;char_reputation_box_title,Reputation:;char_reputation_windows_title,Clan Reputation*/
+		<center>
+			<img src="L2UI.SquareGray" width="280" height=2>
+			<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+				<tr>
+					<td fixwidth=280 align=CENTER>
+						<font color=81BEF7 name=hs12>%WINDOWS_TITLE%</font>
+					</td>
+				</tr>
+			</table>
+			<img src="L2UI.SquareGray" width="280" height=2><br>
+			/*GRID_FORMAT_7=
+				<img src="L2UI.SquareGray" width="280" height=2>
+					<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+						<tr>
+							<td fixwidth=32 align=CENTER>
+								<img src="%IDIMG%" width=32 height=32><br>
+							</td>
+							<td fixwidth=196>
+								<font color=819FF7>%GRID_TITLE%</font> <font color=81BEF7>%DATA_NUM%</font><br1>
+								<font color=F7BE81>- Cost: </font><font color=F5DA81>%CANTIDAD% %DONATION_ITEM_NAME%</font><br>
+							</td>
+							<td fixwidth=52 align=CENTER>
+								<button value="Do It!" action="%BYPASS_DOIT%" width=48 height=32 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+							</td>
+						</tr>
+					</table>
+					<img src="L2UI.SquareGray" width="280" height=2>
+			*/
+		</center>
+	</td></tr></table></body>
+</html>

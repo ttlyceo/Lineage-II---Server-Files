@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<config>
+		<set name="enable" value="false" />
+		<set name="give_reward" value="true" />
+		<set name="give_armor" value="true" />
+		<set name="give_weapon" value="true" />
+	</config>
+	<reward occupation_index="1">
+		<set id="57" value="" />
+	</reward>
+	<reward occupation_index="2">
+		<set id="57" value="" />
+	</reward>
+	<reward occupation_index="3">
+		<set id="57" value="" />
+		<set id="3470" value="1" />
+	</reward>
+
+	<armor occupation_index="1">
+		<set name="Heavy Armor" ids="" /> <!-- Armor id to Give (ID,QUANTYT;ID,QUANTITY) -->
+		<set name="Light Armor" ids="" />
+		<set name="Robe Armor" ids="" />
+	</armor>
+
+	<armor occupation_index="2">
+		<set name="Heavy Armor" ids="" /> <!-- Armor id to Give (ID,QUANTYT;ID,QUANTITY) -->
+		<set name="Light Armor" ids="" />
+		<set name="Robe Armor" ids="" />
+	</armor>
+
+	<armor occupation_index="3">
+		<set name="Heavy Armor" ids="" /> <!-- Armor id to Give (ID,QUANTYT;ID,QUANTITY) -->
+		<set name="Light Armor" ids="" />
+		<set name="Robe Armor" ids="" />
+	</armor>
+
+	<weapon occupation_index="1" weapon_to_give="2">
+		<set name="Sword" ids="2499,1;1463,1200;628,1" /> <!-- Armor id to Give (ID,QUANTYT;ID,QUANTITY) -->
+	</weapon>
+	<weapon occupation_index="2" weapon_to_give="1">
+	</weapon>
+	<weapon occupation_index="3" weapon_to_give="0">
+	</weapon>
+</list>

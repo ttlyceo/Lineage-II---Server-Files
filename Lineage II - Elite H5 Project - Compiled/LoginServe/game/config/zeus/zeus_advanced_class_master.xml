@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="" >
+	<config>
+		<set name="enable" value="true" />
+		<set name="give_reward" value="True" />
+		<set name="give_armor" value="true" />
+		<set name="give_weapon" value="true" />
+		<set name="give_just_one_time" value="false" />
+	</config>
+	<reward occupation_index="1">
+		<set id="20336" value="1" /> <!-- Rune of Experience Points 50% 5 Hours -->
+		<set id="20342" value="1" /> <!-- Rune of SP Points 50% 5 Hours -->
+	</reward>
+	<reward occupation_index="2">
+		<set id="20034" value="1" />
+	</reward>
+	<reward occupation_index="3">
+		
+	</reward>
+
+	<armor occupation_index="1">
+		<!-- <set name="Heavy Armor" ids="58,1;59,1;47,1;2450,1;12324,1;12323,1;12323,1;12325,1;12325,1" /> --> <!-- Armor id to Give (ID,QUANTYT;ID,QUANTITY) -->
+		<set name="Heavy Armor" ids="12324,1;12323,1;12323,1;12325,1;12325,1;12081,1;12080,1;12072,1;12077,1;12079,1" />
+		<set name="Light Armor" ids="12324,1;12323,1;12323,1;12325,1;12325,1;12145,1;12100,1;12098,1;12097,1;12099,1" />
+		<set name="Robe Armor" ids="12324,1;12323,1;12323,1;12325,1;12325,1;12079,1;12083,1;12082,1;12071,1" />
+	</armor>
+
+	<armor occupation_index="2">
+		<set name="Heavy Armor" ids="12336,1;12335,1;12335,1;12337,1;12337,1;12145,1;12144,1;12141,1;12142,1" /> <!-- Armor id to Give (ID,QUANTYT;ID,QUANTITY) -->
+		<set name="Light Armor" ids="12336,1;12335,1;12335,1;12337,1;12337,1;12133,1;12132,1;12131,1;12130,1;12145,1" />
+		<set name="Robe Armor" ids="12336,1;12335,1;12335,1;12337,1;12337,1;12145,1;12100,1;12098,1;12097,1;12099,1" />
+	</armor>
+
+	<armor occupation_index="3">
+
+	</armor>
+
+	<weapon occupation_index="1" weapon_to_give="2">
+		<set name="Sword" ids="12013,1;11714,1;1463,1200" /> <!-- Armor id to Give (ID,QUANTYT;ID,QUANTITY) -->
+		<set name="Double Handed Sword" ids="11736,1;1463,1200" />
+		<set name="Dual Sword" ids="11720,1;1463,1200" />
+		<set name="Dagger" ids="11726,1;1463,1200" />
+		<set name="Bow" ids="11728,1;1341,1000;1463,1200" />
+		<set name="Fist" ids="11730,1;1463,1200" />
+		<set name="Polearm" ids="11725,1;1463,1200" />
+		<set name="Single H Blunt" ids="11729,1;3948,1200" />
+		<set name="Double H Blunt" ids="11731,1;3948,1200" />
+	</weapon>
+	<weapon occupation_index="2" weapon_to_give="1">
+		<set name="Sword" ids="12096,1;11853,1;1464,2000" /> <!-- Armor id to Give (ID,QUANTYT;ID,QUANTITY) -->
+		<set name="Double Handed Sword" ids="11843,1;1464,2000" />
+		<set name="Dual Sword" ids="11852,1;1464,2000" />
+		<set name="Dagger" ids="11863,1;1464,2000" />
+		<set name="Bow" ids="11857,1;1342,2500;1464,2000" />
+		<set name="Fist" ids="11839,1;1464,2000" />
+		<set name="Polearm" ids="11858,1;1464,2000" />
+		<set name="Single H Blunt" ids="11850,1;3949,2000" />
+		<set name="Double H Blunt" ids="11855,1;3949,2000" />
+	</weapon>
+	<weapon occupation_index="3" weapon_to_give="0">
+		<set name="Sword" ids="2499,1" />
+		<set name="Double Handed Sword" ids="5285,1" />
+		<set name="Dual Sword" ids="" />
+		<set name="Dagger" ids="" />
+		<set name="Bow" ids="" />
+		<set name="Fist" ids="" />
+		<set name="Polearm" ids="" />
+		<set name="Single H Blunt" ids="" />
+		<set name="Double H Blunt" ids="" />
+	</weapon>
+</list>

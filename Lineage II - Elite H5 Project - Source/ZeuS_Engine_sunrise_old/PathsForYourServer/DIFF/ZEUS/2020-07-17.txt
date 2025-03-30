@@ -1,0 +1,133 @@
+Index: src/ZeuS/Comunidad/EngineForm/v_auction_house.java
+===================================================================
+--- src/ZeuS/Comunidad/EngineForm/v_auction_house.java	(revision 19)
++++ src/ZeuS/Comunidad/EngineForm/v_auction_house.java	(working copy)
+@@ -1640,6 +1640,12 @@
+ 		}
+ 		
+ 		L2PcInstance thisPlayer = opera.getPlayerbyID(this.PLAYER_ID);
++		if(!(thisPlayer instanceof L2PcInstance)) {
++			return false;
++		}
++		if(thisPlayer.getSellList()==null) {
++			return false;
++		}
+ 		TradeItem[] _items = null;
+ 		if(this.IS_SELL){
+ 			_items = thisPlayer.getSellList().getItems();
+Index: src/ZeuS/procedimientos/autoPots.java
+===================================================================
+--- src/ZeuS/procedimientos/autoPots.java	(revision 19)
++++ src/ZeuS/procedimientos/autoPots.java	(working copy)
+@@ -2,15 +2,20 @@
+ 
+ import java.util.HashMap;
+ import java.util.Map;
++import java.util.Vector;
+ import java.util.logging.Logger;
+ 
+ import ZeuS.Config.general;
+ import ZeuS.interfase.central;
+ import ZeuS.language.language;
+ import l2r.gameserver.ThreadPoolManager;
++import l2r.gameserver.data.xml.impl.ItemData;
+ import l2r.gameserver.handler.ItemHandler;
+ import l2r.gameserver.model.actor.instance.L2PcInstance;
++import l2r.gameserver.model.holders.SkillHolder;
++import l2r.gameserver.model.items.L2Item;
+ import l2r.gameserver.model.items.instance.L2ItemInstance;
++import l2r.gameserver.model.skills.L2Skill;
+ 
+ public class autoPots {
+ 	private static Map<L2PcInstance, _autosP> PLAYER_AUTOPOTS = new HashMap<L2PcInstance, _autosP>();
+@@ -48,7 +53,37 @@
+ 		}
+ 	}
+ 	
+-	public static boolean isAutoCp(L2PcInstance player){
++	
++	public static boolean isAutoCp(L2PcInstance player) {
++		return isAutoCp(player, null, null);
++	}
++	
++	public static boolean isAutoMp(L2PcInstance player) {
++		return isAutoMp(player, null, null);
++	}
++	
++	public static boolean isAutoHp(L2PcInstance player) {
++		return isAutoHp(player, null, null);
++	}
++	
++	public static boolean isAutoCp(L2PcInstance player, L2ItemInstance item, L2Skill skill){
++		if(item != null) {
++			if(item.getId() != 5592) {
++				return false;
++			}
++		}
++		if(skill != null) {
++			L2Item itemCP = ItemData.getInstance().getTemplate(5592);
++			if(itemCP.hasSkills()) {
++				Vector<Integer> Skills = new Vector<Integer>();
++				for (SkillHolder skillInfo : itemCP.getSkills()) {
++					Skills.add(skillInfo.getSkill().getId());
++				}
++				if(!Skills.contains(skill.getId())) {
++					return false;
++				}
++			}
++		}	
+ 		if(PLAYER_AUTOPOTS != null){
+ 			if(PLAYER_AUTOPOTS.size()>0){
+ 				if(PLAYER_AUTOPOTS.containsKey(player)){
+@@ -59,7 +94,24 @@
+ 		return false;
+ 	}
+ 	
+-	public static boolean isAutoMp(L2PcInstance player){
++	public static boolean isAutoMp(L2PcInstance player, L2ItemInstance item, L2Skill skill){
++		if(item != null) {
++			if(item.getId() != 728) {
++				return false;
++			}
++		}
++		if(skill != null) {
++			L2Item itemCP = ItemData.getInstance().getTemplate(728);
++			if(itemCP.hasSkills()) {
++				Vector<Integer> Skills = new Vector<Integer>();
++				for (SkillHolder skillInfo : itemCP.getSkills()) {
++					Skills.add(skillInfo.getSkill().getId());
++				}
++				if(!Skills.contains(skill.getId())) {
++					return false;
++				}
++			}
++		}		
+ 		if(PLAYER_AUTOPOTS != null){
+ 			if(PLAYER_AUTOPOTS.size()>0){
+ 				if(PLAYER_AUTOPOTS.containsKey(player)){
+@@ -69,7 +121,24 @@
+ 		}
+ 		return false;
+ 	}
+-	public static boolean isAutoHp(L2PcInstance player){
++	public static boolean isAutoHp(L2PcInstance player, L2ItemInstance item, L2Skill skill){
++		if(item != null) {
++			if(item.getId() != 1539) {
++				return false;
++			}
++		}
++		if(skill != null) {
++			L2Item itemCP = ItemData.getInstance().getTemplate(1539);
++			if(itemCP.hasSkills()) {
++				Vector<Integer> Skills = new Vector<Integer>();
++				for (SkillHolder skillInfo : itemCP.getSkills()) {
++					Skills.add(skillInfo.getSkill().getId());
++				}
++				if(!Skills.contains(skill.getId())) {
++					return false;
++				}
++			}
++		}		
+ 		if(PLAYER_AUTOPOTS != null){
+ 			if(PLAYER_AUTOPOTS.size()>0){
+ 				if(PLAYER_AUTOPOTS.containsKey(player)){

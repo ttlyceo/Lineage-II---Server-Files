@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/items.xsd">
+	<item id="23000" type="EtcItem" name="Vote Coin">
+		<set name="icon" val="icon.skill6302" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23001" type="EtcItem" name="Event Coin">
+		<set name="icon" val="icon.etc_capture_stone_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23002" type="EtcItem" name="Firts Surprice">
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="10101-1" />
+	</item>
+	<item id="23003" type="EtcItem" name="Second Surprice">
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="10103-1" />
+	</item>
+	<item id="23004" type="EtcItem" name="Third Surprice">
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+	<item id="23005" type="EtcItem" name="Event Raidboss Surprice">
+		<set name="icon" val="icon.etc_dragons_blood_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="10102-1" />
+	</item>
+	<item id="23008" type="Armor" name="Talisman - STR">
+		<set name="icon" val="icon.etc_talisman_event_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="8498-1" />
+		<set name="time" val="840" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="23009" type="Armor" name="Talisman - DEX">
+		<set name="icon" val="icon.etc_talisman_event_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="8499-1" />
+		<set name="time" val="840" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="23010" type="Armor" name="Talisman - CON">
+		<set name="icon" val="icon.etc_talisman_event_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="8500-1" />
+		<set name="time" val="840" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="23011" type="Armor" name="Talisman - WIT">
+		<set name="icon" val="icon.etc_talisman_event_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="8502-1" />
+		<set name="time" val="840" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="23012" type="Armor" name="Talisman - INT">
+		<set name="icon" val="icon.etc_talisman_event_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="8501-1" />
+		<set name="time" val="840" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="23013" type="Armor" name="Talisman - MEN">
+		<set name="icon" val="icon.etc_talisman_event_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="8503-1" />
+		<set name="time" val="840" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+
+	<item id="23015" type="Armor" name="Knight's Cloak">
+		<set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="220" />
+		<set name="price" val="28671000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_depositable" val="true" />
+		<for>
+			<add stat="darkRes" val="60" />
+			<add stat="earthRes" val="60" />
+			<add stat="holyRes" val="60" />
+			<add stat="pDef" val="35" />
+		</for>
+	</item>
+	<item id="23016" type="Armor" name="Archer's Cloak">
+		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="220" />
+		<set name="price" val="28671000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_depositable" val="true" />
+		<for>
+			<add stat="darkRes" val="60" />
+			<add stat="earthRes" val="60" />
+			<add stat="holyRes" val="60" />
+			<add stat="pDef" val="35" />
+		</for>
+	</item>
+	<item id="23017" type="Armor" name="Enchanter's Cloak">
+		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="220" />
+		<set name="price" val="28671000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_depositable" val="true" />
+		<for>
+			<add stat="darkRes" val="60" />
+			<add stat="earthRes" val="60" />
+			<add stat="holyRes" val="60" />
+			<add stat="pDef" val="35" />
+		</for>
+	</item>
+	<item id="23018" type="Armor" name="Healer's Cloak">
+		<set name="icon" val="BranchSys2.Icon.br_freya_cloak_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="220" />
+		<set name="price" val="28671000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_depositable" val="true" />
+		<for>
+			<add stat="darkRes" val="60" />
+			<add stat="earthRes" val="60" />
+			<add stat="holyRes" val="60" />
+			<add stat="pDef" val="35" />
+		</for>
+	</item>
+	<item id="23019" type="Armor" name="Rouge's Cloak">
+		<set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="220" />
+		<set name="price" val="28671000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_depositable" val="true" />
+		<for>
+			<add stat="darkRes" val="60" />
+			<add stat="earthRes" val="60" />
+			<add stat="holyRes" val="60" />
+			<add stat="pDef" val="35" />
+		</for>
+	</item>
+	<item id="23020" type="Armor" name="Warrior's Cloak">
+		<set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="220" />
+		<set name="price" val="28671000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_depositable" val="true" />
+		<for>
+			<add stat="darkRes" val="60" />
+			<add stat="earthRes" val="60" />
+			<add stat="holyRes" val="60" />
+			<add stat="pDef" val="35" />
+		</for>
+	</item>
+	<item id="23021" type="Armor" name="Summoner's Cloak">
+		<set name="icon" val="BranchSys2.Icon.br_freya_cloak_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="220" />
+		<set name="price" val="28671000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_depositable" val="true" />
+		<for>
+			<add stat="darkRes" val="60" />
+			<add stat="earthRes" val="60" />
+			<add stat="holyRes" val="60" />
+			<add stat="pDef" val="35" />
+		</for>
+	</item>
+	<item id="23022" type="Armor" name="Wizard's Cloak">
+		<set name="icon" val="BranchSys2.Icon.br_freya_cloak_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="S84" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="220" />
+		<set name="price" val="28671000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_depositable" val="true" />
+		<for>
+			<add stat="darkRes" val="60" />
+			<add stat="earthRes" val="60" />
+			<add stat="holyRes" val="60" />
+			<add stat="pDef" val="35" />
+		</for>
+	</item>
+	<item id="23023" type="EtcItem" name="Donation Coin">
+		<set name="icon" val="icon.skillboss" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23024" type="EtcItem" name="Event - RaidBoss Coin">
+		<set name="icon" val="icon.skill5860" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
+	</item>
+	<item id="23025" type="EtcItem" name="Coin - PvP PK">
+		<set name="icon" val="icon.etc_Symbol_of_dusk_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23026" type="Armor" name="Talisman - ALL STAT">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="8508-1" />
+		<set name="time" val="1440" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="23027" type="Armor" name="Talisman - STR INT">
+		<set name="icon" val="icon.etc_talisman_event_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="10006-1" />
+		<set name="time" val="840" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="23028" type="Armor" name="Talisman - CON MEN">
+		<set name="icon" val="icon.etc_talisman_event_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="10007-1" />
+		<set name="time" val="840" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="23029" type="Armor" name="Talisman - DEX WIT">
+		<set name="icon" val="icon.etc_talisman_event_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="10008-1" />
+		<set name="time" val="840" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="23030" type="EtcItem" name="Raid Boss Coin">
+		<set name="icon" val="icon.etc_magic_coin_gold_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="0" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="23031" type="EtcItem" name="Event Surprice Box">
+		<set name="icon" val="icon.skill4416_castleguard" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="item_skill" val="10101-1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+	<item id="23032" type="EtcItem" name="Vote Surprice Box Alpha">
+		<set name="icon" val="icon.skill5239" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+	<item id="23033" type="EtcItem" name="Vote Surprice Box Beta">
+		<set name="icon" val="icon.skill0537" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+	<item id="23034" type="EtcItem" name="Donation Surprice Box">
+		<set name="icon" val="icon.lucky_bag_i00" />
+		<set name="item_skill" val="10102-1" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+	<item id="23035" type="EtcItem" name="Vote Surprice Box">
+		<set name="icon" val="icon.etc_letter_in_bottle_brown_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+	<item id="23036" type="EtcItem" name="Vote Surprice Box Hopzone">
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+	<item id="23037" type="EtcItem" name="Vote Surprice Box Topzone">
+		<set name="icon" val="icon.etc_transform_mage_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+	<item id="23038" type="EtcItem" name="Vote Surprice Box Other">
+		<set name="icon" val="icon.etc_nobless_teleport_coupon_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+
+	<item id="23039" type="EtcItem" name="L2ZeuS Engine - Surprice Box Alpha">
+		<set name="icon" val="icon.skill0817" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+	<item id="23040" type="EtcItem" name="L2ZeuS Engine - Surprice Box Beta">
+		<set name="icon" val="icon.skill_transform_s_attack" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>
+	<item id="23041" type="EtcItem" name="L2ZeuS Engine - Surprice Box Gamma">
+		<set name="icon" val="icon.etc_ssq_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+	</item>	
+</list>

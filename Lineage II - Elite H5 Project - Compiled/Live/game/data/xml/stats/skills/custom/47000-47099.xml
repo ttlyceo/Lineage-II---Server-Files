@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skills.xsd">
+	<skill id="46003" levels="1" name="Earth Belt">
+		<!-- Confirmed CT2.5 -->
+		<!-- Boss Jewel Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<add stat="pAtk" val="250" />
+			<add stat="pAtkSpd" val="75" />
+			<add stat="critRate" val="25" />
+			<add stat="runSpd" val="5" />
+		</for>
+	</skill>
+	<skill id="46004" levels="1" name="Fire Belt">
+		<!-- Confirmed CT2.5 -->
+		<!-- Boss Jewel Skill -->
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<add stat="mAtk" val="250" />
+			<add stat="mAtkSpd" val="75" />
+			<add stat="mCritRate" val="2" />
+			<add stat="runSpd" val="5" />
+		</for>
+	</skill>
+	<skill id="46015" levels="1" name="Talisman of Battle - Liberate">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
+		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="360000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DispelBySlot" noicon="1">
+				<param dispel="SILENCE_ALL,9;SILENCE_ALL_TWO,9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="46016" levels="1" name="Cleanse">
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="8874" />
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="46" />
+		<set name="mpInitialConsume" val="12" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="8000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="DispelByCategory" noicon="1" >
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="47050" levels="1" name="Talisman of Conqueror Lv. 1">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>			
+			<add stat="darkRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="windRes" val="10" />
+		</for>
+	</skill>
+	<skill id="47051" levels="1" name="Talisman of Conqueror Lv. 2">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="darkRes" val="20" />
+			<add stat="holyRes" val="20" />
+			<add stat="fireRes" val="20" />
+			<add stat="waterRes" val="20" />
+			<add stat="earthRes" val="20" />
+			<add stat="windRes" val="20" />
+		</for>
+	</skill>
+	<skill id="47052" levels="1" name="Talisman of Conqueror Lv. 3">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="darkRes" val="30" />
+			<add stat="holyRes" val="30" />
+			<add stat="fireRes" val="30" />
+			<add stat="waterRes" val="30" />
+			<add stat="earthRes" val="30" />
+			<add stat="windRes" val="30" />
+		</for>
+	</skill>
+	<skill id="47053" levels="1" name="Talisman of Conqueror Lv. 4">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="darkRes" val="50" />
+			<add stat="holyRes" val="50" />
+			<add stat="fireRes" val="50" />
+			<add stat="waterRes" val="50" />
+			<add stat="earthRes" val="50" />
+			<add stat="windRes" val="50" />
+		</for>
+	</skill>
+	<skill id="47054" levels="1" name="Talisman of Conqueror Lv. 5">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="darkRes" val="75" />
+			<add stat="holyRes" val="75" />
+			<add stat="fireRes" val="75" />
+			<add stat="waterRes" val="75" />
+			<add stat="earthRes" val="75" />
+			<add stat="windRes" val="75" />
+		</for>
+	</skill>
+	<skill id="47055" levels="1" name="Talisman of Conqueror Lv. 6">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="darkRes" val="100" />
+			<add stat="holyRes" val="100" />
+			<add stat="fireRes" val="100" />
+			<add stat="waterRes" val="100" />
+			<add stat="earthRes" val="100" />
+			<add stat="windRes" val="100" />
+		</for>
+	</skill>
+	<skill id="47056" levels="1" name="Talisman of Protection Lv. 1">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<sub stat="stunVuln" val="1" />
+			<sub stat="sleepVuln" val="1" />
+			<sub stat="poisonVuln" val="1" />
+			<sub stat="bleedVuln" val="1" />
+			<sub stat="rootVuln" val="1" />
+			<sub stat="paralyzeVuln" val="1" />
+			<sub stat="derangementVuln" val="1" />
+		</for>
+	</skill>
+	<skill id="47057" levels="1" name="Talisman of Protection Lv. 2">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<sub stat="stunVuln" val="3" />
+			<sub stat="sleepVuln" val="3" />
+			<sub stat="poisonVuln" val="3" />
+			<sub stat="bleedVuln" val="3" />
+			<sub stat="rootVuln" val="3" />
+			<sub stat="paralyzeVuln" val="3" />
+			<sub stat="derangementVuln" val="3" />
+		</for>
+	</skill>
+	<skill id="47058" levels="1" name="Talisman of Protection Lv. 3">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<sub stat="stunVuln" val="5" />
+			<sub stat="sleepVuln" val="5" />
+			<sub stat="poisonVuln" val="5" />
+			<sub stat="bleedVuln" val="5" />
+			<sub stat="rootVuln" val="5" />
+			<sub stat="paralyzeVuln" val="5" />
+			<sub stat="derangementVuln" val="5" />
+		</for>
+	</skill>
+	<skill id="47059" levels="1" name="Talisman of Protection Lv. 4">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<sub stat="stunVuln" val="7" />
+			<sub stat="sleepVuln" val="7" />
+			<sub stat="poisonVuln" val="7" />
+			<sub stat="bleedVuln" val="7" />
+			<sub stat="rootVuln" val="7" />
+			<sub stat="paralyzeVuln" val="7" />
+			<sub stat="derangementVuln" val="7" />
+		</for>
+	</skill>
+	<skill id="47060" levels="1" name="Talisman of Protection Lv. 5">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<sub stat="stunVuln" val="10" />
+			<sub stat="sleepVuln" val="10" />
+			<sub stat="poisonVuln" val="10" />
+			<sub stat="bleedVuln" val="10" />
+			<sub stat="rootVuln" val="10" />
+			<sub stat="paralyzeVuln" val="10" />
+			<sub stat="derangementVuln" val="10" />
+		</for>
+	</skill>
+	<skill id="47061" levels="1" name="Talisman of Protection Lv. 6">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<sub stat="stunVuln" val="15" />
+			<sub stat="sleepVuln" val="15" />
+			<sub stat="poisonVuln" val="15" />
+			<sub stat="bleedVuln" val="15" />
+			<sub stat="rootVuln" val="15" />
+			<sub stat="paralyzeVuln" val="15" />
+			<sub stat="derangementVuln" val="15" />
+		</for>
+	</skill>
+	<skill id="47062" levels="1" name="Talisman of Insanity Lv. 1">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pAtk" val="100" />
+			<add stat="pAtkSpd" val="10" />
+			<mul stat="critRate" val="1.01" />
+			<add stat="mAtk" val="100" />
+			<add stat="mAtkSpd" val="10" />
+			<add stat="mCritRate" val="1.01" />
+		</for>
+	</skill>
+	<skill id="47063" levels="1" name="Talisman of Insanity Lv. 2">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pAtk" val="200" />
+			<add stat="pAtkSpd" val="20" />
+			<mul stat="critRate" val="1.02" />
+			<add stat="mAtk" val="200" />
+			<add stat="mAtkSpd" val="20" />
+			<add stat="mCritRate" val="1.02" />
+		</for>
+	</skill>
+	<skill id="47064" levels="1" name="Talisman of Insanity Lv. 3">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pAtk" val="300" />
+			<add stat="pAtkSpd" val="30" />
+			<mul stat="critRate" val="1.03" />
+			<add stat="mAtk" val="300" />
+			<add stat="mAtkSpd" val="30" />
+			<add stat="mCritRate" val="1.03" />
+		</for>
+	</skill>
+	<skill id="47065" levels="1" name="Talisman of Insanity Lv. 4">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pAtk" val="400" />
+			<add stat="pAtkSpd" val="50" />
+			<mul stat="critRate" val="1.05" />
+			<add stat="mAtk" val="400" />
+			<add stat="mAtkSpd" val="50" />
+			<add stat="mCritRate" val="1.05" />
+		</for>
+	</skill>
+	<skill id="47066" levels="1" name="Talisman of Insanity Lv. 5">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pAtk" val="500" />
+			<add stat="pAtkSpd" val="75" />
+			<mul stat="critRate" val="1.07" />
+			<add stat="mAtk" val="500" />
+			<add stat="mAtkSpd" val="75" />
+			<add stat="mCritRate" val="1.07" />
+		</for>
+	</skill>
+	<skill id="47067" levels="1" name="Talisman of Insanity Lv. 6">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pAtk" val="650" />
+			<add stat="pAtkSpd" val="100" />
+			<mul stat="critRate" val="1.10" />
+			<add stat="mAtk" val="650" />
+			<add stat="mAtkSpd" val="100" />
+			<add stat="mCritRate" val="1.10" />
+		</for>
+	</skill>
+	<skill id="47068" levels="1" name="Talisman of Authority Lv. 1">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pDef" val="100" />
+			<add stat="mDef" val="100" />
+			<add stat="runSpd" val="1" />
+			<mul stat="mReuse" val="1.01" />
+			<mul stat="pReuse" val="1.01" />
+		</for>
+	</skill>
+	<skill id="47069" levels="1" name="Talisman of Authority Lv. 2">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pDef" val="200" />
+			<add stat="mDef" val="200" />
+			<add stat="runSpd" val="2" />
+			<mul stat="mReuse" val="1.02" />
+			<mul stat="pReuse" val="1.02" />
+		</for>
+	</skill>
+	<skill id="47070" levels="1" name="Talisman of Authority Lv. 3">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pDef" val="300" />
+			<add stat="mDef" val="300" />
+			<add stat="runSpd" val="3" />
+			<mul stat="mReuse" val="1.03" />
+			<mul stat="pReuse" val="1.03" />
+		</for>
+	</skill>
+	<skill id="47071" levels="1" name="Talisman of Authority Lv. 4">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pDef" val="400" />
+			<add stat="mDef" val="400" />
+			<add stat="runSpd" val="4" />
+			<mul stat="mReuse" val="1.04" />
+			<mul stat="pReuse" val="1.04" />
+		</for>
+	</skill>
+	<skill id="47072" levels="1" name="Talisman of Authority Lv. 5">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pDef" val="500" />
+			<add stat="mDef" val="500" />
+			<add stat="runSpd" val="5" />
+			<mul stat="mReuse" val="1.05" />
+			<mul stat="pReuse" val="1.05" />
+		</for>
+	</skill>
+	<skill id="47073" levels="1" name="Talisman of Authority Lv. 6">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			
+			<add stat="pDef" val="650" />
+			<add stat="mDef" val="650" />
+			<add stat="runSpd" val="7" />
+			<mul stat="mReuse" val="1.07" />
+			<mul stat="pReuse" val="1.07" />
+		</for>
+	</skill>
+	<skill id="47121" levels="1" name="Talisman of Battle - Liberate">
+	
+	
+	
+	<set name="hitTime" val="200" />
+        <set name="isMagic" val="2" /> <!-- Static Skill -->
+        <set name="magicLvl" val="75" />
+        <set name="operateType" val="A1" />
+        <set name="reuseDelay" val="600000" />
+        <set name="targetType" val="SELF" />
+        <set name="forceUse" val="true" />
+        <for>
+            <effect name="DispelByCategory" noicon="1" >
+				<param slot="debuff" rate="100" max="10" />				
+			</effect>    
+			<effect name="DispelBySlot" noicon="1">
+                <param dispel="BLEEDING,9;POISON,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9;PARALYZE,9;ATTACK_TIME_UP,9;SPEED_DOWN,9;SILENCE_ALL,9;SILENCE_ALL_TWO,9" />
+            </effect>			
+        </for>
+		
+	<!-- <set name="abnormalLvl" val="1" /> -->
+        <!-- <set name="abnormalTime" val="1500" /> -->
+        <!-- <set name="aggroPoints" val="655" /> -->
+        <!-- <set name="castRange" val="400" /> -->
+        <!-- <set name="affectRange" val="1000" /> -->
+        <!-- <set name="hitTime" val="200" /> -->
+        <!-- <set name="isMagic" val="2" /> -->
+        <!-- <set name="mpConsume" val="1" /> -->
+        <!-- <set name="mpInitialConsume" val="1" /> -->
+        <!-- <set name="operateType" val="A2" /> -->
+        <!-- <set name="reuseDelay" val="600000" /> -->
+        <!-- <set name="skillType" val="BUFF" /> -->
+        <!-- <set name="targetType" val="SELF" /> -->
+
+        
+		<!-- <for> -->
+            
+			<!-- <effect name="DispelBySlot" noicon="1"> -->
+                
+				<!-- <param dispel="BLEEDING,9;POISON,9;ROOT_PHYSICALLY,1;ROOT_MAGICALLY,1;PARALYZE,1;ATTACK_TIME_UP,3;SPEED_DOWN,3" /> -->
+            
+			<!-- </effect> -->          
+        
+		<!-- </for> -->
+    
+	</skill>
+</list>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+	<item id="42116" price="0" /> <!--Immortal Cuirass -->
+	<item id="42117" price="0" /> <!--Immortal Gaiter -->
+	<item id="42118" price="0" /> <!--Immortal Gauntlet -->
+	<item id="42119" price="0" /> <!--Immortal Boots -->
+	<item id="42120" price="0" /> <!--Immortal Helmet -->
+	<item id="42121" price="0" /> <!--Immortal Hauberk -->
+	<item id="42122" price="0" /> <!--Immortal Leather Leggins -->
+	<item id="42123" price="0" /> <!--Immortal Leather Gloves -->
+	<item id="42124" price="0" /> <!--Immortal Leather Boots -->
+	<item id="42125" price="0" /> <!--Immortal Leather Helmet -->
+	<item id="42126" price="0" /> <!--Immortal Tunic -->
+	<item id="42127" price="0" /> <!--Immortal Hose -->
+	<item id="42128" price="0" /> <!--Immortal Gloves -->
+	<item id="42129" price="0" /> <!--Immortal Shoes -->
+	<item id="42130" price="0" /> <!--Immortal Circlet -->
+	<item id="42131" price="0" /> <!--Twilight Cuirass -->
+	<item id="42132" price="0" /> <!--Twilight Gaiter -->
+	<item id="42133" price="0" /> <!--Twilight Gauntlet -->
+	<item id="42134" price="0" /> <!--Twilight Boots -->
+	<item id="42135" price="0" /> <!--Twilight Helmet -->
+	<item id="42136" price="0" /> <!--Twilight Hauberk -->
+	<item id="42137" price="0" /> <!--Twilight Leather Leggins -->
+	<item id="42138" price="0" /> <!--Twilight Leather Gloves -->
+	<item id="42139" price="0" /> <!--Twilight Leather Boots -->
+	<item id="42140" price="0" /> <!--Twilight Leather Helmet -->
+	<item id="42141" price="0" /> <!--Twilight Tunic -->
+	<item id="42142" price="0" /> <!--Twilight Hose -->
+	<item id="42143" price="0" /> <!--Twilight Gloves -->
+	<item id="42144" price="0" /> <!--Twilight Shoes -->
+	<item id="42145" price="0" /> <!--Twilight Circlet -->
+	<item id="42146" price="0" /> <!--Seraph Cuirass -->
+	<item id="42147" price="0" /> <!--Seraph Gaiter -->
+	<item id="42148" price="0" /> <!--Seraph Gauntlet -->
+	<item id="42149" price="0" /> <!--Seraph Boots -->
+	<item id="42150" price="0" /> <!--Seraph Helmet -->
+	<item id="42151" price="0" /> <!--Seraph Hauberk -->
+	<item id="42152" price="0" /> <!--Seraph Leather Leggins -->
+	<item id="42153" price="0" /> <!--Seraph Leather Gloves -->
+	<item id="42154" price="0" /> <!--Seraph Leather Boots -->
+	<item id="42155" price="0" /> <!--Seraph Leather Helmet -->
+	<item id="42156" price="0" /> <!--Seraph Tunic -->
+	<item id="42157" price="0" /> <!--Seraph Hose -->
+	<item id="42158" price="0" /> <!--Seraph Gloves -->
+	<item id="42159" price="0" /> <!--Seraph Shoes -->
+	<item id="42160" price="0" /> <!--Seraph Circlet -->
+	<item id="42161" price="0" /> <!--Eternal Cuirass -->
+	<item id="42162" price="0" /> <!--Eternal Gaiter -->
+	<item id="42163" price="0" /> <!--Eternal Gauntlet -->
+	<item id="42164" price="0" /> <!--Eternal Boots -->
+	<item id="42165" price="0" /> <!--Eternal Helmet -->
+	<item id="42166" price="0" /> <!--Eternal Hauberk -->
+	<item id="42167" price="0" /> <!--Eternal Leather Leggins -->
+	<item id="42168" price="0" /> <!--Eternal Leather Gloves -->
+	<item id="42169" price="0" /> <!--Eternal Leather Boots -->
+	<item id="42170" price="0" /> <!--Eternal Leather Helmet -->
+	<item id="42171" price="0" /> <!--Eternal Tunic -->
+	<item id="42172" price="0" /> <!--Eternal Hose -->
+	<item id="42173" price="0" /> <!--Eternal Gloves -->
+	<item id="42174" price="0" /> <!--Eternal Shoes -->
+	<item id="42175" price="0" /> <!--Eternal Circlet -->
+</list>

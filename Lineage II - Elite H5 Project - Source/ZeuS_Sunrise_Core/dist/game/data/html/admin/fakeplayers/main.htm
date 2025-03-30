@@ -1,0 +1,175 @@
+<html>
+<title>Community Board Services</title>
+<body><br>
+<table width=755>
+	<tr>
+		<td align=center valign="top">
+			<table>
+                <tr>
+                    <td>Total Phantoms: %fakecount%</td>
+                </tr>
+                <tr>
+                    <td>Phantoms Enabled: %taskcount%</td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <td width=280 align="center"><font color=58FA58>Spawn Phantom</font></td>
+                    <td align=center><font color=696969>LINEAGE II - Fake Players Dashboard</font>
+                        <button value="Help" action="bypass -h admin_html fakeplayers/help/fakes.htm" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" />
+                    </td>
+                </tr>
+            </table>
+            <table height=40 width=290>
+                <tr>
+                    <td><button value="Delete" action="bypass -h admin_deletefake" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td width=280 align="center"><font color=58FA58>Spawn Class</font></td>
+                </tr>
+            </table>
+            <table width=270 cellpadding="4">
+                <tr>
+                    <td>Class Type:</td>
+                    <td><combobox width=120 height=17 var=ebox list=adventurer;archmage;cardinal;dominator;doombringer;dreadnought;duelist;ghostHunter;ghostSentinel;grandKhavatari;moonlightSentinel;mysticMuse;sagittarius;femaleSoulhound;soultaker;stormScreamer;titan;trickster;windRider></td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button value="Create Class" action="bypass -h admin_phantom_class $ebox" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+                </tr>
+            </table>
+            <table width="290">
+                <tr>
+                    <td width=30 height=20>Level</td>
+                    <td width=50 height=20>Class</td>
+                </tr>
+                <tr>
+                    <td width=30>
+                        <edit width=30 height=12 var=fakelevel />
+                    </td>
+                    <td>
+                        <!-- Class name in list max-length need to be <=16 -->
+                        <combobox width=120 var=fakeclass list="Duelist;DreadNought;Sagittarius;MoonlightSent;GhostSentinel;Archmage;MysticMuse;StormScreamer;Soultaker;PhoenixKnight;EvaTemplar;ShillenTemplar;Overlord;Titan;GrandKh;HellKnight;Trickster;Doombringer;Soulhound;Cardinal;ShSaint;Evasaint" />
+                    </td>
+                    <td>
+                        <button value="Spawn Fake" action="bypass admin_fakespawn $fakeclass htm $fakelevel" width=80 height=30 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF" />
+                    </td>
+                </tr>
+            </table>
+            <table height=45 width=290>
+                <tr>
+                    <td><button value="Enchanter" action="bypass -h admin_spawnenchanter 1" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                    <td><button value="Sell" action="bypass -h admin_spawnsell 1" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                    <td><button value="Citizen" action="bypass -h admin_spawncitizen 1" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                    <td><button value="Seller" action="bypass -h admin_spawnseller 1" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                    <td><button value="Random" action="bypass -h admin_spawnrandom 1" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td width=280 align="center"><font color=58FA58>Spawn Walkers</font></td>
+                </tr>
+                <tr>
+                    <td width=280 align="center"><font color=58FA58>Walker will take configured nodes in the phantomWalker.xml depending of its nearest town!</font></td>
+                </tr>
+            </table>
+            <table height=40 width=290>
+                <tr>
+                    <td><button value="Walker" action="bypass -h admin_spawnwalker 1" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td width=280 align="center"><font color=58FA58>Spawn Phantom PvP</font></td>
+                </tr>
+            </table>
+            <table width=300>
+                <tr>
+                    <td><font color="LEVEL">Range:</font></td>
+                    <td><edit var="qbox" width=145 height=15></td>
+                </tr>
+                <tr>
+                    <td><font color="LEVEL">Quanty:</font></td>
+                    <td><edit var="qboxqnt" width=145 height=15></td>
+                </tr>
+            </table>
+            <table height=45 width=290>
+                <tr>
+                    <td><button value="Primavel" action="bypass -h admin_spawn_phantom_zone primeval $qbox $qboxqnt" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td width=280 align="center"><font color=58FA58>Restore Phantom Players</font></td>
+                </tr>
+                <tr>
+                    <td>false = restore normal players | true = restore expired shops as new shops</td>
+                </tr>
+            </table>
+            <table width=300>
+                <tr>
+                    <td><font color="LEVEL">Quanty:</font></td>
+                    <td><edit var="qboxqntrest" width=145 height=15></td>
+
+                </tr>
+                <tr>
+                    <td>Restore Expired Offline Sellers with new shops? </td>
+                    <td><combobox width=120 height=17 var=eboxSs list=false;true></td>
+                </tr>
+            </table>
+            <table height=45 width=290>
+                <tr>
+                    <td align="center"><button value="Spawn" action="bypass -h admin_restore_phantoms $qboxqntrest $eboxSs" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                </tr>
+            </table>
+
+
+            <table>
+                <tr>
+                    <td width=280 align="center"><font color=58FA58>Spawn All Offline Stores</font></td>
+                </tr>
+            </table>
+            <table height=45 width=290>
+                <tr>
+                    <td align="center"><button value="Spawn" action="bypass -h admin_phantomstore 1" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                </tr>
+			</table>
+
+            <table>
+                <tr>
+                    <td width=280 align="center"><font color=58FA58>Spawn Custom Phantom Store</font></td>
+                </tr>
+            </table>
+
+
+            <table width=790 cellpadding="4">
+                <tr>
+                    <td align="center"><font color="LEVEL">usage: (item1,item2,item3 qnt1,qnt2,qnt3 value1,value2,value3;BOX MESSAGE)</font></td>
+                </tr>
+            </table>
+            <table width=300 cellpadding="4">
+                <tr>
+                    <td>Type:</td>
+                    <td><combobox width=120 height=17 var=mode list=buy;sell></td>
+                </tr>
+                <tr>
+                    <td><font color="LEVEL">Code: (split using ",")</font></td>
+                    <td><edit var="rest" width=145 height=15></td>
+                </tr>
+            </table>
+            <table height=45 width=290>
+                <tr>
+                    <td><button value="Spawn" action="bypass -h admin_spawncustomseller $mode $rest" width=50 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+                </tr>
+            </table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

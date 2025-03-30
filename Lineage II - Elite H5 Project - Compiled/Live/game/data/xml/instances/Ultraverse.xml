@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="UltraVerse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
+    <activityTime val="120"/>
+    <allowSummon val="false"/>
+    <emptyDestroyTime val="2"/>
+    <exitPoint x="82698" y="148638" z="-3473"/>
+</instance>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<config>
+		<set name="enable" value="true" />
+		<set name="healing_cp_potion_ids" value="5592" />
+		<set name="healing_hp_potion_ids" value="1539" />
+		<set name="healing_mp_potion_ids" value="728" />
+	</config>
+
+	<potions>
+		<potion class_id="88" cp_value="600" hp_value="2000" mp_value="2000" oly_cp_value="4" oly_hp_value="5" oly_mp_value="6" /> <!-- Duelist -->
+	</potions>
+</list>

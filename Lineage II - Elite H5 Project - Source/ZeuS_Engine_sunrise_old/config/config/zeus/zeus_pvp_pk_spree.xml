@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+	<config>
+		<set name="enabled" value="True" />
+	</config>
+	<pvp count="100" messages="The player %CHAR_NAME% is a mass murderer width %CANT% PVP" />
+	<pvp count="150" messages="The player %CHAR_NAME% is a mass murderer width %CANT% PVP" />
+
+	<pk count="100" messages="The player %CHAR_NAME% is a mass murderer width %CANT% PK" />
+	<pk count="150" messages="The player %CHAR_NAME% is a mass murderer width %CANT% PK" />
+	
+</list>

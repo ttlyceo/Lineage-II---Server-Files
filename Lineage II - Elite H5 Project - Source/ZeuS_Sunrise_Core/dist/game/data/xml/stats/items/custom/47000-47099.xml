@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="47001" type="Armor" name="Earth Belt">
+		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
+		<set name="price" val="1917000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="46003-1" />
+		<for>
+			<add order="0" stat="pDef" val="14" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="47002" type="Armor" name="Fire Belt">
+		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="92" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
+		<set name="price" val="1917000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="item_skill" val="46004-1" />
+		<for>
+			<add order="0" stat="pDef" val="14" />
+			<enchant stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="47008" type="Armor" name="Talisman of Battle - Liberate">
+        
+		<set name="icon" val="icon5.talismanabulv4" />        
+		<set name="default_action" val="EQUIP" />        
+		<set name="bodypart" val="deco1" />        
+		<set name="immediate_effect" val="true" />        
+		<set name="material" val="GOLD" />        
+		<set name="weight" val="150" />        
+		<set name="item_skill" val="47121-1" />        
+		<set name="is_tradable" val="true" />        
+		<set name="is_dropable" val="false" />        
+		<set name="is_sellable" val="true" />
+    
+	</item>
+	<item id="47025" type="Armor" name="Black Talisman - Free Speech">
+		<set name="icon" val="icon.etc_talisman_event_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="1409-1" />
+		<set name="duration" val="65" />
+		<set name="useSkillDisTime" val="6" />
+	</item>
+	<item id="47020" type="Armor" name="Talisman of Insanity Lv. 1">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47062-1" />
+	</item>
+	<item id="47021" type="Armor" name="Talisman of Insanity Lv. 2">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47063-1" />
+	</item>
+	<item id="47022" type="Armor" name="Talisman of Insanity Lv. 3">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47064-1" />
+	</item>
+	<item id="47023" type="Armor" name="Talisman of Insanity Lv. 4">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47065-1" />
+	</item>
+	<item id="47024" type="Armor" name="Talisman of Insanity Lv. 5">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47066-1" />
+	</item>
+	<item id="47025" type="Armor" name="Talisman of Insanity Lv. 6">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47067-1" />
+	</item>
+	<item id="47026" type="Armor" name="Talisman of Protection Lv. 1">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47056-1" />
+	</item>
+	<item id="47027" type="Armor" name="Talisman of Protection Lv. 2">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47057-1" />
+	</item>
+	<item id="47028" type="Armor" name="Talisman of Protection Lv. 3">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47058-1" />
+	</item>
+	<item id="47029" type="Armor" name="Talisman of Protection Lv. 4">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47059-1" />
+	</item>
+	<item id="47030" type="Armor" name="Talisman of Protection Lv. 5">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47060-1" />
+	</item>
+	<item id="47031" type="Armor" name="Talisman of Protection Lv. 6">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47061-1" />
+	</item>
+	<item id="47032" type="Armor" name="Talisman of Authority Lv. 1">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47068-1" />
+	</item>
+	<item id="47033" type="Armor" name="Talisman of Authority Lv. 2">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47069-1" />
+		
+	</item>
+	<item id="47034" type="Armor" name="Talisman of Authority Lv. 3">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47070-1" />
+		
+	</item>
+	<item id="47035" type="Armor" name="Talisman of Authority Lv. 4">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47071-1" />
+		
+	</item>
+	<item id="47036" type="Armor" name="Talisman of Authority Lv. 5">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47072-1" />
+		
+	</item>
+	<item id="47037" type="Armor" name="Talisman of Authority Lv. 6">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47073-1" />
+		
+	</item>
+	<item id="47038" type="Armor" name="Talisman of Conqueror Lv. 1">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47050-1" />
+		
+	</item>
+	<item id="47039" type="Armor" name="Talisman of Conqueror Lv. 2">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47051-1" />
+		
+	</item>
+	<item id="47040" type="Armor" name="Talisman of Conqueror Lv. 3">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47052-1" />
+		
+	</item>
+	<item id="47041" type="Armor" name="Talisman of Conqueror Lv. 4">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47053-1" />
+		
+	</item>
+	<item id="47042" type="Armor" name="Talisman of Conqueror Lv. 5">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47054-1" />
+		
+	</item>
+	<item id="47043" type="Armor" name="Talisman of Conqueror Lv. 6">
+		<set name="icon" val="icon.etc_talisman_event_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="material" val="GOLD" />
+		
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="47055-1" />
+		
+	</item>
+</list>

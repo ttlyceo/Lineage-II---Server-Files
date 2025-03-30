@@ -1,0 +1,41 @@
+<html>
+	<title>Community Board</title>
+	<body><center>
+		%SERVER_LOGO%<br>
+        <table border=0 cellpadding=0 cellspacing=0 width=256 ><tr><td valign="top" align="center"><br>
+		<center><font color="81F7D8">Here you are able to sell your account.<br1>Below you can add your required item & price.<br1>Make sure to put YOUR Alt-Char in Receiver Box.<br1>When ready, Click Send the Target your Price.</font></center>
+		<center><br1><table width=210>
+			<tr>
+				<td width=80 align="RIGHT">Select Item</td>
+				<td width=130 align="LEFT"><combobox width=130 var="cmbItem" list="%LIST%"></td>
+		
+			</tr>
+		</table><br1>
+		<table  width=210>
+			<tr>
+				<td width=80 align="RIGHT">Amount</td>
+				<td width=130 align="LEFT"><edit type="number" var="txtAmount" width=130></td>
+			</tr>
+		</table></center>
+		<table>
+			<tr>
+				<td width=280 align="CENTER">
+					<button value="Add Item to List" action="%LINK_ADD_ITEM%" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc">
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td width=280 align="CENTER">
+					Receiver<br1>
+					<font color="LEVEL" name="hs12">%RECEIVER_NAME%</font><br1>
+					<edit var="txtReceiver" width=130>
+					<button value="Add Receiver" action="%LINK_ADD_RECEIVER%" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_Fight1None" fore="L2UI_CT1.OlympiadWnd_DF_Fight1None">
+				</td>
+			</tr>
+		</table><br>
+		<center>%TABLE_ITEM%</center>
+		<center><button value="Send the Target your Price" action="%LINK_SENDER%" width=200 height=32 back="L2UI_CT1.OlympiadWnd_DF_Back" fore="L2UI_CT1.OlympiadWnd_DF_Back"></center>
+        </td></tr></table></center>
+	</body>
+</html>

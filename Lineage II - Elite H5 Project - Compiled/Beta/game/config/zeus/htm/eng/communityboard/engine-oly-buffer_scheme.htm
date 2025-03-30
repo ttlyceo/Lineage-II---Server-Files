@@ -1,0 +1,146 @@
+<html>
+	<title>Community Board</title>	<body>
+	    <table border=0 cellpadding=0 cellspacing=0 height=510 width=256 ><tr><td valign="top" align="center"><br>
+		<center><br>
+			<img src="L2UI.SquareGray" width=780 height=1><img src="L2UI.SquareBlank" width=780 height=2>
+			<table width=616 bgcolor=171717>
+				<tr>
+					<td width=16>
+
+					</td>
+					<td align=CENTER width=560>
+						<center>
+							<font color=86AB98>Buffer Scheme</font>
+						</center>
+					</td>
+					<td width=16>
+
+					</td>
+				</tr>
+			</table>
+			<img src="L2UI.SquareBlank" width=780 height=2><img src="L2UI.SquareGray" width=780 height=1>
+		</center>
+		<img src="L2UI.SquareGray" width="756" height="2">
+		<table width=730 border=0 cellpadding=0>
+			<tr>
+				<td width=720 fixwidth=720>
+					<img src="L2UI.SquareGray" width=744 height=2>
+					<table width=760 bgcolor="1F1F1F" height=48>
+						<tr>
+							<td width=32>
+								<table width=32>
+									<tr>
+										<td width=32>
+											<img src="icon.skill5662" width=32 height=32>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width=644>
+								<table width=604 border=0>
+									<tr>
+										<td>
+											<table cellpadding=0 cellspacing=0 border=0>
+												<tr>
+													<td>
+														<font name="hs12" color="FF9900">Oly Buff Scheme System</font>
+													</td>
+													<td>
+
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<font color="F8F9B7">You can create your own Scheme for Oly</font>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width=64 align="RIGHT"></td>
+						</tr>
+					</table>
+					<img src="L2UI.SquareGray" width="756" height=2>
+				</td>
+			</tr>
+		</table><br>
+		<center>
+			<table width=750>
+				<tr>
+					<td fixwidth=280>
+						<center>
+							/*GRID_FORMAT_1=
+								<img src="L2UI.SquareGray" width="280" height=2>
+								<table width=280 background=L2UI_CT1.Windows_DF_TooltipBG>
+									<tr>
+										<td width=32 height=38>
+											<table width=34 height=33 background="%ICON_SKILL%" border=0 cellspacing=0 cellpadding=-2>
+												<tr>
+													<td>
+														<button action="%BUFF_BYPASS%" back=L2UI_CT1.ItemWindow_DF_Frame_Down fore=L2UI_CT1.ItemWindow_DF_Frame width="35" height="34" value=" " >
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td fixwidth="204" height=38>
+											<font name=hs12>%BUFF_NAME%</font>
+										</td>
+										<td width=32 height=38>
+											%BUTTON_ADD_REMOVE%
+										</td>
+									</tr>
+								</table>
+							*/
+						</center>
+					</td>
+					<td fixwidth=470>
+						<table width=470 background=L2UI_CT1.Windows_DF_TooltipBG>
+							<tr>
+								<td align=center>
+									<font name=hs12 color=FF8000>Oly Buff Scheme</font><br>
+								</td>
+							</tr>
+							<tr>
+								<td align=center>
+									<font name=hs12 color=F7BE81>Enter Scheme Name</font>
+								</td>
+							</tr>
+							<tr>
+								<td align=center>
+									<edit var="txtNomSch" width=180>
+									<button value="Create" action="%BYPASS_SCHEME_CREATE%" width=150 height=34 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+								</td>
+							</tr>
+						</table>
+						/*GRID_FORMAT_2=
+							<table width=455 background=L2UI_CT1.Windows_DF_TooltipBG>
+								<tr>
+									<td fixwidth=455 align=center>
+										<table width=455 background=L2UI_CT1.Windows_DF_TooltipBG border=0>
+											<tr>
+												<td fixwidth=180>
+													<button value="%MY_SCHEME_NAME_SELECTED%" action="%MY_SCHEME_SELECTED_BYPASS%" width=180 height=50 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+												</td>
+												<td fixwidth=130 align=LEFT>
+													<button value="BUFF ME" action="%MY_SCHEME_USE_ME_SELECTED%" width=130 height=50 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+												</td>
+												<td fixwidth=75 align=CENTER>
+													<font name=hs12 color="%MY_SCHEME_SELECTED_COLOR%">Buff = %MY_SCHEME_SELECTED_QUANTITY_BUFF%</font>
+												</td>
+												<td fixwidth=50 align=LEFT>
+													<button action="%MY_SCHEME_SELECTED_REMOVE_ME%" width=50 height=50 back="L2UI_CT1.ICON_DF_CHARACTERTURN_ZOOMOUT" fore="L2UI_CT1.ICON_DF_CHARACTERTURN_ZOOMOUT">
+												</td>
+											</tr>
+										</table><br>
+									</td>
+								</tr>
+							</table>
+						*/
+					</td>
+				</tr>
+			</table>
+		</center><br>
+	</td></tr></table></body>
+</html>

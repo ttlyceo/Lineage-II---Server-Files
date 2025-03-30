@@ -1,0 +1,179 @@
+<html noscrollbar>
+<title>L2SOW Community Board</title>
+<body><br><center>
+<table border=0 width=463 height=82 cellspacing=4 cellpadding=3 background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+	<tr>
+		<td width=220 align=left valign=top>
+			<table width=456 height=25 background="l2ui_ct1.Windows_DF_TooltipBG">
+				<tr><td height=5 ></td></tr>
+				<tr>
+					<td width=200 align=center valign=top>
+						<table border=0 cellspacing=0 cellpadding=0 width=32 height=32 background="icon.skill0219">
+							<tr>
+								<td width=32 height=32 align=center valign=top>
+									<button action="bypass zeus_html .\config\zeus\htm\[LANG]\communityboard\engine-index-manual.htm" width=34 height=34 back="L2UI_CT1.ItemWindow_DF_Frame_Down" fore="L2UI_CT1.ItemWindow_DF_Frame"/>
+								</td>
+							</tr>
+						</table><br>
+						<font color="LEVEL">Services</font>
+					</td>
+					<td width=200 align=center valign=top>
+						<table border=0 cellspacing=0 cellpadding=0 width=32 height=32 background="icon.skill0436">
+							<tr>
+								<td width=32 height=32 align=center valign=top>
+									<button action="bypass zeus_html .\config\zeus\htm\[LANG]\communityboard\engine-index-manual.htm" width=34 height=34 back="L2UI_CT1.ItemWindow_DF_Frame_Down" fore="L2UI_CT1.ItemWindow_DF_Frame"/>
+								</td>
+							</tr>
+						</table><br>
+						Teleports
+					</td>
+					<td width=200 align=center valign=top>
+						<table border=0 cellspacing=0 cellpadding=0 width=32 height=32 background="icon.skill0332">
+							<tr>
+								<td width=32 height=32 align=center valign=top>
+									<button action="bypass zeus_html .\config\zeus\htm\[LANG]\communityboard\engine-index-manual-shop.htm" width=34 height=34 back="L2UI_CT1.ItemWindow_DF_Frame_Down" fore="L2UI_CT1.ItemWindow_DF_Frame"/>
+								</td>
+							</tr>
+						</table><br>
+						Shops
+					</td>
+					<td width=200 align=center valign=top>
+						<table border=0 cellspacing=0 cellpadding=0 width=32 height=32 background="icon.skill0435">
+							<tr>
+								<td width=32 height=32 align=center valign=top>
+									<button action="bypass zeus_html .\config\zeus\htm\[LANG]\communityboard\engine-index-manual-class-master.htm" width=34 height=34 back="L2UI_CT1.ItemWindow_DF_Frame_Down" fore="L2UI_CT1.ItemWindow_DF_Frame"/>
+								</td>
+							</tr>
+						</table><br>
+						Class Mater
+					</td>
+					<td width=200 align=center valign=top>
+						<table border=0 cellspacing=0 cellpadding=0 width=32 height=32 background="icon.skill0173">
+							<tr>
+								<td width=32 height=32 align=center valign=top>
+									<button action="bypass zeus_html .\config\zeus\htm\[LANG]\communityboard\engine-index-manual-others.htm" width=34 height=34 back="L2UI_CT1.ItemWindow_DF_Frame_Down" fore="L2UI_CT1.ItemWindow_DF_Frame"/>
+								</td>
+							</tr>
+						</table><br>
+						Others
+					</td>
+				</tr>
+				<tr><td height=5 ></td></tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<br>
+<table border=0 width=743 height=32 cellspacing=4 cellpadding=3 background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+	<tr>
+		<td fixwidth=32>
+			<img src="icon.skill1297" width=32 height=32>
+		</td>
+		<td fixwidth=555>
+			<font color="F0A505">General Scheme Buffer</font><br1>
+			<font color="9C6B02">All the buff that you can use in the server (General and Premium)</font>
+		</td>
+		<td fixwidth=150>
+			<button value="Open Buffer" action="bypass %BYPASS_ENGINE%;Buffer;0;0;0;0;0;0" width=145 height=35 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+		</td>
+	</tr>
+</table>
+<table border=0 width=743 height=32 cellspacing=4 cellpadding=3 background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+	<tr>
+		<td fixwidth=32>
+			<img src="icon.skill4285" width=32 height=32>
+		</td>
+		<td fixwidth=555>
+			<font color="F0A505">Augment Manager</font><br1>
+			<font color="9C6B02">You can Augment and/or Deaugment</font>
+		</td>
+		<td fixwidth=150>
+			<button value="Open Manager" action="bypass %BYPASS_ENGINE%;AugmentManager;0;0;0;0;0;0" width=145 height=35 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+		</td>
+	</tr>
+</table>
+<table border=0 width=743 height=32 cellspacing=4 cellpadding=3 background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+	<tr>
+		<td fixwidth=32>
+			<img src="icon.skill1369" width=32 height=32>
+		</td>
+		<td fixwidth=555>
+			<font color="F0A505">Drop Search</font><br1>
+			<font color="9C6B02">In this Drop/NPC Database you can find all the item/npc from our server.</font>
+		</td>
+		<td fixwidth=150>
+			<button value="Open Drop Search" action="bypass %BYPASS_ENGINE%;DropSearch;0;0;0;0;0;0" width=145 height=35 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+		</td>
+	</tr>
+</table>
+<table border=0 width=743 height=32 cellspacing=4 cellpadding=3 background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+	<tr>
+		<td fixwidth=32>
+			<img src="icon.skillboss" width=32 height=32>
+		</td>
+		<td fixwidth=555>
+			<font color="F0A505">Raid Boss Manager</font><br1>
+			<font color="9C6B02">Raid Boss Information Manager</font>
+		</td>
+		<td fixwidth=150>
+			<button value="Open Raidboss Manager" action="bypass %BYPASS_ENGINE%;RaidBossInfo;0;0;0;0;0;0" width=145 height=35 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+		</td>
+	</tr>
+</table>
+<table border=0 width=743 height=32 cellspacing=4 cellpadding=3 background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+	<tr>
+		<td fixwidth=32>
+			<img src="icon.skill0462" width=32 height=32>
+		</td>
+		<td fixwidth=555>
+			<font color="F0A505">Remove Attributes</font><br1>
+			<font color="9C6B02">You can remove all your Elemental Attributes from your item's</font>
+		</td>
+		<td fixwidth=150>
+			<button value="Open Remove Attributes" action="bypass %BYPASS_ENGINE%;RemoveAttri;0;0;0;0;0;0" width=145 height=35 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+		</td>
+	</tr>
+</table>
+<table border=0 width=743 height=32 cellspacing=4 cellpadding=3 background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+	<tr>
+		<td fixwidth=32>
+			<img src="icon.pouch_i00" width=32 height=32>
+		</td>
+		<td fixwidth=555>
+			<font color="F0A505">Warehouse Manager</font><br1>
+			<font color="9C6B02">Save your items safely to free up space in your inventory</font>
+		</td>
+		<td fixwidth=150>
+			<button value="Open Warehouse Manager" action="bypass %BYPASS_ENGINE%;Warehouse;0;0;0;0;0;0" width=145 height=35 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+		</td>
+	</tr>
+</table>
+<table border=0 width=743 height=32 cellspacing=4 cellpadding=3 background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+	<tr>
+		<td fixwidth=32>
+			<img src="icon.skill5739" width=32 height=32>
+		</td>
+		<td fixwidth=555>
+			<font color="F0A505">Symbol Maker Manager</font><br1>
+			<font color="9C6B02">You can add your dyes symbols easily</font>
+		</td>
+		<td fixwidth=150>
+			<button value="Open Symbol Manager" action="bypass %BYPASS_ENGINE%;Symbolmaker;0;0;0;0;0;0" width=145 height=35 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+		</td>
+	</tr>
+</table>
+<table border=0 width=743 height=32 cellspacing=4 cellpadding=3 background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+	<tr>
+		<td fixwidth=32>
+			<img src="icon.skill6319" width=32 height=32>
+		</td>
+		<td fixwidth=555>
+			<font color="F0A505">Miscelanius</font><br1>
+			<font color="9C6B02">Level 85, Nobles, Pk, Fames, Clan Event, Changes Clan/Player Name and others.</font>
+		</td>
+		<td fixwidth=150>
+			<button value="Open Miscelanius" action="bypass %BYPASS_ENGINE%;charclanoption;0;0;0;0;0;0" width=145 height=35 back=L2UI_ct1.button_df fore=L2UI_ct1.button_df>
+		</td>
+	</tr>
+</table>
+</center></body></html>

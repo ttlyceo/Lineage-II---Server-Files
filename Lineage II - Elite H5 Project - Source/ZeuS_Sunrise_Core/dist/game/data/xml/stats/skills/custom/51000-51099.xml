@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/skills.xsd">
+
+	<skill id="51000" levels="1" name="Kain Stun">
+	<set name="icon" val="icon.skill0000" />
+		<set name="mpConsume" val="112" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
+		<set name="abnormalType" val="stun" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="2000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="28600" /> <!-- Base Land Rate -->
+		<set name="offensive" val="true" />
+		<set name="reuseDelay" val="180000" />
+		<set name="basicProperty" val="CON" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="AREA" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="RemoveTarget" noicon="1" val="9" abnormalLvl="1" abnormalType="stun" />
+		</for>
+	</skill>
+
+	<skill id="51001" levels="1" name="Kain Sword">
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="300" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="600" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="112" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="1084" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
+	</skill>	
+
+	<skill id="51222" levels="1" name="Little Devil Agathion - Summon (or Release)">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="40718" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" />
+		</for>
+	</skill>
+
+	<skill id="51223" levels="1" name="Little Devil Agathion - Summon (or Release)">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="40719" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" />
+		</for>
+	</skill>
+
+	<skill id="51224" levels="1" name="Little Devil Agathion - Summon (or Release)">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="40720" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" />
+		</for>
+	</skill>
+
+	<skill id="51225" levels="1" name="Little Devil Agathion - Summon (or Release)">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="40721" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" />
+		</for>
+	</skill>	
+</list>

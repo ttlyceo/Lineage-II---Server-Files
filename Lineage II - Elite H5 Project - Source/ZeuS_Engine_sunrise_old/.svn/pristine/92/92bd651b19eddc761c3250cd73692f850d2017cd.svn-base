@@ -1,0 +1,30 @@
+#SMTP Configuration From your Email Server
+#Email Data
+ServerName = ZeuS Server
+AdminEmail = YOUR_SERVER_EMAIL@gmail.com
+
+#-------------------- Subject for Emails --------------------------
+RegisterSubject = Security Code for Account Register
+ChangePasswordSubject = Security Code for Change your Password
+DonationNotification = Donation Information
+DonationNotificationReady = Donation Ready
+FailSecondaryPassword = Secondary Password Failed Entry
+RecoveryAccount = Security Code for Recovery Account
+RecoveryAccountChange = Recovery Account Information
+#-------------------- Subject for Emails --------------------------
+
+#Email DOnation System by PHP Data
+#You need to put the same data Here and in the PHP File
+
+
+#http://elixsum.com/eliXsumWeB.php?tip=ACTIVE_DONATION&ZE_LINK_KEY_CHECK=c37ea66e1a54c1fb8016cd3562912625&ZE_DO_ID_CHECK=0fa0f94c9720705201ee612df9a2d13d
+
+WebGetNameType = tip
+WebForValidate = http://ZEUS.com/ZEUSWeB.php
+WebDonationLinkKey = 0000000000000000000
+WebGetCommandName_for_ID_DONATION = DO_ID_CHECK
+WebGetCommandName_for_ID_KEY = LINK_KEY_CHECK
+
+#Security Email
+SendEmailWHenPutWrogSecondayPassword = true
+MinutesToSend = 2

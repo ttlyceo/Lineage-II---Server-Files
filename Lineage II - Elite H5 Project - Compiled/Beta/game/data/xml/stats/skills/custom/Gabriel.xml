@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+<skill id="51211" levels="1" name="Release Seal on Agathion - Lind">
+		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="226" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" />
+		</for>
+	</skill>
+	<skill id="51212" levels="1" name="Release Seal on Agathion - Valakas">
+		<!-- Confirmed CT2.5 -->
+		<set name="blockedInOlympiad" val="true" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="224" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" />
+		</for>
+	</skill>
+</list>

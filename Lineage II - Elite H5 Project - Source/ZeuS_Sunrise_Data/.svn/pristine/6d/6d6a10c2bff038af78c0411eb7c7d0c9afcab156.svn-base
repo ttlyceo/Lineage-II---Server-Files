@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/buylist.xsd">
+    <npcs>
+         <npc>955</npc>
+         <npc>956</npc>
+     </npcs>
+   <item id="1" count="1" /> <!-- Short Sword -->
+   <item id="3" count="1" /> <!-- Broadsword -->
+   <item id="66" count="1" /> <!-- Gladius -->
+   <item id="2" count="1" /> <!-- Long Sword -->
+   <item id="4219" count="1" /> <!-- Dream Sword -->
+   <item id="68" count="1" /> <!-- Falchion -->
+   <item id="1333" count="1" /> <!-- Brandish -->
+   <item id="5284" count="1" /> <!-- Zweihander -->
+   <item id="4202" count="1" /> <!-- Chrono Cithara -->
+
+</list>
